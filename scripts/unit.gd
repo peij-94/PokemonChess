@@ -286,11 +286,20 @@ func _sync_unit_3d(data: Dictionary = {}) -> void:
 	
 	# In 3D mode, the 3D unit provides visuals while 2D Area2D provides interaction
 	if icon_sprite:
+		icon_sprite.visible = false
 		icon_sprite.modulate.a = 0.0
+	if base_sprite:
+		base_sprite.visible = false
 	if has_node("Shadow"):
 		get_node("Shadow").visible = false
 	if has_node("UIOverlay"):
 		get_node("UIOverlay").visible = false
+	if has_node("CastParticles"):
+		get_node("CastParticles").visible = false
+	if has_node("ClickRing"):
+		get_node("ClickRing").visible = false
+	if has_node("ClickParticles"):
+		get_node("ClickParticles").visible = false
 
 func _exit_tree() -> void:
 	if unit_3d and is_instance_valid(unit_3d):
@@ -313,13 +322,22 @@ func _process(delta: float) -> void:
 		var p_data = PokemonDatabase.get_pokemon(pokemon_id)
 		_sync_unit_3d(p_data)
 
-	if unit_3d and is_instance_valid(unit_3d) and not unit_3d.is_animating_action:
-		var a3d: Arena3D = GameManager.get_meta("arena_3d", null) if GameManager.has_meta("arena_3d") else null
-		if a3d:
-			var target_3d = a3d.pos_2d_to_3d(position, is_on_bench)
-			if GameManager.board_ref and GameManager.board_ref.dragged_unit == self:
-				target_3d.y = 0.55
-			unit_3d.position = target_3d
+	if unit_3d and is_instance_valid(unit_3d):
+		if icon_sprite and icon_sprite.visible:
+			icon_sprite.visible = false
+		if has_node("Shadow") and get_node("Shadow").visible:
+			get_node("Shadow").visible = false
+		if has_node("UIOverlay") and get_node("UIOverlay").visible:
+			get_node("UIOverlay").visible = false
+		if base_sprite and base_sprite.visible:
+			base_sprite.visible = false
+		if not unit_3d.is_animating_action:
+			var a3d: Arena3D = GameManager.get_meta("arena_3d", null) if GameManager.has_meta("arena_3d") else null
+			if a3d:
+				var target_3d = a3d.pos_2d_to_3d(position, is_on_bench)
+				if GameManager.board_ref and GameManager.board_ref.dragged_unit == self:
+					target_3d.y = 0.55
+				unit_3d.position = target_3d
 
 	if is_dead or not is_in_combat:
 		return

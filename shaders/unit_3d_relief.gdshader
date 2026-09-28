@@ -84,5 +84,5 @@ void fragment() {
 		shaded_rgb = mix(shaded_rgb, hit_flash_color.rgb, hit_flash);
 	}
 	
-	COLOR = vec4(shaded_rgb, base_color.a);
+	COLOR = vec4(shaded_rgb, base_color.a * COLOR.a);
 }

@@ -1,0 +1,1071 @@
+extends Node
+
+# PokemonDatabase: Central repository of all Pokemon stats, skills, and synergy definitions
+
+var pokemons: Dictionary = {
+	"charmander": {
+		"id": "charmander",
+		"name": "小火龙",
+		"title": "蜥蜴宝可梦",
+		"cost": 1,
+		"types": ["Fire"],
+		"hp": 550,
+		"atk": 52,
+		"armor": 20,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向目标吐射灼热火花，造成180点法术伤害并点燃敌人2秒。",
+		"skill_detail": "消耗100能量，向目标连续吐出炽热火花，造成180点单体火系法术伤害，并附加持续2秒的轻度灼烧（每秒20点真实伤害）。",
+		"desc": "尾巴上的火焰代表它的生命力，状态绝佳时火焰会熊熊燃烧。擅长远距离喷射烈焰并点燃多名敌方单位！",
+		"skill_power": 180,
+		"skills": {
+			1: {
+				"name": "火花",
+				"desc": "向目标吐射灼热火花，造成180点法术伤害并点燃敌人2秒。",
+				"detail": "消耗100能量，向目标连续吐出炽热火花，造成180点单体火系法术伤害，并附加持续2秒的轻度灼烧（每秒20点真实伤害）。",
+				"power": 180,
+				"vfx": "ember",
+				"sfx": "fire",
+				"scale": 0.28
+			},
+			2: {
+				"name": "火焰旋涡",
+				"desc": "在目标脚下召唤烈焰风暴，造成340点范围伤害并减速敌人30%。",
+				"detail": "消耗100能量，在目标密集区域卷起炽烈的火焰旋涡，对范围内所有敌人造成340点火系范围法术伤害，降低其30%移速与攻速，并灼烧3秒（每秒30点真实伤害）。",
+				"power": 340,
+				"vfx": "flamethrower",
+				"sfx": "fire",
+				"scale": 0.35
+			},
+			3: {
+				"name": "炼狱爆炎",
+				"desc": "释放终极炽热炼狱，造成680点巨额范围真实火伤并永久灼烧。",
+				"detail": "消耗100能量，引爆体内狂暴龙火化身炼狱，向正前方扇形区域喷发深红烈焰，对范围内所有敌人造成680点巨额火系真实伤害，并施加持续至战斗结束的剧烈灼烧（每秒45点真实伤害）。",
+				"power": 680,
+				"vfx": "inferno",
+				"sfx": "fire",
+				"scale": 0.46
+			}
+		},
+		"icon": "res://assets/units/charmander.png"
+	},
+	"squirtle": {
+		"id": "squirtle",
+		"name": "杰尼龟",
+		"title": "小龟宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 650,
+		"atk": 45,
+		"armor": 35,
+		"mr": 25,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "喷射高压水柱冲击目标，造成160点伤害并获得200点护盾。",
+		"skill_detail": "消耗100能量，从口中猛烈喷射高压水流冲击当前目标，造成160点单体水系法术伤害并击退0.5格，同时自身凝聚一层吸收200点伤害的水流护甲。",
+		"desc": "坚硬的外壳不仅能抵挡物理冲击，更能反弹敌方攻势并凝聚坚不可摧的水流护盾！前排防御先锋。",
+		"skill_power": 160,
+		"skills": {
+			1: {
+				"name": "水枪",
+				"desc": "喷射高压水柱冲击目标，造成160点伤害并获得200点护盾。",
+				"detail": "消耗100能量，从口中猛烈喷射高压水流冲击当前目标，造成160点单体水系法术伤害并击退0.5格，同时自身凝聚一层吸收200点伤害的水流护甲。",
+				"power": 160,
+				"vfx": "water_gun",
+				"sfx": "water",
+				"scale": 0.3
+			},
+			2: {
+				"name": "水之波动",
+				"desc": "凝聚震荡水球爆破，造成300点伤害并生成350点水幕护盾。",
+				"detail": "消耗100能量，发射蕴含超音波的震荡水球爆裂，造成300点范围水系伤害，并使命中敌人混乱减速25%，自身与相邻1格内友军获得350点潮汐护盾。",
+				"power": 300,
+				"vfx": "hydro_pump",
+				"sfx": "water",
+				"scale": 0.38
+			},
+			3: {
+				"name": "加农水炮",
+				"desc": "双炮齐发狂暴水龙卷，造成600点穿透伤害并击飞击退全线，获得650点神圣水壁。",
+				"detail": "消耗100能量，背甲双管加农水炮全开，喷射贯穿战场的狂暴水龙卷，对直线上所有敌人造成600点水系伤害并将敌人击退击飞，自身获得650点神圣水幕护盾。",
+				"power": 600,
+				"vfx": "hydro_cannon",
+				"sfx": "water",
+				"scale": 0.5
+			}
+		},
+		"icon": "res://assets/units/squirtle.png"
+	},
+	"bulbasaur": {
+		"id": "bulbasaur",
+		"name": "妙蛙种子",
+		"title": "种子宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 600,
+		"atk": 48,
+		"armor": 30,
+		"mr": 30,
+		"range": 2,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "寄生种子",
+		"skill_desc": "寄生敌方吸取生命，造成160点伤害并将100%转化为自身回复。",
+		"skill_detail": "消耗100能量，向目标射出一枚寄生种子，每秒造成80点草系伤害（共160点），并将造成的全部伤害100%转化为自身生命值。",
+		"desc": "背上的种子伴随它一同成长，战斗中能甩出翡翠般锋利的飞叶快刀，并汲取敌方养分回馈自身生命！",
+		"skill_power": 160,
+		"skills": {
+			1: {
+				"name": "寄生种子",
+				"desc": "寄生敌方吸取生命，造成160点伤害并将100%转化为自身回复。",
+				"detail": "消耗100能量，向目标射出一枚寄生种子，每秒造成80点草系伤害（共160点），并将造成的全部伤害100%转化为自身生命值。",
+				"power": 160,
+				"vfx": "leech_seed",
+				"sfx": "skill",
+				"scale": 0.36
+			},
+			2: {
+				"name": "飞叶快刀",
+				"desc": "扇形飞射翡翠快刀，对3名敌人各造成320点伤害并回复自身220点生命。",
+				"detail": "消耗100能量，从背后球茎两侧甩出两波破空飞行的锋利翡翠利叶，对最多3名敌方单位各造成320点草系法术伤害，同时汲取精华回复自身220点生命。",
+				"power": 320,
+				"vfx": "razor_leaf",
+				"sfx": "skill",
+				"scale": 0.45
+			},
+			3: {
+				"name": "疯狂植物",
+				"desc": "召唤史诗巨树狂暴根须破地而出，造成650点巨额范围伤害并禁锢2秒。",
+				"detail": "消耗100能量，沟通大地引爆森林之力，无数巨型荆棘藤蔓与尖刺古木破土而出，对范围内所有敌方单位造成650点草系毁灭伤害，禁锢2秒并为自身回复450点生命值。",
+				"power": 650,
+				"vfx": "frenzy_plant",
+				"sfx": "skill",
+				"scale": 0.55
+			}
+		},
+		"icon": "res://assets/units/bulbasaur.png"
+	},
+	"machop": {
+		"id": "machop",
+		"name": "腕力",
+		"title": "怪力宝可梦",
+		"cost": 1,
+		"types": ["Fighting"],
+		"hp": 620,
+		"atk": 58,
+		"armor": 25,
+		"mr": 15,
+		"range": 1,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "下盘踢",
+		"skill_desc": "飞速扫踢敌方下盘，造成200点物理伤害并使目标减速40%持续2秒。",
+		"skill_detail": "消耗100能量，压低重心对近身敌人发动敏捷扫堂踢，造成200点单体物理伤害，打乱敌方步调降低其40%移速与攻速持续2秒。",
+		"desc": "全身都是精壮的肌肉，拥有无论怎样剧烈运动都不会酸痛的体魄。能够单枪匹马过肩摔摔晕核心敌人！",
+		"skill_power": 200,
+		"skills": {
+			1: {
+				"name": "下盘踢",
+				"desc": "飞速扫踢敌方下盘，造成200点物理伤害并使目标减速40%持续2秒。",
+				"detail": "消耗100能量，压低重心对近身敌人发动敏捷扫堂踢，造成200点单体物理伤害，打乱敌方步调降低其40%移速与攻速持续2秒。",
+				"power": 200,
+				"vfx": "low_kick",
+				"sfx": "punch",
+				"scale": 0.32
+			},
+			2: {
+				"name": "地狱翻滚",
+				"desc": "擒抱目标进行暴扣砸地摔，造成360点物理伤害并眩晕目标1.5秒。",
+				"detail": "消耗100能量，凭借一身精壮怪力猛扑擒抱目标高高举起，重重砸入地面，造成360点重度物理伤害，并压制眩晕目标1.5秒。",
+				"power": 360,
+				"vfx": "body_slam",
+				"sfx": "punch",
+				"scale": 0.42
+			},
+			3: {
+				"name": "近身战·爆裂拳",
+				"desc": "狂暴连打重拳击碎护甲，对周围敌人造成720点毁灭物理伤害并削弱50%护甲。",
+				"detail": "消耗100能量，进入舍身决战状态，双臂化为残影向周围敌人爆发连续音速重拳，累计造成720点毁灭物理伤害，撕裂护甲使其护甲值永久降低50%并震退周围敌人。",
+				"power": 720,
+				"vfx": "close_combat",
+				"sfx": "punch",
+				"scale": 0.52
+			}
+		},
+		"icon": "res://assets/units/machop.png"
+	},
+	"pikachu": {
+		"id": "pikachu",
+		"name": "皮卡丘",
+		"title": "鼠宝可梦",
+		"cost": 2,
+		"types": ["Electric"],
+		"hp": 580,
+		"atk": 60,
+		"armor": 20,
+		"mr": 25,
+		"range": 3,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "电击",
+		"skill_desc": "脸颊释放微型电弧，对目标造成220点雷电伤害并麻痹0.6秒。",
+		"skill_detail": "消耗100能量，红脸颊闪烁火花释放耀眼电弧，对当前目标造成220点雷电伤害，并造成0.6秒短暂麻痹打断其当前施法动作。",
+		"desc": "脸颊两边有着小小的电力袋，遇到危险时就会放电。是拥有高机动性与强力连环闪电的远程核心输出！",
+		"skill_power": 220,
+		"skills": {
+			1: {
+				"name": "电击",
+				"desc": "脸颊释放微型电弧，对目标造成220点雷电伤害并麻痹0.6秒。",
+				"detail": "消耗100能量，红脸颊闪烁火花释放耀眼电弧，对当前目标造成220点雷电伤害，并造成0.6秒短暂麻痹打断其当前施法动作。",
+				"power": 220,
+				"vfx": "thundershock",
+				"sfx": "thunder",
+				"scale": 0.28
+			},
+			2: {
+				"name": "十万伏特",
+				"desc": "接引天雷劈击2名敌人，造成380点雷电伤害并麻痹1秒。",
+				"detail": "消耗100能量，竖起尾巴接引天雷，召唤两道金光雷霆连续劈击2名敌人，造成380点雷电伤害并造成1.0秒强力麻痹眩晕。",
+				"power": 380,
+				"vfx": "thunderbolt",
+				"sfx": "thunder",
+				"scale": 0.36
+			},
+			3: {
+				"name": "千万伏特",
+				"desc": "释放七彩雷暴风暴，对全场4名敌人累计轰下780点毁灭雷电伤害并连续锁链麻痹。",
+				"detail": "消耗100能量，爆发出超越极限的羁绊雷光，七彩绚烂的神之闪电如暴风骤雨般降临，连续轰击全场最多4名敌方单位，累计造成780点巨额雷电法术伤害并连锁麻痹1.5秒。",
+				"power": 780,
+				"vfx": "volt_catastrophe",
+				"sfx": "thunder",
+				"scale": 0.48
+			}
+		},
+		"icon": "res://assets/units/pikachu.png"
+	},
+	"gengar": {
+		"id": "gengar",
+		"name": "耿鬼",
+		"title": "影子宝可梦",
+		"cost": 3,
+		"types": ["Ghost", "Psychic"],
+		"hp": 700,
+		"atk": 65,
+		"armor": 25,
+		"mr": 35,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "舌舔",
+		"skill_desc": "阴影伸出幽灵巨舌舔舐，造成240点伤害并沉默目标1.5秒。",
+		"skill_detail": "消耗100能量，身体遁入敌方背后伸出冰冷幽灵巨舌进行偷袭舔舐，造成240点幽灵系法术伤害并使目标沉默1.5秒无法积攒能量与施法。",
+		"desc": "潜藏在阴影中的幽灵恶作剧大师，能无视敌方部分防御，凝聚幽暗深邃的暗影法球削弱敌方魔抗！",
+		"skill_power": 240,
+		"skills": {
+			1: {
+				"name": "舌舔",
+				"desc": "阴影伸出幽灵巨舌舔舐，造成240点伤害并沉默目标1.5秒。",
+				"detail": "消耗100能量，身体遁入敌方背后伸出冰冷幽灵巨舌进行偷袭舔舐，造成240点幽灵系法术伤害并使目标沉默1.5秒无法积攒能量与施法。",
+				"power": 240,
+				"vfx": "lick",
+				"sfx": "skill",
+				"scale": 0.34
+			},
+			2: {
+				"name": "暗影球",
+				"desc": "聚能发射旋转暗影法球贯穿直线，造成420点伤害并削弱30%魔抗。",
+				"detail": "消耗100能量，聚能发射一枚深紫旋转暗影球贯穿沿途直线所有敌人，造成420点穿透法术伤害，并永久削弱命中目标30%魔法抗性。",
+				"power": 420,
+				"vfx": "shadow_ball",
+				"sfx": "skill",
+				"scale": 0.45
+			},
+			3: {
+				"name": "祸不单行·暗影狂潮",
+				"desc": "潜入阴影引爆全场噩梦漩涡，对所有负面状态敌人造成850点毁灭暴击伤害。",
+				"detail": "消耗100能量，发出刺耳狂笑遁入暗影世界，在全场所有敌人脚下引爆幽灵鬼手黑潭，造成500点基础法术伤害；若敌人处于灼烧、减速、眩晕或沉默等负面状态，伤害直接提升至850点并恐惧1.5秒。",
+				"power": 850,
+				"vfx": "hex_nightmare",
+				"sfx": "skill",
+				"scale": 0.55
+			}
+		},
+		"icon": "res://assets/units/gengar.png"
+	},
+	"snorlax": {
+		"id": "snorlax",
+		"name": "卡比兽",
+		"title": "嗜睡宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 1100,
+		"atk": 62,
+		"armor": 45,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.55,
+		"max_mana": 100,
+		"skill_name": "打鼾·睡觉",
+		"skill_desc": "原地呼呼大睡1.5秒，回复35%最大生命值并提升40点护甲魔抗。",
+		"skill_detail": "消耗100能量，倒头大睡1.5秒免疫所有控制，每秒发出震耳鼾声对近身敌人造成150点伤害，并为自身恢复35%最大生命值，获得40点双抗加成。",
+		"desc": "超级大胃王，只要吃饱了就会呼呼大睡。凭借无与伦比的高额生命值和天然减伤，以及泰山压顶震撼全场！",
+		"skill_power": 150,
+		"skills": {
+			1: {
+				"name": "打鼾·睡觉",
+				"desc": "原地呼呼大睡1.5秒，回复35%最大生命值并提升40点护甲魔抗。",
+				"detail": "消耗100能量，倒头大睡1.5秒免疫所有控制，每秒发出震耳鼾声对近身敌人造成150点伤害，并为自身恢复35%最大生命值，获得40点双抗加成。",
+				"power": 150,
+				"vfx": "rest",
+				"sfx": "skill",
+				"scale": 0.32
+			},
+			2: {
+				"name": "泰山压顶",
+				"desc": "腾空重重压击大地，对周围所有敌人造成360点伤害并造成地震眩晕1.2秒。",
+				"detail": "消耗100能量，庞大身躯腾空而起重重压击大地，对周围所有敌人造成360点物理冲击伤害，并造成大范围地震眩晕1.2秒。",
+				"power": 360,
+				"vfx": "body_slam",
+				"sfx": "skill",
+				"scale": 0.42
+			},
+			3: {
+				"name": "终极冲击·破坏陨落",
+				"desc": "汇聚不可阻挡的肉山冲击波，向前狂暴碾压造成760点伤害并击退全线。",
+				"detail": "消耗100能量，将体内积蓄的全部能量化作肉山滚石狂暴碾压前方所有敌人，造成760点巨额物理冲击伤害，击退3格并眩晕1.8秒，获得常驻25%伤害减免。",
+				"power": 760,
+				"vfx": "giga_impact",
+				"sfx": "skill",
+				"scale": 0.54
+			}
+		},
+		"icon": "res://assets/units/snorlax.png"
+	},
+	"alakazam": {
+		"id": "alakazam",
+		"name": "胡地",
+		"title": "念力宝可梦",
+		"cost": 4,
+		"types": ["Psychic"],
+		"hp": 680,
+		"atk": 75,
+		"armor": 20,
+		"mr": 50,
+		"range": 4,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "幻象光线",
+		"skill_desc": "汤匙发射七彩念力射线，造成280点伤害并使目标陷入混乱1.5秒。",
+		"skill_detail": "消耗100能量，双手银匙交叉发射一道绚丽的七彩念力射线，对目标造成280点单体超能法术伤害，并使目标陷入混乱致盲1.5秒。",
+		"desc": "智商高达5000的超能宝可梦，双手各持一把念力汤匙，释放狂暴的精神强念风暴大面积毁灭对手！",
+		"skill_power": 280,
+		"skills": {
+			1: {
+				"name": "幻象光线",
+				"desc": "汤匙发射七彩念力射线，造成280点伤害并使目标陷入混乱1.5秒。",
+				"detail": "消耗100能量，双手银匙交叉发射一道绚丽的七彩念力射线，对目标造成280点单体超能法术伤害，并使目标陷入混乱致盲1.5秒。",
+				"power": 280,
+				"vfx": "psybeam",
+				"sfx": "skill",
+				"scale": 0.34
+			},
+			2: {
+				"name": "精神强念",
+				"desc": "释放狂暴念力风暴，对最多3名敌人造成550点高额法术轰击并削减魔抗。",
+				"detail": "消耗100能量，双手挥舞念力汤匙释放高维念力波，锁定最多3名敌人进行精神重击，造成550点毁灭级法术伤害并降低其35%魔抗。",
+				"power": 550,
+				"vfx": "psystrike",
+				"sfx": "skill",
+				"scale": 0.44
+			},
+			3: {
+				"name": "预知未来·星轨崩塌",
+				"desc": "召唤宇宙星轨念力天体轰击全屏，造成920点巨额全场法术伤害，低血直接斩杀。",
+				"detail": "消耗100能量，超强智商沟通未来时空法则，锁定敌方全员引爆宇宙天体光核，对全场所有敌人造成总计920点超能毁灭伤害，若敌人生命低于30%直接斩杀！",
+				"power": 920,
+				"vfx": "future_sight",
+				"sfx": "skill",
+				"scale": 0.55
+			}
+		},
+		"icon": "res://assets/units/alakazam.png"
+	},
+	"charizard": {
+		"id": "charizard",
+		"name": "喷火龙",
+		"title": "火焰宝可梦",
+		"cost": 4,
+		"types": ["Fire", "Dragon"],
+		"hp": 900,
+		"atk": 82,
+		"armor": 35,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "火焰旋涡",
+		"skill_desc": "喷射回旋炎柱吞噬敌人，造成320点伤害并灼烧3秒。",
+		"skill_detail": "消耗100能量，双翼振动升空喷出一道旋转火焰龙卷，将正面2名敌人卷入烈焰中，造成320点火系法术伤害并施加持续3秒的烈焰灼烧（每秒35点真实伤害）。",
+		"desc": "翱翔天际的炎之巨龙，口中喷出的炽热大字爆炎能够融化一切岩石，兼具火系与龙系的双重毁灭羁绊！",
+		"skill_power": 320,
+		"skills": {
+			1: {
+				"name": "火焰旋涡",
+				"desc": "喷射回旋炎柱吞噬敌人，造成320点伤害并灼烧3秒。",
+				"detail": "消耗100能量，双翼振动升空喷出一道旋转火焰龙卷，将正面2名敌人卷入烈焰中，造成320点火系法术伤害并施加持续3秒的烈焰灼烧（每秒35点真实伤害）。",
+				"power": 320,
+				"vfx": "flamethrower",
+				"sfx": "fire",
+				"scale": 0.32
+			},
+			2: {
+				"name": "大字爆炎",
+				"desc": "喷射巨型“大”字炽热烈火爆破敌人密集区，造成620点爆炸伤害并大范围点燃。",
+				"detail": "消耗100能量，向敌方单位最密集的区域喷出巨型‘大’字形炽热炎爆，瞬间造成620点大范围爆炸火伤并造成5秒极温灼烧。",
+				"power": 620,
+				"vfx": "fire_blast",
+				"sfx": "fire",
+				"scale": 0.44
+			},
+			3: {
+				"name": "爆炸烈焰·天崩地裂",
+				"desc": "俯冲喷吐灭世龙焰，引发全场熔岩地爆，造成980点毁灭伤害并使敌人受伤害提升40%。",
+				"detail": "消耗100能量，升至极高空凝聚毁天灭地的终极龙焰向下俯冲狂轰，熔岩地核破土而出，对敌方全阵线造成980点毁天灭地的爆炸火伤并使敌方受到全技能伤害提升40%。",
+				"power": 980,
+				"vfx": "blast_burn",
+				"sfx": "fire",
+				"scale": 0.56
+			}
+		},
+		"icon": "res://assets/units/charizard.png"
+	},
+	"gyarados": {
+		"id": "gyarados",
+		"name": "暴鲤龙",
+		"title": "凶恶宝可梦",
+		"cost": 4,
+		"types": ["Water", "Dragon"],
+		"hp": 980,
+		"atk": 85,
+		"armor": 40,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "潮旋·狂浪",
+		"skill_desc": "掀起怒涛漩涡困住目标，造成280点伤害并束缚1.2秒。",
+		"skill_detail": "消耗100能量，庞大身躯搅动海潮，在目标敌人脚下掀起狂暴水流漩涡，造成280点水系伤害并将其困在旋涡中心无法移动，持续1.2秒。",
+		"desc": "从弱小的鲤鱼王进化而来的凶猛暴君，蓄力发射的破坏死光能够横扫全屏战场！",
+		"skill_power": 280,
+		"skills": {
+			1: {
+				"name": "潮旋·狂浪",
+				"desc": "掀起怒涛漩涡困住目标，造成280点伤害并束缚1.2秒。",
+				"detail": "消耗100能量，庞大身躯搅动海潮，在目标敌人脚下掀起狂暴水流漩涡，造成280点水系伤害并将其困在旋涡中心无法移动，持续1.2秒。",
+				"power": 280,
+				"vfx": "hydro_pump",
+				"sfx": "water",
+				"scale": 0.32
+			},
+			2: {
+				"name": "破坏光线",
+				"desc": "蓄力发射贯穿全屏的毁灭死光，对直线上所有敌人造成650点毁灭伤害。",
+				"detail": "消耗100能量，张开巨口极速汇聚纯净能量，喷射一道贯穿全场的毁灭光束，对直线上所有敌人造成650点毁灭物理与法术冲击。",
+				"power": 650,
+				"vfx": "hyper_beam",
+				"sfx": "water",
+				"scale": 0.44
+			},
+			3: {
+				"name": "暴风龙怒·海啸死光",
+				"desc": "狂暴龙神狂怒觉醒，释放交织海啸与破坏死光，对全场造成1050点毁灭伤害并击退全员。",
+				"detail": "消耗100能量，陷入绝对暴怒逆鳞狂化，掀起滔天海啸巨浪冲刷整个棋盘，同时巨口连续喷射3道交叉破坏死光横扫战场，对全场敌人造成总计1050点终极毁灭伤害并击退全员。",
+				"power": 1050,
+				"vfx": "hydro_tempest",
+				"sfx": "water",
+				"scale": 0.56
+			}
+		},
+		"icon": "res://assets/units/gyarados.png"
+	},
+	"dragonite": {
+		"id": "dragonite",
+		"name": "快龙",
+		"title": "龙宝可梦",
+		"cost": 5,
+		"types": ["Dragon"],
+		"hp": 1150,
+		"atk": 95,
+		"armor": 45,
+		"mr": 45,
+		"range": 2,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "龙之波动",
+		"skill_desc": "喷吐扇形龙气冲击波，对前方敌人造成360点龙系魔法伤害。",
+		"skill_detail": "消耗100能量，胸膛鼓起喷发纯正神龙冲击波，对前方扇形区域内所有敌人造成360点龙系魔法伤害。",
+		"desc": "虽然身躯庞大却能在天空中超音速翱翔。能够自苍穹呼唤流星雨轰炸全场敌军的高阶终极神龙！",
+		"skill_power": 360,
+		"skills": {
+			1: {
+				"name": "龙之波动",
+				"desc": "喷吐扇形龙气冲击波，对前方敌人造成360点龙系魔法伤害。",
+				"detail": "消耗100能量，胸膛鼓起喷发纯正神龙冲击波，对前方扇形区域内所有敌人造成360点龙系魔法伤害。",
+				"power": 360,
+				"vfx": "dragon_pulse",
+				"sfx": "skill",
+				"scale": 0.34
+			},
+			2: {
+				"name": "流星群",
+				"desc": "自苍穹召唤5枚陨石流星连续轰炸战场，累计造成1200点总伤害。",
+				"detail": "消耗100能量，咆哮震动九霄，召唤5枚炽热流星从苍穹呼啸坠落连续轰炸战场，累计造成1200点巨额范围龙系伤害。",
+				"power": 1200,
+				"vfx": "draco_meteor",
+				"sfx": "skill",
+				"scale": 0.44
+			},
+			3: {
+				"name": "真龙降世·太古陨星劫",
+				"desc": "召唤万古龙魂与陨星雨天谴，对全场轰下1800点毁灭伤害并群体眩晕1.5秒。",
+				"detail": "消耗100能量，天穹撕裂为赤金色，召唤9枚巨型太古陨星地毯式洗礼战场，累计造成1800点毁灭级神龙真实伤害，将全场敌军震晕1.5秒，快龙获得全能吸血50%持续至回合结束。",
+				"power": 1800,
+				"vfx": "dragon_apocalypse",
+				"sfx": "skill",
+				"scale": 0.56
+			}
+		},
+		"icon": "res://assets/units/dragonite.png"
+	},
+	"mewtwo": {
+		"id": "mewtwo",
+		"name": "超梦",
+		"title": "基因宝可梦",
+		"cost": 5,
+		"types": ["Psychic"],
+		"hp": 1050,
+		"atk": 100,
+		"armor": 35,
+		"mr": 50,
+		"range": 3,
+		"atk_speed": 0.85,
+		"max_mana": 100,
+		"skill_name": "精神利刃",
+		"skill_desc": "凝聚念力利刃横扫前方，对2名敌人造成400点必定暴击的超能伤害。",
+		"skill_detail": "消耗100能量，双掌凝聚高密度的超能能量化为两柄利刃向前斩出，对前方2名敌人造成400点魔法伤害，且必定产生200%暴击伤害。",
+		"desc": "通过基因重组诞生的最强超能宝可梦，拥有毁灭一切的精神击破之力，一击即可令敌阵全员瘫痪！",
+		"skill_power": 400,
+		"skills": {
+			1: {
+				"name": "精神利刃",
+				"desc": "凝聚念力利刃横扫前方，对2名敌人造成400点必定暴击的超能伤害。",
+				"detail": "消耗100能量，双掌凝聚高密度的超能能量化为两柄利刃向前斩出，对前方2名敌人造成400点魔法伤害，且必定产生200%暴击伤害。",
+				"power": 400,
+				"vfx": "psycho_cut",
+				"sfx": "skill",
+				"scale": 0.34
+			},
+			2: {
+				"name": "精神击破",
+				"desc": "具象化超念力波震碎敌方阵线，对全体敌军造成800点伤害并沉默3秒。",
+				"detail": "消耗100能量，具象化不可思议的超念力波震碎全场敌方阵线，对全体敌军造成800点全图超能伤害并施加强制沉默3秒。",
+				"power": 800,
+				"vfx": "psystrike",
+				"sfx": "skill",
+				"scale": 0.44
+			},
+			3: {
+				"name": "创世念动力·精神黑洞",
+				"desc": "创造吞噬一切的精神奇点黑洞，吸附全场敌人并引爆造成1600点毁灭伤害与瘫痪。",
+				"detail": "消耗100能量，在战场正中心具象化出不断坍缩的超能黑洞，强引力波将全场敌人吸扯至中心点，随后引爆奇点造成1600点终极真实伤害，并使全场敌军瘫痪2.5秒！",
+				"power": 1600,
+				"vfx": "cosmic_singularity",
+				"sfx": "skill",
+				"scale": 0.58
+			}
+		},
+		"icon": "res://assets/units/mewtwo.png"
+	},
+	"eevee": {
+		"id": "eevee",
+		"name": "伊布",
+		"title": "进化宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 600,
+		"atk": 58,
+		"armor": 25,
+		"mr": 25,
+		"range": 3,
+		"atk_speed": 0.78,
+		"max_mana": 90,
+		"skill_name": "电光一闪",
+		"skill_desc": "化为白光疾速冲刺，造成200点伤害且必定命中，攻速提升30%。",
+		"skill_detail": "消耗90能量，身体化为一道白光折线穿梭冲过当前目标，造成200点穿透物理伤害（必定命中），并在接下来3秒内提升30%攻击速度。",
+		"desc": "拥有不规则基因的宝可梦，极具适应力。发射的高速星群百发百中，是敏捷可靠的远程物理输出！",
+		"skill_power": 200,
+		"skills": {
+			1: {
+				"name": "电光一闪",
+				"desc": "化为白光疾速冲刺，造成200点伤害且必定命中，攻速提升30%。",
+				"detail": "消耗90能量，身体化为一道白光折线穿梭冲过当前目标，造成200点穿透物理伤害（必定命中），并在接下来3秒内提升30%攻击速度。",
+				"power": 200,
+				"vfx": "quick_attack",
+				"sfx": "swift",
+				"scale": 0.32
+			},
+			2: {
+				"name": "高速星星",
+				"desc": "发射旋转金光星群，对3名敌人造成340点穿透伤害且必定命中。",
+				"detail": "消耗90能量，甩动蓬松毛发向前方连续射出6枚旋转金光星芒，对最多3名敌方单位造成累计340点穿透物理伤害，无视闪避且必定暴击。",
+				"power": 340,
+				"vfx": "swift",
+				"sfx": "swift",
+				"scale": 0.42
+			},
+			3: {
+				"name": "九彩升华齐聚顶",
+				"desc": "汇聚8大进化形态神力，向全屏发射绚烂彩星，造成700点伤害并使友军全属性提升25%。",
+				"detail": "消耗90能量，沟通所有8种进化分支的终极基因力量，在战场上空汇聚九色虹光星河砸向敌阵，造成700点全属性混合伤害，并使全场友军攻速、双抗与攻击力提升25%持续4秒。",
+				"power": 700,
+				"vfx": "extreme_evoboost",
+				"sfx": "swift",
+				"scale": 0.52
+			}
+		},
+		"icon": "res://assets/units/eevee.png"
+	},
+	"growlithe": {
+		"id": "growlithe",
+		"name": "卡蒂狗",
+		"title": "小狗宝可梦",
+		"cost": 2,
+		"types": ["Fire"],
+		"hp": 700,
+		"atk": 62,
+		"armor": 30,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "火焰牙",
+		"skill_desc": "燃火利齿咬碎目标，造成220点物理伤害并灼烧2秒。",
+		"skill_detail": "消耗100能量，犬齿裹挟炽热烈火猛烈撕咬目标，造成220点火系物理伤害，并造成持续2秒的火焰灼烧（每秒25点真实伤害）。",
+		"desc": "性格忠诚勇猛，周身喷发的火焰轮能瞬间冲破敌方前排阵型，为火系阵容提供至关重要的冲锋突破点！",
+		"skill_power": 220,
+		"skills": {
+			1: {
+				"name": "火焰牙",
+				"desc": "燃火利齿咬碎目标，造成220点物理伤害并灼烧2秒。",
+				"detail": "消耗100能量，犬齿裹挟炽热烈火猛烈撕咬目标，造成220点火系物理伤害，并造成持续2秒的火焰灼烧（每秒25点真实伤害）。",
+				"power": 220,
+				"vfx": "fire_fang",
+				"sfx": "fire",
+				"scale": 0.32
+			},
+			2: {
+				"name": "火焰轮",
+				"desc": "缠绕烈焰之轮撞击敌人，造成360点范围伤害并灼烧3秒。",
+				"detail": "消耗100能量，全身高速旋转化身一道滚滚火轮冲向敌方密集区域，造成360点火系范围伤害并留下持续燃烧的烈火地面持续3秒。",
+				"power": 360,
+				"vfx": "flame_wheel",
+				"sfx": "fire",
+				"scale": 0.42
+			},
+			3: {
+				"name": "闪焰冲锋·神速",
+				"desc": "燃烧全身化身金红火凤冲锋，造成720点大范围冲击伤害并击飞目标1秒。",
+				"detail": "消耗100能量，以超越肉眼的速度燃尽自身烈焰化作赤金流星撞击敌阵，对目标及其周围敌人造成720点高额爆炸火伤并全员击飞击退，施加5秒重度灼烧。",
+				"power": 720,
+				"vfx": "flare_blitz",
+				"sfx": "fire",
+				"scale": 0.52
+			}
+		},
+		"icon": "res://assets/units/growlithe.png"
+	},
+	"psyduck": {
+		"id": "psyduck",
+		"name": "可达鸭",
+		"title": "鸭宝可梦",
+		"cost": 2,
+		"types": ["Water", "Psychic"],
+		"hp": 680,
+		"atk": 50,
+		"armor": 25,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 90,
+		"skill_name": "水之波动",
+		"skill_desc": "抱头吐出迷乱水球，造成180点伤害并降低目标25%攻击速度。",
+		"skill_detail": "消耗90能量，因轻微头痛抱住双颊喷射出一团震荡水球，对当前目标造成180点水系魔法伤害，并使其攻速降低25%持续2.5秒。",
+		"desc": "平时总是一副呆萌困惑的模样，但一旦头痛欲裂就会释放不可思议的超念力激波摧毁敌方神经！",
+		"skill_power": 180,
+		"skills": {
+			1: {
+				"name": "水之波动",
+				"desc": "抱头吐出迷乱水球，造成180点伤害并降低目标25%攻击速度。",
+				"detail": "消耗90能量，因轻微头痛抱住双颊喷射出一团震荡水球，对当前目标造成180点水系魔法伤害，并使其攻速降低25%持续2.5秒。",
+				"power": 180,
+				"vfx": "water_gun",
+				"sfx": "skill",
+				"scale": 0.32
+			},
+			2: {
+				"name": "念力头槌",
+				"desc": "引爆神秘超念力，对目标区域造成320点伤害并群体眩晕1.2秒。",
+				"detail": "消耗90能量，头痛加剧至临界点引爆潜藏的神秘超念力，双眼泛出蓝光释放激震念力波，对目标及其相邻所有敌人造成320点法术伤害并群体眩晕1.2秒。",
+				"power": 320,
+				"vfx": "zen_headbutt",
+				"sfx": "skill",
+				"scale": 0.42
+			},
+			3: {
+				"name": "念动力·神智崩坏",
+				"desc": "头痛彻底爆发释放灾厄级意念风暴，造成660点伤害并将敌人浮空压制2秒。",
+				"detail": "消耗90能量，强大的重力失衡力场覆盖大半战场，将范围内所有敌人托举浮空并猛力砸下，造成660点超能潮汐混合伤害，施加2.0秒浮空压制与30%魔抗削弱。",
+				"power": 660,
+				"vfx": "psychokinesis",
+				"sfx": "skill",
+				"scale": 0.52
+			}
+		},
+		"icon": "res://assets/units/psyduck.png"
+	},
+	"electabuzz": {
+		"id": "electabuzz",
+		"name": "电击兽",
+		"title": "电击宝可梦",
+		"cost": 3,
+		"types": ["Electric"],
+		"hp": 780,
+		"atk": 72,
+		"armor": 28,
+		"mr": 30,
+		"range": 1,
+		"atk_speed": 0.82,
+		"max_mana": 100,
+		"skill_name": "雷电拳",
+		"skill_desc": "双拳凝聚高压雷暴轰击目标，造成260点伤害并眩晕0.8秒。",
+		"skill_detail": "消耗100能量，双拳高速转动蓄满金色雷光，向当前目标重重轰出一记强力雷电拳，造成260点单体雷电伤害并将其麻痹打断0.8秒。",
+		"desc": "只要挥动双臂就会向四周释放凶猛的等离子强电，与皮卡丘携手组成雷霆咆哮的超强电系双核！",
+		"skill_power": 260,
+		"skills": {
+			1: {
+				"name": "雷电拳",
+				"desc": "双拳凝聚高压雷暴轰击目标，造成260点伤害并眩晕0.8秒。",
+				"detail": "消耗100能量，双拳高速转动蓄满金色雷光，向当前目标重重轰出一记强力雷电拳，造成260点单体雷电伤害并将其麻痹打断0.8秒。",
+				"power": 260,
+				"vfx": "thunder_punch",
+				"sfx": "discharge",
+				"scale": 0.3
+			},
+			2: {
+				"name": "放电",
+				"desc": "双臂回旋引爆高压电浆脉冲，对周围所有敌人造成460点伤害并麻痹1秒。",
+				"detail": "消耗100能量，双臂疯狂旋转引爆体内狂暴电能，向四周爆发放射状高压电浆脉冲，对周围所有敌人造成460点雷电伤害并麻痹1.0秒。",
+				"power": 460,
+				"vfx": "discharge",
+				"sfx": "discharge",
+				"scale": 0.4
+			},
+			3: {
+				"name": "狂雷天降·等离子风暴",
+				"desc": "召唤万雷灭世风暴，对全场所有敌人连续劈落8道雷霆，累计造成820点毁灭伤害。",
+				"detail": "消耗100能量，双臂指天化身为导电神塔，引爆等离子雷暴云层，在全场敌人头顶接连劈下毁灭金雷，累计造成820点毁灭雷电伤害并在地面留下持续4秒的导电电浆区。",
+				"power": 820,
+				"vfx": "thunder_tempest",
+				"sfx": "discharge",
+				"scale": 0.5
+			}
+		},
+		"icon": "res://assets/units/electabuzz.png"
+	},
+	"lapras": {
+		"id": "lapras",
+		"name": "拉普拉斯",
+		"title": "乘龙宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 950,
+		"atk": 55,
+		"armor": 40,
+		"mr": 45,
+		"range": 2,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "冰砾",
+		"skill_desc": "飞速投掷尖锐冰晶碎块，造成220点伤害并降低目标35%攻速。",
+		"skill_detail": "消耗100能量，凝聚数枚极寒冰砾高速掷向目标，造成220点冰霜法术伤害，极寒之气令目标动作迟滞，降低其35%攻击速度持续3秒。",
+		"desc": "温和善良的乘龙，背负坚固的冰甲甲壳，不仅身形厚重坚固，其呼唤的极寒暴风雪更令敌方攻势彻底迟缓！",
+		"skill_power": 220,
+		"skills": {
+			1: {
+				"name": "冰砾",
+				"desc": "飞速投掷尖锐冰晶碎块，造成220点伤害并降低目标35%攻速。",
+				"detail": "消耗100能量，凝聚数枚极寒冰砾高速掷向目标，造成220点冰霜法术伤害，极寒之气令目标动作迟滞，降低其35%攻击速度持续3秒。",
+				"power": 220,
+				"vfx": "ice_shard",
+				"sfx": "blizzard",
+				"scale": 0.3
+			},
+			2: {
+				"name": "暴风雪",
+				"desc": "召唤旋转极寒暴风雪，造成420点伤害并使范围内敌人减速40%。",
+				"detail": "消耗100能量，向战场召唤席卷全域的极寒暴风雪与飞旋冰晶，对范围内敌军造成420点冰霜伤害并减缓其40%攻速与移速持续3秒。",
+				"power": 420,
+				"vfx": "blizzard",
+				"sfx": "blizzard",
+				"scale": 0.4
+			},
+			3: {
+				"name": "绝对零度",
+				"desc": "释放冰封一切的绝对零度寒流，造成760点伤害并将所有受击敌人深度冰冻2秒。",
+				"detail": "消耗100能量，昂首高唱冰之挽歌，口中喷发温度降至-273.15℃的极寒绝对零度寒流，对范围内所有敌人造成760点巨额冰霜伤害并深度冰冻2.0秒！",
+				"power": 760,
+				"vfx": "sheer_cold",
+				"sfx": "blizzard",
+				"scale": 0.52
+			}
+		},
+		"icon": "res://assets/units/lapras.png"
+	},
+	"lucario": {
+		"id": "lucario",
+		"name": "路卡利欧",
+		"title": "波导宝可梦",
+		"cost": 4,
+		"types": ["Fighting"],
+		"hp": 920,
+		"atk": 88,
+		"armor": 35,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.85,
+		"max_mana": 100,
+		"skill_name": "发劲",
+		"skill_desc": "掌心喷发波导冲击波，对当前目标造成300点真实伤害并麻痹1秒。",
+		"skill_detail": "消耗100能量，贴近目标将掌心凝聚的波导能量以极高压喷薄而出，穿透护甲对目标造成300点纯粹真实伤害，并造成1.0秒麻痹眩晕。",
+		"desc": "能够看透并感知一切气息与波导的孤高武神，波导弹必中且势不可挡，格斗系的终极核心杀器！",
+		"skill_power": 300,
+		"skills": {
+			1: {
+				"name": "发劲",
+				"desc": "掌心喷发波导冲击波，对当前目标造成300点真实伤害并麻痹1秒。",
+				"detail": "消耗100能量，贴近目标将掌心凝聚的波导能量以极高压喷薄而出，穿透护甲对目标造成300点纯粹真实伤害，并造成1.0秒麻痹眩晕。",
+				"power": 300,
+				"vfx": "force_palm",
+				"sfx": "aura_sphere",
+				"scale": 0.32
+			},
+			2: {
+				"name": "波导弹",
+				"desc": "轰出深蓝波导法球贯穿前方，对沿途敌人造成620点巨额真实伤害。",
+				"detail": "消耗100能量，感知并凝聚万物之波导，由掌心轰出一道无可阻挡的深蓝波导法球贯穿前方，对沿途所有敌人造成620点真实伤害且必定命中。",
+				"power": 620,
+				"vfx": "aura_sphere",
+				"sfx": "aura_sphere",
+				"scale": 0.42
+			},
+			3: {
+				"name": "彗星拳·极意波导风暴",
+				"desc": "开启Mega神速连击轰出灭世波导光柱，造成1080点巨额真实伤害并破除一切护盾。",
+				"detail": "消耗100能量，进入波导极意境界，身形瞬移爆发音速彗星拳碎裂敌阵，后撤跃至半空轰下浩瀚波导风暴光柱，对范围内敌人造成1080点巨额真实伤害，破除一切护盾并造成2秒压制！",
+				"power": 1080,
+				"vfx": "aura_storm",
+				"sfx": "aura_sphere",
+				"scale": 0.54
+			}
+		},
+		"icon": "res://assets/units/lucario.png"
+	}
+}
+
+# Synergy definitions
+var synergies: Dictionary = {
+	"Fire": {
+		"name": "火系",
+		"icon": "res://assets/ui/type_fire.png",
+		"tiers": [
+			{"count": 2, "desc": "友军攻击附加灼烧效果(每秒25真实伤害)，攻速+25%"},
+			{"count": 3, "desc": "灼烧伤害提升至每秒60，攻速+50%"}
+		]
+	},
+	"Water": {
+		"name": "水系",
+		"icon": "res://assets/ui/type_water.png",
+		"tiers": [
+			{"count": 2, "desc": "友军最大生命值+250，每秒回复2.5%最大生命值"},
+			{"count": 4, "desc": "最大生命值+600，每秒回复5%最大生命值"}
+		]
+	},
+	"Grass": {
+		"name": "草系",
+		"icon": "res://assets/ui/type_grass.png",
+		"tiers": [
+			{"count": 1, "desc": "自身获得25%普攻全能吸血，护甲+20"}
+		]
+	},
+	"Electric": {
+		"name": "电系",
+		"icon": "res://assets/ui/type_electric.png",
+		"tiers": [
+			{"count": 1, "desc": "普攻获得额外+5点法力，每次普攻有25%几率触发弹射闪电"},
+			{"count": 2, "desc": "全队攻速+25%，电系普攻触发弹射闪电几率提升至50%"}
+		]
+	},
+	"Psychic": {
+		"name": "超能系",
+		"icon": "res://assets/ui/type_psychic.png",
+		"tiers": [
+			{"count": 2, "desc": "全队技能伤害提升+35%"},
+			{"count": 3, "desc": "全队技能伤害提升+75%，开局获得30点初始法力"}
+		]
+	},
+	"Fighting": {
+		"name": "格斗系",
+		"icon": "res://assets/ui/type_fighting.png",
+		"tiers": [
+			{"count": 1, "desc": "攻击力+30点，暴击几率+30%"},
+			{"count": 2, "desc": "攻击力+65点，暴击几率+50%，暴击伤害提升+40%"}
+		]
+	},
+	"Dragon": {
+		"name": "龙系",
+		"icon": "res://assets/ui/type_dragon.png",
+		"tiers": [
+			{"count": 2, "desc": "战斗开局获得350点魔免护盾，大招技能伤害+30%"}
+		]
+	},
+	"Normal": {
+		"name": "一般系",
+		"icon": "res://assets/ui/type_normal.png",
+		"tiers": [
+			{"count": 1, "desc": "受到伤害减免15%"},
+			{"count": 2, "desc": "受到伤害减免25%，每秒回复3%最大生命值"}
+		]
+	},
+	"Ghost": {
+		"name": "幽灵系",
+		"icon": "res://assets/ui/type_ghost.png",
+		"tiers": [
+			{"count": 1, "desc": "拥有25%物理闪避几率，攻击无视目标20点护甲"}
+		]
+	}
+}
+
+# Shop tier probability curves by player level [tier1, tier2, tier3, tier4, tier5]
+var shop_rates: Dictionary = {
+	1: [100, 0, 0, 0, 0],
+	2: [100, 0, 0, 0, 0],
+	3: [75, 25, 0, 0, 0],
+	4: [55, 30, 15, 0, 0],
+	5: [45, 33, 20, 2, 0],
+	6: [30, 40, 25, 5, 0],
+	7: [20, 35, 30, 14, 1],
+	8: [15, 25, 35, 21, 4],
+	9: [10, 15, 30, 35, 10]
+}
+
+func get_skill_data(pokemon_id: String, star_level: int = 1) -> Dictionary:
+	var data = get_pokemon(pokemon_id)
+	if data.is_empty():
+		return {}
+	if data.has("skills") and data["skills"].has(star_level):
+		return data["skills"][star_level].duplicate(true)
+	if data.has("skills") and data["skills"].has(1):
+		return data["skills"][1].duplicate(true)
+	return {
+		"name": data.get("skill_name", ""),
+		"desc": data.get("skill_desc", ""),
+		"detail": data.get("skill_detail", ""),
+		"power": data.get("skill_power", 200),
+		"vfx": "thunderbolt",
+		"sfx": "skill",
+		"scale": 0.4
+	}
+
+func get_pokemon(id: String) -> Dictionary:
+	if pokemons.has(id):
+		return pokemons[id].duplicate(true)
+	return {}
+
+func get_pokemons_by_cost(cost: int) -> Array[String]:
+	var result: Array[String] = []
+	for pid in pokemons:
+		if pokemons[pid]["cost"] == cost:
+			result.append(pid)
+	return result
+
+var cached_sprite_frames: Dictionary = {}
+
+func get_sprite_frames(pokemon_id: String) -> SpriteFrames:
+	if cached_sprite_frames.has(pokemon_id):
+		return cached_sprite_frames[pokemon_id]
+		
+	var sf = SpriteFrames.new()
+	var base_dir = "res://assets/units/anim/%s" % pokemon_id
+	
+	# 1. Idle animation
+	sf.add_animation("idle")
+	sf.set_animation_loop("idle", true)
+	sf.set_animation_speed("idle", 3.0)
+	var idle_path = "%s/idle.png" % base_dir
+	if ResourceLoader.exists(idle_path):
+		sf.add_frame("idle", load(idle_path))
+	elif ResourceLoader.exists("%s/walk_0.png" % base_dir):
+		sf.add_frame("idle", load("%s/walk_0.png" % base_dir))
+		
+	var expected_size = Vector2.ZERO
+	if sf.get_frame_count("idle") > 0:
+		var idle_tex = sf.get_frame_texture("idle", 0)
+		if idle_tex:
+			expected_size = idle_tex.get_size()
+		
+	# 2. Walk animation (up to 6 uniform frames)
+	sf.add_animation("walk")
+	sf.set_animation_loop("walk", true)
+	sf.set_animation_speed("walk", 8.0)
+	for w_idx in range(6):
+		var w_path = "%s/walk_%d.png" % [base_dir, w_idx]
+		if ResourceLoader.exists(w_path):
+			var tex = load(w_path) as Texture2D
+			if tex and (expected_size == Vector2.ZERO or tex.get_size() == expected_size):
+				sf.add_frame("walk", tex)
+	if sf.get_frame_count("walk") == 0 and sf.get_frame_count("idle") > 0:
+		sf.add_frame("walk", sf.get_frame_texture("idle", 0))
+		
+	# 3. Attack animation (up to 6 uniform frames)
+	sf.add_animation("attack")
+	sf.set_animation_loop("attack", false)
+	sf.set_animation_speed("attack", 14.0)
+	for a_idx in range(6):
+		var a_path = "%s/attack_%d.png" % [base_dir, a_idx]
+		if ResourceLoader.exists(a_path):
+			var tex = load(a_path) as Texture2D
+			if tex and (expected_size == Vector2.ZERO or tex.get_size() == expected_size):
+				sf.add_frame("attack", tex)
+	if sf.get_frame_count("attack") == 0 and sf.get_frame_count("idle") > 0:
+		sf.add_frame("attack", sf.get_frame_texture("idle", 0))
+		
+	# 4. Hurt animation (up to 2 uniform frames)
+	sf.add_animation("hurt")
+	sf.set_animation_loop("hurt", false)
+	sf.set_animation_speed("hurt", 6.0)
+	for h_idx in range(2):
+		var h_path = "%s/hurt_%d.png" % [base_dir, h_idx]
+		if ResourceLoader.exists(h_path):
+			var tex = load(h_path) as Texture2D
+			if tex and (expected_size == Vector2.ZERO or tex.get_size() == expected_size):
+				sf.add_frame("hurt", tex)
+	if sf.get_frame_count("hurt") == 0 and sf.get_frame_count("idle") > 0:
+		sf.add_frame("hurt", sf.get_frame_texture("idle", 0))
+		
+	cached_sprite_frames[pokemon_id] = sf
+	return sf

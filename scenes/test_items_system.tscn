@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://item_test_system_uid_01"]
+
+[ext_resource type="Script" path="res://scripts/test_items_system.gd" id="1_test"]
+
+[node name="TestItemsSystem" type="Node"]
+script = ExtResource("1_test")

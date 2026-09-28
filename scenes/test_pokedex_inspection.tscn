@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7m2x8n1v4k99"]
+
+[ext_resource type="Script" path="res://scripts/test_pokedex_inspection.gd" id="1_test"]
+
+[node name="TestRoot" type="Node2D"]
+
+[node name="TestPokedexInspection" type="Node" parent="."]
+script = ExtResource("1_test")

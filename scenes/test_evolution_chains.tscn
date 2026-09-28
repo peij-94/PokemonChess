@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b82cxd0q24m1e"]
+
+[ext_resource type="PackedScene" uid="uid://c8yj3a2v5n8o1" path="res://scenes/main.tscn" id="1_main"]
+[ext_resource type="Script" path="res://scripts/test_evolution_chains.gd" id="2_test"]
+
+[node name="TestRoot" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("1_main")]
+
+[node name="TestEvolutionChains" type="Node" parent="."]
+script = ExtResource("2_test")

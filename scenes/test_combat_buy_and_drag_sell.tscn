@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cb5y38d7sla0m"]
+
+[ext_resource type="Script" path="res://scripts/test_combat_buy_and_drag_sell.gd" id="1_test"]
+
+[node name="TestCombatBuyAndDragSell" type="Node"]
+script = ExtResource("1_test")

@@ -1,0 +1,362 @@
+{
+  "alakazam": {
+    "walk": {
+      "file": "assets/raw_sprites/alakazam/Walk-Anim.png",
+      "fw": 32,
+      "fh": 40,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/alakazam/Attack-Anim.png",
+      "fw": 72,
+      "fh": 72,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/alakazam/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 64,
+      "frames": 2
+    }
+  },
+  "bulbasaur": {
+    "walk": {
+      "file": "assets/raw_sprites/bulbasaur/Walk-Anim.png",
+      "fw": 40,
+      "fh": 40,
+      "frames": 6
+    },
+    "attack": {
+      "file": "assets/raw_sprites/bulbasaur/Attack-Anim.png",
+      "fw": 64,
+      "fh": 72,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/bulbasaur/Hurt-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "charizard": {
+    "walk": {
+      "file": "assets/raw_sprites/charizard/Walk-Anim.png",
+      "fw": 40,
+      "fh": 48,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/charizard/Attack-Anim.png",
+      "fw": 80,
+      "fh": 88,
+      "frames": 14
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/charizard/Hurt-Anim.png",
+      "fw": 64,
+      "fh": 64,
+      "frames": 2
+    }
+  },
+  "charmander": {
+    "walk": {
+      "file": "assets/raw_sprites/charmander/Walk-Anim.png",
+      "fw": 32,
+      "fh": 32,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/charmander/Attack-Anim.png",
+      "fw": 64,
+      "fh": 64,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/charmander/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "dragonite": {
+    "walk": {
+      "file": "assets/raw_sprites/dragonite/Walk-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/dragonite/Attack-Anim.png",
+      "fw": 72,
+      "fh": 80,
+      "frames": 13
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/dragonite/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 72,
+      "frames": 2
+    }
+  },
+  "eevee": {
+    "walk": {
+      "file": "assets/raw_sprites/eevee/Walk-Anim.png",
+      "fw": 40,
+      "fh": 48,
+      "frames": 7
+    },
+    "attack": {
+      "file": "assets/raw_sprites/eevee/Attack-Anim.png",
+      "fw": 64,
+      "fh": 72,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/eevee/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 48,
+      "frames": 2
+    }
+  },
+  "electabuzz": {
+    "walk": {
+      "file": "assets/raw_sprites/electabuzz/Walk-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/electabuzz/Attack-Anim.png",
+      "fw": 72,
+      "fh": 72,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/electabuzz/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 64,
+      "frames": 2
+    }
+  },
+  "gengar": {
+    "walk": {
+      "file": "assets/raw_sprites/gengar/Walk-Anim.png",
+      "fw": 32,
+      "fh": 40,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/gengar/Attack-Anim.png",
+      "fw": 72,
+      "fh": 80,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/gengar/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "growlithe": {
+    "walk": {
+      "file": "assets/raw_sprites/growlithe/Walk-Anim.png",
+      "fw": 32,
+      "fh": 40,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/growlithe/Attack-Anim.png",
+      "fw": 72,
+      "fh": 80,
+      "frames": 13
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/growlithe/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 48,
+      "frames": 2
+    }
+  },
+  "gyarados": {
+    "walk": {
+      "file": "assets/raw_sprites/gyarados/Walk-Anim.png",
+      "fw": 88,
+      "fh": 128,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/gyarados/Attack-Anim.png",
+      "fw": 104,
+      "fh": 136,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/gyarados/Hurt-Anim.png",
+      "fw": 72,
+      "fh": 120,
+      "frames": 2
+    }
+  },
+  "lapras": {
+    "walk": {
+      "file": "assets/raw_sprites/lapras/Walk-Anim.png",
+      "fw": 48,
+      "fh": 56,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/lapras/Attack-Anim.png",
+      "fw": 88,
+      "fh": 88,
+      "frames": 12
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/lapras/Hurt-Anim.png",
+      "fw": 56,
+      "fh": 96,
+      "frames": 2
+    }
+  },
+  "lucario": {
+    "walk": {
+      "file": "assets/raw_sprites/lucario/Walk-Anim.png",
+      "fw": 32,
+      "fh": 48,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/lucario/Attack-Anim.png",
+      "fw": 64,
+      "fh": 72,
+      "frames": 15
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/lucario/Hurt-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "machop": {
+    "walk": {
+      "file": "assets/raw_sprites/machop/Walk-Anim.png",
+      "fw": 24,
+      "fh": 32,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/machop/Attack-Anim.png",
+      "fw": 64,
+      "fh": 80,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/machop/Hurt-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "mewtwo": {
+    "walk": {
+      "file": "assets/raw_sprites/mewtwo/Walk-Anim.png",
+      "fw": 48,
+      "fh": 56,
+      "frames": 6
+    },
+    "attack": {
+      "file": "assets/raw_sprites/mewtwo/Attack-Anim.png",
+      "fw": 80,
+      "fh": 88,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/mewtwo/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 72,
+      "frames": 2
+    }
+  },
+  "pikachu": {
+    "walk": {
+      "file": "assets/raw_sprites/pikachu/Walk-Anim.png",
+      "fw": 32,
+      "fh": 40,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/pikachu/Attack-Anim.png",
+      "fw": 80,
+      "fh": 80,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/pikachu/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 64,
+      "frames": 2
+    }
+  },
+  "psyduck": {
+    "walk": {
+      "file": "assets/raw_sprites/psyduck/Walk-Anim.png",
+      "fw": 24,
+      "fh": 40,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/psyduck/Attack-Anim.png",
+      "fw": 72,
+      "fh": 72,
+      "frames": 11
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/psyduck/Hurt-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 2
+    }
+  },
+  "snorlax": {
+    "walk": {
+      "file": "assets/raw_sprites/snorlax/Walk-Anim.png",
+      "fw": 32,
+      "fh": 48,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/snorlax/Attack-Anim.png",
+      "fw": 64,
+      "fh": 88,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/snorlax/Hurt-Anim.png",
+      "fw": 48,
+      "fh": 64,
+      "frames": 2
+    }
+  },
+  "squirtle": {
+    "walk": {
+      "file": "assets/raw_sprites/squirtle/Walk-Anim.png",
+      "fw": 32,
+      "fh": 32,
+      "frames": 4
+    },
+    "attack": {
+      "file": "assets/raw_sprites/squirtle/Attack-Anim.png",
+      "fw": 64,
+      "fh": 72,
+      "frames": 10
+    },
+    "hurt": {
+      "file": "assets/raw_sprites/squirtle/Hurt-Anim.png",
+      "fw": 40,
+      "fh": 56,
+      "frames": 2
+    }
+  }
+}

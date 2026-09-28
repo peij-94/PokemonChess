@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://baicp7p2tei4w"]
+
+[ext_resource type="Script" path="res://scripts/test_cancel_evolution.gd" id="1_test"]
+
+[node name="TestCancelEvolution" type="Node"]
+script = ExtResource("1_test")

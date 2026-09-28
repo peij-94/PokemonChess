@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://b6k17upm2w8x"]
+
+[ext_resource type="Script" path="res://scripts/unit.gd" id="1_unit"]
+[ext_resource type="Texture2D" path="res://assets/arena/tile_highlight.png" id="2_base"]
+[ext_resource type="Texture2D" path="res://assets/arena/unit_shadow.png" id="2_shadow"]
+[ext_resource type="Script" path="res://scripts/click_ring.gd" id="3_clickring"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7q9v1"]
+radius = 28.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_bg"]
+bg_color = Color(0.15, 0.15, 0.18, 0.9)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill"]
+bg_color = Color(0.2, 0.85, 0.35, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mana_bg"]
+bg_color = Color(0.1, 0.12, 0.16, 0.9)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mana_fill"]
+bg_color = Color(0.2, 0.6, 0.95, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Unit" type="Node2D" groups=["units"]]
+z_index = 5
+script = ExtResource("1_unit")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 16)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_shadow")
+
+[node name="BasePlate" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_base")
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+texture_filter = 2
+
+[node name="CastParticles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.9
+lifetime = 0.5
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 90.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+color = Color(1, 0.85, 0.2, 1)
+
+[node name="ClickRing" type="Node2D" parent="."]
+position = Vector2(0, 16)
+script = ExtResource("3_clickring")
+
+[node name="ClickParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, 8)
+emitting = false
+amount = 14
+one_shot = true
+explosiveness = 0.85
+lifetime = 0.45
+direction = Vector2(0, -1)
+spread = 75.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 40.0
+initial_velocity_max = 90.0
+scale_amount_min = 3.0
+scale_amount_max = 5.5
+color = Color(1, 0.9, 0.3, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7q9v1")
+
+[node name="UIOverlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StarContainer" type="HBoxContainer" parent="UIOverlay"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_top = -14.0
+offset_right = 25.0
+offset_bottom = 2.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="HPBar" type="ProgressBar" parent="UIOverlay"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 7.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_hp_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="UIOverlay"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 8.0
+offset_right = 26.0
+offset_bottom = 12.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_mana_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mana_fill")
+value = 50.0
+show_percentage = false
+
+[node name="NameLabel" type="Label" parent="UIOverlay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -10.0
+offset_right = 35.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.95)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 11
+text = "皮卡丘"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

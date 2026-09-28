@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cb3v8q1m4p2o"]
+
+[ext_resource type="PackedScene" uid="uid://c8yj3a2v5n8o1" path="res://scenes/main.tscn" id="1_main"]
+[ext_resource type="Script" path="res://scripts/test_combat_frames.gd" id="2_combat_test"]
+
+[node name="TestCombatRoot" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("1_main")]
+
+[node name="CombatTest" type="Node" parent="Main"]
+script = ExtResource("2_combat_test")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://test_item_bench_3x3_uid"]
+
+[ext_resource type="Script" path="res://scripts/test_item_bench_3x3_and_start_flow.gd" id="1_test"]
+
+[node name="TestItemBench3x3" type="Node"]
+script = ExtResource("1_test")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://test_unique_skill_vfx_uid"]
+
+[ext_resource type="Script" path="res://scripts/test_unique_skill_vfx.gd" id="1_test"]
+
+[node name="TestUniqueSkillVFX" type="Node"]
+script = ExtResource("1_test")

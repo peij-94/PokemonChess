@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dafd0yy0trad"]
+
+[ext_resource type="Script" path="res://scripts/test_topbar_layout.gd" id="1_test"]
+
+[node name="TestRoot" type="Node2D"]
+
+[node name="TestTopBarLayout" type="Node" parent="."]
+script = ExtResource("1_test")

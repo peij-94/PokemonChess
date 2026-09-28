@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://team_comp_planner_uid"]
+
+[ext_resource type="Script" path="res://scripts/team_comp_planner.gd" id="1_comp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.08, 0.1, 0.15, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.55, 0.85, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="TeamCompPlanner" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -240.0
+offset_right = 300.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+script = ExtResource("1_comp")
+
+[node name="Dialog" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = -14.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="Dialog"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Dialog/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.25, 1)
+theme_override_font_sizes/font_size = 15
+text = "📋 主流流派阵容构筑器 (Team Planner)"
+
+[node name="StatusLabel" type="Label" parent="Dialog/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7, 0.8, 0.9, 0.8)
+theme_override_font_sizes/font_size = 11
+text = "暂未设置目标阵容"
+horizontal_alignment = 2
+
+[node name="CloseBtn" type="Button" parent="Dialog/Header"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="Dialog"]
+layout_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="Dialog"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CompList" type="VBoxContainer" parent="Dialog/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8

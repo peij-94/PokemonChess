@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://c6y78pv3x8m01"]
+
+[ext_resource type="Script" path="res://scripts/arena_modal.gd" id="1_arena"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.08, 0.1, 0.15, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.75, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn"]
+bg_color = Color(0.18, 0.24, 0.35, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.45, 0.6, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_gold"]
+bg_color = Color(0.85, 0.65, 0.15, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="ArenaModal" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arena")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.04, 0.07, 0.85)
+
+[node name="Dialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -240.0
+offset_right = 280.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="Dialog/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Dialog/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "🏟️ 冠军联盟竞技场 • 场地特性环境"
+
+[node name="Desc" type="Label" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "汇聚千万观众与绚丽烟火的宝可梦世界大赛主赛场
+（每 3 局追加一项新特性，当前已激活 1 / 4 项）"
+autowrap_mode = 2
+
+[node name="AwakenLabel" type="Label" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 13
+text = "⚡ 下一特性觉醒：第 4 回合（当前第 1 回合）"
+
+[node name="Scroll" type="ScrollContainer" parent="Dialog/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Cards" type="VBoxContainer" parent="Dialog/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Footer" type="HBoxContainer" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="CycleBtn" type="Button" parent="Dialog/VBox/Footer"]
+custom_minimum_size = Vector2(140, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
+theme_override_font_sizes/font_size = 13
+text = "🎲 切换场地 (B)"
+
+[node name="CloseBtn" type="Button" parent="Dialog/VBox/Footer"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+theme_override_font_sizes/font_size = 13
+text = "关闭"

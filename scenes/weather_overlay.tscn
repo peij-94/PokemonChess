@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://weather_overlay_uid"]
+
+[ext_resource type="Shader" path="res://shaders/weather_effect.gdshader" id="1_shader"]
+[ext_resource type="Script" path="res://scripts/weather_overlay.gd" id="2_script"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_weather"]
+shader = ExtResource("1_shader")
+shader_parameter/weather_type = 0
+shader_parameter/intensity = 0.85
+
+[node name="WeatherOverlay" type="ColorRect"]
+material = SubResource("ShaderMaterial_weather")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 1)
+script = ExtResource("2_script")

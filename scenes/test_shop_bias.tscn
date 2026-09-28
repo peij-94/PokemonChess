@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci7y2p92xvwqm"]
+
+[ext_resource type="PackedScene" uid="uid://c8yj3a2v5n8o1" path="res://scenes/main.tscn" id="1_main"]
+[ext_resource type="Script" path="res://scripts/test_shop_bias.gd" id="2_test"]
+
+[node name="TestRoot" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("1_main")]
+
+[node name="TestShopBias" type="Node" parent="."]
+script = ExtResource("2_test")

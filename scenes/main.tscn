@@ -1,0 +1,620 @@
+[gd_scene format=3 uid="uid://c8yj3a2v5n8o1"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/board.gd" id="2_board"]
+[ext_resource type="Texture2D" path="res://assets/ui/unit_selector_ring.png" id="3_highlight"]
+[ext_resource type="Script" path="res://scripts/hud_ui.gd" id="4_hud"]
+[ext_resource type="Texture2D" path="res://assets/ui/coin.png" id="5_coin"]
+[ext_resource type="PackedScene" path="res://scenes/pokedex_modal.tscn" id="6_pokedex"]
+[ext_resource type="PackedScene" path="res://scenes/arena_modal.tscn" id="7_arena"]
+[ext_resource type="PackedScene" path="res://scenes/dps_meter.tscn" id="8_dps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_topbar"]
+bg_color = Color(0.09, 0.11, 0.16, 0.95)
+border_width_bottom = 2
+border_color = Color(0.2, 0.25, 0.35, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_bg"]
+bg_color = Color(0.18, 0.2, 0.25, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill"]
+bg_color = Color(0.2, 0.85, 0.4, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exp_bg"]
+bg_color = Color(0.18, 0.2, 0.25, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exp_fill"]
+bg_color = Color(0.2, 0.65, 0.95, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.09, 0.11, 0.16, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.25, 0.35, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn"]
+bg_color = Color(0.18, 0.24, 0.35, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.45, 0.65, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_gold"]
+bg_color = Color(0.65, 0.45, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9, 0.7, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_red"]
+bg_color = Color(0.65, 0.15, 0.15, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9, 0.3, 0.3, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.08, 0.1, 0.15, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.55, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.06, 0.07, 0.1, 1)
+
+[node name="BattleBgTexture" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BgOverlay" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.04, 0.05, 0.08, 0.25)
+
+[node name="ArenaMat" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 66.0
+offset_right = 910.0
+offset_bottom = 478.0
+mouse_filter = 2
+color = Color(0.1, 0.12, 0.18, 0.45)
+
+[node name="BenchMat" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 470.0
+offset_right = 934.0
+offset_bottom = 554.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.15, 0.5)
+
+[node name="Board" type="Node2D" parent="."]
+script = ExtResource("2_board")
+
+[node name="Tiles" type="Node2D" parent="Board"]
+
+[node name="Bench" type="Node2D" parent="Board"]
+
+[node name="Units" type="Node2D" parent="Board"]
+
+[node name="Selector" type="Sprite2D" parent="Board"]
+z_index = 4
+texture = ExtResource("3_highlight")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("4_hud")
+
+[node name="TopBar" type="Panel" parent="HUD"]
+custom_minimum_size = Vector2(1280, 56)
+offset_right = 1280.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_topbar")
+
+[node name="PlayerInfo" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 330.0
+offset_bottom = 46.0
+theme_override_constants/separation = 10
+
+[node name="HPBar" type="ProgressBar" parent="HUD/TopBar/PlayerInfo"]
+custom_minimum_size = Vector2(100, 16)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_hp_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="HUD/TopBar/PlayerInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "HP: 100 / 100"
+
+[node name="CoinIcon" type="TextureRect" parent="HUD/TopBar/PlayerInfo"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_coin")
+expand_mode = 1
+
+[node name="GoldLabel" type="Label" parent="HUD/TopBar/PlayerInfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "10"
+
+[node name="InterestLabel" type="Label" parent="HUD/TopBar/PlayerInfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "利息 +1"
+
+[node name="RoundInfo" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 10.0
+offset_right = 618.0
+offset_bottom = 46.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="RoundLabel" type="Label" parent="HUD/TopBar/RoundInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "第 1 回合"
+
+[node name="PhaseLabel" type="Label" parent="HUD/TopBar/RoundInfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+text = "【准备阶段】"
+
+[node name="TimerLabel" type="Label" parent="HUD/TopBar/RoundInfo"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "20s"
+horizontal_alignment = 1
+
+[node name="StartBattleBtn" type="Button" parent="HUD/TopBar/RoundInfo"]
+custom_minimum_size = Vector2(80, 28)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
+theme_override_font_sizes/font_size = 12
+text = "立即开战"
+
+[node name="ActionButtons" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 13.0
+offset_right = 998.0
+offset_bottom = 43.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="ArenaBgBtn" type="Button" parent="HUD/TopBar/ActionButtons"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+theme_override_font_sizes/font_size = 11
+text = "🏟️ 场地 [B]"
+
+[node name="PokedexBtn" type="Button" parent="HUD/TopBar/ActionButtons"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+theme_override_font_sizes/font_size = 11
+text = "📖 图鉴 [P]"
+
+[node name="TeamCompBtn" type="Button" parent="HUD/TopBar/ActionButtons"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+theme_override_font_sizes/font_size = 11
+text = "📋 阵容 [C]"
+
+[node name="DynamaxBtn" type="Button" parent="HUD/TopBar/ActionButtons"]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_red")
+theme_override_font_sizes/font_size = 11
+text = "🔴 极巨化"
+
+[node name="LevelInfo" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -18.0
+offset_right = -14.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="LevelLabel" type="Label" parent="HUD/TopBar/LevelInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Lv.1 (棋子: 0/1)"
+
+[node name="EXPBar" type="ProgressBar" parent="HUD/TopBar/LevelInfo"]
+custom_minimum_size = Vector2(90, 14)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_exp_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_exp_fill")
+value = 50.0
+show_percentage = false
+
+[node name="EXPLabel" type="Label" parent="HUD/TopBar/LevelInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "0 / 2 EXP"
+
+[node name="SynergyPanel" type="Panel" parent="HUD"]
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 205.0
+offset_bottom = 460.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Title" type="Label" parent="HUD/SynergyPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 180.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 13
+text = "⚡ 属性羁绊"
+
+[node name="Scroll" type="ScrollContainer" parent="HUD/SynergyPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 34.0
+offset_right = 182.0
+offset_bottom = 380.0
+
+[node name="VBox" type="VBoxContainer" parent="HUD/SynergyPanel/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="BottomActions" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BigStartBattleBtn" type="Button" parent="HUD/BottomActions"]
+layout_mode = 0
+offset_left = 945.0
+offset_top = 482.0
+offset_right = 1125.0
+offset_bottom = 540.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
+theme_override_font_sizes/font_size = 15
+text = "⚔️ 开始战斗"
+
+[node name="SellBtn" type="Button" parent="HUD/BottomActions"]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 482.0
+offset_right = 1255.0
+offset_bottom = 540.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_red")
+text = "出售棋子"
+
+[node name="UnitInfoPanel" type="Panel" parent="HUD/BottomActions"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 470.0
+offset_right = 205.0
+offset_bottom = 705.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Name" type="Label" parent="HUD/BottomActions/UnitInfoPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 180.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 13
+text = "皮卡丘 (★1)"
+
+[node name="Stats" type="Label" parent="HUD/BottomActions/UnitInfoPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 32.0
+offset_right = 180.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.8, 0.85, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "生命: 580/580
+攻击: 60
+射程: 3
+技能: 十万伏特"
+autowrap_mode = 2
+
+[node name="ShopPanel" type="Panel" parent="HUD"]
+custom_minimum_size = Vector2(1040, 145)
+offset_left = 220.0
+offset_top = 560.0
+offset_right = 1260.0
+offset_bottom = 705.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="CardsContainer" type="HBoxContainer" parent="HUD/ShopPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 815.0
+offset_bottom = 130.0
+theme_override_constants/separation = 12
+
+[node name="Controls" type="VBoxContainer" parent="HUD/ShopPanel"]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 15.0
+offset_right = 1020.0
+offset_bottom = 130.0
+theme_override_constants/separation = 8
+
+[node name="RerollBtn" type="Button" parent="HUD/ShopPanel/Controls"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "🔄 刷新商店 (2G)"
+
+[node name="BuyExpBtn" type="Button" parent="HUD/ShopPanel/Controls"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "📖 研读升级 (4G)"
+
+[node name="LockBtn" type="Button" parent="HUD/ShopPanel/Controls"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+toggle_mode = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "🔒 锁定商店"
+
+[node name="EndGameModal" type="Panel" parent="HUD"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -140.0
+offset_right = 260.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="HUD/EndGameModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Title" type="Label" parent="HUD/EndGameModal/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 24
+text = "🎉 恭喜达成全胜! 🎉"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="HUD/EndGameModal/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 14
+text = "您成功击溃了所有波次！"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RestartBtn" type="Button" parent="HUD/EndGameModal/VBox"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
+text = "再来一局"
+
+[node name="StartMenuModal" type="Panel" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="HUD/StartMenuModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.05, 0.08, 0.94)
+
+[node name="Dialog" type="Panel" parent="HUD/StartMenuModal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -240.0
+offset_right = 340.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="HUD/StartMenuModal/Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 25.0
+offset_right = -30.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 32
+text = "⚡ 宝可梦自走棋 ⚡"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.8, 0.95, 1)
+theme_override_font_sizes/font_size = 15
+text = "Pokémon Auto-Chess • 策略对决与属性羁绊"
+horizontal_alignment = 1
+
+[node name="RulesPanel" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="RulesLabel" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 13
+text = " • 购买棋子：从下方商店挑选宝可梦，拖拽或点击部署至战场
+ • 三合一进化：3 只相同宝可梦自动合成 2 星/3 星终极形态
+ • 属性羁绊：集齐火、水、电、草、超能、龙等属性触发全队特技
+ • 自动战斗：回合就绪后自动索敌，满蓝施放招牌大招！"
+
+[node name="BtnRow" type="HBoxContainer" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="PlayGameBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/BtnRow"]
+custom_minimum_size = Vector2(180, 52)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
+theme_override_font_sizes/font_size = 18
+text = "🎮 开始游戏"
+
+[node name="MenuPokedexBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/BtnRow"]
+custom_minimum_size = Vector2(180, 52)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+theme_override_font_sizes/font_size = 18
+text = "📖 宝可梦图鉴"
+
+[node name="HintLabel" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.65, 0.75, 1)
+theme_override_font_sizes/font_size = 12
+text = "快捷键提示：[空格键] 开始战斗 / [P] 打开宝可梦图鉴"
+horizontal_alignment = 1
+
+[node name="PokedexModal" parent="HUD" instance=ExtResource("6_pokedex")]
+visible = false
+
+[node name="EnvironmentBar" type="HBoxContainer" parent="HUD"]
+offset_left = 260.0
+offset_top = 58.0
+offset_right = 1020.0
+offset_bottom = 86.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ArenaBanner" type="Button" parent="HUD/EnvironmentBar"]
+custom_minimum_size = Vector2(480, 28)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_panel")
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "🏟️ 场地特性 [Lv.1] • 点击查看详情"
+
+[node name="ArenaModal" parent="HUD" instance=ExtResource("7_arena")]
+visible = false
+
+[node name="DPSMeter" parent="HUD" instance=ExtResource("8_dps")]
+
+

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://test_comp_planner_and_hover_uid"]
+
+[ext_resource type="Script" path="res://scripts/test_comp_planner_and_hover.gd" id="1_test"]
+
+[node name="TestCompPlannerAndHover" type="Node"]
+script = ExtResource("1_test")

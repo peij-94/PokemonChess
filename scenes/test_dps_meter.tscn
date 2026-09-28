@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://testdpsmeter001"]
+
+[ext_resource type="Script" path="res://scripts/test_dps_meter.gd" id="1_test"]
+
+[node name="TestDPSMeter" type="Node"]
+script = ExtResource("1_test")

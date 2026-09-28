@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://dpsmeter001"]
+
+[ext_resource type="Script" path="res://scripts/dps_meter.gd" id="1_dps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toggle"]
+bg_color = Color(0.12, 0.16, 0.24, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.55, 0.85, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.08, 0.1, 0.15, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28, 0.4, 0.6, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_summary"]
+bg_color = Color(0.12, 0.15, 0.2, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="DPSMeter" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 70.0
+offset_right = -10.0
+offset_bottom = 430.0
+grow_horizontal = 0
+mouse_filter = 2
+script = ExtResource("1_dps")
+
+[node name="ToggleBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_toggle")
+theme_override_font_sizes/font_size = 12
+text = "📊 统计"
+
+[node name="MainPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ContentVBox" type="VBoxContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Header" type="HBoxContainer" parent="MainPanel/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TitleLabel" type="Label" parent="MainPanel/ContentVBox/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 12
+text = "📊 战斗数据统计"
+
+[node name="Spacer" type="Control" parent="MainPanel/ContentVBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TeamToggleBtn" type="Button" parent="MainPanel/ContentVBox/Header"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "我方"
+
+[node name="CloseBtn" type="Button" parent="MainPanel/ContentVBox/Header"]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "✖"
+
+[node name="TabBar" type="HBoxContainer" parent="MainPanel/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="DamageTab" type="Button" parent="MainPanel/ContentVBox/TabBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "⚔️ 输出"
+
+[node name="TakenTab" type="Button" parent="MainPanel/ContentVBox/TabBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "🛡️ 承伤"
+
+[node name="HealingTab" type="Button" parent="MainPanel/ContentVBox/TabBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "💚 治疗"
+
+[node name="SummaryBar" type="PanelContainer" parent="MainPanel/ContentVBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_summary")
+
+[node name="HBox" type="HBoxContainer" parent="MainPanel/ContentVBox/SummaryBar"]
+layout_mode = 2
+
+[node name="SummaryLabel" type="Label" parent="MainPanel/ContentVBox/SummaryBar/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 10
+text = "全队输出: 0"
+
+[node name="ModeLabel" type="Label" parent="MainPanel/ContentVBox/SummaryBar/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.45, 1)
+theme_override_font_sizes/font_size = 10
+text = "【输出】"
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/ContentVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="RowsContainer" type="VBoxContainer" parent="MainPanel/ContentVBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4

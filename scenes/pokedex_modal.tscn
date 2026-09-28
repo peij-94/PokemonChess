@@ -1,0 +1,318 @@
+[gd_scene format=3 uid="uid://bv8k2p7q4x1m"]
+
+[ext_resource type="Script" path="res://scripts/pokedex_modal.gd" id="1_pokedex"]
+[ext_resource type="Texture2D" path="res://assets/units/pikachu.jpg" id="2_icon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.08, 0.1, 0.15, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.7, 0.2, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+bg_color = Color(0.12, 0.15, 0.22, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.35, 0.5, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_close"]
+bg_color = Color(0.7, 0.2, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="PokedexModal" type="Panel"]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pokedex")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0.03, 0.04, 0.07, 0.92)
+
+[node name="Dialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -290.0
+offset_right = 500.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="Header" type="HBoxContainer" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 14.0
+offset_right = -20.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="Dialog/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "📖 宝可梦自走棋 图鉴手册 (Pokédex)"
+
+[node name="Spacer" type="Control" parent="Dialog/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseBtn" type="Button" parent="Dialog/Header"]
+custom_minimum_size = Vector2(40, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_close")
+theme_override_font_sizes/font_size = 16
+text = "✕"
+
+[node name="HBox" type="HBoxContainer" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 58.0
+offset_right = -20.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="LeftPanel" type="VBoxContainer" parent="Dialog/HBox"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="FilterHBox" type="HBoxContainer" parent="Dialog/HBox/LeftPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Scroll" type="ScrollContainer" parent="Dialog/HBox/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Dialog/HBox/LeftPanel/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="RightPanel" type="VBoxContainer" parent="Dialog/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="HeaderHBox" type="HBoxContainer" parent="Dialog/HBox/RightPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconRect" type="TextureRect" parent="Dialog/HBox/RightPanel/HeaderHBox"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("2_icon")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBox" type="VBoxContainer" parent="Dialog/HBox/RightPanel/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="NameLabel" type="Label" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "皮卡丘"
+
+[node name="TitleLabel" type="Label" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.8, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+text = "【鼠宝可梦】"
+
+[node name="CostLabel" type="Label" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "招募费用: 2 金币"
+
+[node name="TypesHBox" type="HBoxContainer" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EvoChainHBox" type="HBoxContainer" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EvoLabel" type="Label" parent="Dialog/HBox/RightPanel/HeaderHBox/VBox/EvoChainHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.8, 0.35, 1)
+theme_override_font_sizes/font_size = 11
+text = "🧬 进化路线:"
+
+[node name="DescCard" type="PanelContainer" parent="Dialog/HBox/RightPanel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="DescLabel" type="Label" parent="Dialog/HBox/RightPanel/DescCard"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+text = "脸颊两边有着小小的电力袋，遇到危险时就会放电。是拥有高机动性与强力连环闪电的远程核心输出！"
+autowrap_mode = 2
+
+[node name="StatsCard" type="PanelContainer" parent="Dialog/HBox/RightPanel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="GridContainer" type="GridContainer" parent="Dialog/HBox/RightPanel/StatsCard"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 6
+columns = 4
+
+[node name="SkillCard" type="PanelContainer" parent="Dialog/HBox/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="VBox" type="VBoxContainer" parent="Dialog/HBox/RightPanel/SkillCard"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SkillTitle" type="Label" parent="Dialog/HBox/RightPanel/SkillCard/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "⚡ 招牌绝招: 十万伏特 (消耗能量: 100)"
+
+[node name="StarTabs" type="HBoxContainer" parent="Dialog/HBox/RightPanel/SkillCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BasicAtkBtn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/StarTabs"]
+custom_minimum_size = Vector2(86, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "💥 普通攻击"
+
+[node name="Star1Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/StarTabs"]
+custom_minimum_size = Vector2(86, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "★1 基础技能"
+
+[node name="Star2Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/StarTabs"]
+custom_minimum_size = Vector2(86, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "★2 进阶技能"
+
+[node name="Star3Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/StarTabs"]
+custom_minimum_size = Vector2(86, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "★3 终极技能"
+
+[node name="BranchHBox" type="HBoxContainer" parent="Dialog/HBox/RightPanel/SkillCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BranchLabel" type="Label" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "招式选择:"
+
+[node name="Branch1Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "招式 1"
+
+[node name="Branch2Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "招式 2"
+
+[node name="Branch3Btn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "招式 3"
+
+[node name="Spacer" type="Control" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EquippedBadge" type="Label" parent="Dialog/HBox/RightPanel/SkillCard/VBox/BranchHBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 1, 0.55, 1)
+theme_override_font_sizes/font_size = 11
+text = "【✅ 当前阵容已装备】"
+
+[node name="ContentHBox" type="HBoxContainer" parent="Dialog/HBox/RightPanel/SkillCard/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="SkillDesc" type="Label" parent="Dialog/HBox/RightPanel/SkillCard/VBox/ContentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+text = "消耗100能量，接引天雷召唤多道金光雷霆劈击2名敌人，造成320点雷电伤害并造成1.0秒强力麻痹眩晕。"
+autowrap_mode = 2
+
+[node name="PreviewVBox" type="VBoxContainer" parent="Dialog/HBox/RightPanel/SkillCard/VBox/ContentHBox"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Frame" type="Panel" parent="Dialog/HBox/RightPanel/SkillCard/VBox/ContentHBox/PreviewVBox"]
+clip_contents = true
+custom_minimum_size = Vector2(130, 95)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="VFXSprite" type="AnimatedSprite2D" parent="Dialog/HBox/RightPanel/SkillCard/VBox/ContentHBox/PreviewVBox/Frame"]
+position = Vector2(65, 48)
+
+[node name="PlayBtn" type="Button" parent="Dialog/HBox/RightPanel/SkillCard/VBox/ContentHBox/PreviewVBox"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "▶ 试放特效"

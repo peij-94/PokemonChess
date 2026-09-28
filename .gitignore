@@ -1,0 +1,25 @@
+# Godot 4.x
+.godot/
+*.translation
+
+# Cache archives and raw dumps
+scripts/cache/*.tgz
+scripts/cache/*.tar.gz
+scripts/cache/*.zip
+scripts/cache/*.csv
+scripts/cache/*.import
+scripts/cache/test_render/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS / OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

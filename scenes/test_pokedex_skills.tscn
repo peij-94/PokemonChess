@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7k9w3e8q5x2m"]
+
+[ext_resource type="Script" path="res://scripts/test_pokedex_skills.gd" id="1_test"]
+
+[node name="TestPokedexSkills" type="Node"]
+script = ExtResource("1_test")

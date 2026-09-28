@@ -50,6 +50,7 @@ var stun_timer: float = 0.0
 var burn_timer: float = 0.0
 var burn_dps: float = 0.0
 var stun_vfx: Node2D = null
+var unit_3d: Unit3D = null
 
 # Combat Metrics Tracking
 var damage_dealt: float = 0.0
@@ -265,6 +266,36 @@ func update_visuals(data: Dictionary) -> void:
 		hp_bar.modulate = Color(0.3, 0.85, 0.4)
 		
 	update_bars()
+	_sync_unit_3d(data)
+
+func _sync_unit_3d(data: Dictionary = {}) -> void:
+	if not GameManager.has_meta("arena_3d"):
+		return
+	var arena_3d: Arena3D = GameManager.get_meta("arena_3d")
+	if arena_3d == null or not is_instance_valid(arena_3d):
+		return
+	if unit_3d == null or not is_instance_valid(unit_3d):
+		unit_3d = preload("res://scenes/unit_3d.tscn").instantiate() as Unit3D
+		if arena_3d.units_container:
+			arena_3d.units_container.add_child(unit_3d)
+	
+	unit_3d.position = arena_3d.pos_2d_to_3d(position, is_on_bench)
+	var p_name = data.get("name", name_label.text if name_label else pokemon_id)
+	unit_3d.setup_visuals(pokemon_id, star_level, is_enemy, p_name)
+	unit_3d.update_bars(current_hp, max_hp, current_mana, max_mana)
+	
+	# In 3D mode, the 3D unit provides visuals while 2D Area2D provides interaction
+	if icon_sprite:
+		icon_sprite.modulate.a = 0.0
+	if has_node("Shadow"):
+		get_node("Shadow").visible = false
+	if has_node("UIOverlay"):
+		get_node("UIOverlay").visible = false
+
+func _exit_tree() -> void:
+	if unit_3d and is_instance_valid(unit_3d):
+		unit_3d.queue_free()
+		unit_3d = null
 
 func update_bars() -> void:
 	if hp_bar:
@@ -273,8 +304,23 @@ func update_bars() -> void:
 	if mana_bar:
 		mana_bar.max_value = max_mana
 		mana_bar.value = current_mana
+	if unit_3d and is_instance_valid(unit_3d):
+		unit_3d.update_bars(current_hp, max_hp, current_mana, max_mana)
 
 func _process(delta: float) -> void:
+	# Synchronize 3D unit position with 2D position (dragging, bench, combat movement)
+	if unit_3d == null and GameManager.has_meta("arena_3d") and not is_dead:
+		var p_data = PokemonDatabase.get_pokemon(pokemon_id)
+		_sync_unit_3d(p_data)
+
+	if unit_3d and is_instance_valid(unit_3d) and not unit_3d.is_animating_action:
+		var a3d: Arena3D = GameManager.get_meta("arena_3d", null) if GameManager.has_meta("arena_3d") else null
+		if a3d:
+			var target_3d = a3d.pos_2d_to_3d(position, is_on_bench)
+			if GameManager.board_ref and GameManager.board_ref.dragged_unit == self:
+				target_3d.y = 0.55
+			unit_3d.position = target_3d
+
 	if is_dead or not is_in_combat:
 		return
 		
@@ -355,6 +401,8 @@ func run_combat_ai(delta: float) -> void:
 	# Flip sprite towards enemy
 	if abs(dir.x) > 0.05:
 		icon_sprite.flip_h = (dir.x < 0)
+		if unit_3d and is_instance_valid(unit_3d) and unit_3d.sprite:
+			unit_3d.sprite.flip_h = (dir.x < 0)
 	
 	if tile_dist <= attack_range + 0.4:
 		# In attack range!
@@ -368,6 +416,8 @@ func run_combat_ai(delta: float) -> void:
 			if icon_sprite.animation != "attack" and icon_sprite.animation != "hurt":
 				if icon_sprite.animation != "idle":
 					icon_sprite.play("idle")
+			if unit_3d and is_instance_valid(unit_3d) and not unit_3d.is_animating_action:
+				unit_3d.play_animation("idle")
 	else:
 		# Move towards enemy
 		var move_speed = 135.0
@@ -375,6 +425,8 @@ func run_combat_ai(delta: float) -> void:
 		if icon_sprite.animation != "attack" and icon_sprite.animation != "hurt":
 			if icon_sprite.animation != "walk":
 				icon_sprite.play("walk")
+		if unit_3d and is_instance_valid(unit_3d) and not unit_3d.is_animating_action:
+			unit_3d.play_animation("walk")
 
 func find_closest_enemy() -> Unit:
 	var potential_targets = get_tree().get_nodes_in_group("units")
@@ -415,6 +467,10 @@ func perform_attack(target: Unit) -> void:
 		
 	attack_count += 1
 	var is_combo = (attack_count % 3 == 0)
+	
+	if unit_3d and is_instance_valid(unit_3d):
+		var target_3d_pos = target.unit_3d.position if (target and target.unit_3d and is_instance_valid(target.unit_3d)) else unit_3d.position + Vector3(0, 0, -1.0)
+		unit_3d.perform_3d_attack_leap(target_3d_pos)
 	
 	# Play attack animation based on basic_attack type
 	var atk_type = basic_attack_info.get("type", "special" if attack_range >= 2 else "physical")
@@ -718,6 +774,9 @@ func cast_skill() -> void:
 	if particles:
 		particles.restart()
 		particles.emitting = true
+		
+	if unit_3d and is_instance_valid(unit_3d):
+		unit_3d.perform_3d_skill_cast()
 		
 	var tw = create_tween()
 	tw.tween_property(icon_sprite, "modulate", Color(2.5, 2.5, 2.5), 0.12)
@@ -1137,6 +1196,10 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 		AudioManager.play_sfx("punch", 1.35, 1.0)
 	
 	# Sprite hit shake & hurt animation
+	if unit_3d and is_instance_valid(unit_3d):
+		unit_3d.perform_3d_hurt()
+		unit_3d.update_bars(current_hp, max_hp, current_mana, max_mana)
+		
 	var hit_tw = create_tween()
 	if is_crit and reduced > 0:
 		hit_tw.tween_property(icon_sprite, "modulate", Color(2.6, 2.0, 0.8), 0.06)
@@ -1241,6 +1304,9 @@ func die() -> void:
 	current_hp = 0
 	update_bars()
 	icon_sprite.play("hurt")
+	if unit_3d and is_instance_valid(unit_3d):
+		unit_3d.perform_3d_death()
+		unit_3d = null
 	
 	if is_enemy:
 		if MegaDatabase:

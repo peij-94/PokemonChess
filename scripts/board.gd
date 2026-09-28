@@ -54,6 +54,7 @@ func init_grid_data() -> void:
 		bench_slots.append(null)
 
 func build_visual_board() -> void:
+	var hide_2d = GameManager.has_meta("arena_3d")
 	for c in range(COLS):
 		for r in range(ROWS):
 			var tile = Sprite2D.new()
@@ -63,13 +64,16 @@ func build_visual_board() -> void:
 			else:
 				tile.texture = load("res://assets/arena/tile_player.png")
 			tile.position = grid_to_world(Vector2i(c, r))
+			if hide_2d:
+				tile.modulate.a = 0.0
 			tiles_container.add_child(tile)
 
 func build_visual_bench() -> void:
+	var hide_2d = GameManager.has_meta("arena_3d")
 	for i in range(BENCH_SLOTS):
 		var slot_tile = Sprite2D.new()
 		slot_tile.texture = load("res://assets/arena/tile_player.png")
-		slot_tile.modulate = Color(0.7, 0.8, 1.0, 0.7)
+		slot_tile.modulate = Color(0.7, 0.8, 1.0, 0.0 if hide_2d else 0.7)
 		slot_tile.position = bench_to_world(i)
 		bench_container.add_child(slot_tile)
 
@@ -301,18 +305,26 @@ func _input(event: InputEvent) -> void:
 			
 		if in_sell:
 			selector_sprite.visible = false
+			if GameManager.has_meta("arena_3d"):
+				GameManager.get_meta("arena_3d").highlight_tile(Vector2i(-1, -1))
 		else:
 			var hover_grid = world_to_grid(dragged_unit.position)
 			if GameManager.current_phase == GameManager.Phase.PREPARATION and hover_grid != Vector2i(-1, -1) and hover_grid.y >= 3:
 				selector_sprite.visible = true
 				selector_sprite.position = grid_to_world(hover_grid)
+				if GameManager.has_meta("arena_3d"):
+					GameManager.get_meta("arena_3d").highlight_tile(hover_grid)
 			else:
 				var hover_bench = world_to_bench(dragged_unit.position)
 				if hover_bench != -1:
 					selector_sprite.visible = true
 					selector_sprite.position = bench_to_world(hover_bench)
+					if GameManager.has_meta("arena_3d"):
+						GameManager.get_meta("arena_3d").highlight_bench(hover_bench)
 				else:
 					selector_sprite.visible = false
+					if GameManager.has_meta("arena_3d"):
+						GameManager.get_meta("arena_3d").highlight_tile(Vector2i(-1, -1))
 					
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 		if is_dragging and dragged_unit != null:
@@ -391,6 +403,8 @@ func start_drag(unit: Unit) -> void:
 	GameManager.unit_drag_started.emit(unit, refund)
 
 func end_drag() -> void:
+	if GameManager.has_meta("arena_3d"):
+		GameManager.get_meta("arena_3d").highlight_tile(Vector2i(-1, -1))
 	if dragged_unit == null:
 		return
 	var unit = dragged_unit
@@ -423,6 +437,8 @@ func end_drag() -> void:
 		tw.tween_property(unit, "position", drag_start_pos, 0.12).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 func cancel_drag() -> void:
+	if GameManager.has_meta("arena_3d"):
+		GameManager.get_meta("arena_3d").highlight_tile(Vector2i(-1, -1))
 	if dragged_unit != null:
 		dragged_unit.z_index = 5
 		dragged_unit.scale = Vector2(1.0, 1.0)
@@ -438,6 +454,12 @@ func select_unit(unit: Unit) -> void:
 	selector_sprite.position = unit.position
 	selector_sprite.scale = Vector2(0.85, 0.85)
 	
+	if GameManager.has_meta("arena_3d") and unit:
+		if unit.is_on_bench:
+			GameManager.get_meta("arena_3d").highlight_bench(unit.grid_coord.x)
+		else:
+			GameManager.get_meta("arena_3d").highlight_tile(unit.grid_coord)
+	
 	if selector_tween and selector_tween.is_valid():
 		selector_tween.kill()
 	selector_tween = create_tween().set_loops()
@@ -452,6 +474,8 @@ func deselect_unit() -> void:
 	selector_sprite.rotation = 0.0
 	if selector_tween and selector_tween.is_valid():
 		selector_tween.kill()
+	if GameManager.has_meta("arena_3d"):
+		GameManager.get_meta("arena_3d").highlight_tile(Vector2i(-1, -1))
 
 func try_place_unit_on_grid(unit: Unit, target_coord: Vector2i) -> void:
 	var existing = board_grid[target_coord.x][target_coord.y]

@@ -513,6 +513,21 @@ static func spawn_aura_sphere(parent: Node2D, origin_pos: Vector2, target_pos: V
 # Unified Multi-Tier Skill VFX Dispatcher (Supports all 49 skills)
 # -------------------------------------------------------------
 static func spawn_skill_vfx(vfx_name: String, parent: Node2D, origin_pos: Vector2, target_pos: Vector2, scale_factor: float = 1.0, extra_targets: Array = []) -> void:
+	# If 3D Arena is present, dispatch 3D volumetric skill visual effect
+	if GameManager.has_meta("arena_3d"):
+		var a3d: Arena3D = GameManager.get_meta("arena_3d")
+		if a3d and is_instance_valid(a3d) and a3d.vfx_container:
+			var o3d = a3d.pos_2d_to_3d(origin_pos)
+			var t3d = a3d.pos_2d_to_3d(target_pos)
+			var extras_3d = []
+			for t in extra_targets:
+				if is_instance_valid(t) and t is Node2D:
+					extras_3d.append(a3d.pos_2d_to_3d(t.position))
+				elif t is Vector2:
+					extras_3d.append(a3d.pos_2d_to_3d(t))
+			SkillVFX3D.spawn_skill_vfx_3d(vfx_name, a3d.vfx_container, o3d, t3d, scale_factor, extras_3d)
+			return
+
 	match vfx_name:
 		"thunderbolt":
 			spawn_thunderbolt(parent, target_pos, scale_factor)

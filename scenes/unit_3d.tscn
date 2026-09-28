@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://c6xk2p8m4w1o2"]
+
+[ext_resource type="Script" path="res://scripts/unit_3d.gd" id="1_unit3d"]
+[ext_resource type="Texture2D" path="res://assets/arena/unit_shadow.png" id="2_shadow"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shadow"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.45)
+albedo_texture = ExtResource("2_shadow")
+roughness = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_shadow"]
+material = SubResource("StandardMaterial3D_shadow")
+size = Vector2(1.2, 1.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spark"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.9, 0.3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_spark"]
+material = SubResource("StandardMaterial3D_spark")
+size = Vector3(0.06, 0.06, 0.06)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_bg"]
+bg_color = Color(0.12, 0.14, 0.18, 0.95)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill"]
+bg_color = Color(0.2, 0.85, 0.35, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mana_bg"]
+bg_color = Color(0.1, 0.12, 0.16, 0.9)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mana_fill"]
+bg_color = Color(0.2, 0.6, 0.95, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Unit3D" type="Node3D"]
+script = ExtResource("1_unit3d")
+
+[node name="Shadow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0)
+mesh = SubResource("PlaneMesh_shadow")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+pixel_size = 0.016
+
+[node name="CastParticles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+emitting = false
+amount = 18
+one_shot = true
+explosiveness = 0.92
+lifetime = 0.45
+mesh = SubResource("BoxMesh_spark")
+emission_shape = 1
+emission_sphere_radius = 0.45
+spread = 180.0
+gravity = Vector3(0, 0.8, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 4.5
+color = Color(1, 0.88, 0.35, 1)
+
+[node name="UIBar3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0)
+billboard = 1
+no_depth_test = true
+texture_filter = 1
+pixel_size = 0.008
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(140, 50)
+render_target_update_mode = 4
+
+[node name="UIContainer" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarContainer" type="HBoxContainer" parent="SubViewport/UIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_top = 2.0
+offset_right = 30.0
+offset_bottom = 18.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="HPBar" type="ProgressBar" parent="SubViewport/UIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 20.0
+offset_right = 55.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_hp_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="SubViewport/UIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 28.0
+offset_right = 55.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_mana_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mana_fill")
+value = 50.0
+show_percentage = false
+
+[node name="NameLabel" type="Label" parent="SubViewport/UIContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 34.0
+offset_right = 60.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 11
+text = "皮卡丘"
+horizontal_alignment = 1
+vertical_alignment = 1

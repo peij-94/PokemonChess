@@ -213,6 +213,8 @@ static func spawn_3d_water_beam(parent: Node3D, origin_pos: Vector3, target_pos:
 	beam.mesh = cyl
 	
 	var mat = StandardMaterial3D.new()
+	mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
+	mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
 	mat.transparency = StandardMaterial3D.TRANSPARENCY_ALPHA
 	mat.albedo_color = Color(0.2, 0.65, 1.0, 0.75)
 	mat.emission_enabled = true
@@ -367,6 +369,8 @@ static func spawn_3d_ice_cataclysm(parent: Node3D, target_pos: Vector3, scale_fa
 		spike.mesh = prism
 		
 		var mat = StandardMaterial3D.new()
+		mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
+		mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
 		mat.transparency = StandardMaterial3D.TRANSPARENCY_ALPHA
 		mat.albedo_color = Color(0.65, 0.90, 1.0, 0.8)
 		mat.roughness = 0.1
@@ -406,6 +410,8 @@ static func spawn_3d_ground_rupture(parent: Node3D, target_pos: Vector3, scale_f
 	ring.mesh = torus
 	
 	var mat = StandardMaterial3D.new()
+	mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
+	mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
 	mat.albedo_color = Color(0.7, 0.5, 0.3)
 	mat.emission_enabled = true
 	mat.emission = Color(0.8, 0.6, 0.2)

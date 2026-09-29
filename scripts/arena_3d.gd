@@ -139,15 +139,17 @@ func build_arena_tiles() -> void:
 			tile.mesh = plane
 			
 			var mat = StandardMaterial3D.new()
-			mat.roughness = 0.65
-			mat.metallic = 0.1
-			# Top 3 rows are enemy side (crimson tint), bottom 3 are player side (cyan/amber tint)
+			mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
+			mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
+			mat.roughness = 0.3
+			mat.metallic = 0.05
+			# Top 3 rows are enemy side (crimson/coral), bottom 3 are player side (cobalt/azure)
 			if r < 3:
 				var is_dark = ((c + r) % 2 == 0)
-				mat.albedo_color = Color(0.38, 0.18, 0.22, 1.0) if is_dark else Color(0.48, 0.22, 0.26, 1.0)
+				mat.albedo_color = Color(0.48, 0.16, 0.22, 1.0) if is_dark else Color(0.58, 0.22, 0.28, 1.0)
 			else:
 				var is_dark = ((c + r) % 2 == 0)
-				mat.albedo_color = Color(0.18, 0.30, 0.42, 1.0) if is_dark else Color(0.24, 0.38, 0.52, 1.0)
+				mat.albedo_color = Color(0.18, 0.36, 0.54, 1.0) if is_dark else Color(0.24, 0.44, 0.64, 1.0)
 			
 			tile.set_surface_override_material(0, mat)
 			tile.position = grid_to_world_3d(Vector2i(c, r)) - Vector3(0, 0.02, 0)
@@ -164,11 +166,13 @@ func build_bench_slots() -> void:
 		slot.mesh = cylinder
 		
 		var mat = StandardMaterial3D.new()
-		mat.albedo_color = Color(0.22, 0.40, 0.55, 0.85)
-		mat.roughness = 0.5
+		mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
+		mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
+		mat.albedo_color = Color(0.24, 0.46, 0.68, 0.90)
+		mat.roughness = 0.3
 		mat.emission_enabled = true
-		mat.emission = Color(0.1, 0.25, 0.4)
-		mat.emission_energy_multiplier = 0.4
+		mat.emission = Color(0.12, 0.28, 0.48)
+		mat.emission_energy_multiplier = 0.45
 		slot.set_surface_override_material(0, mat)
 		
 		slot.position = bench_to_world_3d(i)

@@ -14,9 +14,11 @@ glow_intensity = 0.6
 glow_bloom = 0.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+diffuse_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("2_floor")
 uv1_scale = Vector3(1, 1, 1)
-roughness = 0.8
+roughness = 0.4
 metallic = 0.05
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
@@ -43,8 +45,9 @@ environment = SubResource("Environment_3d")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 5, 14, 8)
 light_color = Color(1, 0.96, 0.9, 1)
-light_energy = 1.15
+light_energy = 1.30
 shadow_enabled = true
+directional_shadow_mode = 0
 shadow_bias = 0.04
 directional_shadow_max_distance = 35.0
 

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="PokemonAutoChess"
+config/name="PokemonChess"
 config/name_localized={
 "zh": "宝可梦自走棋"
 }
@@ -40,7 +40,7 @@ window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="PokemonAutoChess"
+project/assembly_name="PokemonChess"
 
 [rendering]
 

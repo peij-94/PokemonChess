@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/pokedex_modal.tscn" id="6_pokedex"]
 [ext_resource type="PackedScene" path="res://scenes/arena_modal.tscn" id="7_arena"]
 [ext_resource type="PackedScene" path="res://scenes/dps_meter.tscn" id="8_dps"]
+[ext_resource type="PackedScene" path="res://scenes/arena_3d.tscn" id="9_arena_3d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_topbar"]
 bg_color = Color(0.09, 0.11, 0.16, 0.95)
@@ -127,6 +128,7 @@ mouse_filter = 2
 color = Color(0.04, 0.05, 0.08, 0.25)
 
 [node name="ArenaMat" type="ColorRect" parent="Background"]
+visible = false
 layout_mode = 0
 offset_left = 370.0
 offset_top = 66.0
@@ -136,6 +138,7 @@ mouse_filter = 2
 color = Color(0.1, 0.12, 0.18, 0.45)
 
 [node name="BenchMat" type="ColorRect" parent="Background"]
+visible = false
 layout_mode = 0
 offset_left = 346.0
 offset_top = 470.0
@@ -143,6 +146,19 @@ offset_right = 934.0
 offset_bottom = 554.0
 mouse_filter = 2
 color = Color(0.08, 0.1, 0.15, 0.5)
+
+[node name="Viewport3DContainer" type="SubViewportContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Viewport3DContainer"]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Arena3D" parent="Viewport3DContainer/SubViewport" instance=ExtResource("9_arena_3d")]
 
 [node name="Board" type="Node2D" parent="."]
 script = ExtResource("2_board")

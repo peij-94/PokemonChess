@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://dm6u5g8w2k9q1"]
+
+[ext_resource type="Script" path="res://scripts/showcase_3d_models.gd" id="1_showcase"]
+
+[sub_resource type="Environment" id="Environment_showcase"]
+background_mode = 1
+background_color = Color(0.06, 0.07, 0.10, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.60, 0.72, 1)
+ambient_light_energy = 0.95
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 0.4
+glow_bloom = 0.15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.08, 0.09, 0.13, 1)
+roughness = 0.25
+metallic = 0.15
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("StandardMaterial3D_floor")
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pedestal"]
+transparency = 1
+albedo_color = Color(0.18, 0.48, 0.88, 0.88)
+roughness = 0.16
+metallic = 0.10
+clearcoat_enabled = true
+clearcoat = 0.85
+rim_enabled = true
+rim = 0.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pedestal"]
+material = SubResource("StandardMaterial3D_pedestal")
+top_radius = 0.65
+bottom_radius = 0.70
+height = 0.08
+radial_segments = 36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gold"]
+albedo_color = Color(1, 0.84, 0.35, 1)
+metallic = 0.92
+roughness = 0.20
+clearcoat_enabled = true
+clearcoat = 0.7
+
+[sub_resource type="TorusMesh" id="TorusMesh_gold"]
+material = SubResource("StandardMaterial3D_gold")
+inner_radius = 0.63
+outer_radius = 0.71
+rings = 36
+ring_segments = 16
+
+[node name="Showcase3D" type="Node3D"]
+script = ExtResource("1_showcase")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_showcase")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 4, 8, 5)
+light_color = Color(1, 0.98, 0.93, 1)
+light_energy = 1.40
+shadow_enabled = true
+directional_shadow_mode = 2
+shadow_blur = 1.2
+shadow_bias = 0.02
+
+[node name="FillLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, 0.353553, -0.612372, -4, 6, -4)
+light_color = Color(0.65, 0.78, 0.98, 1)
+light_energy = 0.55
+shadow_enabled = false
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 1.6, 3.8)
+fov = 42.0
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="Turntable" type="Node3D" parent="."]
+
+[node name="PikachuSlot" type="Node3D" parent="Turntable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+
+[node name="PedestalCylinder" type="MeshInstance3D" parent="Turntable/PikachuSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+mesh = SubResource("CylinderMesh_pedestal")
+
+[node name="GoldRim" type="MeshInstance3D" parent="Turntable/PikachuSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045, 0)
+mesh = SubResource("TorusMesh_gold")
+
+[node name="CharmanderSlot" type="Node3D" parent="Turntable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -0.4)
+
+[node name="PedestalCylinder" type="MeshInstance3D" parent="Turntable/CharmanderSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+mesh = SubResource("CylinderMesh_pedestal")
+
+[node name="GoldRim" type="MeshInstance3D" parent="Turntable/CharmanderSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045, 0)
+mesh = SubResource("TorusMesh_gold")
+
+[node name="SquirtleSlot" type="Node3D" parent="Turntable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -0.4)
+
+[node name="PedestalCylinder" type="MeshInstance3D" parent="Turntable/SquirtleSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+mesh = SubResource("CylinderMesh_pedestal")
+
+[node name="GoldRim" type="MeshInstance3D" parent="Turntable/SquirtleSlot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045, 0)
+mesh = SubResource("TorusMesh_gold")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 24.0
+offset_right = 300.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "★ 开源 3D 宝可梦低模实机展台 (Pikachu / Charmander / Squirtle) ★"
+horizontal_alignment = 1

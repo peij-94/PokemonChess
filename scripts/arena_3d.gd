@@ -131,50 +131,99 @@ func highlight_bench(slot_idx: int, color: Color = Color(1.0, 0.9, 0.3, 0.7)) ->
 		selector_3d.visible = true
 
 func build_arena_tiles() -> void:
+	# Gold bevel material shared across tiles
+	var gold_bevel_mat = StandardMaterial3D.new()
+	gold_bevel_mat.albedo_color = Color(0.76, 0.64, 0.38, 1.0)
+	gold_bevel_mat.metallic = 0.88
+	gold_bevel_mat.roughness = 0.26
+	gold_bevel_mat.clearcoat_enabled = true
+	gold_bevel_mat.clearcoat = 0.5
+	
 	for c in range(COLS):
 		for r in range(ROWS):
-			var tile = MeshInstance3D.new()
-			var plane = BoxMesh.new()
-			plane.size = Vector3(CELL_SIZE_3D * 0.94, 0.04, CELL_SIZE_3D * 0.94)
-			tile.mesh = plane
+			var tile_group = Node3D.new()
+			tile_group.position = grid_to_world_3d(Vector2i(c, r))
+			
+			# Outer metallic gold chamfer inlay
+			var border_mesh = MeshInstance3D.new()
+			var border_box = BoxMesh.new()
+			border_box.size = Vector3(CELL_SIZE_3D * 0.96, 0.02, CELL_SIZE_3D * 0.96)
+			border_mesh.mesh = border_box
+			border_mesh.position = Vector3(0, -0.015, 0)
+			border_mesh.set_surface_override_material(0, gold_bevel_mat)
+			tile_group.add_child(border_mesh)
+			
+			# Inner polished tabletop stone / wood slab
+			var slab_mesh = MeshInstance3D.new()
+			var slab_box = BoxMesh.new()
+			slab_box.size = Vector3(CELL_SIZE_3D * 0.92, 0.035, CELL_SIZE_3D * 0.92)
+			slab_mesh.mesh = slab_box
+			slab_mesh.position = Vector3(0, -0.005, 0)
 			
 			var mat = StandardMaterial3D.new()
-			mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
-			mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
-			mat.roughness = 0.3
-			mat.metallic = 0.05
-			# Top 3 rows are enemy side (crimson/coral), bottom 3 are player side (cobalt/azure)
-			if r < 3:
-				var is_dark = ((c + r) % 2 == 0)
-				mat.albedo_color = Color(0.48, 0.16, 0.22, 1.0) if is_dark else Color(0.58, 0.22, 0.28, 1.0)
-			else:
-				var is_dark = ((c + r) % 2 == 0)
-				mat.albedo_color = Color(0.18, 0.36, 0.54, 1.0) if is_dark else Color(0.24, 0.44, 0.64, 1.0)
+			mat.roughness = 0.24
+			mat.metallic = 0.12
+			mat.clearcoat_enabled = true
+			mat.clearcoat = 0.65
+			mat.clearcoat_roughness = 0.15
 			
-			tile.set_surface_override_material(0, mat)
-			tile.position = grid_to_world_3d(Vector2i(c, r)) - Vector3(0, 0.02, 0)
-			tiles_node.add_child(tile)
-			tile_meshes[Vector2i(c, r)] = tile
+			# Top 3 rows: Enemy mahogany/crimson slate. Bottom 3 rows: Player obsidian/cobalt slate
+			var is_dark = ((c + r) % 2 == 0)
+			if r < 3:
+				mat.albedo_color = Color(0.25, 0.08, 0.12, 1.0) if is_dark else Color(0.35, 0.13, 0.18, 1.0)
+			else:
+				mat.albedo_color = Color(0.10, 0.16, 0.28, 1.0) if is_dark else Color(0.16, 0.25, 0.40, 1.0)
+			
+			slab_mesh.set_surface_override_material(0, mat)
+			tile_group.add_child(slab_mesh)
+			
+			tiles_node.add_child(tile_group)
+			tile_meshes[Vector2i(c, r)] = slab_mesh
 
 func build_bench_slots() -> void:
 	for i in range(8):
-		var slot = MeshInstance3D.new()
+		var slot_group = Node3D.new()
+		slot_group.position = bench_to_world_3d(i)
+		
+		# Acrylic dock socket
+		var dock_mesh = MeshInstance3D.new()
 		var cylinder = CylinderMesh.new()
-		cylinder.top_radius = 0.65
+		cylinder.top_radius = 0.66
 		cylinder.bottom_radius = 0.70
-		cylinder.height = 0.06
-		slot.mesh = cylinder
+		cylinder.height = 0.04
+		cylinder.radial_segments = 36
+		dock_mesh.mesh = cylinder
+		dock_mesh.position = Vector3(0, 0.015, 0)
 		
 		var mat = StandardMaterial3D.new()
-		mat.diffuse_mode = BaseMaterial3D.DIFFUSE_TOON
-		mat.specular_mode = BaseMaterial3D.SPECULAR_TOON
-		mat.albedo_color = Color(0.24, 0.46, 0.68, 0.90)
-		mat.roughness = 0.3
+		mat.albedo_color = Color(0.12, 0.22, 0.36, 0.92)
+		mat.roughness = 0.18
+		mat.metallic = 0.15
+		mat.clearcoat_enabled = true
+		mat.clearcoat = 0.75
 		mat.emission_enabled = true
-		mat.emission = Color(0.12, 0.28, 0.48)
+		mat.emission = Color(0.12, 0.32, 0.58)
 		mat.emission_energy_multiplier = 0.45
-		slot.set_surface_override_material(0, mat)
+		dock_mesh.set_surface_override_material(0, mat)
+		slot_group.add_child(dock_mesh)
 		
-		slot.position = bench_to_world_3d(i)
-		bench_node.add_child(slot)
-		bench_meshes.append(slot)
+		# Gold metallic socket rim
+		var rim_mesh = MeshInstance3D.new()
+		var torus = TorusMesh.new()
+		torus.inner_radius = 0.64
+		torus.outer_radius = 0.71
+		torus.rings = 36
+		rim_mesh.mesh = torus
+		rim_mesh.position = Vector3(0, 0.03, 0)
+		
+		var rim_mat = StandardMaterial3D.new()
+		rim_mat.albedo_color = Color(0.96, 0.84, 0.38, 1.0)
+		rim_mat.metallic = 0.90
+		rim_mat.roughness = 0.20
+		rim_mat.clearcoat_enabled = true
+		rim_mat.clearcoat = 0.6
+		rim_mesh.set_surface_override_material(0, rim_mat)
+		slot_group.add_child(rim_mesh)
+		
+		bench_node.add_child(slot_group)
+		bench_meshes.append(dock_mesh)

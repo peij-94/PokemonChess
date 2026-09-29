@@ -335,8 +335,9 @@ func _process(delta: float) -> void:
 			var a3d: Arena3D = GameManager.get_meta("arena_3d", null) if GameManager.has_meta("arena_3d") else null
 			if a3d:
 				var target_3d = a3d.pos_2d_to_3d(position, is_on_bench)
-				if GameManager.board_ref and GameManager.board_ref.dragged_unit == self:
-					target_3d.y = 0.55
+				if unit_3d.is_dragged or unit_3d.drag_elevation > 0.001:
+					target_3d.y = unit_3d.drag_elevation
+					unit_3d.update_drag_motion(target_3d)
 				unit_3d.position = target_3d
 
 	if is_dead or not is_in_combat:

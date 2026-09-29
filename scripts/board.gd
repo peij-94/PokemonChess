@@ -397,6 +397,8 @@ func start_drag(unit: Unit) -> void:
 	is_hovering_sell_zone = false
 	unit.z_index = 50
 	create_tween().tween_property(unit, "scale", Vector2(1.12, 1.12), 0.08)
+	if unit.unit_3d and is_instance_valid(unit.unit_3d):
+		unit.unit_3d.perform_pickup()
 	
 	var data = PokemonDatabase.get_pokemon(unit.pokemon_id)
 	var refund = data.get("cost", 1) * int(pow(3, unit.star_level - 1))
@@ -435,6 +437,8 @@ func end_drag() -> void:
 		# Return to start position
 		var tw = create_tween()
 		tw.tween_property(unit, "position", drag_start_pos, 0.12).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		if unit.unit_3d and is_instance_valid(unit.unit_3d):
+			unit.unit_3d.perform_drop_bounce()
 
 func cancel_drag() -> void:
 	if GameManager.has_meta("arena_3d"):
@@ -443,6 +447,8 @@ func cancel_drag() -> void:
 		dragged_unit.z_index = 5
 		dragged_unit.scale = Vector2(1.0, 1.0)
 		dragged_unit.position = drag_start_pos
+		if dragged_unit.unit_3d and is_instance_valid(dragged_unit.unit_3d):
+			dragged_unit.unit_3d.perform_drop_bounce()
 		dragged_unit = null
 	is_dragging = false
 	is_hovering_sell_zone = false
@@ -525,6 +531,10 @@ func try_place_unit_on_grid(unit: Unit, target_coord: Vector2i) -> void:
 			unit.position = grid_to_world(target_coord)
 			
 	AudioManager.play_sfx("click", 1.0)
+	if unit.unit_3d and is_instance_valid(unit.unit_3d):
+		unit.unit_3d.perform_drop_bounce()
+	if existing != null and existing.unit_3d and is_instance_valid(existing.unit_3d):
+		existing.unit_3d.perform_drop_bounce()
 	deselect_unit()
 	update_synergies()
 
@@ -555,6 +565,10 @@ func try_place_unit_on_bench(unit: Unit, target_slot: int) -> void:
 		unit.position = bench_to_world(target_slot)
 		
 	AudioManager.play_sfx("click", 1.0)
+	if unit.unit_3d and is_instance_valid(unit.unit_3d):
+		unit.unit_3d.perform_drop_bounce()
+	if existing != null and existing.unit_3d and is_instance_valid(existing.unit_3d):
+		existing.unit_3d.perform_drop_bounce()
 	deselect_unit()
 	update_synergies()
 

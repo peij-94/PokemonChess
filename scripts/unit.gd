@@ -417,11 +417,11 @@ func run_combat_ai(delta: float) -> void:
 	var tile_dist = dist_pixels / 64.0
 	var dir = (target_unit.position - position).normalized()
 	
-	# Flip sprite towards enemy
-	if abs(dir.x) > 0.05:
+	# Flip sprite / rotate 3D model towards enemy
+	if abs(dir.x) > 0.05 or abs(dir.y) > 0.05:
 		icon_sprite.flip_h = (dir.x < 0)
-		if unit_3d and is_instance_valid(unit_3d) and unit_3d.sprite:
-			unit_3d.sprite.flip_h = (dir.x < 0)
+		if unit_3d and is_instance_valid(unit_3d):
+			unit_3d.set_facing(Vector3(dir.x, 0, dir.y))
 	
 	if tile_dist <= attack_range + 0.4:
 		# In attack range!

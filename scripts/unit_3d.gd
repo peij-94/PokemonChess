@@ -3,12 +3,12 @@ class_name Unit3D
 
 # Unit3D: Amiibo / Tabletop Figure 3D Representation for Pokemon Auto-Chess
 # Features:
+# - Supports both genuine 3D GLB models and authentic 2D AnimatedSprite3D billboard fallback
 # - Premium acrylic crystal pedestal base with gold metallic bezel rim
 # - Translucent crystal body (Sapphire for Player, Ruby for Enemy)
 # - Polished metallic rim with Star-level evolution trim (Gold, Platinum, Radiant Prismatic)
 # - Tactile pick-up & drop-snap physics (elevation, dynamic motion tilt, bounce compression)
 # - Weighted tabletop clack impact sound & ground impact dust particles
-# - Authentic AnimatedSprite3D with dynamic billboard lighting
 # - 3D floating status bar & elemental particles
 
 @onready var sprite: AnimatedSprite3D = $Sprite
@@ -34,6 +34,11 @@ var pokemon_id: String = ""
 var star_level: int = 1
 var is_enemy: bool = false
 var base_scale_3d: Vector3 = Vector3(1, 1, 1)
+
+# True 3D GLB Model Instance
+var model_3d: Node3D = null
+var anim_player_3d: AnimationPlayer = null
+var model_base_y: float = 0.08
 
 # Tactile Amiibo Drag & Drop state
 var is_dragged: bool = false
@@ -83,17 +88,17 @@ func setup_visuals(p_id: String, p_star: int, p_is_enemy: bool, p_name: String) 
 	if name_label:
 		name_label.text = p_name
 	
-	# Load sprite frames from PokemonDatabase
-	var sf = PokemonDatabase.get_sprite_frames(pokemon_id)
-	sprite.sprite_frames = sf
-	sprite.play("idle")
-	
-	# Adjust sprite size so figurine stands prominently on top of pedestal (~1.25m tall)
-	var target_height = 1.25 + (star_level - 1) * 0.18
-	sprite.pixel_size = 0.016 * (target_height / 1.25)
+	var target_height = 1.15 + (star_level - 1) * 0.16
 	
 	# Configure Amiibo Pedestal Crystal & Gold Materials
 	_apply_pedestal_materials()
+	
+	# Check if a genuine 3D GLB model exists in assets/models/<pokemon_id>.glb
+	var model_path = "res://assets/models/%s.glb" % pokemon_id
+	if FileAccess.file_exists(model_path):
+		_setup_3d_mesh(model_path, target_height)
+	else:
+		_setup_2d_sprite(target_height)
 	
 	# Star badges in 3D UI
 	if star_container:
@@ -114,6 +119,78 @@ func setup_visuals(p_id: String, p_star: int, p_is_enemy: bool, p_name: String) 
 			
 	# Subtle random bob phase so figurines have natural micro-presence
 	bob_time = randf() * PI * 2.0
+
+func _setup_2d_sprite(target_height: float) -> void:
+	if model_3d and is_instance_valid(model_3d):
+		model_3d.visible = false
+	sprite.visible = true
+	var sf = PokemonDatabase.get_sprite_frames(pokemon_id)
+	sprite.sprite_frames = sf
+	sprite.play("idle")
+	sprite.pixel_size = 0.016 * (target_height / 1.15)
+
+func _setup_3d_mesh(model_path: String, target_height: float) -> void:
+	sprite.visible = false
+	if model_3d != null and is_instance_valid(model_3d):
+		model_3d.queue_free()
+		model_3d = null
+		anim_player_3d = null
+		
+	var gltf = GLTFDocument.new()
+	var state = GLTFState.new()
+	var err = gltf.append_from_file(model_path, state)
+	if err != OK:
+		_setup_2d_sprite(target_height)
+		return
+		
+	model_3d = gltf.generate_scene(state)
+	if model_3d == null:
+		_setup_2d_sprite(target_height)
+		return
+		
+	add_child(model_3d)
+	
+	# Calculate bounding box to normalize scale
+	var aabb = _calculate_model_aabb(model_3d)
+	var max_dim = max(aabb.size.x, max(aabb.size.y, aabb.size.z))
+	var s = target_height / max_dim if max_dim > 0.001 else 1.0
+	model_3d.scale = Vector3(s, s, s)
+	
+	model_base_y = -aabb.position.y * s + 0.08
+	model_3d.position.x = -(aabb.position.x + aabb.size.x * 0.5) * s
+	model_3d.position.z = -(aabb.position.z + aabb.size.z * 0.5) * s
+	model_3d.position.y = model_base_y
+	
+	# Facing orientation: player units face towards enemy side (-Z), enemy units face (+Z)
+	if is_enemy:
+		model_3d.rotation.y = 0.0
+	else:
+		model_3d.rotation.y = PI
+		
+	anim_player_3d = model_3d.find_child("AnimationPlayer", true, false)
+	if anim_player_3d:
+		var anims = anim_player_3d.get_animation_list()
+		if not anims.is_empty():
+			anim_player_3d.play(anims[0])
+
+func _calculate_model_aabb(node: Node) -> AABB:
+	var total_aabb = AABB()
+	var first = true
+	var stack = [node]
+	while not stack.is_empty():
+		var curr = stack.pop_back()
+		if curr is MeshInstance3D and curr.mesh:
+			var maabb = curr.get_aabb()
+			if first:
+				total_aabb = maabb
+				first = false
+			else:
+				total_aabb = total_aabb.merge(maabb)
+		for c in curr.get_children():
+			stack.push_back(c)
+	if first:
+		return AABB(Vector3(-0.5, 0, -0.5), Vector3(1, 1, 1))
+	return total_aabb
 
 func _apply_pedestal_materials() -> void:
 	if crystal_mat:
@@ -177,8 +254,24 @@ func update_bars(current_hp: float, max_hp: float, current_mana: float, max_mana
 		mana_bar.value = current_mana
 
 func play_animation(anim_name: String) -> void:
-	if sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
+	if anim_player_3d and is_instance_valid(anim_player_3d):
+		if anim_player_3d.has_animation(anim_name):
+			anim_player_3d.play(anim_name)
+			return
+		elif anim_name == "attack":
+			for a in ["attack", "Attack", "Impactrueno", "hit", "strike"]:
+				if anim_player_3d.has_animation(a):
+					anim_player_3d.play(a)
+					return
+	if sprite.visible and sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
 		sprite.play(anim_name)
+
+func set_facing(dir_3d: Vector3) -> void:
+	if model_3d and is_instance_valid(model_3d) and dir_3d.length_squared() > 0.01:
+		var target_rot = atan2(dir_3d.x, dir_3d.z)
+		model_3d.rotation.y = lerp_angle(model_3d.rotation.y, target_rot, 0.25)
+	elif sprite.visible:
+		sprite.flip_h = (dir_3d.x < 0)
 
 func _process(delta: float) -> void:
 	# Keep floor shadow on the ground plane when unit is lifted during dragging
@@ -189,18 +282,29 @@ func _process(delta: float) -> void:
 		# Smoothly lerp towards drag tilt
 		current_tilt = current_tilt.lerp(tilt_target, delta * 12.0)
 		pedestal.rotation = current_tilt
-		sprite.rotation = current_tilt * 0.7
+		if sprite.visible:
+			sprite.rotation = current_tilt * 0.7
+		elif model_3d and is_instance_valid(model_3d):
+			model_3d.rotation.x = current_tilt.x * 0.8
+			model_3d.rotation.z = current_tilt.z * 0.8
 		# Gradually decay tilt target towards neutral if no further motion
 		tilt_target = tilt_target.lerp(Vector3.ZERO, delta * 6.0)
 	else:
 		# Settle rotation
 		pedestal.rotation = pedestal.rotation.lerp(Vector3.ZERO, delta * 15.0)
-		sprite.rotation = sprite.rotation.lerp(Vector3.ZERO, delta * 15.0)
-		
+		if sprite.visible:
+			sprite.rotation = sprite.rotation.lerp(Vector3.ZERO, delta * 15.0)
+		elif model_3d and is_instance_valid(model_3d):
+			model_3d.rotation.x = lerpf(model_3d.rotation.x, 0.0, delta * 15.0)
+			model_3d.rotation.z = lerpf(model_3d.rotation.z, 0.0, delta * 15.0)
+			
 		if not is_animating_action:
 			bob_time += delta * 2.8
 			# Subtle tactile breathing: Pokemon figurine slightly bobs on pedestal
-			sprite.position.y = 0.70 + sin(bob_time) * 0.02
+			if sprite.visible:
+				sprite.position.y = 0.70 + sin(bob_time) * 0.02
+			elif model_3d and is_instance_valid(model_3d):
+				model_3d.position.y = model_base_y + sin(bob_time) * 0.015
 
 # === TACTILE AMIIBO DRAG & DROP SYSTEM ===
 
@@ -234,8 +338,6 @@ func update_drag_motion(current_world_pos: Vector3) -> void:
 	last_drag_pos = current_world_pos
 	
 	# Tilt physically into movement direction:
-	# delta_v.x -> roll (Z axis tilt)
-	# delta_v.z -> pitch (X axis tilt)
 	var roll = clamp(-delta_v.x * 2.8, -0.28, 0.28)
 	var pitch = clamp(delta_v.z * 2.8, -0.28, 0.28)
 	tilt_target = Vector3(pitch, 0.0, roll)
@@ -315,13 +417,15 @@ func perform_3d_skill_cast() -> void:
 	var tw = create_tween()
 	# Elevate in 3D air with radiant pedestal rim glow
 	tw.tween_property(self, "position:y", home_y + 0.45, 0.16).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	tw.parallel().tween_property(sprite, "modulate", Color(2.4, 2.4, 2.4), 0.16)
+	if sprite.visible:
+		tw.parallel().tween_property(sprite, "modulate", Color(2.4, 2.4, 2.4), 0.16)
 	if rim_mat:
 		tw.parallel().tween_property(rim_mat, "emission_energy_multiplier", 2.2, 0.16)
 		
 	# Lands firmly back on board
 	tw.tween_property(self, "position:y", home_y, 0.20).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
-	tw.parallel().tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0), 0.20)
+	if sprite.visible:
+		tw.parallel().tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0), 0.20)
 	if rim_mat:
 		tw.parallel().tween_property(rim_mat, "emission_energy_multiplier", 0.8, 0.20)
 		
@@ -336,16 +440,17 @@ func perform_3d_hurt() -> void:
 	play_animation("hurt")
 	var home_pos = position
 	var tw = create_tween()
-	tw.tween_property(sprite, "modulate", Color(3.0, 0.5, 0.5), 0.08)
+	if sprite.visible:
+		tw.tween_property(sprite, "modulate", Color(3.0, 0.5, 0.5), 0.08)
 	tw.parallel().tween_property(pedestal, "rotation:x", 0.18, 0.08)
 	tw.parallel().tween_property(self, "position", home_pos + Vector3(0, 0.10, 0.12), 0.08)
 	
-	tw.tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0), 0.12)
+	if sprite.visible:
+		tw.tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0), 0.12)
 	tw.parallel().tween_property(pedestal, "rotation:x", 0.0, 0.12)
 	tw.parallel().tween_property(self, "position", home_pos, 0.12)
 	tw.tween_callback(func():
-		if sprite.animation == "hurt":
-			play_animation("idle")
+		play_animation("idle")
 	)
 
 # 3D Dissolve Death: Figurine shrinks into acrylic pedestal and vanishes
@@ -356,7 +461,8 @@ func perform_3d_death() -> void:
 		ui_bar_3d.visible = false
 	var tw = create_tween()
 	tw.tween_property(self, "scale", Vector3(0.08, 0.08, 0.08), 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	tw.parallel().tween_property(sprite, "modulate:a", 0.0, 0.35)
+	if sprite.visible:
+		tw.parallel().tween_property(sprite, "modulate:a", 0.0, 0.35)
 	if crystal_mat:
 		tw.parallel().tween_property(crystal_mat, "albedo_color:a", 0.0, 0.35)
 	tw.tween_callback(queue_free)

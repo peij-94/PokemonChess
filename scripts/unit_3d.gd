@@ -36,6 +36,7 @@ var is_enemy: bool = false
 var base_scale_3d: Vector3 = Vector3(1, 1, 1)
 
 # True 3D GLB Model Instance
+var model_anchor: Node3D = null
 var model_3d: Node3D = null
 var anim_player_3d: AnimationPlayer = null
 var model_base_y: float = 0.08
@@ -131,7 +132,12 @@ func _setup_2d_sprite(target_height: float) -> void:
 
 func _setup_3d_mesh(model_path: String, target_height: float) -> void:
 	sprite.visible = false
-	if model_3d != null and is_instance_valid(model_3d):
+	if model_anchor != null and is_instance_valid(model_anchor):
+		model_anchor.queue_free()
+		model_anchor = null
+		model_3d = null
+		anim_player_3d = null
+	elif model_3d != null and is_instance_valid(model_3d):
 		model_3d.queue_free()
 		model_3d = null
 		anim_player_3d = null
@@ -148,7 +154,11 @@ func _setup_3d_mesh(model_path: String, target_height: float) -> void:
 		_setup_2d_sprite(target_height)
 		return
 		
-	add_child(model_3d)
+	model_anchor = Node3D.new()
+	model_anchor.name = "ModelAnchor"
+	model_anchor.position = Vector3(0, model_base_y, 0)
+	add_child(model_anchor)
+	model_anchor.add_child(model_3d)
 	
 	# Calculate bounding box to normalize scale
 	var aabb = _calculate_model_aabb(model_3d)
@@ -156,16 +166,16 @@ func _setup_3d_mesh(model_path: String, target_height: float) -> void:
 	var s = target_height / max_dim if max_dim > 0.001 else 1.0
 	model_3d.scale = Vector3(s, s, s)
 	
-	model_base_y = -aabb.position.y * s + 0.08
+	# Position model inside anchor so feet are grounded and centered horizontally
 	model_3d.position.x = -(aabb.position.x + aabb.size.x * 0.5) * s
+	model_3d.position.y = -aabb.position.y * s
 	model_3d.position.z = -(aabb.position.z + aabb.size.z * 0.5) * s
-	model_3d.position.y = model_base_y
 	
 	# Facing orientation: player units face towards enemy side (-Z), enemy units face (+Z)
 	if is_enemy:
-		model_3d.rotation.y = 0.0
+		model_anchor.rotation.y = 0.0
 	else:
-		model_3d.rotation.y = PI
+		model_anchor.rotation.y = PI
 		
 	anim_player_3d = model_3d.find_child("AnimationPlayer", true, false)
 	if anim_player_3d:
@@ -267,9 +277,10 @@ func play_animation(anim_name: String) -> void:
 		sprite.play(anim_name)
 
 func set_facing(dir_3d: Vector3) -> void:
-	if model_3d and is_instance_valid(model_3d) and dir_3d.length_squared() > 0.01:
+	var anchor_target = model_anchor if (model_anchor and is_instance_valid(model_anchor)) else model_3d
+	if anchor_target and is_instance_valid(anchor_target) and dir_3d.length_squared() > 0.01:
 		var target_rot = atan2(dir_3d.x, dir_3d.z)
-		model_3d.rotation.y = lerp_angle(model_3d.rotation.y, target_rot, 0.25)
+		anchor_target.rotation.y = lerp_angle(anchor_target.rotation.y, target_rot, 0.25)
 	elif sprite.visible:
 		sprite.flip_h = (dir_3d.x < 0)
 
@@ -278,15 +289,16 @@ func _process(delta: float) -> void:
 	if floor_shadow:
 		floor_shadow.position.y = -drag_elevation + 0.008
 		
+	var anchor_target = model_anchor if (model_anchor and is_instance_valid(model_anchor)) else model_3d
 	if is_dragged:
 		# Smoothly lerp towards drag tilt
 		current_tilt = current_tilt.lerp(tilt_target, delta * 12.0)
 		pedestal.rotation = current_tilt
 		if sprite.visible:
 			sprite.rotation = current_tilt * 0.7
-		elif model_3d and is_instance_valid(model_3d):
-			model_3d.rotation.x = current_tilt.x * 0.8
-			model_3d.rotation.z = current_tilt.z * 0.8
+		elif anchor_target and is_instance_valid(anchor_target):
+			anchor_target.rotation.x = current_tilt.x * 0.8
+			anchor_target.rotation.z = current_tilt.z * 0.8
 		# Gradually decay tilt target towards neutral if no further motion
 		tilt_target = tilt_target.lerp(Vector3.ZERO, delta * 6.0)
 	else:
@@ -294,17 +306,17 @@ func _process(delta: float) -> void:
 		pedestal.rotation = pedestal.rotation.lerp(Vector3.ZERO, delta * 15.0)
 		if sprite.visible:
 			sprite.rotation = sprite.rotation.lerp(Vector3.ZERO, delta * 15.0)
-		elif model_3d and is_instance_valid(model_3d):
-			model_3d.rotation.x = lerpf(model_3d.rotation.x, 0.0, delta * 15.0)
-			model_3d.rotation.z = lerpf(model_3d.rotation.z, 0.0, delta * 15.0)
+		elif anchor_target and is_instance_valid(anchor_target):
+			anchor_target.rotation.x = lerpf(anchor_target.rotation.x, 0.0, delta * 15.0)
+			anchor_target.rotation.z = lerpf(anchor_target.rotation.z, 0.0, delta * 15.0)
 			
 		if not is_animating_action:
 			bob_time += delta * 2.8
 			# Subtle tactile breathing: Pokemon figurine slightly bobs on pedestal
 			if sprite.visible:
 				sprite.position.y = 0.70 + sin(bob_time) * 0.02
-			elif model_3d and is_instance_valid(model_3d):
-				model_3d.position.y = model_base_y + sin(bob_time) * 0.015
+			elif anchor_target and is_instance_valid(anchor_target):
+				anchor_target.position.y = model_base_y + sin(bob_time) * 0.015
 
 # === TACTILE AMIIBO DRAG & DROP SYSTEM ===
 

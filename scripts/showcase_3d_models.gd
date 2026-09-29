@@ -36,7 +36,13 @@ func load_and_setup_models() -> void:
 		if model == null:
 			continue
 			
-		# Normalize model scale to fit tabletop pedestal (~1.0m to 1.2m)
+		var pivot = Node3D.new()
+		pivot.name = key + "_Pivot"
+		pivot.position = Vector3(0, 0.08, 0)
+		slot.add_child(pivot)
+		pivot.add_child(model)
+		
+		# Normalize model scale to fit tabletop pedestal (~1.0m to 1.15m)
 		var aabb = _calculate_model_aabb(model)
 		var max_dim = max(aabb.size.x, max(aabb.size.y, aabb.size.z))
 		if max_dim > 0.001:
@@ -44,11 +50,9 @@ func load_and_setup_models() -> void:
 			var s = target_sz / max_dim
 			model.scale = Vector3(s, s, s)
 			# Center horizontally and position feet on pedestal surface
-			model.position.y = -aabb.position.y * s + 0.08
+			model.position.y = -aabb.position.y * s
 			model.position.x = -(aabb.position.x + aabb.size.x * 0.5) * s
 			model.position.z = -(aabb.position.z + aabb.size.z * 0.5) * s
-			
-		slot.add_child(model)
 		
 		# Play animations if available
 		var anim_player: AnimationPlayer = model.find_child("AnimationPlayer", true, false)

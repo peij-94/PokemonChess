@@ -124,10 +124,10 @@ func _ready() -> void:
 	
 	# Test interactive skill VFX playback button
 	pokedex.play_skill_vfx("pikachu", false)
-	print("[PASS] All 152 Pokémon lore, stats, skill details, and animated VFX previews verified in Pokédex!")
+	print("[PASS] All %d Pokémon lore, stats, skill details, and animated VFX previews verified in Pokédex!" % PokemonDatabase.pokemons.size())
 	
-	# Test Star-Level Specific Skills (456 unique skills across 152 Pokemon)
-	print("\nTesting Star-Level Skills (152 Pokemon x 3 Stars = 456 Skills):")
+	# Test Star-Level Specific Skills
+	print("\nTesting Star-Level Skills (%d Pokemon x 3 Stars = %d Skills):" % [PokemonDatabase.pokemons.size(), PokemonDatabase.pokemons.size() * 3])
 
 	for pid in PokemonDatabase.pokemons:
 		var data = PokemonDatabase.get_pokemon(pid)
@@ -256,7 +256,7 @@ func _ready() -> void:
 	
 	anim_unit.queue_free()
 	dummy_target.queue_free()
-	print("[PASS] All 152 Pokémon sprite sheets verified with complete Walk, Attack, Hurt animation loops!")
+	print("[PASS] All %d Pokémon sprite sheets verified with complete Walk, Attack, Hurt animation loops!" % PokemonDatabase.pokemons.size())
 
 
 	# Test Skill Animated Sprite Sheets & VFX Generation (14 Skills)
@@ -295,8 +295,8 @@ func _ready() -> void:
 	SkillVFX.spawn_aura_sphere(main_node, spawn_origin, spawn_target)
 	print("[PASS] All 14 legacy skill animated sprite sequences loaded and spawned successfully!")
 
-	# Test All 456 Star-Level Skill VFX Differentiation & Spawning (152 Pokemon x 3 Stars)
-	print("\nTesting Tier-Differentiated Skill VFX (456 Unique Skills across 152 Pokémon):")
+	# Test All Star-Level Skill VFX Differentiation & Spawning
+	print("\nTesting Tier-Differentiated Skill VFX (%d Unique Skills across %d Pokémon):" % [PokemonDatabase.pokemons.size() * 3, PokemonDatabase.pokemons.size()])
 	for pid in PokemonDatabase.pokemons:
 		var vfx_1 = PokemonDatabase.get_skill_data(pid, 1).get("vfx", "")
 		var vfx_2 = PokemonDatabase.get_skill_data(pid, 2).get("vfx", "")
@@ -316,7 +316,8 @@ func _ready() -> void:
 			# Test spawning through unified multi-tier dispatcher
 			SkillVFX.spawn_skill_vfx(vfx_name, main_node, spawn_origin, spawn_target, 1.0)
 
-	print("[PASS] All 456 star-level skills verified: 100% unique tier VFX per Pokémon, >=6 frames, and spawned cleanly via SkillVFX!")
+	print("[PASS] All %d star-level skills verified: 100%% unique tier VFX per Pokémon, >=6 frames, and spawned cleanly via SkillVFX!" % (PokemonDatabase.pokemons.size() * 3))
+
 
 
 	print("\n===============================================")

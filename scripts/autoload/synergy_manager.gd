@@ -222,3 +222,43 @@ func get_ice_damage_amp(is_enemy: bool) -> float:
 		return 1.60
 	return 1.0
 
+func get_dark_crit_bonus(is_enemy: bool) -> float:
+	if is_enemy:
+		return 0.0
+	var tier = active_tiers.get("Dark", 0)
+	if tier == 1:
+		return 0.25
+	elif tier >= 2:
+		return 0.45
+	return 0.0
+
+func get_dark_armor_pen(is_enemy: bool) -> float:
+	if is_enemy:
+		return 0.0
+	var tier = active_tiers.get("Dark", 0)
+	if tier == 1:
+		return 0.20
+	elif tier >= 2:
+		return 0.40
+	return 0.0
+
+func get_steel_damage_reduction(is_enemy: bool) -> float:
+	if is_enemy:
+		return 0.0
+	var tier = active_tiers.get("Steel", 0)
+	if tier == 1:
+		return 0.20
+	elif tier >= 2:
+		return 0.30
+	return 0.0
+
+func get_steel_shield_bonus(is_enemy: bool) -> int:
+	if is_enemy:
+		return 0
+	var tier = active_tiers.get("Steel", 0)
+	if tier == 1:
+		return 250
+	elif tier >= 2:
+		return 600
+	return 0
+

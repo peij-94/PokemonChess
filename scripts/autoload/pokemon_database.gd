@@ -20200,12 +20200,31048 @@ var pokemons: Dictionary = {
 			]
 		},
 		"icon": "res://assets/units/mew.png"
+	},
+	"chikorita": {
+		"id": "chikorita",
+		"name": "菊草叶",
+		"title": "叶子宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 565,
+		"atk": 54,
+		"armor": 33,
+		"mr": 33,
+		"range": 2,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，使出【反射壁】。利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，使出【寄生种子】。植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【飞叶快刀】！飞出叶片，切斩对手进行攻击。容易击中要害。 对范围内最多2名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "藤鞭",
+					"desc": "用如同鞭子般弯曲而细长的藤蔓摔打对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【藤鞭】！用如同鞭子般弯曲而细长的藤蔓摔打对手进行攻击。 席卷战场对最多4名敌人造成425点巨额伤害与强力击破！",
+					"power": 425,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "vine_whip",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/chikorita.png"
+	},
+	"bayleef": {
+		"id": "bayleef",
+		"name": "月桂叶",
+		"title": "叶子宝可梦",
+		"cost": 2,
+		"types": ["Grass"],
+		"hp": 662,
+		"atk": 63,
+		"armor": 40,
+		"mr": 40,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，使出【反射壁】。利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，使出【寄生种子】。植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【飞叶快刀】！飞出叶片，切斩对手进行攻击。容易击中要害。 对范围内最多2名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/bayleef.png"
+	},
+	"meganium": {
+		"id": "meganium",
+		"name": "大竺葵",
+		"title": "芳草宝可梦",
+		"cost": 4,
+		"types": ["Grass"],
+		"hp": 792,
+		"atk": 76,
+		"armor": 49,
+		"mr": 49,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "花瓣舞",
+		"skill_desc": "在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。",
+		"skill_detail": "消耗100能量，使出【花瓣舞】。在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。 对目标造成340点伤害。",
+		"skill_power": 340,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "花瓣舞",
+					"desc": "在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。",
+					"detail": "消耗100能量，使出【花瓣舞】。在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，使出【反射壁】。利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，爆发【寄生种子】！植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【叶刃】！像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/meganium.png"
+	},
+	"cyndaquil": {
+		"id": "cyndaquil",
+		"name": "火球鼠",
+		"title": "火鼠宝可梦",
+		"cost": 1,
+		"types": ["Fire"],
+		"hp": 526,
+		"atk": 61,
+		"armor": 23,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰轮】。让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "过热",
+					"desc": "使出全部力量攻击对手。使用之后会因为反作用力，自己的特攻大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【过热】！使出全部力量攻击对手。使用之后会因为反作用力，自己的特攻大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cyndaquil.png"
+	},
+	"quilava": {
+		"id": "quilava",
+		"name": "火岩鼠",
+		"title": "火山宝可梦",
+		"cost": 2,
+		"types": ["Fire"],
+		"hp": 649,
+		"atk": 74,
+		"armor": 30,
+		"mr": 33,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰轮】。让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "过热",
+					"desc": "使出全部力量攻击对手。使用之后会因为反作用力，自己的特攻大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【过热】！使出全部力量攻击对手。使用之后会因为反作用力，自己的特攻大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/quilava.png"
+	},
+	"typhlosion": {
+		"id": "typhlosion",
+		"name": "火暴兽",
+		"title": "火山宝可梦",
+		"cost": 4,
+		"types": ["Fire"],
+		"hp": 779,
+		"atk": 93,
+		"armor": 39,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "陀螺球",
+					"desc": "让身体高速旋转并撞击对手。速度比对手越慢，威力越大。",
+					"detail": "消耗100能量，使出【陀螺球】。让身体高速旋转并撞击对手。速度比对手越慢，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰轮】！让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，释放终极奥义【祸不单行】！接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/typhlosion.png"
+	},
+	"totodile": {
+		"id": "totodile",
+		"name": "小锯鳄",
+		"title": "大颚宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 597,
+		"atk": 64,
+		"armor": 33,
+		"mr": 25,
+		"range": 2,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，释放终极奥义【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/totodile.png"
+	},
+	"croconaw": {
+		"id": "croconaw",
+		"name": "蓝鳄",
+		"title": "大颚宝可梦",
+		"cost": 2,
+		"types": ["Water"],
+		"hp": 695,
+		"atk": 74,
+		"armor": 40,
+		"mr": 32,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，释放终极奥义【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/croconaw.png"
+	},
+	"feraligatr": {
+		"id": "feraligatr",
+		"name": "大力鳄",
+		"title": "大颚宝可梦",
+		"cost": 4,
+		"types": ["Water"],
+		"hp": 825,
+		"atk": 90,
+		"armor": 49,
+		"mr": 41,
+		"range": 2,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，爆发【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【水流尾】！如惊涛骇浪般挥动大尾巴攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/feraligatr.png"
+	},
+	"sentret": {
+		"id": "sentret",
+		"name": "尾立",
+		"title": "放哨宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 500,
+		"atk": 52,
+		"armor": 20,
+		"mr": 24,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，爆发【抓】！用坚硬且无比锋利的爪子抓对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【种子炸弹】！将外壳坚硬的大种子，从上方砸下攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sentret.png"
+	},
+	"furret": {
+		"id": "furret",
+		"name": "大尾立",
+		"title": "长躯干宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 825,
+		"atk": 71,
+		"armor": 33,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，使出【突袭】。可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【雷电拳】！用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/furret.png"
+	},
+	"hoothoot": {
+		"id": "hoothoot",
+		"name": "咕咕",
+		"title": "猫头鹰宝可梦",
+		"cost": 1,
+		"types": ["Normal", "Flying"],
+		"hp": 662,
+		"atk": 45,
+		"armor": 20,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【勇鸟猛攻】！收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/hoothoot.png"
+	},
+	"noctowl": {
+		"id": "noctowl",
+		"name": "猫头夜鹰",
+		"title": "猫头鹰宝可梦",
+		"cost": 3,
+		"types": ["Normal", "Flying"],
+		"hp": 922,
+		"atk": 78,
+		"armor": 26,
+		"mr": 47,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "食梦",
+					"desc": "吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【食梦】。吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dream_eater",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【勇鸟猛攻】！收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/noctowl.png"
+	},
+	"ledyba": {
+		"id": "ledyba",
+		"name": "芭瓢虫",
+		"title": "五星宝可梦",
+		"cost": 1,
+		"types": ["Bug", "Flying"],
+		"hp": 532,
+		"atk": 48,
+		"armor": 20,
+		"mr": 40,
+		"range": 3,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，使出【光墙】。利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，使出【反射壁】。利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "音速拳",
+					"desc": "以迅雷不及掩耳之势出拳。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【音速拳】！以迅雷不及掩耳之势出拳。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，爆发【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ledyba.png"
+	},
+	"ledian": {
+		"id": "ledian",
+		"name": "安瓢虫",
+		"title": "五星宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Flying"],
+		"hp": 630,
+		"atk": 58,
+		"armor": 26,
+		"mr": 53,
+		"range": 3,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，使出【光墙】。利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，使出【反射壁】。利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "音速拳",
+					"desc": "以迅雷不及掩耳之势出拳。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【音速拳】！以迅雷不及掩耳之势出拳。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，爆发【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，释放终极奥义【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ledian.png"
+	},
+	"spinarak": {
+		"id": "spinarak",
+		"name": "圆丝蛛",
+		"title": "吐丝宝可梦",
+		"cost": 1,
+		"types": ["Bug", "Poison"],
+		"hp": 532,
+		"atk": 61,
+		"armor": 22,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸血】。吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，爆发【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，爆发【黑夜魔影】！显示恐怖幻影，只给予对手和自己等级相同的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "污泥波",
+					"desc": "用污泥波攻击自己周围所有的宝可梦。有时会陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【污泥波】！用污泥波攻击自己周围所有的宝可梦。有时会陷入中毒状态。 席卷战场对最多6名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/spinarak.png"
+	},
+	"ariados": {
+		"id": "ariados",
+		"name": "阿利多斯",
+		"title": "长腿宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Poison"],
+		"hp": 727,
+		"atk": 80,
+		"armor": 35,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "致命针刺",
+					"desc": "如果使用此招式打倒对手，攻击会巨幅提高。",
+					"detail": "消耗100能量，使出【致命针刺】。如果使用此招式打倒对手，攻击会巨幅提高。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，爆发【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，爆发【黑夜魔影】！显示恐怖幻影，只给予对手和自己等级相同的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ariados.png"
+	},
+	"crobat": {
+		"id": "crobat",
+		"name": "叉字蝠",
+		"title": "蝙蝠宝可梦",
+		"cost": 4,
+		"types": ["Poison", "Flying"],
+		"hp": 825,
+		"atk": 80,
+		"armor": 40,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.88,
+		"max_mana": 100,
+		"skill_name": "十字毒刃",
+		"skill_desc": "用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。",
+		"skill_detail": "消耗100能量，使出【十字毒刃】。用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "十字毒刃",
+					"desc": "用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。",
+					"detail": "消耗100能量，使出【十字毒刃】。用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸血】！吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，释放终极奥义【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/crobat.png"
+	},
+	"chinchou": {
+		"id": "chinchou",
+		"name": "灯笼鱼",
+		"title": "琵琶鱼宝可梦",
+		"cost": 1,
+		"types": ["Water", "Electric"],
+		"hp": 760,
+		"atk": 58,
+		"armor": 21,
+		"mr": 29,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "电磁波",
+		"skill_desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，使出【电球】。用电气团撞向对手。自己比对手速度越快，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电光】！让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/chinchou.png"
+	},
+	"lanturn": {
+		"id": "lanturn",
+		"name": "电灯怪",
+		"title": "灯宝可梦",
+		"cost": 3,
+		"types": ["Water", "Electric"],
+		"hp": 1085,
+		"atk": 71,
+		"armor": 30,
+		"mr": 38,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "电磁波",
+		"skill_desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，使出【电球】。用电气团撞向对手。自己比对手速度越快，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电光】！让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lanturn.png"
+	},
+	"pichu": {
+		"id": "pichu",
+		"name": "皮丘",
+		"title": "小鼠宝可梦",
+		"cost": 1,
+		"types": ["Electric"],
+		"hp": 450,
+		"atk": 48,
+		"armor": 20,
+		"mr": 20,
+		"range": 3,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "电击",
+		"skill_desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【电击】。发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "雷电拳",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电击】。发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电光】。让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "铁尾",
+					"desc": "使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【铁尾】！使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "iron_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/pichu.png"
+	},
+	"cleffa": {
+		"id": "cleffa",
+		"name": "皮宝宝",
+		"title": "星形宝可梦",
+		"cost": 1,
+		"types": ["Fairy"],
+		"hp": 597,
+		"atk": 51,
+		"armor": 20,
+		"mr": 29,
+		"range": 3,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【精神强念】。向对手发送强大的念力进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "大字爆炎",
+					"desc": "用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【大字爆炎】！用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cleffa.png"
+	},
+	"igglybuff": {
+		"id": "igglybuff",
+		"name": "宝宝丁",
+		"title": "气球宝可梦",
+		"cost": 1,
+		"types": ["Normal", "Fairy"],
+		"hp": 857,
+		"atk": 48,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，使出【日光束】。第１回合收集满满的日光，第２回合发射光束进行攻击。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，爆发【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "大字爆炎",
+					"desc": "用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【大字爆炎】！用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "食梦",
+					"desc": "吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。",
+					"detail": "消耗100能量，释放终极奥义【食梦】！吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dream_eater",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/igglybuff.png"
+	},
+	"togepi": {
+		"id": "togepi",
+		"name": "波克比",
+		"title": "针球宝可梦",
+		"cost": 1,
+		"types": ["Fairy"],
+		"hp": 500,
+		"atk": 48,
+		"armor": 33,
+		"mr": 33,
+		"range": 3,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【神通力】。发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/togepi.png"
+	},
+	"togetic": {
+		"id": "togetic",
+		"name": "波克基古",
+		"title": "幸福宝可梦",
+		"cost": 2,
+		"types": ["Fairy", "Flying"],
+		"hp": 630,
+		"atk": 74,
+		"armor": 42,
+		"mr": 51,
+		"range": 3,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "空气利刃",
+		"skill_desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【空气利刃】。用锐利的风切斩对手进行攻击。容易击中要害。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【空气利刃】。用锐利的风切斩对手进行攻击。容易击中要害。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/togetic.png"
+	},
+	"natu": {
+		"id": "natu",
+		"name": "天然雀",
+		"title": "小鸟宝可梦",
+		"cost": 1,
+		"types": ["Psychic", "Flying"],
+		"hp": 532,
+		"atk": 67,
+		"armor": 24,
+		"mr": 24,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，使出【预知未来】。在使用招式２回合后，向对手发送一团念力进行攻击。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【精神强念】。向对手发送强大的念力进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，爆发【黑夜魔影】！显示恐怖幻影，只给予对手和自己等级相同的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "钢翼",
+					"desc": "用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。",
+					"detail": "消耗100能量，爆发【钢翼】！用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "steel_wing",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/natu.png"
+	},
+	"xatu": {
+		"id": "xatu",
+		"name": "天然鸟",
+		"title": "神秘宝可梦",
+		"cost": 3,
+		"types": ["Psychic", "Flying"],
+		"hp": 695,
+		"atk": 84,
+		"armor": 35,
+		"mr": 35,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "空气斩",
+		"skill_desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【空气斩】。用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+		"skill_power": 250,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【空气斩】。用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，使出【预知未来】。在使用招式２回合后，向对手发送一团念力进行攻击。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，爆发【飞翔】！第１回合飞上天空，第２回合攻击对手。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，释放终极奥义【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/xatu.png"
+	},
+	"mareep": {
+		"id": "mareep",
+		"name": "咩利羊",
+		"title": "绵毛宝可梦",
+		"cost": 1,
+		"types": ["Electric"],
+		"hp": 630,
+		"atk": 64,
+		"armor": 22,
+		"mr": 24,
+		"range": 3,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，使出【电球】。用电气团撞向对手。自己比对手速度越快，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电磁波】！向对手发出微弱的电击，从而让对手陷入麻痹状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/mareep.png"
+	},
+	"flaaffy": {
+		"id": "flaaffy",
+		"name": "茸茸羊",
+		"title": "绵毛宝可梦",
+		"cost": 2,
+		"types": ["Electric"],
+		"hp": 727,
+		"atk": 74,
+		"armor": 29,
+		"mr": 31,
+		"range": 3,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，使出【电球】。用电气团撞向对手。自己比对手速度越快，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电击】！发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/flaaffy.png"
+	},
+	"ampharos": {
+		"id": "ampharos",
+		"name": "电龙",
+		"title": "灯宝可梦",
+		"cost": 3,
+		"types": ["Electric"],
+		"hp": 857,
+		"atk": 97,
+		"armor": 42,
+		"mr": 44,
+		"range": 3,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "雷电拳",
+		"skill_desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【雷电拳】。用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 对目标造成250点伤害。",
+		"skill_power": 250,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电拳】。用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电击】。发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，爆发【龙之波动】！从大大的口中掀起冲击波攻击对手。 对范围内最多3名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ampharos.png"
+	},
+	"bellossom": {
+		"id": "bellossom",
+		"name": "美丽花",
+		"title": "花宝可梦",
+		"cost": 3,
+		"types": ["Grass"],
+		"hp": 760,
+		"atk": 80,
+		"armor": 47,
+		"mr": 49,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "魔法叶",
+		"skill_desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+		"skill_detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【叶刃】。像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "溶解液",
+					"desc": "将强酸泼向对手进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【溶解液】。将强酸泼向对手进行攻击。有时会降低对手的特防。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "落英缤纷",
+					"desc": "猛烈地刮起飞雪般的落花，攻击周围所有的宝可梦，并给予伤害。",
+					"detail": "消耗100能量，爆发【落英缤纷】！猛烈地刮起飞雪般的落花，攻击周围所有的宝可梦，并给予伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "蝶舞",
+					"desc": "轻巧地跳起神秘而又美丽的舞蹈。提高自己的特攻、特防和速度。",
+					"detail": "消耗100能量，爆发【蝶舞】！轻巧地跳起神秘而又美丽的舞蹈。提高自己的特攻、特防和速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "extreme_evoboost",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，释放终极奥义【寄生种子】！植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/bellossom.png"
+	},
+	"marill": {
+		"id": "marill",
+		"name": "玛力露",
+		"title": "水鼠宝可梦",
+		"cost": 1,
+		"types": ["Water", "Fairy"],
+		"hp": 727,
+		"atk": 45,
+		"armor": 26,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，爆发【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，释放终极奥义【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/marill.png"
+	},
+	"azumarill": {
+		"id": "azumarill",
+		"name": "玛力露丽",
+		"title": "水兔宝可梦",
+		"cost": 2,
+		"types": ["Water", "Fairy"],
+		"hp": 922,
+		"atk": 61,
+		"armor": 40,
+		"mr": 40,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，使出【水流尾】。如惊涛骇浪般挥动大尾巴攻击对手。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，释放终极奥义【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，释放终极奥义【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/azumarill.png"
+	},
+	"sudowoodo": {
+		"id": "sudowoodo",
+		"name": "树才怪",
+		"title": "模仿宝可梦",
+		"cost": 2,
+		"types": ["Rock"],
+		"hp": 727,
+		"atk": 87,
+		"armor": 56,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "落石",
+		"skill_desc": "拿起小岩石，投掷对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "木槌",
+					"desc": "用坚硬的躯体撞击对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【木槌】。用坚硬的躯体撞击对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "power_whip",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【尖石攻击】。用尖尖的岩石刺入对手进行攻击。容易击中要害。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，爆发【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sudowoodo.png"
+	},
+	"politoed": {
+		"id": "politoed",
+		"name": "蚊香蛙皇",
+		"title": "蛙宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 857,
+		"atk": 80,
+		"armor": 38,
+		"mr": 49,
+		"range": 2,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，使出【灭亡之歌】。倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫光线",
+					"desc": "向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫光线】。向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/politoed.png"
+	},
+	"hoppip": {
+		"id": "hoppip",
+		"name": "毽子草",
+		"title": "棉草宝可梦",
+		"cost": 1,
+		"types": ["Grass", "Flying"],
+		"hp": 500,
+		"atk": 45,
+		"armor": 22,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "吸取",
+		"skill_desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+		"skill_detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/hoppip.png"
+	},
+	"skiploom": {
+		"id": "skiploom",
+		"name": "毽子花",
+		"title": "棉草宝可梦",
+		"cost": 1,
+		"types": ["Grass", "Flying"],
+		"hp": 630,
+		"atk": 51,
+		"armor": 26,
+		"mr": 33,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/skiploom.png"
+	},
+	"jumpluff": {
+		"id": "jumpluff",
+		"name": "毽子棉",
+		"title": "棉草宝可梦",
+		"cost": 3,
+		"types": ["Grass", "Flying"],
+		"hp": 760,
+		"atk": 58,
+		"armor": 35,
+		"mr": 47,
+		"range": 2,
+		"atk_speed": 0.83,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/jumpluff.png"
+	},
+	"aipom": {
+		"id": "aipom",
+		"name": "长尾怪手",
+		"title": "长尾宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 630,
+		"atk": 67,
+		"armor": 29,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁尾",
+					"desc": "使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【铁尾】！使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "iron_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，释放终极奥义【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/aipom.png"
+	},
+	"sunkern": {
+		"id": "sunkern",
+		"name": "向日种子",
+		"title": "种子宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 467,
+		"atk": 45,
+		"armor": 20,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "吸取",
+		"skill_desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+		"skill_detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，使出【日光束】。第１回合收集满满的日光，第２回合发射光束进行攻击。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，爆发【种子炸弹】！将外壳坚硬的大种子，从上方砸下攻击对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sunkern.png"
+	},
+	"sunflora": {
+		"id": "sunflora",
+		"name": "向日花怪",
+		"title": "太阳宝可梦",
+		"cost": 2,
+		"types": ["Grass"],
+		"hp": 760,
+		"atk": 90,
+		"armor": 29,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，使出【种子炸弹】。将外壳坚硬的大种子，从上方砸下攻击对手。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "花瓣舞",
+					"desc": "在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。",
+					"detail": "消耗100能量，使出【花瓣舞】。在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sunflora.png"
+	},
+	"yanma": {
+		"id": "yanma",
+		"name": "蜻蜻蜓",
+		"title": "薄翼宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Flying"],
+		"hp": 695,
+		"atk": 71,
+		"armor": 24,
+		"mr": 24,
+		"range": 1,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，使出【银色旋风】。在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，爆发【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，释放终极奥义【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/yanma.png"
+	},
+	"wooper": {
+		"id": "wooper",
+		"name": "乌波",
+		"title": "水鱼宝可梦",
+		"cost": 1,
+		"types": ["Water", "Ground"],
+		"hp": 630,
+		"atk": 51,
+		"armor": 24,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，使出【浊流】。向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，使出【地震】。利用地震的冲击，攻击自己周围所有的宝可梦。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，爆发【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，释放终极奥义【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wooper.png"
+	},
+	"quagsire": {
+		"id": "quagsire",
+		"name": "沼王",
+		"title": "水鱼宝可梦",
+		"cost": 2,
+		"types": ["Water", "Ground"],
+		"hp": 890,
+		"atk": 77,
+		"armor": 42,
+		"mr": 33,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，使出【水流尾】。如惊涛骇浪般挥动大尾巴攻击对手。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，使出【浊流】。向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，爆发【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "雪崩",
+					"desc": "如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。",
+					"detail": "消耗100能量，释放终极奥义【雪崩】！如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "avalanche",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/quagsire.png"
+	},
+	"espeon": {
+		"id": "espeon",
+		"name": "太阳伊布",
+		"title": "太阳宝可梦",
+		"cost": 4,
+		"types": ["Psychic"],
+		"hp": 695,
+		"atk": 106,
+		"armor": 31,
+		"mr": 47,
+		"range": 3,
+		"atk_speed": 0.83,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/espeon.png"
+	},
+	"umbreon": {
+		"id": "umbreon",
+		"name": "月亮伊布",
+		"title": "月光宝可梦",
+		"cost": 4,
+		"types": ["Dark"],
+		"hp": 890,
+		"atk": 64,
+		"armor": 53,
+		"mr": 62,
+		"range": 1,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "追打",
+		"skill_desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+		"skill_detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，爆发【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 对范围内最多2名敌人造成415点伤害，并施加战术压制。",
+					"power": 415,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/umbreon.png"
+	},
+	"murkrow": {
+		"id": "murkrow",
+		"name": "黑暗鸦",
+		"title": "黑暗宝可梦",
+		"cost": 2,
+		"types": ["Dark", "Flying"],
+		"hp": 662,
+		"atk": 77,
+		"armor": 23,
+		"mr": 23,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【翅膀攻击】！大大地展开美丽的翅膀，将其撞向对手进行攻击。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【暗袭要害】！抓住瞬间的空隙切斩对手。容易击中要害。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/murkrow.png"
+	},
+	"slowking": {
+		"id": "slowking",
+		"name": "呆呆王",
+		"title": "王者宝可梦",
+		"cost": 3,
+		"types": ["Water", "Psychic"],
+		"hp": 890,
+		"atk": 87,
+		"armor": 40,
+		"mr": 53,
+		"range": 3,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【水之波动】！用水的震动攻击对手。有时会使对手混乱。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/slowking.png"
+	},
+	"misdreavus": {
+		"id": "misdreavus",
+		"name": "梦妖",
+		"title": "夜啼宝可梦",
+		"cost": 2,
+		"types": ["Ghost"],
+		"hp": 662,
+		"atk": 77,
+		"armor": 31,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "shadow_ball",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，爆发【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【暗影球】！投掷一团黑影进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，释放终极奥义【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/misdreavus.png"
+	},
+	"unown": {
+		"id": "unown",
+		"name": "未知图腾",
+		"title": "象征宝可梦",
+		"cost": 1,
+		"types": ["Psychic"],
+		"hp": 584,
+		"atk": 69,
+		"armor": 25,
+		"mr": 25,
+		"range": 3,
+		"atk_speed": 0.67,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，使出【精神利刃】。用实体化的心之利刃劈开对手。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神击破",
+					"desc": "将神奇的念波实体化攻击对手。给予物理伤害。",
+					"detail": "消耗100能量，释放终极奥义【精神击破】！将神奇的念波实体化攻击对手。给予物理伤害。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psystrike",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/unown.png"
+	},
+	"wobbuffet": {
+		"id": "wobbuffet",
+		"name": "果然翁",
+		"title": "忍耐宝可梦",
+		"cost": 2,
+		"types": ["Psychic"],
+		"hp": 1400,
+		"atk": 45,
+		"armor": 30,
+		"mr": 30,
+		"range": 3,
+		"atk_speed": 0.63,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，使出【精神利刃】。用实体化的心之利刃劈开对手。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神击破",
+					"desc": "将神奇的念波实体化攻击对手。给予物理伤害。",
+					"detail": "消耗100能量，释放终极奥义【精神击破】！将神奇的念波实体化攻击对手。给予物理伤害。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psystrike",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wobbuffet.png"
+	},
+	"girafarig": {
+		"id": "girafarig",
+		"name": "麒麟奇",
+		"title": "长颈宝可梦",
+		"cost": 3,
+		"types": ["Normal", "Psychic"],
+		"hp": 727,
+		"atk": 80,
+		"armor": 33,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，使出【恶意追击】。如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/girafarig.png"
+	},
+	"pineco": {
+		"id": "pineco",
+		"name": "榛果球",
+		"title": "蓑衣虫宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 597,
+		"atk": 64,
+		"armor": 44,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "陀螺球",
+					"desc": "让身体高速旋转并撞击对手。速度比对手越慢，威力越大。",
+					"detail": "消耗100能量，爆发【陀螺球】！让身体高速旋转并撞击对手。速度比对手越慢，威力越大。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【种子炸弹】！将外壳坚硬的大种子，从上方砸下攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/pineco.png"
+	},
+	"forretress": {
+		"id": "forretress",
+		"name": "佛烈托斯",
+		"title": "蓑衣虫宝可梦",
+		"cost": 3,
+		"types": ["Bug", "Steel"],
+		"hp": 760,
+		"atk": 80,
+		"armor": 67,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "重磅冲撞",
+		"skill_desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+		"skill_detail": "消耗100能量，使出【重磅冲撞】。用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，使出【重磅冲撞】。用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/forretress.png"
+	},
+	"dunsparce": {
+		"id": "dunsparce",
+		"name": "土龙弟弟",
+		"title": "地蛇宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 922,
+		"atk": 67,
+		"armor": 35,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "掷泥",
+		"skill_desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+		"skill_detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，爆发【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/dunsparce.png"
+	},
+	"gligar": {
+		"id": "gligar",
+		"name": "天蝎",
+		"title": "飞蝎宝可梦",
+		"cost": 2,
+		"types": ["Ground", "Flying"],
+		"hp": 695,
+		"atk": 71,
+		"armor": 51,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，使出【燕返】。以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "连斩",
+					"desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+					"detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒击】！用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【垃圾射击】！用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/gligar.png"
+	},
+	"steelix": {
+		"id": "steelix",
+		"name": "大钢蛇",
+		"title": "铁蛇宝可梦",
+		"cost": 3,
+		"types": ["Steel", "Ground"],
+		"hp": 760,
+		"atk": 77,
+		"armor": 75,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，爆发【落石】！拿起小岩石，投掷对手进行攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，释放终极奥义【地裂】！让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【龙息】！将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/steelix.png"
+	},
+	"snubbull": {
+		"id": "snubbull",
+		"name": "布鲁",
+		"title": "妖精宝可梦",
+		"cost": 1,
+		"types": ["Fairy"],
+		"hp": 662,
+		"atk": 74,
+		"armor": 26,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，释放终极奥义【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/snubbull.png"
+	},
+	"granbull": {
+		"id": "granbull",
+		"name": "布鲁皇",
+		"title": "妖精宝可梦",
+		"cost": 3,
+		"types": ["Fairy"],
+		"hp": 857,
+		"atk": 100,
+		"armor": 38,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "逆鳞",
+					"desc": "在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。",
+					"detail": "消耗100能量，爆发【逆鳞】！在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dragon_apocalypse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成350点巨额伤害与强力击破！",
+					"power": 350,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/granbull.png"
+	},
+	"qwilfish": {
+		"id": "qwilfish",
+		"name": "千针鱼",
+		"title": "气球宝可梦",
+		"cost": 2,
+		"types": ["Water", "Poison"],
+		"hp": 695,
+		"atk": 84,
+		"armor": 42,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒针】！将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成175点伤害，并施加战术压制。",
+					"power": 175,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "致命针刺",
+					"desc": "如果使用此招式打倒对手，攻击会巨幅提高。",
+					"detail": "消耗100能量，爆发【致命针刺】！如果使用此招式打倒对手，攻击会巨幅提高。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，释放终极奥义【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/qwilfish.png"
+	},
+	"scizor": {
+		"id": "scizor",
+		"name": "巨钳螳螂",
+		"title": "钳子宝可梦",
+		"cost": 3,
+		"types": ["Bug", "Steel"],
+		"hp": 727,
+		"atk": 106,
+		"armor": 49,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "子弹拳",
+		"skill_desc": "向对手使出如子弹般快速而坚硬的拳头。必定能够先制攻击。",
+		"skill_detail": "消耗100能量，使出【子弹拳】。向对手使出如子弹般快速而坚硬的拳头。必定能够先制攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "子弹拳",
+					"desc": "向对手使出如子弹般快速而坚硬的拳头。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【子弹拳】。向对手使出如子弹般快速而坚硬的拳头。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "连斩",
+					"desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+					"detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，爆发【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真空波",
+					"desc": "挥动拳头，掀起真空波。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【真空波】！挥动拳头，掀起真空波。必定能够先制攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/scizor.png"
+	},
+	"shuckle": {
+		"id": "shuckle",
+		"name": "壶壶",
+		"title": "发酵宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Rock"],
+		"hp": 450,
+		"atk": 45,
+		"armor": 75,
+		"mr": 75,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "落石",
+		"skill_desc": "拿起小岩石，投掷对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shuckle.png"
+	},
+	"heracross": {
+		"id": "heracross",
+		"name": "赫拉克罗斯",
+		"title": "独角宝可梦",
+		"cost": 4,
+		"types": ["Bug", "Fighting"],
+		"hp": 792,
+		"atk": 103,
+		"armor": 38,
+		"mr": 47,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【飞弹针】。向对手发射锐针进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，爆发【暗袭要害】！抓住瞬间的空隙切斩对手。容易击中要害。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "劈瓦",
+					"desc": "将手刀猛烈地挥下攻击对手。还可以破坏光墙和反射壁等。",
+					"detail": "消耗100能量，爆发【劈瓦】！将手刀猛烈地挥下攻击对手。还可以破坏光墙和反射壁等。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "cross_chop",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/heracross.png"
+	},
+	"sneasel": {
+		"id": "sneasel",
+		"name": "狃拉",
+		"title": "钩爪宝可梦",
+		"cost": 2,
+		"types": ["Dark", "Ice"],
+		"hp": 630,
+		"atk": 84,
+		"armor": 29,
+		"mr": 38,
+		"range": 1,
+		"atk_speed": 0.84,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "冰砾",
+					"desc": "瞬间制作冰块，快速地扔向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【冰砾】。瞬间制作冰块，快速地扔向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，爆发【冰冻之风】！将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "冰锥",
+					"desc": "向对手发射锋利的冰柱进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【冰锥】！向对手发射锋利的冰柱进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "icicle_spear",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【毒击】！用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sneasel.png"
+	},
+	"teddiursa": {
+		"id": "teddiursa",
+		"name": "熊宝宝",
+		"title": "小熊宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 662,
+		"atk": 74,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "雪崩",
+					"desc": "如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。",
+					"detail": "消耗100能量，释放终极奥义【雪崩】！如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "avalanche",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/teddiursa.png"
+	},
+	"ursaring": {
+		"id": "ursaring",
+		"name": "圈圈熊",
+		"title": "冬眠宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 857,
+		"atk": 106,
+		"armor": 38,
+		"mr": 38,
+		"range": 1,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ursaring.png"
+	},
+	"slugma": {
+		"id": "slugma",
+		"name": "熔岩虫",
+		"title": "熔岩宝可梦",
+		"cost": 1,
+		"types": ["Fire"],
+		"hp": 532,
+		"atk": 67,
+		"armor": 22,
+		"mr": 22,
+		"range": 3,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "浊雾",
+		"skill_desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【浊雾】。将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【浊雾】。将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "溶化",
+					"desc": "通过细胞的变化进行液化，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【溶化】！通过细胞的变化进行液化，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "acid_armor",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/slugma.png"
+	},
+	"magcargo": {
+		"id": "magcargo",
+		"name": "熔岩蜗牛",
+		"title": "熔岩宝可梦",
+		"cost": 2,
+		"types": ["Fire", "Rock"],
+		"hp": 662,
+		"atk": 80,
+		"armor": 58,
+		"mr": 40,
+		"range": 3,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【浊雾】。将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，爆发【落石】！拿起小岩石，投掷对手进行攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【闪焰冲锋】！让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/magcargo.png"
+	},
+	"swinub": {
+		"id": "swinub",
+		"name": "小山猪",
+		"title": "小猪宝可梦",
+		"cost": 1,
+		"types": ["Ice", "Ground"],
+		"hp": 597,
+		"atk": 54,
+		"armor": 22,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "冰砾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，爆发【冰冻之风】！将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，释放终极奥义【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/swinub.png"
+	},
+	"piloswine": {
+		"id": "piloswine",
+		"name": "长毛猪",
+		"title": "野猪宝可梦",
+		"cost": 3,
+		"types": ["Ice", "Ground"],
+		"hp": 922,
+		"atk": 87,
+		"armor": 40,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "冰冻牙",
+		"skill_desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+		"skill_detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+		"skill_power": 230,
+		"basic_attack": {
+			"type": "physical",
+			"name": "冰砾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【细雪】！将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，释放终极奥义【地裂】！让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【冰冻之风】！将结冰的冷气吹向对手进行攻击。会降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/piloswine.png"
+	},
+	"corsola": {
+		"id": "corsola",
+		"name": "太阳珊瑚",
+		"title": "珊瑚宝可梦",
+		"cost": 2,
+		"types": ["Water", "Rock"],
+		"hp": 695,
+		"atk": 64,
+		"armor": 47,
+		"mr": 47,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/corsola.png"
+	},
+	"remoraid": {
+		"id": "remoraid",
+		"name": "铁炮鱼",
+		"title": "喷射宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 500,
+		"atk": 64,
+		"armor": 20,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，爆发【极光束】！向对手发射虹色光束进行攻击。有时会降低对手的攻击。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【种子机关枪】！向对手猛烈地发射种子进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/remoraid.png"
+	},
+	"octillery": {
+		"id": "octillery",
+		"name": "章鱼桶",
+		"title": "喷射宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 760,
+		"atk": 90,
+		"armor": 38,
+		"mr": 38,
+		"range": 4,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，使出【极光束】。向对手发射虹色光束进行攻击。有时会降低对手的攻击。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【岩石爆击】。向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【垃圾射击】！用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【水之波动】！用水的震动攻击对手。有时会使对手混乱。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/octillery.png"
+	},
+	"delibird": {
+		"id": "delibird",
+		"name": "信使鸟",
+		"title": "搬运宝可梦",
+		"cost": 1,
+		"types": ["Ice", "Flying"],
+		"hp": 565,
+		"atk": 64,
+		"armor": 24,
+		"mr": 24,
+		"range": 1,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "啄钻",
+		"skill_desc": "一边旋转，一边将尖喙刺入对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄钻】。一边旋转，一边将尖喙刺入对手进行攻击。 对目标造成260点伤害。",
+		"skill_power": 260,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄钻",
+					"desc": "一边旋转，一边将尖喙刺入对手进行攻击。",
+					"detail": "消耗100能量，使出【啄钻】。一边旋转，一边将尖喙刺入对手进行攻击。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，使出【预知未来】。在使用招式２回合后，向对手发送一团念力进行攻击。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，爆发【极光束】！向对手发射虹色光束进行攻击。有时会降低对手的攻击。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，爆发【飞翔】！第１回合飞上天空，第２回合攻击对手。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，释放终极奥义【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 席卷战场对最多4名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/delibird.png"
+	},
+	"mantine": {
+		"id": "mantine",
+		"name": "巨翅飞鱼",
+		"title": "风筝宝可梦",
+		"cost": 3,
+		"types": ["Water", "Flying"],
+		"hp": 825,
+		"atk": 74,
+		"armor": 35,
+		"mr": 67,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【翅膀攻击】！大大地展开美丽的翅膀，将其撞向对手进行攻击。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【水之波动】！用水的震动攻击对手。有时会使对手混乱。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/mantine.png"
+	},
+	"skarmory": {
+		"id": "skarmory",
+		"name": "盔甲鸟",
+		"title": "钢甲鸟宝可梦",
+		"cost": 3,
+		"types": ["Steel", "Flying"],
+		"hp": 695,
+		"atk": 74,
+		"armor": 67,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【空气利刃】。用锐利的风切斩对手进行攻击。容易击中要害。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【翅膀攻击】！大大地展开美丽的翅膀，将其撞向对手进行攻击。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "劈开",
+					"desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【劈开】！用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "钢翼",
+					"desc": "用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【钢翼】！用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "steel_wing",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/skarmory.png"
+	},
+	"houndour": {
+		"id": "houndour",
+		"name": "戴鲁比",
+		"title": "阴暗宝可梦",
+		"cost": 1,
+		"types": ["Dark", "Fire"],
+		"hp": 565,
+		"atk": 74,
+		"armor": 20,
+		"mr": 26,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "恶之波动",
+			"style": "dark_pulse",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【浊雾】！将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多3名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "蓄能焰袭",
+					"desc": "让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。",
+					"detail": "消耗100能量，爆发【蓄能焰袭】！让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【闪焰冲锋】！让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，释放终极奥义【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 席卷战场对最多4名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/houndour.png"
+	},
+	"houndoom": {
+		"id": "houndoom",
+		"name": "黑鲁加",
+		"title": "阴暗宝可梦",
+		"cost": 3,
+		"types": ["Dark", "Fire"],
+		"hp": 760,
+		"atk": 93,
+		"armor": 26,
+		"mr": 40,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "恶之波动",
+			"style": "dark_pulse",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "炼狱",
+					"desc": "用烈焰包裹住对手进行攻击。让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【炼狱】。用烈焰包裹住对手进行攻击。让对手陷入灼伤状态。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "inferno",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【浊雾】！将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多3名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【闪焰冲锋】！让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "蓄能焰袭",
+					"desc": "让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。",
+					"detail": "消耗100能量，释放终极奥义【蓄能焰袭】！让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。 席卷战场对最多4名敌人造成450点巨额伤害与强力击破！",
+					"power": 450,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/houndoom.png"
+	},
+	"kingdra": {
+		"id": "kingdra",
+		"name": "刺龙王",
+		"title": "龙宝可梦",
+		"cost": 4,
+		"types": ["Water", "Dragon"],
+		"hp": 760,
+		"atk": 84,
+		"armor": 47,
+		"mr": 47,
+		"range": 2,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，使出【龙之波动】。从大大的口中掀起冲击波攻击对手。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "龙卷风",
+					"desc": "兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【龙卷风】！兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【龙息】！将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/kingdra.png"
+	},
+	"phanpy": {
+		"id": "phanpy",
+		"name": "小小象",
+		"title": "长鼻宝可梦",
+		"cost": 1,
+		"types": ["Ground"],
+		"hp": 857,
+		"atk": 61,
+		"armor": 31,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/phanpy.png"
+	},
+	"donphan": {
+		"id": "donphan",
+		"name": "顿甲",
+		"title": "铠甲宝可梦",
+		"cost": 3,
+		"types": ["Ground"],
+		"hp": 857,
+		"atk": 100,
+		"armor": 58,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "雷电牙",
+		"skill_desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+		"skill_power": 230,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/donphan.png"
+	},
+	"porygon2": {
+		"id": "porygon2",
+		"name": "多边兽２型",
+		"title": "虚拟宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 825,
+		"atk": 90,
+		"armor": 44,
+		"mr": 47,
+		"range": 3,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电击】。发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "三重攻击",
+					"desc": "用３种光线进行攻击。有时会让对手陷入麻痹、灼伤或冰冻的状态。",
+					"detail": "消耗100能量，使出【三重攻击】。用３种光线进行攻击。有时会让对手陷入麻痹、灼伤或冰冻的状态。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "tri_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/porygon2.png"
+	},
+	"stantler": {
+		"id": "stantler",
+		"name": "惊角鹿",
+		"title": "大角宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 747,
+		"atk": 84,
+		"armor": 32,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/stantler.png"
+	},
+	"smeargle": {
+		"id": "smeargle",
+		"name": "图图犬",
+		"title": "画画宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 630,
+		"atk": 45,
+		"armor": 20,
+		"mr": 24,
+		"range": 1,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【抓】！用坚硬且无比锋利的爪子抓对手进行攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/smeargle.png"
+	},
+	"tyrogue": {
+		"id": "tyrogue",
+		"name": "无畏小子",
+		"title": "打斗宝可梦",
+		"cost": 1,
+		"types": ["Fighting"],
+		"hp": 500,
+		"atk": 45,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "音速拳",
+					"desc": "以迅雷不及掩耳之势出拳。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【音速拳】。以迅雷不及掩耳之势出拳。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "飞膝踢",
+					"desc": "跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。",
+					"detail": "消耗100能量，爆发【飞膝踢】！跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。 对范围内最多2名敌人造成520点伤害，并施加战术压制。",
+					"power": 520,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_kick",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 席卷战场对最多6名敌人造成300点巨额伤害与强力击破！",
+					"power": 300,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/tyrogue.png"
+	},
+	"hitmontop": {
+		"id": "hitmontop",
+		"name": "战舞郎",
+		"title": "倒立宝可梦",
+		"cost": 3,
+		"types": ["Fighting"],
+		"hp": 597,
+		"atk": 84,
+		"armor": 47,
+		"mr": 53,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "近身战",
+		"skill_desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+		"skill_detail": "消耗100能量，使出【近身战】。放弃守护，向对手的怀里突击。自己的防御和特防会降低。 对目标造成340点伤害。",
+		"skill_power": 340,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，使出【近身战】。放弃守护，向对手的怀里突击。自己的防御和特防会降低。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "陀螺球",
+					"desc": "让身体高速旋转并撞击对手。速度比对手越慢，威力越大。",
+					"detail": "消耗100能量，使出【陀螺球】。让身体高速旋转并撞击对手。速度比对手越慢，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，爆发【挖洞】！第１回合钻入，第２回合攻击对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/hitmontop.png"
+	},
+	"smoochum": {
+		"id": "smoochum",
+		"name": "迷唇娃",
+		"title": "亲吻宝可梦",
+		"cost": 1,
+		"types": ["Ice", "Psychic"],
+		"hp": 565,
+		"atk": 77,
+		"armor": 20,
+		"mr": 33,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "雪崩",
+					"desc": "如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。",
+					"detail": "消耗100能量，爆发【雪崩】！如果受到对手的招式攻击，就能给予该对手２倍威力的攻击。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "avalanche",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，释放终极奥义【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/smoochum.png"
+	},
+	"elekid": {
+		"id": "elekid",
+		"name": "电击怪",
+		"title": "电气宝可梦",
+		"cost": 2,
+		"types": ["Electric"],
+		"hp": 565,
+		"atk": 64,
+		"armor": 20,
+		"mr": 29,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "电光一闪",
+		"skill_desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+		"skill_detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，使出【踢倒】。用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电拳】。用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电击】！发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电光】！让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真气弹",
+					"desc": "提高气势，释放出全部力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【真气弹】！提高气势，释放出全部力量。有时会降低对手的特防。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "aura_sphere",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "电击波",
+					"desc": "向对手快速发出电击。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【电击波】！向对手快速发出电击。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/elekid.png"
+	},
+	"magby": {
+		"id": "magby",
+		"name": "鸭嘴宝宝",
+		"title": "火种宝可梦",
+		"cost": 2,
+		"types": ["Fire"],
+		"hp": 565,
+		"atk": 71,
+		"armor": 20,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰轮】。让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【浊雾】！将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多3名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰旋涡",
+					"desc": "将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。",
+					"detail": "消耗100能量，爆发【火焰旋涡】！将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。 对范围内最多3名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "fire_spin",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【毒击】！用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/magby.png"
+	},
+	"miltank": {
+		"id": "miltank",
+		"name": "大奶罐",
+		"title": "奶牛宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 890,
+		"atk": 74,
+		"armor": 51,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【雷电拳】！用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/miltank.png"
+	},
+	"blissey": {
+		"id": "blissey",
+		"name": "幸福蛋",
+		"title": "幸福宝可梦",
+		"cost": 4,
+		"types": ["Normal"],
+		"hp": 1400,
+		"atk": 71,
+		"armor": 20,
+		"mr": 65,
+		"range": 3,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，使出【治愈波动】。放出治愈波动，从而回复对手最大ＨＰ的一半。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【高速星星】！发射星形的光攻击对手。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/blissey.png"
+	},
+	"raikou": {
+		"id": "raikou",
+		"name": "雷公",
+		"title": "天雷宝可梦",
+		"cost": 5,
+		"types": ["Electric"],
+		"hp": 857,
+		"atk": 97,
+		"armor": 38,
+		"mr": 49,
+		"range": 3,
+		"atk_speed": 0.84,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，使出【放电】。用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "电击",
+					"desc": "发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电击】。发出电流刺激对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电光】！让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 席卷战场对最多4名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/raikou.png"
+	},
+	"entei": {
+		"id": "entei",
+		"name": "炎帝",
+		"title": "火山宝可梦",
+		"cost": 5,
+		"types": ["Fire"],
+		"hp": 1020,
+		"atk": 97,
+		"armor": 42,
+		"mr": 38,
+		"range": 2,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰轮】。让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰旋涡",
+					"desc": "将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。",
+					"detail": "消耗100能量，爆发【火焰旋涡】！将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。 对范围内最多3名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "fire_spin",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/entei.png"
+	},
+	"suicune": {
+		"id": "suicune",
+		"name": "水君",
+		"title": "极光宝可梦",
+		"cost": 5,
+		"types": ["Water"],
+		"hp": 922,
+		"atk": 80,
+		"armor": 56,
+		"mr": 56,
+		"range": 2,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【神通力】。发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫光线",
+					"desc": "向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫光线】。向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "绝对零度",
+					"desc": "给对手一击濒死。如果是冰属性以外的宝可梦使用，就会难以打中。",
+					"detail": "消耗100能量，爆发【绝对零度】！给对手一击濒死。如果是冰属性以外的宝可梦使用，就会难以打中。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sheer_cold",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，爆发【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水枪】！向对手猛烈地喷射水流进行攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【水之波动】！用水的震动攻击对手。有时会使对手混乱。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/suicune.png"
+	},
+	"larvitar": {
+		"id": "larvitar",
+		"name": "幼基拉斯",
+		"title": "岩石肤宝可梦",
+		"cost": 1,
+		"types": ["Rock", "Ground"],
+		"hp": 597,
+		"atk": 63,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "恶之波动",
+					"desc": "从体内发出充满恶意的恐怖气场。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【恶之波动】！从体内发出充满恶意的恐怖气场。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/larvitar.png"
+	},
+	"pupitar": {
+		"id": "pupitar",
+		"name": "沙基拉斯",
+		"title": "子弹宝可梦",
+		"cost": 2,
+		"types": ["Rock", "Ground"],
+		"hp": 727,
+		"atk": 76,
+		"armor": 35,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "铁壁",
+		"skill_desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+		"skill_detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "恶之波动",
+					"desc": "从体内发出充满恶意的恐怖气场。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【恶之波动】！从体内发出充满恶意的恐怖气场。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/pupitar.png"
+	},
+	"tyranitar": {
+		"id": "tyranitar",
+		"name": "班基拉斯",
+		"title": "铠甲宝可梦",
+		"cost": 5,
+		"types": ["Rock", "Dark"],
+		"hp": 922,
+		"atk": 109,
+		"armor": 53,
+		"mr": 49,
+		"range": 1,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，爆发【落石】！拿起小岩石，投掷对手进行攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "恶之波动",
+					"desc": "从体内发出充满恶意的恐怖气场。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【恶之波动】！从体内发出充满恶意的恐怖气场。有时会使对手畏缩。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/tyranitar.png"
+	},
+	"lugia": {
+		"id": "lugia",
+		"name": "洛奇亚",
+		"title": "潜水宝可梦",
+		"cost": 5,
+		"types": ["Psychic", "Flying"],
+		"hp": 961,
+		"atk": 80,
+		"armor": 62,
+		"mr": 73,
+		"range": 3,
+		"atk_speed": 0.83,
+		"max_mana": 100,
+		"skill_name": "起风",
+		"skill_desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【神通力】。发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "神鸟猛击",
+					"desc": "第２回合攻击对手。偶尔使对手畏缩。也容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【神鸟猛击】！第２回合攻击对手。偶尔使对手畏缩。也容易击中要害。 席卷战场对最多4名敌人造成900点巨额伤害与强力击破！",
+					"power": 900,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lugia.png"
+	},
+	"ho_oh": {
+		"id": "ho_oh",
+		"name": "凤王",
+		"title": "虹色宝可梦",
+		"cost": 5,
+		"types": ["Fire", "Flying"],
+		"hp": 961,
+		"atk": 106,
+		"armor": 44,
+		"mr": 73,
+		"range": 2,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "起风",
+		"skill_desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【勇鸟猛攻】。收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【神通力】。发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "大字爆炎",
+					"desc": "用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【大字爆炎】！用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【高速星星】！发射星形的光攻击对手。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ho_oh.png"
+	},
+	"celebi": {
+		"id": "celebi",
+		"name": "时拉比",
+		"title": "时空穿越宝可梦",
+		"cost": 5,
+		"types": ["Psychic", "Grass"],
+		"hp": 922,
+		"atk": 87,
+		"armor": 49,
+		"mr": 49,
+		"range": 3,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "寄生种子",
+		"skill_desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+		"skill_detail": "消耗100能量，使出【寄生种子】。植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，使出【寄生种子】。植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，爆发【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【精神利刃】！用实体化的心之利刃劈开对手。容易击中要害。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/celebi.png"
+	},
+	"treecko": {
+		"id": "treecko",
+		"name": "木守宫",
+		"title": "林蜥宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 532,
+		"atk": 64,
+		"armor": 20,
+		"mr": 29,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，使出【恶意追击】。如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，爆发【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 对范围内最多3名敌人造成520点伤害，并施加战术压制。",
+					"power": 520,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【龙息】！将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/treecko.png"
+	},
+	"grovyle": {
+		"id": "grovyle",
+		"name": "森林蜥蜴",
+		"title": "林蜥宝可梦",
+		"cost": 2,
+		"types": ["Grass"],
+		"hp": 597,
+		"atk": 77,
+		"armor": 24,
+		"mr": 33,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "连斩",
+		"skill_desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+		"skill_detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "连斩",
+					"desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+					"detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，爆发【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真空波",
+					"desc": "挥动拳头，掀起真空波。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【真空波】！挥动拳头，掀起真空波。必定能够先制攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【叶刃】！像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/grovyle.png"
+	},
+	"sceptile": {
+		"id": "sceptile",
+		"name": "蜥蜴王",
+		"title": "密林宝可梦",
+		"cost": 4,
+		"types": ["Grass"],
+		"hp": 727,
+		"atk": 90,
+		"armor": 33,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.85,
+		"max_mana": 100,
+		"skill_name": "叶刃",
+		"skill_desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【叶刃】。像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对目标造成280点伤害。",
+		"skill_power": 280,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【叶刃】。像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，爆发【暗袭要害】！抓住瞬间的空隙切斩对手。容易击中要害。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，爆发【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 对范围内最多3名敌人造成520点伤害，并施加战术压制。",
+					"power": 520,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真空波",
+					"desc": "挥动拳头，掀起真空波。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【真空波】！挥动拳头，掀起真空波。必定能够先制攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sceptile.png"
+	},
+	"torchic": {
+		"id": "torchic",
+		"name": "火稚鸡",
+		"title": "雏鸡宝可梦",
+		"cost": 1,
+		"types": ["Fire"],
+		"hp": 565,
+		"atk": 67,
+		"armor": 22,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "蓄能焰袭",
+					"desc": "让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。",
+					"detail": "消耗100能量，使出【蓄能焰袭】。让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰旋涡",
+					"desc": "将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【火焰旋涡】！将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。 席卷战场对最多6名敌人造成375点巨额伤害与强力击破！",
+					"power": 375,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_spin",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/torchic.png"
+	},
+	"combusken": {
+		"id": "combusken",
+		"name": "力壮鸡",
+		"title": "幼鸡宝可梦",
+		"cost": 2,
+		"types": ["Fire", "Fighting"],
+		"hp": 662,
+		"atk": 77,
+		"armor": 31,
+		"mr": 31,
+		"range": 2,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【喷射火焰】。向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "蓄能焰袭",
+					"desc": "让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。",
+					"detail": "消耗100能量，爆发【蓄能焰袭】！让火焰覆盖全身，攻击对手。积蓄力量并提高自己的速度。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，爆发【啄】！用尖锐的喙或角刺向对手进行攻击。 对范围内最多2名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【闪焰冲锋】！让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/combusken.png"
+	},
+	"blaziken": {
+		"id": "blaziken",
+		"name": "火焰鸡",
+		"title": "猛火宝可梦",
+		"cost": 4,
+		"types": ["Fire", "Fighting"],
+		"hp": 792,
+		"atk": 100,
+		"armor": 35,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "火焰拳",
+		"skill_desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+		"skill_power": 250,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "飞膝踢",
+					"desc": "跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。",
+					"detail": "消耗100能量，使出【飞膝踢】。跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。 对目标造成360点伤害。",
+					"power": 360,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mega_kick",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，爆发【抓】！用坚硬且无比锋利的爪子抓对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【闪焰冲锋】！让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【勇鸟猛攻】！收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/blaziken.png"
+	},
+	"mudkip": {
+		"id": "mudkip",
+		"name": "水跃鱼",
+		"title": "沼鱼宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 597,
+		"atk": 67,
+		"armor": 26,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【水之波动】！用水的震动攻击对手。有时会使对手混乱。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/mudkip.png"
+	},
+	"marshtomp": {
+		"id": "marshtomp",
+		"name": "沼跃鱼",
+		"title": "沼鱼宝可梦",
+		"cost": 2,
+		"types": ["Water", "Ground"],
+		"hp": 727,
+		"atk": 77,
+		"armor": 35,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "泥巴射击",
+		"skill_desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【泥巴射击】。向对手投掷泥块进行攻击。同时降低对手的速度。 对目标造成210点伤害。",
+		"skill_power": 210,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，使出【泥巴射击】。向对手投掷泥块进行攻击。同时降低对手的速度。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，使出【冲浪】。利用大浪攻击自己周围所有的宝可梦。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，爆发【落石】！拿起小岩石，投掷对手进行攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【水之波动】！用水的震动攻击对手。有时会使对手混乱。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/marshtomp.png"
+	},
+	"swampert": {
+		"id": "swampert",
+		"name": "巨沼怪",
+		"title": "沼鱼宝可梦",
+		"cost": 4,
+		"types": ["Water", "Ground"],
+		"hp": 922,
+		"atk": 93,
+		"armor": 44,
+		"mr": 44,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，使出【冲浪】。利用大浪攻击自己周围所有的宝可梦。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，爆发【落石】！拿起小岩石，投掷对手进行攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "波动冲",
+					"desc": "使出【波动冲】全力攻击敌人。",
+					"detail": "消耗100能量，释放终极奥义【波动冲】！使出【波动冲】全力攻击敌人。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/swampert.png"
+	},
+	"poochyena": {
+		"id": "poochyena",
+		"name": "土狼犬",
+		"title": "紧咬宝可梦",
+		"cost": 1,
+		"types": ["Dark"],
+		"hp": 500,
+		"atk": 58,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，使出【恶意追击】。如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，释放终极奥义【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 席卷战场对最多4名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成350点巨额伤害与强力击破！",
+					"power": 350,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/poochyena.png"
+	},
+	"mightyena": {
+		"id": "mightyena",
+		"name": "大狼犬",
+		"title": "紧咬宝可梦",
+		"cost": 2,
+		"types": ["Dark"],
+		"hp": 727,
+		"atk": 80,
+		"armor": 35,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成350点巨额伤害与强力击破！",
+					"power": 350,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 席卷战场对最多6名敌人造成300点巨额伤害与强力击破！",
+					"power": 300,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/mightyena.png"
+	},
+	"zigzagoon": {
+		"id": "zigzagoon",
+		"name": "蛇纹熊",
+		"title": "豆狸宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 519,
+		"atk": 45,
+		"armor": 22,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【飞弹针】。向对手发射锐针进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/zigzagoon.png"
+	},
+	"linoone": {
+		"id": "linoone",
+		"name": "直冲熊",
+		"title": "猛冲宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 779,
+		"atk": 67,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "劈开",
+		"skill_desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【劈开】。用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "劈开",
+					"desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【劈开】。用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【飞弹针】。向对手发射锐针进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/linoone.png"
+	},
+	"wurmple": {
+		"id": "wurmple",
+		"name": "刺尾虫",
+		"title": "虫宝宝宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 565,
+		"atk": 51,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，爆发【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wurmple.png"
+	},
+	"silcoon": {
+		"id": "silcoon",
+		"name": "甲壳茧",
+		"title": "蛹宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 597,
+		"atk": 45,
+		"armor": 29,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "铁壁",
+		"skill_desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+		"skill_detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，使出【吐丝】。用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒针】！将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成175点伤害，并施加战术压制。",
+					"power": 175,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，爆发【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/silcoon.png"
+	},
+	"beautifly": {
+		"id": "beautifly",
+		"name": "狩猎凤蝶",
+		"title": "蝴蝶宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Flying"],
+		"hp": 662,
+		"atk": 87,
+		"armor": 26,
+		"mr": 26,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "起风",
+		"skill_desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【空气利刃】！用锐利的风切斩对手进行攻击。容易击中要害。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒针】！将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成175点伤害，并施加战术压制。",
+					"power": 175,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，爆发【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【撞击】！用整个身体撞向对手进行攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/beautifly.png"
+	},
+	"cascoon": {
+		"id": "cascoon",
+		"name": "盾甲茧",
+		"title": "蛹宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 597,
+		"atk": 45,
+		"armor": 29,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "铁壁",
+		"skill_desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+		"skill_detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，使出【吐丝】。用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒针】！将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成175点伤害，并施加战术压制。",
+					"power": 175,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，爆发【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cascoon.png"
+	},
+	"dustox": {
+		"id": "dustox",
+		"name": "毒粉蛾",
+		"title": "毒蛾宝可梦",
+		"cost": 2,
+		"types": ["Bug", "Poison"],
+		"hp": 662,
+		"atk": 54,
+		"armor": 35,
+		"mr": 44,
+		"range": 1,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "起风",
+		"skill_desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，使出【虫咬】。咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，爆发【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/dustox.png"
+	},
+	"lotad": {
+		"id": "lotad",
+		"name": "莲叶童子",
+		"title": "浮萍宝可梦",
+		"cost": 1,
+		"types": ["Water", "Grass"],
+		"hp": 532,
+		"atk": 48,
+		"armor": 20,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【飞叶快刀】！飞出叶片，切斩对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lotad.png"
+	},
+	"lombre": {
+		"id": "lombre",
+		"name": "莲帽小童",
+		"title": "爽朗宝可梦",
+		"cost": 1,
+		"types": ["Water", "Grass"],
+		"hp": 662,
+		"atk": 61,
+		"armor": 26,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lombre.png"
+	},
+	"ludicolo": {
+		"id": "ludicolo",
+		"name": "乐天河童",
+		"title": "乐天宝可梦",
+		"cost": 3,
+		"types": ["Water", "Grass"],
+		"hp": 792,
+		"atk": 80,
+		"armor": 35,
+		"mr": 49,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "吸取",
+		"skill_desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+		"skill_detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泡沫光线",
+					"desc": "向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫光线】！向对手猛烈地喷射泡沫进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ludicolo.png"
+	},
+	"seedot": {
+		"id": "seedot",
+		"name": "橡实果",
+		"title": "橡实宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 532,
+		"atk": 48,
+		"armor": 26,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "旋风刀",
+					"desc": "制造风之刃，于第２回合攻击对手。容易击中要害。",
+					"detail": "消耗100能量，爆发【旋风刀】！制造风之刃，于第２回合攻击对手。容易击中要害。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/seedot.png"
+	},
+	"nuzleaf": {
+		"id": "nuzleaf",
+		"name": "长鼻叶",
+		"title": "捉弄宝可梦",
+		"cost": 1,
+		"types": ["Grass", "Dark"],
+		"hp": 727,
+		"atk": 67,
+		"armor": 22,
+		"mr": 22,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "飞叶快刀",
+		"skill_desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+		"skill_power": 210,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【空气利刃】！用锐利的风切斩对手进行攻击。容易击中要害。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【叶刃】！像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，释放终极奥义【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 席卷战场对最多6名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/nuzleaf.png"
+	},
+	"shiftry": {
+		"id": "shiftry",
+		"name": "狡猾天狗",
+		"title": "邪恶宝可梦",
+		"cost": 3,
+		"types": ["Grass", "Dark"],
+		"hp": 857,
+		"atk": 87,
+		"armor": 31,
+		"mr": 31,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "叶刃",
+		"skill_desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【叶刃】。像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对目标造成280点伤害。",
+		"skill_power": 280,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "叶刃",
+					"desc": "像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【叶刃】。像用剑一般操纵叶片切斩对手进行攻击。容易击中要害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leaf_blade",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【空气利刃】！用锐利的风切斩对手进行攻击。容易击中要害。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "落英缤纷",
+					"desc": "猛烈地刮起飞雪般的落花，攻击周围所有的宝可梦，并给予伤害。",
+					"detail": "消耗100能量，释放终极奥义【落英缤纷】！猛烈地刮起飞雪般的落花，攻击周围所有的宝可梦，并给予伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shiftry.png"
+	},
+	"taillow": {
+		"id": "taillow",
+		"name": "傲骨燕",
+		"title": "幼燕宝可梦",
+		"cost": 1,
+		"types": ["Normal", "Flying"],
+		"hp": 532,
+		"atk": 58,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，使出【燕返】。以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【勇鸟猛攻】！收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/taillow.png"
+	},
+	"swellow": {
+		"id": "swellow",
+		"name": "大王燕",
+		"title": "燕子宝可梦",
+		"cost": 3,
+		"types": ["Normal", "Flying"],
+		"hp": 662,
+		"atk": 77,
+		"armor": 31,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.86,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【空气斩】。用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "神鸟猛击",
+					"desc": "第２回合攻击对手。偶尔使对手畏缩。也容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【神鸟猛击】！第２回合攻击对手。偶尔使对手畏缩。也容易击中要害。 席卷战场对最多4名敌人造成900点巨额伤害与强力击破！",
+					"power": 900,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "钢翼",
+					"desc": "用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【钢翼】！用坚硬的翅膀敲打对手进行攻击。有时会提高自己的防御。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "steel_wing",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/swellow.png"
+	},
+	"wingull": {
+		"id": "wingull",
+		"name": "长翅鸥",
+		"title": "海鸥宝可梦",
+		"cost": 1,
+		"types": ["Water", "Flying"],
+		"hp": 532,
+		"atk": 58,
+		"armor": 20,
+		"mr": 20,
+		"range": 3,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【空气利刃】！用锐利的风切斩对手进行攻击。容易击中要害。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wingull.png"
+	},
+	"pelipper": {
+		"id": "pelipper",
+		"name": "大嘴鸥",
+		"title": "水鸟宝可梦",
+		"cost": 2,
+		"types": ["Water", "Flying"],
+		"hp": 662,
+		"atk": 84,
+		"armor": 49,
+		"mr": 35,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "翅膀攻击",
+		"skill_desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "翅膀攻击",
+					"desc": "大大地展开美丽的翅膀，将其撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【翅膀攻击】。大大地展开美丽的翅膀，将其撞向对手进行攻击。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "wing_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【暴风】。用强烈的风席卷对手进行攻击。有时会使对手混乱。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【水之波动】！用水的震动攻击对手。有时会使对手混乱。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/pelipper.png"
+	},
+	"ralts": {
+		"id": "ralts",
+		"name": "拉鲁拉丝",
+		"title": "心情宝可梦",
+		"cost": 1,
+		"types": ["Psychic", "Fairy"],
+		"hp": 454,
+		"atk": 51,
+		"armor": 20,
+		"mr": 20,
+		"range": 3,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "百万吨重踢",
+					"desc": "使出力大无穷的重踢踢飞对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【百万吨重踢】！使出力大无穷的重踢踢飞对手进行攻击。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mega_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "食梦",
+					"desc": "吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。",
+					"detail": "消耗100能量，释放终极奥义【食梦】！吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dream_eater",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ralts.png"
+	},
+	"kirlia": {
+		"id": "kirlia",
+		"name": "奇鲁莉安",
+		"title": "感情宝可梦",
+		"cost": 1,
+		"types": ["Psychic", "Fairy"],
+		"hp": 519,
+		"atk": 64,
+		"armor": 20,
+		"mr": 29,
+		"range": 3,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【魔法叶】！散落可以追踪对手的神奇叶片。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "食梦",
+					"desc": "吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。",
+					"detail": "消耗100能量，释放终极奥义【食梦】！吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dream_eater",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/kirlia.png"
+	},
+	"gardevoir": {
+		"id": "gardevoir",
+		"name": "沙奈朵",
+		"title": "包容宝可梦",
+		"cost": 3,
+		"types": ["Psychic", "Fairy"],
+		"hp": 714,
+		"atk": 103,
+		"armor": 33,
+		"mr": 56,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真空波",
+					"desc": "挥动拳头，掀起真空波。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【真空波】！挥动拳头，掀起真空波。必定能够先制攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "波导弹",
+					"desc": "从体内产生出波导之力，然后向对手发出。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【波导弹】！从体内产生出波导之力，然后向对手发出。攻击必定会命中。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "aura_sphere",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/gardevoir.png"
+	},
+	"surskit": {
+		"id": "surskit",
+		"name": "溜溜糖球",
+		"title": "水黾宝可梦",
+		"cost": 1,
+		"types": ["Bug", "Water"],
+		"hp": 532,
+		"atk": 54,
+		"armor": 20,
+		"mr": 27,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "泡沫",
+		"skill_desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，使出【水炮】。向对手猛烈地喷射大量水流进行攻击。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，爆发【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/surskit.png"
+	},
+	"masquerain": {
+		"id": "masquerain",
+		"name": "雨翅蛾",
+		"title": "眼珠宝可梦",
+		"cost": 3,
+		"types": ["Bug", "Flying"],
+		"hp": 727,
+		"atk": 87,
+		"armor": 32,
+		"mr": 41,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "电光一闪",
+		"skill_desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+		"skill_detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【虫鸣】。利用振动发出音波进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "蝶舞",
+					"desc": "轻巧地跳起神秘而又美丽的舞蹈。提高自己的特攻、特防和速度。",
+					"detail": "消耗100能量，使出【蝶舞】。轻巧地跳起神秘而又美丽的舞蹈。提高自己的特攻、特防和速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "extreme_evoboost",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，爆发【泡沫】！向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水流喷射",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【水流喷射】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，爆发【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "空气利刃",
+					"desc": "用锐利的风切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【空气利刃】！用锐利的风切斩对手进行攻击。容易击中要害。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/masquerain.png"
+	},
+	"shroomish": {
+		"id": "shroomish",
+		"name": "蘑蘑菇",
+		"title": "蘑菇宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 662,
+		"atk": 48,
+		"armor": 31,
+		"mr": 31,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "吸取",
+		"skill_desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+		"skill_detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，使出【剧毒】。让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，爆发【种子炸弹】！将外壳坚硬的大种子，从上方砸下攻击对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【垃圾射击】！用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "污泥炸弹",
+					"desc": "用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【污泥炸弹】！用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shroomish.png"
+	},
+	"breloom": {
+		"id": "breloom",
+		"name": "斗笠菇",
+		"title": "蘑菇宝可梦",
+		"cost": 3,
+		"types": ["Grass", "Fighting"],
+		"hp": 662,
+		"atk": 106,
+		"armor": 40,
+		"mr": 31,
+		"range": 2,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "音速拳",
+		"skill_desc": "以迅雷不及掩耳之势出拳。必定能够先制攻击。",
+		"skill_detail": "消耗100能量，使出【音速拳】。以迅雷不及掩耳之势出拳。必定能够先制攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "音速拳",
+					"desc": "以迅雷不及掩耳之势出拳。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【音速拳】。以迅雷不及掩耳之势出拳。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，使出【剧毒】。让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "发劲",
+					"desc": "向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【发劲】！向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "force_palm",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "劈瓦",
+					"desc": "将手刀猛烈地挥下攻击对手。还可以破坏光墙和反射壁等。",
+					"detail": "消耗100能量，释放终极奥义【劈瓦】！将手刀猛烈地挥下攻击对手。还可以破坏光墙和反射壁等。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "cross_chop",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "种子炸弹",
+					"desc": "将外壳坚硬的大种子，从上方砸下攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【种子炸弹】！将外壳坚硬的大种子，从上方砸下攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/breloom.png"
+	},
+	"slakoth": {
+		"id": "slakoth",
+		"name": "懒人獭",
+		"title": "懒人宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 662,
+		"atk": 61,
+		"armor": 31,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/slakoth.png"
+	},
+	"vigoroth": {
+		"id": "vigoroth",
+		"name": "过动猿",
+		"title": "暴猿宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 792,
+		"atk": 74,
+		"armor": 40,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【喷射火焰】。向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/vigoroth.png"
+	},
+	"slaking": {
+		"id": "slaking",
+		"name": "请假王",
+		"title": "怕麻烦宝可梦",
+		"cost": 5,
+		"types": ["Normal"],
+		"hp": 1247,
+		"atk": 126,
+		"armor": 49,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "百万吨重踢",
+					"desc": "使出力大无穷的重踢踢飞对手进行攻击。",
+					"detail": "消耗100能量，爆发【百万吨重踢】！使出力大无穷的重踢踢飞对手进行攻击。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_kick",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "疯狂伏特",
+					"desc": "让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【疯狂伏特】！让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/slaking.png"
+	},
+	"nincada": {
+		"id": "nincada",
+		"name": "土居忍士",
+		"title": "入门宝可梦",
+		"cost": 1,
+		"types": ["Bug", "Ground"],
+		"hp": 474,
+		"atk": 51,
+		"armor": 44,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸血】！吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，爆发【挖洞】！第１回合钻入，第２回合攻击对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "吐丝",
+					"desc": "用口中吐出的丝缠绕对手，从而大幅降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【吐丝】！用口中吐出的丝缠绕对手，从而大幅降低对手的速度。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "string_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【起风】！用翅膀将刮起的狂风袭向对手进行攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，释放终极奥义【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/nincada.png"
+	},
+	"ninjask": {
+		"id": "ninjask",
+		"name": "铁面忍者",
+		"title": "忍者宝可梦",
+		"cost": 3,
+		"types": ["Bug", "Flying"],
+		"hp": 669,
+		"atk": 80,
+		"armor": 24,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.95,
+		"max_mana": 100,
+		"skill_name": "连斩",
+		"skill_desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+		"skill_detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "连斩",
+					"desc": "用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。",
+					"detail": "消耗100能量，使出【连斩】。用镰刀或爪子等切斩对手进行攻击。连续击中，威力就会提高。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，使出【挖洞】。第１回合钻入，第２回合攻击对手。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸血】！吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【虫鸣】！利用振动发出音波进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/ninjask.png"
+	},
+	"shedinja": {
+		"id": "shedinja",
+		"name": "脱壳忍者",
+		"title": "空壳宝可梦",
+		"cost": 1,
+		"types": ["Bug", "Ghost"],
+		"hp": 450,
+		"atk": 80,
+		"armor": 24,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，使出【挖洞】。第１回合钻入，第２回合攻击对手。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸血】！吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，释放终极奥义【祸不单行】！接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【暗影球】！投掷一团黑影进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shedinja.png"
+	},
+	"whismur": {
+		"id": "whismur",
+		"name": "咕妞妞",
+		"title": "细语宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 688,
+		"atk": 55,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/whismur.png"
+	},
+	"loudred": {
+		"id": "loudred",
+		"name": "吼爆弹",
+		"title": "大声宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 818,
+		"atk": 68,
+		"armor": 23,
+		"mr": 23,
+		"range": 1,
+		"atk_speed": 0.67,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/loudred.png"
+	},
+	"exploud": {
+		"id": "exploud",
+		"name": "爆音怪",
+		"title": "噪音宝可梦",
+		"cost": 3,
+		"types": ["Normal"],
+		"hp": 948,
+		"atk": 81,
+		"armor": 32,
+		"mr": 37,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "咬碎",
+		"skill_desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+		"skill_detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+		"skill_power": 260,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/exploud.png"
+	},
+	"makuhita": {
+		"id": "makuhita",
+		"name": "幕下力士",
+		"title": "毅力宝可梦",
+		"cost": 1,
+		"types": ["Fighting"],
+		"hp": 740,
+		"atk": 61,
+		"armor": 20,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，使出【近身战】。放弃守护，向对手的怀里突击。自己的防御和特防会降低。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，使出【重磅冲撞】。用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "发劲",
+					"desc": "向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【发劲】！向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "force_palm",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "爆裂拳",
+					"desc": "使出浑身力气出拳进行攻击。必定会使对手混乱。",
+					"detail": "消耗100能量，爆发【爆裂拳】！使出浑身力气出拳进行攻击。必定会使对手混乱。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dynamic_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "十字劈",
+					"desc": "用两手呈十字劈打对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，爆发【十字劈】！用两手呈十字劈打对手进行攻击。容易击中要害。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "cross_chop",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/makuhita.png"
+	},
+	"hariyama": {
+		"id": "hariyama",
+		"name": "铁掌力士",
+		"title": "猛推宝可梦",
+		"cost": 3,
+		"types": ["Fighting"],
+		"hp": 1208,
+		"atk": 100,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "发劲",
+					"desc": "向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【发劲】。向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "force_palm",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，使出【近身战】。放弃守护，向对手的怀里突击。自己的防御和特防会降低。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，爆发【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【冲浪】！利用大浪攻击自己周围所有的宝可梦。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/hariyama.png"
+	},
+	"azurill": {
+		"id": "azurill",
+		"name": "露力丽",
+		"title": "水珠宝可梦",
+		"cost": 1,
+		"types": ["Normal", "Fairy"],
+		"hp": 597,
+		"atk": 45,
+		"armor": 22,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "泡沫",
+		"skill_desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，使出【冲浪】。利用大浪攻击自己周围所有的宝可梦。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻光束】。向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "攀瀑",
+					"desc": "以惊人的气势扑向对手。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【攀瀑】！以惊人的气势扑向对手。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/azurill.png"
+	},
+	"nosepass": {
+		"id": "nosepass",
+		"name": "朝北鼻",
+		"title": "罗盘宝可梦",
+		"cost": 2,
+		"types": ["Rock"],
+		"hp": 467,
+		"atk": 51,
+		"armor": 65,
+		"mr": 44,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电光】。让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电磁波】！向对手发出微弱的电击，从而让对手陷入麻痹状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/nosepass.png"
+	},
+	"skitty": {
+		"id": "skitty",
+		"name": "向尾喵",
+		"title": "小猫宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 597,
+		"atk": 51,
+		"armor": 24,
+		"mr": 20,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻光束】。向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【暴风雪】。将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，释放终极奥义【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/skitty.png"
+	},
+	"delcatty": {
+		"id": "delcatty",
+		"name": "优雅猫",
+		"title": "清高宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 727,
+		"atk": 64,
+		"armor": 33,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "舍身冲撞",
+		"skill_desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+		"skill_detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+		"skill_power": 340,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，使出【舍身冲撞】。拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻光束】。向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【暴风雪】。将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "疯狂伏特",
+					"desc": "让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【疯狂伏特】！让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/delcatty.png"
+	},
+	"sableye": {
+		"id": "sableye",
+		"name": "勾魂眼",
+		"title": "黑暗宝可梦",
+		"cost": 2,
+		"types": ["Dark", "Ghost"],
+		"hp": 597,
+		"atk": 71,
+		"armor": 38,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【暗影球】。投掷一团黑影进行攻击。有时会降低对手的特防。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，爆发【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 对范围内最多2名敌人造成415点伤害，并施加战术压制。",
+					"power": 415,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，爆发【挖洞】！第１回合钻入，第２回合攻击对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暗影拳",
+					"desc": "使出混影之拳。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【暗影拳】！使出混影之拳。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "shadow_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sableye.png"
+	},
+	"mawile": {
+		"id": "mawile",
+		"name": "大嘴娃",
+		"title": "欺骗宝可梦",
+		"cost": 2,
+		"types": ["Steel", "Fairy"],
+		"hp": 597,
+		"atk": 77,
+		"armor": 42,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "夹住",
+					"desc": "将对手从两侧夹住，给予伤害。",
+					"detail": "消耗100能量，使出【夹住】。将对手从两侧夹住，给予伤害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crabhammer",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，释放终极奥义【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，释放终极奥义【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/mawile.png"
+	},
+	"aron": {
+		"id": "aron",
+		"name": "可可多拉",
+		"title": "铁铠宝可梦",
+		"cost": 1,
+		"types": ["Steel", "Rock"],
+		"hp": 597,
+		"atk": 67,
+		"armor": 49,
+		"mr": 22,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/aron.png"
+	},
+	"lairon": {
+		"id": "lairon",
+		"name": "可多拉",
+		"title": "铁铠宝可梦",
+		"cost": 2,
+		"types": ["Steel", "Rock"],
+		"hp": 662,
+		"atk": 80,
+		"armor": 67,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "头锤",
+		"skill_desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lairon.png"
+	},
+	"aggron": {
+		"id": "aggron",
+		"name": "波士可多拉",
+		"title": "铁铠宝可梦",
+		"cost": 4,
+		"types": ["Steel", "Rock"],
+		"hp": 727,
+		"atk": 93,
+		"armor": 75,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "头锤",
+		"skill_desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/aggron.png"
+	},
+	"meditite": {
+		"id": "meditite",
+		"name": "玛沙那",
+		"title": "冥想宝可梦",
+		"cost": 1,
+		"types": ["Fighting", "Psychic"],
+		"hp": 467,
+		"atk": 48,
+		"armor": 29,
+		"mr": 29,
+		"range": 1,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，使出【踢倒】。用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "发劲",
+					"desc": "向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【发劲】。向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "force_palm",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞膝踢",
+					"desc": "跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。",
+					"detail": "消耗100能量，释放终极奥义【飞膝踢】！跳起后用膝盖撞对手进行攻击。如果撞偏则自己会受到伤害。 席卷战场对最多4名敌人造成850点巨额伤害与强力击破！",
+					"power": 850,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mega_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火焰拳】！用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/meditite.png"
+	},
+	"medicham": {
+		"id": "medicham",
+		"name": "恰雷姆",
+		"title": "冥想宝可梦",
+		"cost": 2,
+		"types": ["Fighting", "Psychic"],
+		"hp": 662,
+		"atk": 61,
+		"armor": 38,
+		"mr": 38,
+		"range": 1,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "火焰拳",
+		"skill_desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+		"skill_power": 250,
+		"basic_attack": {
+			"type": "physical",
+			"name": "空手劈",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电拳】。用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻拳】！用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【精神利刃】！用实体化的心之利刃劈开对手。容易击中要害。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "发劲",
+					"desc": "向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【发劲】！向对手的身体发出冲击波进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "force_palm",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/medicham.png"
+	},
+	"electrike": {
+		"id": "electrike",
+		"name": "落雷兽",
+		"title": "闪电宝可梦",
+		"cost": 1,
+		"types": ["Electric"],
+		"hp": 532,
+		"atk": 64,
+		"armor": 22,
+		"mr": 22,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电光】。让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电磁波】！向对手发出微弱的电击，从而让对手陷入麻痹状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "电击波",
+					"desc": "向对手快速发出电击。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【电击波】！向对手快速发出电击。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/electrike.png"
+	},
+	"manectric": {
+		"id": "manectric",
+		"name": "雷电兽",
+		"title": "放电宝可梦",
+		"cost": 3,
+		"types": ["Electric"],
+		"hp": 727,
+		"atk": 90,
+		"armor": 31,
+		"mr": 31,
+		"range": 3,
+		"atk_speed": 0.81,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰牙】。用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电磁波】！向对手发出微弱的电击，从而让对手陷入麻痹状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【电光】！让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "电击波",
+					"desc": "向对手快速发出电击。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【电击波】！向对手快速发出电击。攻击必定会命中。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【雷电牙】！用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 席卷战场对最多4名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/manectric.png"
+	},
+	"plusle": {
+		"id": "plusle",
+		"name": "正电拍拍",
+		"title": "加油宝可梦",
+		"cost": 1,
+		"types": ["Electric"],
+		"hp": 662,
+		"atk": 77,
+		"armor": 22,
+		"mr": 38,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "电磁波",
+		"skill_desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电光】。让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，爆发【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/plusle.png"
+	},
+	"minun": {
+		"id": "minun",
+		"name": "負电拍拍",
+		"title": "加油宝可梦",
+		"cost": 1,
+		"types": ["Electric"],
+		"hp": 662,
+		"atk": 71,
+		"armor": 26,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "电磁波",
+		"skill_desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "电击",
+			"style": "spark",
+			"sfx": "spark"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "电磁波",
+					"desc": "向对手发出微弱的电击，从而让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电磁波】。向对手发出微弱的电击，从而让对手陷入麻痹状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "电光",
+					"desc": "让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【电光】。让电流覆盖全身，猛撞向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "spark",
+					"sfx": "thunder",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "电球",
+					"desc": "用电气团撞向对手。自己比对手速度越快，威力越大。",
+					"detail": "消耗100能量，爆发【电球】！用电气团撞向对手。自己比对手速度越快，威力越大。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "electro_ball",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "放电",
+					"desc": "用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【放电】！用耀眼的电击攻击自己周围所有的宝可梦。有时会陷入麻痹状态。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "discharge",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "电网",
+					"desc": "用电网捉住对手进行攻击。降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【电网】！用电网捉住对手进行攻击。降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "electroweb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/minun.png"
+	},
+	"volbeat": {
+		"id": "volbeat",
+		"name": "电萤虫",
+		"title": "萤火虫宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 695,
+		"atk": 69,
+		"armor": 38,
+		"mr": 42,
+		"range": 1,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【虫鸣】。利用振动发出音波进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，爆发【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/volbeat.png"
+	},
+	"illumise": {
+		"id": "illumise",
+		"name": "甜甜萤",
+		"title": "萤火虫宝可梦",
+		"cost": 1,
+		"types": ["Bug"],
+		"hp": 695,
+		"atk": 69,
+		"armor": 38,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.76,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "虫鸣",
+					"desc": "利用振动发出音波进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【虫鸣】。利用振动发出音波进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bug_buzz",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "银色旋风",
+					"desc": "在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。",
+					"detail": "消耗100能量，爆发【银色旋风】！在风中掺入鳞粉攻击对手。有时会提高自己的全部能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "silver_wind",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【空气斩】！用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/illumise.png"
+	},
+	"roselia": {
+		"id": "roselia",
+		"name": "毒蔷薇",
+		"title": "荆棘宝可梦",
+		"cost": 2,
+		"types": ["Grass", "Poison"],
+		"hp": 597,
+		"atk": 87,
+		"armor": 24,
+		"mr": 40,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "魔法叶",
+					"desc": "散落可以追踪对手的神奇叶片。攻击必定会命中。",
+					"detail": "消耗100能量，使出【魔法叶】。散落可以追踪对手的神奇叶片。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒击】。用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "花瓣舞",
+					"desc": "在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。",
+					"detail": "消耗100能量，爆发【花瓣舞】！在２～３回合内，散落花瓣攻击对手。之后自己会陷入混乱。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "神通力",
+					"desc": "发出看不见的神奇力量进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【神通力】！发出看不见的神奇力量进行攻击。有时会使对手畏缩。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/roselia.png"
+	},
+	"gulpin": {
+		"id": "gulpin",
+		"name": "溶食兽",
+		"title": "胃袋宝可梦",
+		"cost": 1,
+		"types": ["Poison"],
+		"hp": 727,
+		"atk": 50,
+		"armor": 28,
+		"mr": 28,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "拍击",
+		"skill_desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，使出【拍击】。使用长长的尾巴或手等拍打对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "污泥炸弹",
+					"desc": "用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【污泥炸弹】。用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【垃圾射击】。用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "食梦",
+					"desc": "吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【食梦】！吃掉正在睡觉的对手的梦进行攻击。回复对手所受到伤害的一半ＨＰ。 对范围内最多3名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dream_eater",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "溶化",
+					"desc": "通过细胞的变化进行液化，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【溶化】！通过细胞的变化进行液化，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "acid_armor",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【毒击】！用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/gulpin.png"
+	},
+	"swalot": {
+		"id": "swalot",
+		"name": "吞食兽",
+		"title": "毒袋宝可梦",
+		"cost": 3,
+		"types": ["Poison"],
+		"hp": 922,
+		"atk": 69,
+		"armor": 41,
+		"mr": 41,
+		"range": 1,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "泰山压顶",
+		"skill_desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+		"skill_power": 270,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【垃圾射击】。用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，使出【剧毒】。让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "拍击",
+					"desc": "使用长长的尾巴或手等拍打对手进行攻击。",
+					"detail": "消耗100能量，爆发【拍击】！使用长长的尾巴或手等拍打对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "污泥炸弹",
+					"desc": "用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【污泥炸弹】！用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/swalot.png"
+	},
+	"carvanha": {
+		"id": "carvanha",
+		"name": "利牙鱼",
+		"title": "凶猛宝可梦",
+		"cost": 1,
+		"types": ["Water", "Dark"],
+		"hp": 565,
+		"atk": 80,
+		"armor": 20,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，使出【恶意追击】。如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水流喷射",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【水流喷射】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/carvanha.png"
+	},
+	"sharpedo": {
+		"id": "sharpedo",
+		"name": "巨牙鲨",
+		"title": "凶暴宝可梦",
+		"cost": 3,
+		"types": ["Water", "Dark"],
+		"hp": 727,
+		"atk": 100,
+		"armor": 22,
+		"mr": 22,
+		"range": 2,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "劈开",
+		"skill_desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+		"skill_detail": "消耗100能量，使出【劈开】。用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "劈开",
+					"desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【劈开】。用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "水流喷射",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【水流喷射】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，使出【恶意追击】。如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sharpedo.png"
+	},
+	"wailmer": {
+		"id": "wailmer",
+		"name": "吼吼鲸",
+		"title": "球鲸宝可梦",
+		"cost": 2,
+		"types": ["Water"],
+		"hp": 1117,
+		"atk": 67,
+		"armor": 20,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，使出【重磅冲撞】。用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "潜水",
+					"desc": "第１回合潜入，第２回合浮上来进行攻击。",
+					"detail": "消耗100能量，爆发【潜水】！第１回合潜入，第２回合浮上来进行攻击。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wailmer.png"
+	},
+	"wailord": {
+		"id": "wailord",
+		"name": "吼鲸王",
+		"title": "浮鲸宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 1377,
+		"atk": 80,
+		"armor": 24,
+		"mr": 24,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，爆发【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wailord.png"
+	},
+	"numel": {
+		"id": "numel",
+		"name": "呆火驼",
+		"title": "迟钝宝可梦",
+		"cost": 1,
+		"types": ["Fire", "Ground"],
+		"hp": 662,
+		"atk": 64,
+		"armor": 22,
+		"mr": 24,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰轮】。让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/numel.png"
+	},
+	"camerupt": {
+		"id": "camerupt",
+		"name": "喷火驼",
+		"title": "喷火宝可梦",
+		"cost": 3,
+		"types": ["Fire", "Ground"],
+		"hp": 727,
+		"atk": 90,
+		"armor": 35,
+		"mr": 38,
+		"range": 2,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "岩崩",
+		"skill_desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+		"skill_power": 250,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "fire_ember",
+			"sfx": "fire"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，使出【地裂】。让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，释放终极奥义【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火焰轮】！让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/camerupt.png"
+	},
+	"torkoal": {
+		"id": "torkoal",
+		"name": "煤炭龟",
+		"title": "煤炭宝可梦",
+		"cost": 2,
+		"types": ["Fire"],
+		"hp": 727,
+		"atk": 77,
+		"armor": 67,
+		"mr": 35,
+		"range": 2,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "炼狱",
+					"desc": "用烈焰包裹住对手进行攻击。让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【炼狱】。用烈焰包裹住对手进行攻击。让对手陷入灼伤状态。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "inferno",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "浊雾",
+					"desc": "将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【浊雾】。将肮脏的浓雾吹向对手进行攻击。有时会让对手陷入中毒状态。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "热风",
+					"desc": "将炎热的气息吹向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【热风】！将炎热的气息吹向对手进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成415点伤害，并施加战术压制。",
+					"power": 415,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heat_wave",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰旋涡",
+					"desc": "将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。",
+					"detail": "消耗100能量，爆发【火焰旋涡】！将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。 对范围内最多3名敌人造成235点伤害，并施加战术压制。",
+					"power": 235,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "fire_spin",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰轮",
+					"desc": "让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰轮】！让火焰覆盖全身，猛撞向对手进行攻击。有时会让对手陷入灼伤状态。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "flame_wheel",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/torkoal.png"
+	},
+	"spoink": {
+		"id": "spoink",
+		"name": "跳跳猪",
+		"title": "弹跳宝可梦",
+		"cost": 1,
+		"types": ["Psychic"],
+		"hp": 662,
+		"atk": 67,
+		"armor": 20,
+		"mr": 40,
+		"range": 3,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/spoink.png"
+	},
+	"grumpig": {
+		"id": "grumpig",
+		"name": "噗噗猪",
+		"title": "操纵宝可梦",
+		"cost": 3,
+		"types": ["Psychic"],
+		"hp": 792,
+		"atk": 80,
+		"armor": 33,
+		"mr": 53,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "幻象光线",
+		"skill_desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+		"skill_power": 230,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，释放终极奥义【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/grumpig.png"
+	},
+	"spinda": {
+		"id": "spinda",
+		"name": "晃晃斑",
+		"title": "斑点熊猫宝可梦",
+		"cost": 1,
+		"types": ["Normal"],
+		"hp": 662,
+		"atk": 61,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "疯狂伏特",
+					"desc": "让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【疯狂伏特】！让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "挖洞",
+					"desc": "第１回合钻入，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【挖洞】！第１回合钻入，第２回合攻击对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/spinda.png"
+	},
+	"trapinch": {
+		"id": "trapinch",
+		"name": "大颚蚁",
+		"title": "蚁狮宝可梦",
+		"cost": 1,
+		"types": ["Ground"],
+		"hp": 565,
+		"atk": 87,
+		"armor": 24,
+		"mr": 24,
+		"range": 1,
+		"atk_speed": 0.60,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，使出【蛮力】。发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，爆发【地裂】！让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 对范围内最多2名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/trapinch.png"
+	},
+	"vibrava": {
+		"id": "vibrava",
+		"name": "超音波幼虫",
+		"title": "振动宝可梦",
+		"cost": 1,
+		"types": ["Ground", "Dragon"],
+		"hp": 597,
+		"atk": 67,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "龙息",
+		"skill_desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，使出【地裂】。让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，爆发【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 席卷战场对最多6名敌人造成300点巨额伤害与强力击破！",
+					"power": 300,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/vibrava.png"
+	},
+	"flygon": {
+		"id": "flygon",
+		"name": "沙漠蜻蜓",
+		"title": "神秘宝可梦",
+		"cost": 3,
+		"types": ["Ground", "Dragon"],
+		"hp": 792,
+		"atk": 87,
+		"armor": 40,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "龙爪",
+		"skill_desc": "用尖锐的巨爪劈开对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【龙爪】。用尖锐的巨爪劈开对手进行攻击。 对目标造成260点伤害。",
+		"skill_power": 260,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙爪",
+					"desc": "用尖锐的巨爪劈开对手进行攻击。",
+					"detail": "消耗100能量，使出【龙爪】。用尖锐的巨爪劈开对手进行攻击。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "dragon_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "地裂",
+					"desc": "让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。",
+					"detail": "消耗100能量，使出【地裂】。让对手掉落于地裂的裂缝中进行攻击。只要命中就会一击濒死。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，爆发【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "真空波",
+					"desc": "挥动拳头，掀起真空波。必定能够先制攻击。",
+					"detail": "消耗100能量，释放终极奥义【真空波】！挥动拳头，掀起真空波。必定能够先制攻击。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成350点巨额伤害与强力击破！",
+					"power": 350,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "逆鳞",
+					"desc": "在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。",
+					"detail": "消耗100能量，释放终极奥义【逆鳞】！在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dragon_apocalypse",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/flygon.png"
+	},
+	"cacnea": {
+		"id": "cacnea",
+		"name": "刺球仙人掌",
+		"title": "仙人掌宝可梦",
+		"cost": 1,
+		"types": ["Grass"],
+		"hp": 597,
+		"atk": 77,
+		"armor": 22,
+		"mr": 22,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒击】。用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "溶解液",
+					"desc": "将强酸泼向对手进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【溶解液】！将强酸泼向对手进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cacnea.png"
+	},
+	"cacturne": {
+		"id": "cacturne",
+		"name": "梦歌仙人掌",
+		"title": "稻草人宝可梦",
+		"cost": 3,
+		"types": ["Grass", "Dark"],
+		"hp": 727,
+		"atk": 97,
+		"armor": 31,
+		"mr": 31,
+		"range": 2,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "毒针",
+		"skill_desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+		"skill_detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+		"skill_power": 130,
+		"basic_attack": {
+			"type": "physical",
+			"name": "藤鞭",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "毒针",
+					"desc": "将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒针】。将有毒的针刺入对手进行攻击。有时会让对手陷入中毒状态。 对目标造成130点伤害。",
+					"power": 130,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，使出【毒击】。用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "种子机关枪",
+					"desc": "向对手猛烈地发射种子进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，使出【种子机关枪】。向对手猛烈地发射种子进行攻击。连续攻击２～５次。 对目标造成150点伤害。",
+					"power": 150,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "恶意追击",
+					"desc": "如果此回合内对手已经受到伤害的话，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【恶意追击】！如果此回合内对手已经受到伤害的话，招式威力会变成２倍。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "飞弹针",
+					"desc": "向对手发射锐针进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，爆发【飞弹针】！向对手发射锐针进行攻击。连续攻击２～５次。 对范围内最多2名敌人造成205点伤害，并施加战术压制。",
+					"power": 205,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "pin_missile",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，释放终极奥义【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cacturne.png"
+	},
+	"swablu": {
+		"id": "swablu",
+		"name": "青绵鸟",
+		"title": "绵鸟宝可梦",
+		"cost": 1,
+		"types": ["Normal", "Flying"],
+		"hp": 565,
+		"atk": 48,
+		"armor": 31,
+		"mr": 38,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "啄",
+		"skill_desc": "用尖锐的喙或角刺向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+		"skill_power": 170,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，爆发【龙之波动】！从大大的口中掀起冲击波攻击对手。 对范围内最多3名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，爆发【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 席卷战场对最多4名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/swablu.png"
+	},
+	"altaria": {
+		"id": "altaria",
+		"name": "七夕青鸟",
+		"title": "哼唱宝可梦",
+		"cost": 3,
+		"types": ["Dragon", "Flying"],
+		"hp": 760,
+		"atk": 67,
+		"armor": 44,
+		"mr": 51,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "龙息",
+		"skill_desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "啄",
+					"desc": "用尖锐的喙或角刺向对手进行攻击。",
+					"detail": "消耗100能量，使出【啄】。用尖锐的喙或角刺向对手进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "drill_peck",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，爆发【龙之波动】！从大大的口中掀起冲击波攻击对手。 对范围内最多3名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暴风",
+					"desc": "用强烈的风席卷对手进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【暴风】！用强烈的风席卷对手进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "勇鸟猛攻",
+					"desc": "收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【勇鸟猛攻】！收拢翅膀，通过低空飞行突击对手。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，释放终极奥义【灭亡之歌】！倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/altaria.png"
+	},
+	"zangoose": {
+		"id": "zangoose",
+		"name": "猫鼬斩",
+		"title": "猫鼬宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 747,
+		"atk": 97,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，使出【追打】。当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，爆发【电光一闪】！以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "燕返",
+					"desc": "以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。",
+					"detail": "消耗100能量，爆发【燕返】！以敏捷的动作戏弄对手后进行切斩。攻击必定会命中。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，爆发【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "垃圾射击",
+					"desc": "用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【垃圾射击】！用肮脏的垃圾撞向对手进行攻击。有时会让对手陷入中毒状态。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "gunk_shot",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/zangoose.png"
+	},
+	"seviper": {
+		"id": "seviper",
+		"name": "饭匙蛇",
+		"title": "牙蛇宝可梦",
+		"cost": 2,
+		"types": ["Poison"],
+		"hp": 747,
+		"atk": 87,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "舌舔",
+		"skill_desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+		"skill_detail": "消耗100能量，使出【舌舔】。用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【舌舔】。用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "毒尾",
+					"desc": "用尾巴拍打。有时会让对手陷入中毒状态，也容易击中要害。",
+					"detail": "消耗100能量，使出【毒尾】。用尾巴拍打。有时会让对手陷入中毒状态，也容易击中要害。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，使出【暗袭要害】。抓住瞬间的空隙切斩对手。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "毒击",
+					"desc": "用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，爆发【毒击】！用带毒的触手或手臂刺入对手。有时会让对手陷入中毒状态。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "poison_jab",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "污泥炸弹",
+					"desc": "用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。",
+					"detail": "消耗100能量，释放终极奥义【污泥炸弹】！用污泥投掷对手进行攻击。有时会让对手陷入中毒状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/seviper.png"
+	},
+	"lunatone": {
+		"id": "lunatone",
+		"name": "月石",
+		"title": "陨石宝可梦",
+		"cost": 2,
+		"types": ["Rock", "Psychic"],
+		"hp": 857,
+		"atk": 84,
+		"armor": 33,
+		"mr": 42,
+		"range": 3,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，使出【催眠术】。施以诱导睡意的暗示，让对手陷入睡眠状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，爆发【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lunatone.png"
+	},
+	"solrock": {
+		"id": "solrock",
+		"name": "太阳岩",
+		"title": "陨石宝可梦",
+		"cost": 2,
+		"types": ["Rock", "Psychic"],
+		"hp": 857,
+		"atk": 84,
+		"armor": 42,
+		"mr": 33,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "闪焰冲锋",
+					"desc": "让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【闪焰冲锋】。让火焰覆盖全身猛撞向对手。自己也会受到不小的伤害。有时会让对手陷入灼伤状态。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "flare_blitz",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰旋涡",
+					"desc": "将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。",
+					"detail": "消耗100能量，使出【火焰旋涡】。将对手困在激烈的火焰旋涡中，在４～５回合内进行攻击。 对目标造成170点伤害。",
+					"power": 170,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "fire_spin",
+					"sfx": "fire",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，释放终极奥义【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/solrock.png"
+	},
+	"barboach": {
+		"id": "barboach",
+		"name": "泥泥鳅",
+		"title": "须鱼宝可梦",
+		"cost": 1,
+		"types": ["Water", "Ground"],
+		"hp": 597,
+		"atk": 53,
+		"armor": 23,
+		"mr": 22,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "掷泥",
+		"skill_desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+		"skill_detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 对范围内最多2名敌人造成430点伤害，并施加战术压制。",
+					"power": 430,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/barboach.png"
+	},
+	"whiscash": {
+		"id": "whiscash",
+		"name": "鲶鱼王",
+		"title": "须鱼宝可梦",
+		"cost": 3,
+		"types": ["Water", "Ground"],
+		"hp": 987,
+		"atk": 72,
+		"armor": 37,
+		"mr": 36,
+		"range": 2,
+		"atk_speed": 0.70,
+		"max_mana": 100,
+		"skill_name": "掷泥",
+		"skill_desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+		"skill_detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+		"skill_power": 140,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【水之波动】！用水的震动攻击对手。有时会使对手混乱。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，爆发【水流尾】！如惊涛骇浪般挥动大尾巴攻击对手。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "逆鳞",
+					"desc": "在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。",
+					"detail": "消耗100能量，释放终极奥义【逆鳞】！在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dragon_apocalypse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/whiscash.png"
+	},
+	"corphish": {
+		"id": "corphish",
+		"name": "龙虾小兵",
+		"title": "无赖宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 552,
+		"atk": 74,
+		"armor": 33,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.64,
+		"max_mana": 100,
+		"skill_name": "泡沫",
+		"skill_desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "夹住",
+					"desc": "将对手从两侧夹住，给予伤害。",
+					"detail": "消耗100能量，使出【夹住】。将对手从两侧夹住，给予伤害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crabhammer",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，使出【暗袭要害】。抓住瞬间的空隙切斩对手。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，释放终极奥义【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/corphish.png"
+	},
+	"crawdaunt": {
+		"id": "crawdaunt",
+		"name": "铁螯龙虾",
+		"title": "流氓宝可梦",
+		"cost": 3,
+		"types": ["Water", "Dark"],
+		"hp": 682,
+		"atk": 100,
+		"armor": 42,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "高速星星",
+		"skill_desc": "发射星形的光攻击对手。攻击必定会命中。",
+		"skill_detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "泡沫",
+					"desc": "向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。",
+					"detail": "消耗100能量，使出【泡沫】。向对手用力吹起无数泡泡进行攻击。有时会降低对手的速度。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "bubble_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "夹住",
+					"desc": "将对手从两侧夹住，给予伤害。",
+					"detail": "消耗100能量，爆发【夹住】！将对手从两侧夹住，给予伤害。 对范围内最多2名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crabhammer",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暗袭要害",
+					"desc": "抓住瞬间的空隙切斩对手。容易击中要害。",
+					"detail": "消耗100能量，爆发【暗袭要害】！抓住瞬间的空隙切斩对手。容易击中要害。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/crawdaunt.png"
+	},
+	"baltoy": {
+		"id": "baltoy",
+		"name": "天秤偶",
+		"title": "泥偶宝可梦",
+		"cost": 1,
+		"types": ["Ground", "Psychic"],
+		"hp": 532,
+		"atk": 48,
+		"armor": 29,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【掷泥】！向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，爆发【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，释放终极奥义【祸不单行】！接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【地震】！利用地震的冲击，攻击自己周围所有的宝可梦。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/baltoy.png"
+	},
+	"claydol": {
+		"id": "claydol",
+		"name": "念力土偶",
+		"title": "泥偶宝可梦",
+		"cost": 3,
+		"types": ["Ground", "Psychic"],
+		"hp": 662,
+		"atk": 67,
+		"armor": 51,
+		"mr": 58,
+		"range": 4,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "破坏光线",
+		"skill_desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+		"skill_detail": "消耗100能量，使出【破坏光线】。向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对目标造成400点伤害。",
+		"skill_power": 400,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，使出【破坏光线】。向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对目标造成400点伤害。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "掷泥",
+					"desc": "向对手的脸等投掷泥块进行攻击。会降低对手的命中率。",
+					"detail": "消耗100能量，使出【掷泥】。向对手的脸等投掷泥块进行攻击。会降低对手的命中率。 对目标造成140点伤害。",
+					"power": 140,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【幻象光线】。向对手发射神奇的光线进行攻击。有时会使对手混乱。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，爆发【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，释放终极奥义【祸不单行】！接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/claydol.png"
+	},
+	"lileep": {
+		"id": "lileep",
+		"name": "触手百合",
+		"title": "海百合宝可梦",
+		"cost": 1,
+		"types": ["Rock", "Grass"],
+		"hp": 701,
+		"atk": 61,
+		"armor": 38,
+		"mr": 43,
+		"range": 3,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "swift",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "超级吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【超级吸取】。吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "溶解液",
+					"desc": "将强酸泼向对手进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【溶解液】！将强酸泼向对手进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/lileep.png"
+	},
+	"cradily": {
+		"id": "cradily",
+		"name": "摇篮百合",
+		"title": "藤壶宝可梦",
+		"cost": 3,
+		"types": ["Rock", "Grass"],
+		"hp": 831,
+		"atk": 74,
+		"armor": 47,
+		"mr": 52,
+		"range": 4,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "溶解液",
+		"skill_desc": "将强酸泼向对手进行攻击。有时会降低对手的特防。",
+		"skill_detail": "消耗100能量，使出【溶解液】。将强酸泼向对手进行攻击。有时会降低对手的特防。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "溶解液",
+					"desc": "将强酸泼向对手进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【溶解液】。将强酸泼向对手进行攻击。有时会降低对手的特防。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sludge_bomb",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "寄生种子",
+					"desc": "植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。",
+					"detail": "消耗100能量，使出【寄生种子】。植入寄生种子后，将在每回合一点一点吸取对手的ＨＰ，从而用来回复自己的ＨＰ。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "能量球",
+					"desc": "发射从自然收集的生命力量。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【能量球】！发射从自然收集的生命力量。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "seed_bomb",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "强力鞭打",
+					"desc": "激烈地挥舞青藤或触手摔打对手进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【强力鞭打】！激烈地挥舞青藤或触手摔打对手进行攻击。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "power_whip",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/cradily.png"
+	},
+	"anorith": {
+		"id": "anorith",
+		"name": "太古羽虫",
+		"title": "古虾宝可梦",
+		"cost": 1,
+		"types": ["Rock", "Bug"],
+		"hp": 565,
+		"atk": 84,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，爆发【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/anorith.png"
+	},
+	"armaldo": {
+		"id": "armaldo",
+		"name": "太古盔甲",
+		"title": "甲胄宝可梦",
+		"cost": 3,
+		"types": ["Rock", "Bug"],
+		"hp": 760,
+		"atk": 103,
+		"armor": 49,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "虫咬",
+					"desc": "咬住进行攻击。当对手携带树果时，可以食用并获得其效果。",
+					"detail": "消耗100能量，爆发【虫咬】！咬住进行攻击。当对手携带树果时，可以食用并获得其效果。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "盐水",
+					"desc": "当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。",
+					"detail": "消耗100能量，爆发【盐水】！当对手的ＨＰ负伤到一半左右时，招式威力会变成２倍。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "十字毒刃",
+					"desc": "用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【十字毒刃】！用毒刃劈开对手。有时会让对手陷入中毒状态，也容易击中要害。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "poison_sting",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩石爆击",
+					"desc": "向对手发射坚硬的岩石进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【岩石爆击】！向对手发射坚硬的岩石进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十字剪",
+					"desc": "将镰刀或爪子像剪刀般地交叉，顺势劈开对手。",
+					"detail": "消耗100能量，释放终极奥义【十字剪】！将镰刀或爪子像剪刀般地交叉，顺势劈开对手。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "x_scissor",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/armaldo.png"
+	},
+	"feebas": {
+		"id": "feebas",
+		"name": "丑丑鱼",
+		"title": "鱼宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 450,
+		"atk": 45,
+		"armor": 20,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，使出【光墙】。利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【冲浪】！利用大浪攻击自己周围所有的宝可梦。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，释放终极奥义【泥巴射击】！向对手投掷泥块进行攻击。同时降低对手的速度。 席卷战场对最多6名敌人造成475点巨额伤害与强力击破！",
+					"power": 475,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/feebas.png"
+	},
+	"milotic": {
+		"id": "milotic",
+		"name": "美纳斯",
+		"title": "慈爱宝可梦",
+		"cost": 4,
+		"types": ["Water"],
+		"hp": 890,
+		"atk": 87,
+		"armor": 39,
+		"mr": 60,
+		"range": 3,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "水之波动",
+		"skill_desc": "用水的震动攻击对手。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "龙卷风",
+					"desc": "兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【龙卷风】。兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，爆发【水流尾】！如惊涛骇浪般挥动大尾巴攻击对手。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/milotic.png"
+	},
+	"castform": {
+		"id": "castform",
+		"name": "飘浮泡泡",
+		"title": "天气宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 727,
+		"atk": 67,
+		"armor": 35,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，释放终极奥义【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "大字爆炎",
+					"desc": "用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【大字爆炎】！用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/castform.png"
+	},
+	"kecleon": {
+		"id": "kecleon",
+		"name": "变隐龙",
+		"title": "变色宝可梦",
+		"cost": 2,
+		"types": ["Normal"],
+		"hp": 662,
+		"atk": 80,
+		"armor": 35,
+		"mr": 58,
+		"range": 1,
+		"atk_speed": 0.65,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "舌舔",
+					"desc": "用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【舌舔】！用长长的舌头，舔遍对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "lick",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "踢倒",
+					"desc": "用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【踢倒】！用力踢对手的脚，使其摔倒进行攻击。对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "low_kick",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，释放终极奥义【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 席卷战场对最多4名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/kecleon.png"
+	},
+	"shuppet": {
+		"id": "shuppet",
+		"name": "怨影娃娃",
+		"title": "人偶宝可梦",
+		"cost": 1,
+		"types": ["Ghost"],
+		"hp": 558,
+		"atk": 71,
+		"armor": 20,
+		"mr": 20,
+		"range": 3,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "惊吓",
+		"skill_desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+		"skill_power": 160,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【暗影球】。投掷一团黑影进行攻击。有时会降低对手的特防。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，使出【突袭】。可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，爆发【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shuppet.png"
+	},
+	"banette": {
+		"id": "banette",
+		"name": "诅咒娃娃",
+		"title": "布偶宝可梦",
+		"cost": 3,
+		"types": ["Ghost"],
+		"hp": 688,
+		"atk": 97,
+		"armor": 33,
+		"mr": 32,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "黑夜魔影",
+		"skill_desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+		"skill_detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【暗影球】。投掷一团黑影进行攻击。有时会降低对手的特防。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，使出【突袭】。可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，爆发【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，释放终极奥义【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/banette.png"
+	},
+	"duskull": {
+		"id": "duskull",
+		"name": "夜巡灵",
+		"title": "渡魂宝可梦",
+		"cost": 1,
+		"types": ["Ghost"],
+		"hp": 450,
+		"atk": 48,
+		"armor": 44,
+		"mr": 44,
+		"range": 3,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "黑夜魔影",
+		"skill_desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+		"skill_detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，使出【祸不单行】。接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "吸血",
+					"desc": "吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，使出【吸血】。吸取血液攻击对手。可以回复给予对手伤害的一半ＨＰ。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "leech_life",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，爆发【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 对范围内最多3名敌人造成190点伤害，并施加战术压制。",
+					"power": 190,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "恶之波动",
+					"desc": "从体内发出充满恶意的恐怖气场。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【恶之波动】！从体内发出充满恶意的恐怖气场。有时会使对手畏缩。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "暗影球",
+					"desc": "投掷一团黑影进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【暗影球】！投掷一团黑影进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "shadow_ball",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/duskull.png"
+	},
+	"dusclops": {
+		"id": "dusclops",
+		"name": "彷徨夜灵",
+		"title": "招手宝可梦",
+		"cost": 3,
+		"types": ["Ghost"],
+		"hp": 532,
+		"atk": 67,
+		"armor": 62,
+		"mr": 62,
+		"range": 3,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "暗影拳",
+		"skill_desc": "使出混影之拳。攻击必定会命中。",
+		"skill_detail": "消耗100能量，使出【暗影拳】。使出混影之拳。攻击必定会命中。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "暗影拳",
+					"desc": "使出混影之拳。攻击必定会命中。",
+					"detail": "消耗100能量，使出【暗影拳】。使出混影之拳。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "shadow_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				},
+				{
+					"name": "火焰拳",
+					"desc": "用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火焰拳】。用充满火焰的拳头攻击对手。有时会让对手陷入灼伤状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "fire_punch",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻拳",
+					"desc": "用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻拳】。用充满寒气的拳头攻击对手。有时会让对手陷入冰冻状态。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_punch",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，爆发【黑夜魔影】！显示恐怖幻影，只给予对手和自己等级相同的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "雷电拳",
+					"desc": "用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【雷电拳】！用充满电流的拳头攻击对手。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成355点伤害，并施加战术压制。",
+					"power": 355,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "thunder_punch",
+					"sfx": "thunder",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "吸取",
+					"desc": "吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。",
+					"detail": "消耗100能量，释放终极奥义【吸取】！吸取对手的养分进行攻击。可以回复给予对手伤害的一半ＨＰ。 席卷战场对最多6名敌人造成300点巨额伤害与强力击破！",
+					"power": 300,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "leech_seed",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "祸不单行",
+					"desc": "接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。",
+					"detail": "消耗100能量，释放终极奥义【祸不单行】！接二连三地进行攻击。对处于异常状态的对手给予较大的伤害。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/dusclops.png"
+	},
+	"tropius": {
+		"id": "tropius",
+		"name": "热带龙",
+		"title": "水果宝可梦",
+		"cost": 3,
+		"types": ["Grass", "Flying"],
+		"hp": 916,
+		"atk": 69,
+		"armor": 41,
+		"mr": 43,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "起风",
+		"skill_desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "飞叶快刀",
+			"style": "razor_leaf",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "起风",
+					"desc": "用翅膀将刮起的狂风袭向对手进行攻击。",
+					"detail": "消耗100能量，使出【起风】。用翅膀将刮起的狂风袭向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "gust",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "飞叶快刀",
+					"desc": "飞出叶片，切斩对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【飞叶快刀】。飞出叶片，切斩对手进行攻击。容易击中要害。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "razor_leaf",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【空气斩】。用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "飞叶风暴",
+					"desc": "用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。",
+					"detail": "消耗100能量，爆发【飞叶风暴】！用尖尖的叶片向对手卷起风暴。使用之后因为反作用力自己的特攻会大幅降低。 对范围内最多3名敌人造成520点伤害，并施加战术压制。",
+					"power": 520,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "petal_dance",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，爆发【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "怨恨",
+					"desc": "对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。",
+					"detail": "消耗100能量，释放终极奥义【怨恨】！对对手最后使用的招式怀有怨恨，减少４ＰＰ该招式。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hex_nightmare",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "逆鳞",
+					"desc": "在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。",
+					"detail": "消耗100能量，释放终极奥义【逆鳞】！在２～３回合内，乱打一气地进行攻击。大闹一番后自己会陷入混乱。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dragon_apocalypse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/tropius.png"
+	},
+	"chimecho": {
+		"id": "chimecho",
+		"name": "风铃铃",
+		"title": "风铃宝可梦",
+		"cost": 3,
+		"types": ["Psychic"],
+		"hp": 760,
+		"atk": 84,
+		"armor": 40,
+		"mr": 44,
+		"range": 3,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "念力",
+			"style": "psybeam",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，使出【光墙】。利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/chimecho.png"
+	},
+	"absol": {
+		"id": "absol",
+		"name": "阿勃梭鲁",
+		"title": "灾祸宝可梦",
+		"cost": 4,
+		"types": ["Dark"],
+		"hp": 695,
+		"atk": 106,
+		"armor": 31,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.74,
+		"max_mana": 100,
+		"skill_name": "抓",
+		"skill_desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "咬住",
+			"style": "bite",
+			"sfx": "bite"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "抓",
+					"desc": "用坚硬且无比锋利的爪子抓对手进行攻击。",
+					"detail": "消耗100能量，使出【抓】。用坚硬且无比锋利的爪子抓对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "灭亡之歌",
+					"desc": "倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。",
+					"detail": "消耗100能量，使出【灭亡之歌】。倾听歌声的宝可梦经过３回合陷入濒死。替换后效果消失。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "perish_song",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "电光一闪",
+					"desc": "以迅雷不及掩耳之势扑向对手。必定能够先制攻击。",
+					"detail": "消耗100能量，使出【电光一闪】。以迅雷不及掩耳之势扑向对手。必定能够先制攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "quick_attack",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "旋风刀",
+					"desc": "制造风之刃，于第２回合攻击对手。容易击中要害。",
+					"detail": "消耗100能量，爆发【旋风刀】！制造风之刃，于第２回合攻击对手。容易击中要害。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，爆发【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 对范围内最多3名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "近身战",
+					"desc": "放弃守护，向对手的怀里突击。自己的防御和特防会降低。",
+					"detail": "消耗100能量，释放终极奥义【近身战】！放弃守护，向对手的怀里突击。自己的防御和特防会降低。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "close_combat",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【精神利刃】！用实体化的心之利刃劈开对手。容易击中要害。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/absol.png"
+	},
+	"wynaut": {
+		"id": "wynaut",
+		"name": "小果然",
+		"title": "开朗宝可梦",
+		"cost": 1,
+		"types": ["Psychic"],
+		"hp": 890,
+		"atk": 45,
+		"armor": 25,
+		"mr": 25,
+		"range": 3,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神利刃",
+					"desc": "用实体化的心之利刃劈开对手。容易击中要害。",
+					"detail": "消耗100能量，使出【精神利刃】。用实体化的心之利刃劈开对手。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "psycho_cut",
+					"sfx": "slash",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "催眠术",
+					"desc": "施以诱导睡意的暗示，让对手陷入睡眠状态。",
+					"detail": "消耗100能量，爆发【催眠术】！施以诱导睡意的暗示，让对手陷入睡眠状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hypnosis",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "反射壁",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。",
+					"detail": "消耗100能量，爆发【反射壁】！利用神奇的墙壁，在５回合内减弱从对手那里受到的物理攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "光墙",
+					"desc": "利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。",
+					"detail": "消耗100能量，爆发【光墙】！利用神奇的墙壁，在５回合内减弱从对手那里受到的特殊攻击的伤害。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "light_screen",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神击破",
+					"desc": "将神奇的念波实体化攻击对手。给予物理伤害。",
+					"detail": "消耗100能量，释放终极奥义【精神击破】！将神奇的念波实体化攻击对手。给予物理伤害。 席卷战场对最多6名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psystrike",
+					"sfx": "punch",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/wynaut.png"
+	},
+	"snorunt": {
+		"id": "snorunt",
+		"name": "雪童子",
+		"title": "雪笠宝可梦",
+		"cost": 1,
+		"types": ["Ice"],
+		"hp": 597,
+		"atk": 54,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "细雪",
+		"skill_desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+		"skill_detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "冰砾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【惊吓】！用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成220点伤害，并施加战术压制。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，爆发【冰冻之风】！将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "冰锥",
+					"desc": "向对手发射锋利的冰柱进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【冰锥】！向对手发射锋利的冰柱进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "icicle_spear",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/snorunt.png"
+	},
+	"glalie": {
+		"id": "glalie",
+		"name": "冰鬼护",
+		"title": "脸面宝可梦",
+		"cost": 3,
+		"types": ["Ice"],
+		"hp": 792,
+		"atk": 74,
+		"armor": 40,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.75,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "冰砾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "绝对零度",
+					"desc": "给对手一击濒死。如果是冰属性以外的宝可梦使用，就会难以打中。",
+					"detail": "消耗100能量，使出【绝对零度】。给对手一击濒死。如果是冰属性以外的宝可梦使用，就会难以打中。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "sheer_cold",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "惊吓",
+					"desc": "用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【惊吓】。用尖叫声等突然惊吓对手进行攻击。有时会使对手畏缩。 对目标造成160点伤害。",
+					"power": 160,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【细雪】！将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，爆发【冰冻之风】！将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对范围内最多3名敌人造成295点伤害，并施加战术压制。",
+					"power": 295,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "欺诈",
+					"desc": "利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。",
+					"detail": "消耗100能量，释放终极奥义【欺诈】！利用对手的力量进行攻击。正和自己战斗的对手，其攻击越高，伤害越大。 席卷战场对最多4名敌人造成675点巨额伤害与强力击破！",
+					"power": 675,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "dark_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 席卷战场对最多4名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/glalie.png"
+	},
+	"spheal": {
+		"id": "spheal",
+		"name": "海豹球",
+		"title": "拍手宝可梦",
+		"cost": 1,
+		"types": ["Ice", "Water"],
+		"hp": 727,
+		"atk": 58,
+		"armor": 26,
+		"mr": 26,
+		"range": 1,
+		"atk_speed": 0.61,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【细雪】！将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，爆发【极光束】！向对手发射虹色光束进行攻击。有时会降低对手的攻击。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，释放终极奥义【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/spheal.png"
+	},
+	"sealeo": {
+		"id": "sealeo",
+		"name": "海魔狮",
+		"title": "滚球宝可梦",
+		"cost": 2,
+		"types": ["Ice", "Water"],
+		"hp": 857,
+		"atk": 71,
+		"armor": 35,
+		"mr": 35,
+		"range": 1,
+		"atk_speed": 0.66,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，使出【睡觉】。连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【细雪】！将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，爆发【泰山压顶】！用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对范围内最多2名敌人造成385点伤害，并施加战术压制。",
+					"power": 385,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，爆发【极光束】！向对手发射虹色光束进行攻击。有时会降低对手的攻击。 对范围内最多3名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "冰锥",
+					"desc": "向对手发射锋利的冰柱进行攻击。连续攻击２～５次。",
+					"detail": "消耗100能量，释放终极奥义【冰锥】！向对手发射锋利的冰柱进行攻击。连续攻击２～５次。 席卷战场对最多4名敌人造成325点巨额伤害与强力击破！",
+					"power": 325,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "icicle_spear",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/sealeo.png"
+	},
+	"walrein": {
+		"id": "walrein",
+		"name": "帝牙海狮",
+		"title": "破冰宝可梦",
+		"cost": 4,
+		"types": ["Ice", "Water"],
+		"hp": 987,
+		"atk": 84,
+		"armor": 44,
+		"mr": 44,
+		"range": 1,
+		"atk_speed": 0.71,
+		"max_mana": 100,
+		"skill_name": "冰冻牙",
+		"skill_desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+		"skill_detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+		"skill_power": 230,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻牙】。用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "细雪",
+					"desc": "将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【细雪】。将冰冷的细雪吹向对手进行攻击。有时会让对手陷入冰冻状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_shard",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【水之波动】！用水的震动攻击对手。有时会使对手混乱。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "极光束",
+					"desc": "向对手发射虹色光束进行攻击。有时会降低对手的攻击。",
+					"detail": "消耗100能量，释放终极奥义【极光束】！向对手发射虹色光束进行攻击。有时会降低对手的攻击。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "aurora_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/walrein.png"
+	},
+	"clamperl": {
+		"id": "clamperl",
+		"name": "珍珠贝",
+		"title": "双壳贝宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 500,
+		"atk": 70,
+		"armor": 42,
+		"mr": 29,
+		"range": 2,
+		"atk_speed": 0.63,
+		"max_mana": 100,
+		"skill_name": "水枪",
+		"skill_desc": "向对手猛烈地喷射水流进行攻击。",
+		"skill_detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，使出【冰冻光束】。向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "剧毒",
+					"desc": "让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。",
+					"detail": "消耗100能量，爆发【剧毒】！让对手陷入剧毒状态。随着回合的推进，中毒伤害会增加。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "toxic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，释放终极奥义【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "攀瀑",
+					"desc": "以惊人的气势扑向对手。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【攀瀑】！以惊人的气势扑向对手。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，释放终极奥义【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/clamperl.png"
+	},
+	"huntail": {
+		"id": "huntail",
+		"name": "猎斑鱼",
+		"title": "深海宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 630,
+		"atk": 89,
+		"armor": 51,
+		"mr": 38,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "咬住",
+		"skill_desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "冰冻牙",
+					"desc": "用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【冰冻牙】！用藏有冷气的牙齿咬住对手。有时会使对手畏缩或陷入冰冻状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "ice_fang",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "突袭",
+					"desc": "可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。",
+					"detail": "消耗100能量，爆发【突袭】！可以比对手先攻击。对手使出的招式如果不是攻击招式则会失败。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mach_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "潜水",
+					"desc": "第１回合潜入，第２回合浮上来进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【潜水】！第１回合潜入，第２回合浮上来进行攻击。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/huntail.png"
+	},
+	"gorebyss": {
+		"id": "gorebyss",
+		"name": "樱花鱼",
+		"title": "南海宝可梦",
+		"cost": 3,
+		"types": ["Water"],
+		"hp": 630,
+		"atk": 96,
+		"armor": 51,
+		"mr": 38,
+		"range": 3,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "潜水",
+					"desc": "第１回合潜入，第２回合浮上来进行攻击。",
+					"detail": "消耗100能量，爆发【潜水】！第１回合潜入，第２回合浮上来进行攻击。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "终极冲击",
+					"desc": "使出自己浑身力量突击对手。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【终极冲击】！使出自己浑身力量突击对手。下一回合自己将无法动弹。 席卷战场对最多4名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "giga_impact",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/gorebyss.png"
+	},
+	"relicanth": {
+		"id": "relicanth",
+		"name": "古空棘鱼",
+		"title": "长寿宝可梦",
+		"cost": 3,
+		"types": ["Water", "Rock"],
+		"hp": 922,
+		"atk": 80,
+		"armor": 62,
+		"mr": 33,
+		"range": 2,
+		"atk_speed": 0.69,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "水流尾",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，使出【水枪】。向对手猛烈地喷射水流进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，爆发【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，释放终极奥义【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 席卷战场对最多4名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【岩崩】！将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成575点巨额伤害与强力击破！",
+					"power": 575,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/relicanth.png"
+	},
+	"luvdisc": {
+		"id": "luvdisc",
+		"name": "爱心鱼",
+		"title": "相随宝可梦",
+		"cost": 1,
+		"types": ["Water"],
+		"hp": 552,
+		"atk": 48,
+		"armor": 29,
+		"mr": 33,
+		"range": 2,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "撞击",
+		"skill_desc": "用整个身体撞向对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "水枪",
+					"desc": "向对手猛烈地喷射水流进行攻击。",
+					"detail": "消耗100能量，爆发【水枪】！向对手猛烈地喷射水流进行攻击。 对范围内最多3名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "water_gun",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，爆发【水炮】！向对手猛烈地喷射大量水流进行攻击。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，爆发【冲浪】！利用大浪攻击自己周围所有的宝可梦。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/luvdisc.png"
+	},
+	"bagon": {
+		"id": "bagon",
+		"name": "宝贝龙",
+		"title": "坚硬脑袋宝可梦",
+		"cost": 1,
+		"types": ["Dragon"],
+		"hp": 565,
+		"atk": 71,
+		"armor": 31,
+		"mr": 20,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "火花",
+		"skill_desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+		"skill_detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "龙爪",
+					"desc": "用尖锐的巨爪劈开对手进行攻击。",
+					"detail": "消耗100能量，爆发【龙爪】！用尖锐的巨爪劈开对手进行攻击。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dragon_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/bagon.png"
+	},
+	"shelgon": {
+		"id": "shelgon",
+		"name": "甲壳龙",
+		"title": "耐力宝可梦",
+		"cost": 2,
+		"types": ["Dragon"],
+		"hp": 695,
+		"atk": 84,
+		"armor": 49,
+		"mr": 26,
+		"range": 2,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "头锤",
+		"skill_desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+		"skill_power": 240,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【头锤】。将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，使出【火花】。向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【咬住】！用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，爆发【咬碎】！用利牙咬碎对手进行攻击。有时会降低对手的防御。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 1.10
+				},
+				{
+					"name": "龙爪",
+					"desc": "用尖锐的巨爪劈开对手进行攻击。",
+					"detail": "消耗100能量，爆发【龙爪】！用尖锐的巨爪劈开对手进行攻击。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dragon_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/shelgon.png"
+	},
+	"salamence": {
+		"id": "salamence",
+		"name": "暴飞龙",
+		"title": "龙宝可梦",
+		"cost": 5,
+		"types": ["Dragon", "Flying"],
+		"hp": 890,
+		"atk": 110,
+		"armor": 40,
+		"mr": 40,
+		"range": 2,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "飞翔",
+		"skill_desc": "第１回合飞上天空，第２回合攻击对手。",
+		"skill_detail": "消耗100能量，使出【飞翔】。第１回合飞上天空，第２回合攻击对手。 对目标造成280点伤害。",
+		"skill_power": 280,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，使出【飞翔】。第１回合飞上天空，第２回合攻击对手。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "咬住",
+					"desc": "用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【咬住】。用尖锐的牙咬住对手进行攻击。有时会使对手畏缩。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "bite",
+					"sfx": "bite",
+					"scale": 0.82
+				},
+				{
+					"name": "雷电牙",
+					"desc": "用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。",
+					"detail": "消耗100能量，使出【雷电牙】。用蓄满电流的牙齿咬住对手。有时会使对手畏缩或陷入麻痹状态。 对目标造成230点伤害。",
+					"power": 230,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "thunder_fang",
+					"sfx": "thunder",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成340点伤害，并施加战术压制。",
+					"power": 340,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "火焰牙",
+					"desc": "用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【火焰牙】！用覆盖着火焰的牙齿咬住对手。有时会使对手畏缩或陷入灼伤状态。 对范围内最多2名敌人造成325点伤害，并施加战术压制。",
+					"power": 325,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "fire_fang",
+					"sfx": "fire",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "火花",
+					"desc": "向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【火花】！向对手发射小型火焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成400点巨额伤害与强力击破！",
+					"power": 400,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ember",
+					"sfx": "fire",
+					"scale": 1.55
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【龙息】！将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/salamence.png"
+	},
+	"beldum": {
+		"id": "beldum",
+		"name": "铁哑铃",
+		"title": "铁球宝可梦",
+		"cost": 1,
+		"types": ["Steel", "Psychic"],
+		"hp": 532,
+		"atk": 58,
+		"armor": 40,
+		"mr": 31,
+		"range": 1,
+		"atk_speed": 0.62,
+		"max_mana": 100,
+		"skill_name": "猛撞",
+		"skill_desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+		"skill_detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+		"skill_power": 280,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，使出【铁壁】。将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【意念头锤】。将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，爆发【撞击】！用整个身体撞向对手进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【铁头】！用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "头锤",
+					"desc": "将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【头锤】！将头伸出，笔直地扑向对手进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成550点巨额伤害与强力击破！",
+					"power": 550,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁尾",
+					"desc": "使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁尾】！使用坚硬的尾巴摔打对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "iron_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 席卷战场对最多6名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/beldum.png"
+	},
+	"metang": {
+		"id": "metang",
+		"name": "金属怪",
+		"title": "铁爪宝可梦",
+		"cost": 2,
+		"types": ["Steel", "Psychic"],
+		"hp": 662,
+		"atk": 71,
+		"armor": 49,
+		"mr": 40,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/metang.png"
+	},
+	"metagross": {
+		"id": "metagross",
+		"name": "巨金怪",
+		"title": "铁足宝可梦",
+		"cost": 5,
+		"types": ["Steel", "Psychic"],
+		"hp": 792,
+		"atk": 110,
+		"armor": 62,
+		"mr": 44,
+		"range": 1,
+		"atk_speed": 0.72,
+		"max_mana": 100,
+		"skill_name": "猛撞",
+		"skill_desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+		"skill_detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+		"skill_power": 280,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，使出【猛撞】。以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，使出【金属爪】。用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "撞击",
+					"desc": "用整个身体撞向对手进行攻击。",
+					"detail": "消耗100能量，使出【撞击】。用整个身体撞向对手进行攻击。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，爆发【念力】！向对手发送微弱的念力进行攻击。有时会使对手混乱。 对范围内最多3名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "暗影拳",
+					"desc": "使出混影之拳。攻击必定会命中。",
+					"detail": "消耗100能量，释放终极奥义【暗影拳】！使出混影之拳。攻击必定会命中。 席卷战场对最多4名敌人造成500点巨额伤害与强力击破！",
+					"power": 500,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "shadow_punch",
+					"sfx": "punch",
+					"scale": 1.55
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，释放终极奥义【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/metagross.png"
+	},
+	"regirock": {
+		"id": "regirock",
+		"name": "雷吉洛克",
+		"title": "岩山宝可梦",
+		"cost": 4,
+		"types": ["Rock"],
+		"hp": 792,
+		"atk": 87,
+		"armor": 75,
+		"mr": 49,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "落石",
+		"skill_desc": "拿起小岩石，投掷对手进行攻击。",
+		"skill_detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "落石",
+					"desc": "拿起小岩石，投掷对手进行攻击。",
+					"detail": "消耗100能量，使出【落石】。拿起小岩石，投掷对手进行攻击。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_throw",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "岩崩",
+					"desc": "将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【岩崩】。将大岩石猛烈地撞向对手进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "rock_slide",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，爆发【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，爆发【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，爆发【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "尖石攻击",
+					"desc": "用尖尖的岩石刺入对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，释放终极奥义【尖石攻击】！用尖尖的岩石刺入对手进行攻击。容易击中要害。 席卷战场对最多4名敌人造成700点巨额伤害与强力击破！",
+					"power": 700,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "stone_edge",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，释放终极奥义【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 席卷战场对最多6名敌人造成950点巨额伤害与强力击破！",
+					"power": 950,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/regirock.png"
+	},
+	"regice": {
+		"id": "regice",
+		"name": "雷吉艾斯",
+		"title": "冰山宝可梦",
+		"cost": 4,
+		"types": ["Ice"],
+		"hp": 792,
+		"atk": 87,
+		"armor": 49,
+		"mr": 75,
+		"range": 3,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "冰冻之风",
+		"skill_desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【冰冻之风】。将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对目标造成210点伤害。",
+		"skill_power": 210,
+		"basic_attack": {
+			"type": "special",
+			"name": "冰冻光束",
+			"style": "ice_shard",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "冰冻之风",
+					"desc": "将结冰的冷气吹向对手进行攻击。会降低对手的速度。",
+					"detail": "消耗100能量，使出【冰冻之风】。将结冰的冷气吹向对手进行攻击。会降低对手的速度。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，使出【蛮力】。发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对目标造成340点伤害。",
+					"power": 340,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，爆发【重踏】！用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对范围内最多2名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "暴风雪",
+					"desc": "将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，爆发【暴风雪】！将猛烈的暴风雪刮向对手进行攻击。有时会让对手陷入冰冻状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "blizzard",
+					"sfx": "water",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "十万伏特",
+					"desc": "向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【十万伏特】！向对手发出强力电击进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunderbolt",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "打雷",
+					"desc": "向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，释放终极奥义【打雷】！向对手劈下暴雷进行攻击。有时会让对手陷入麻痹状态。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "thunder",
+					"sfx": "thunder",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/regice.png"
+	},
+	"registeel": {
+		"id": "registeel",
+		"name": "雷吉斯奇鲁",
+		"title": "黑金宝可梦",
+		"cost": 4,
+		"types": ["Steel"],
+		"hp": 792,
+		"atk": 71,
+		"armor": 71,
+		"mr": 71,
+		"range": 1,
+		"atk_speed": 0.68,
+		"max_mana": 100,
+		"skill_name": "铁头",
+		"skill_desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【铁头】。用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+		"skill_power": 260,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "铁头",
+					"desc": "用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【铁头】。用钢铁般坚硬的头部进行攻击。有时会使对手畏缩。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "iron_head",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "重踏",
+					"desc": "用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。",
+					"detail": "消耗100能量，使出【重踏】。用力踩踏地面并攻击自己周围所有的宝可梦。降低对方的速度。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，使出【原始之力】。用原始之力进行攻击。有时会提高自己所有的能力。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "金属爪",
+					"desc": "用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。",
+					"detail": "消耗100能量，爆发【金属爪】！用钢铁之爪劈开对手进行攻击。有时会提高自己的攻击。 对范围内最多2名敌人造成280点伤害，并施加战术压制。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "metal_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "加农光炮",
+					"desc": "将身体的光芒聚集在一点释放出去。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【加农光炮】！将身体的光芒聚集在一点释放出去。有时会降低对手的特防。 对范围内最多3名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "flash_cannon",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "蛮力",
+					"desc": "发挥惊人的力量攻击对手。自己的攻击和防御会降低。",
+					"detail": "消耗100能量，爆发【蛮力】！发挥惊人的力量攻击对手。自己的攻击和防御会降低。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "mega_punch",
+					"sfx": "punch",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "铁壁",
+					"desc": "将皮肤变得坚硬如铁，从而大幅提高自己的防御。",
+					"detail": "消耗100能量，释放终极奥义【铁壁】！将皮肤变得坚硬如铁，从而大幅提高自己的防御。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "reflect",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "重磅冲撞",
+					"desc": "用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。",
+					"detail": "消耗100能量，释放终极奥义【重磅冲撞】！用沉重的身体撞向对手进行攻击。自己比对手越重，威力越大。 席卷战场对最多4名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/registeel.png"
+	},
+	"latias": {
+		"id": "latias",
+		"name": "拉帝亚斯",
+		"title": "无限宝可梦",
+		"cost": 5,
+		"types": ["Dragon", "Psychic"],
+		"hp": 792,
+		"atk": 93,
+		"armor": 44,
+		"mr": 62,
+		"range": 3,
+		"atk_speed": 0.83,
+		"max_mana": 100,
+		"skill_name": "龙之波动",
+		"skill_desc": "从大大的口中掀起冲击波攻击对手。",
+		"skill_detail": "消耗100能量，使出【龙之波动】。从大大的口中掀起冲击波攻击对手。 对目标造成270点伤害。",
+		"skill_power": 270,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "dragon_breath",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，使出【龙之波动】。从大大的口中掀起冲击波攻击对手。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/latias.png"
+	},
+	"latios": {
+		"id": "latios",
+		"name": "拉帝欧斯",
+		"title": "无限宝可梦",
+		"cost": 5,
+		"types": ["Dragon", "Psychic"],
+		"hp": 792,
+		"atk": 106,
+		"armor": 40,
+		"mr": 53,
+		"range": 3,
+		"atk_speed": 0.83,
+		"max_mana": 100,
+		"skill_name": "龙之波动",
+		"skill_desc": "从大大的口中掀起冲击波攻击对手。",
+		"skill_detail": "消耗100能量，使出【龙之波动】。从大大的口中掀起冲击波攻击对手。 对目标造成270点伤害。",
+		"skill_power": 270,
+		"basic_attack": {
+			"type": "special",
+			"name": "火花",
+			"style": "dragon_breath",
+			"sfx": "skill"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，使出【龙之波动】。从大大的口中掀起冲击波攻击对手。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "龙息",
+					"desc": "将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【龙息】。将强烈的气息吹向对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "dragon_breath",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "治愈波动",
+					"desc": "放出治愈波动，从而回复对手最大ＨＰ的一半。",
+					"detail": "消耗100能量，爆发【治愈波动】！放出治愈波动，从而回复对手最大ＨＰ的一半。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "heal_pulse",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，爆发【精神强念】！向对手发送强大的念力进行攻击。有时会降低对手的特防。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "水流裂破",
+					"desc": "用水之力量撞向对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，释放终极奥义【水流裂破】！用水之力量撞向对手进行攻击。有时会降低对手的防御。 席卷战场对最多4名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冲浪",
+					"desc": "利用大浪攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，释放终极奥义【冲浪】！利用大浪攻击自己周围所有的宝可梦。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/latios.png"
+	},
+	"kyogre": {
+		"id": "kyogre",
+		"name": "盖欧卡",
+		"title": "海底宝可梦",
+		"cost": 5,
+		"types": ["Water"],
+		"hp": 922,
+		"atk": 119,
+		"armor": 44,
+		"mr": 67,
+		"range": 3,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "水之波动",
+		"skill_desc": "用水的震动攻击对手。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+		"skill_power": 220,
+		"basic_attack": {
+			"type": "special",
+			"name": "水枪",
+			"style": "water_gun",
+			"sfx": "water"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "水之波动",
+					"desc": "用水的震动攻击对手。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【水之波动】。用水的震动攻击对手。有时会使对手混乱。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "water_pulse",
+					"sfx": "water",
+					"scale": 0.82
+				},
+				{
+					"name": "泰山压顶",
+					"desc": "用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。",
+					"detail": "消耗100能量，使出【泰山压顶】。用整个身体压住对手进行攻击。有时会让对手陷入麻痹状态。 对目标造成270点伤害。",
+					"power": 270,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "body_slam",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "根源波动",
+					"desc": "用无数青白色且闪耀的光线攻击对手。",
+					"detail": "消耗100能量，使出【根源波动】。用无数青白色且闪耀的光线攻击对手。 对目标造成320点伤害。",
+					"power": 320,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "hydro_cannon",
+					"sfx": "water",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "水流尾",
+					"desc": "如惊涛骇浪般挥动大尾巴攻击对手。",
+					"detail": "消耗100能量，爆发【水流尾】！如惊涛骇浪般挥动大尾巴攻击对手。 对范围内最多2名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "aqua_tail",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "浊流",
+					"desc": "向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。",
+					"detail": "消耗100能量，爆发【浊流】！向对手喷射浑浊的水进行攻击。有时会降低对手的命中率。 对范围内最多3名敌人造成400点伤害，并施加战术压制。",
+					"power": 400,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "surf",
+					"sfx": "water",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "猛撞",
+					"desc": "以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【猛撞】！以惊人的气势撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "take_down",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "水炮",
+					"desc": "向对手猛烈地喷射大量水流进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【水炮】！向对手猛烈地喷射大量水流进行攻击。 席卷战场对最多6名敌人造成750点巨额伤害与强力击破！",
+					"power": 750,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "hydro_pump",
+					"sfx": "water",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/kyogre.png"
+	},
+	"groudon": {
+		"id": "groudon",
+		"name": "固拉多",
+		"title": "大陆宝可梦",
+		"cost": 5,
+		"types": ["Ground"],
+		"hp": 922,
+		"atk": 119,
+		"armor": 67,
+		"mr": 44,
+		"range": 1,
+		"atk_speed": 0.78,
+		"max_mana": 100,
+		"skill_name": "泥巴射击",
+		"skill_desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+		"skill_detail": "消耗100能量，使出【泥巴射击】。向对手投掷泥块进行攻击。同时降低对手的速度。 对目标造成210点伤害。",
+		"skill_power": 210,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "泥巴射击",
+					"desc": "向对手投掷泥块进行攻击。同时降低对手的速度。",
+					"detail": "消耗100能量，使出【泥巴射击】。向对手投掷泥块进行攻击。同时降低对手的速度。 对目标造成210点伤害。",
+					"power": 210,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "mud_slap",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "劈开",
+					"desc": "用爪子或镰刀等劈开对手进行攻击。容易击中要害。",
+					"detail": "消耗100能量，使出【劈开】。用爪子或镰刀等劈开对手进行攻击。容易击中要害。 对目标造成240点伤害。",
+					"power": 240,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "地震",
+					"desc": "利用地震的冲击，攻击自己周围所有的宝可梦。",
+					"detail": "消耗100能量，使出【地震】。利用地震的冲击，攻击自己周围所有的宝可梦。 对目标造成300点伤害。",
+					"power": 300,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "earthquake",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "大字爆炎",
+					"desc": "用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，爆发【大字爆炎】！用大字形状的火焰烧尽对手。有时会让对手陷入灼伤状态。 对范围内最多3名敌人造成460点伤害，并施加战术压制。",
+					"power": 460,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "fire_blast",
+					"sfx": "fire",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，释放终极奥义【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 席卷战场对最多4名敌人造成600点巨额伤害与强力击破！",
+					"power": 600,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "喷射火焰",
+					"desc": "向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。",
+					"detail": "消耗100能量，释放终极奥义【喷射火焰】！向对手发射烈焰进行攻击。有时会让对手陷入灼伤状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "flamethrower",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/groudon.png"
+	},
+	"rayquaza": {
+		"id": "rayquaza",
+		"name": "烈空坐",
+		"title": "天空宝可梦",
+		"cost": 5,
+		"types": ["Dragon", "Flying"],
+		"hp": 955,
+		"atk": 119,
+		"armor": 44,
+		"mr": 44,
+		"range": 4,
+		"atk_speed": 0.79,
+		"max_mana": 100,
+		"skill_name": "龙卷风",
+		"skill_desc": "兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。",
+		"skill_detail": "消耗100能量，使出【龙卷风】。兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "撞击",
+			"style": "slash",
+			"sfx": "slash"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "龙卷风",
+					"desc": "兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【龙卷风】。兴起龙卷风，将对手卷入进行攻击。有时会使对手畏缩。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "twister",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "空气斩",
+					"desc": "用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，使出【空气斩】。用连天空也能劈开的空气之刃进行攻击。有时会使对手畏缩。 对目标造成250点伤害。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "air_slash",
+					"sfx": "slash",
+					"scale": 0.82
+				},
+				{
+					"name": "咬碎",
+					"desc": "用利牙咬碎对手进行攻击。有时会降低对手的防御。",
+					"detail": "消耗100能量，使出【咬碎】。用利牙咬碎对手进行攻击。有时会降低对手的防御。 对目标造成260点伤害。",
+					"power": 260,
+					"target_count": 1,
+					"stun_duration": 0.0,
+					"vfx": "crunch",
+					"sfx": "bite",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "原始之力",
+					"desc": "用原始之力进行攻击。有时会提高自己所有的能力。",
+					"detail": "消耗100能量，爆发【原始之力】！用原始之力进行攻击。有时会提高自己所有的能力。 对范围内最多3名敌人造成310点伤害，并施加战术压制。",
+					"power": 310,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "ancient_power",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "龙爪",
+					"desc": "用尖锐的巨爪劈开对手进行攻击。",
+					"detail": "消耗100能量，爆发【龙爪】！用尖锐的巨爪劈开对手进行攻击。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "dragon_claw",
+					"sfx": "slash",
+					"scale": 1.10
+				},
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "疯狂伏特",
+					"desc": "让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。",
+					"detail": "消耗100能量，释放终极奥义【疯狂伏特】！让电流覆盖全身，撞向对手进行攻击。自己也会受到少许伤害。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "thundershock",
+					"sfx": "thunder",
+					"scale": 1.55
+				},
+				{
+					"name": "龙之波动",
+					"desc": "从大大的口中掀起冲击波攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【龙之波动】！从大大的口中掀起冲击波攻击对手。 席卷战场对最多6名敌人造成625点巨额伤害与强力击破！",
+					"power": 625,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "dragon_pulse",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "飞翔",
+					"desc": "第１回合飞上天空，第２回合攻击对手。",
+					"detail": "消耗100能量，释放终极奥义【飞翔】！第１回合飞上天空，第２回合攻击对手。 席卷战场对最多4名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 4,
+					"stun_duration": 0.8,
+					"vfx": "brave_bird",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/rayquaza.png"
+	},
+	"jirachi": {
+		"id": "jirachi",
+		"name": "基拉祈",
+		"title": "祈愿宝可梦",
+		"cost": 5,
+		"types": ["Steel", "Psychic"],
+		"hp": 922,
+		"atk": 87,
+		"armor": 49,
+		"mr": 49,
+		"range": 1,
+		"atk_speed": 0.80,
+		"max_mana": 100,
+		"skill_name": "念力",
+		"skill_desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+		"skill_detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+		"skill_power": 200,
+		"basic_attack": {
+			"type": "physical",
+			"name": "金属爪",
+			"style": "punch",
+			"sfx": "punch"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "念力",
+					"desc": "向对手发送微弱的念力进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，使出【念力】。向对手发送微弱的念力进行攻击。有时会使对手混乱。 对目标造成200点伤害。",
+					"power": 200,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "confusion",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "高速星星",
+					"desc": "发射星形的光攻击对手。攻击必定会命中。",
+					"detail": "消耗100能量，使出【高速星星】。发射星形的光攻击对手。攻击必定会命中。 对目标造成220点伤害。",
+					"power": 220,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "swift",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【精神强念】。向对手发送强大的念力进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "睡觉",
+					"desc": "连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。",
+					"detail": "消耗100能量，爆发【睡觉】！连续睡上２回合。回复自己的全部ＨＰ以及治愈所有异常状态。 对范围内最多3名敌人造成320点伤害，并施加战术压制。",
+					"power": 320,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "rest",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "舍身冲撞",
+					"desc": "拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。",
+					"detail": "消耗100能量，爆发【舍身冲撞】！拼命地猛撞向对手进行攻击。自己也会受到不小的伤害。 对范围内最多2名敌人造成490点伤害，并施加战术压制。",
+					"power": 490,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "double_edge",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "幻象光线",
+					"desc": "向对手发射神奇的光线进行攻击。有时会使对手混乱。",
+					"detail": "消耗100能量，释放终极奥义【幻象光线】！向对手发射神奇的光线进行攻击。有时会使对手混乱。 席卷战场对最多6名敌人造成525点巨额伤害与强力击破！",
+					"power": 525,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "psybeam",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，释放终极奥义【宇宙力量】！汲取宇宙中神秘的力量，从而提高自己的防御和特防。 席卷战场对最多6名敌人造成680点巨额伤害与强力击破！",
+					"power": 680,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/jirachi.png"
+	},
+	"deoxys": {
+		"id": "deoxys",
+		"name": "代欧奇希斯",
+		"title": "ＤＮＡ宝可梦",
+		"cost": 5,
+		"types": ["Psychic"],
+		"hp": 597,
+		"atk": 119,
+		"armor": 26,
+		"mr": 26,
+		"range": 4,
+		"atk_speed": 0.93,
+		"max_mana": 100,
+		"skill_name": "黑夜魔影",
+		"skill_desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+		"skill_detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+		"skill_power": 180,
+		"basic_attack": {
+			"type": "physical",
+			"name": "精神利刃",
+			"style": "melee",
+			"sfx": "attack"
+		},
+		"skills": {
+			1: [
+				{
+					"name": "黑夜魔影",
+					"desc": "显示恐怖幻影，只给予对手和自己等级相同的伤害。",
+					"detail": "消耗100能量，使出【黑夜魔影】。显示恐怖幻影，只给予对手和自己等级相同的伤害。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "night_shade",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "精神强念",
+					"desc": "向对手发送强大的念力进行攻击。有时会降低对手的特防。",
+					"detail": "消耗100能量，使出【精神强念】。向对手发送强大的念力进行攻击。有时会降低对手的特防。 对目标造成280点伤害。",
+					"power": 280,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "psychic",
+					"sfx": "skill",
+					"scale": 0.82
+				},
+				{
+					"name": "宇宙力量",
+					"desc": "汲取宇宙中神秘的力量，从而提高自己的防御和特防。",
+					"detail": "消耗100能量，使出【宇宙力量】。汲取宇宙中神秘的力量，从而提高自己的防御和特防。 对目标造成180点伤害。",
+					"power": 180,
+					"target_count": 2,
+					"stun_duration": 0.0,
+					"vfx": "cosmic_singularity",
+					"sfx": "skill",
+					"scale": 0.82
+				}
+			],
+			2: [
+				{
+					"name": "追打",
+					"desc": "当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。",
+					"detail": "消耗100能量，爆发【追打】！当对手替换宝可梦上场时使出此招式的话，能够以２倍的威力进行攻击。 对范围内最多2名敌人造成250点伤害，并施加战术压制。",
+					"power": 250,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "tackle",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "意念头锤",
+					"desc": "将思念的力量集中在前额进行攻击。有时会使对手畏缩。",
+					"detail": "消耗100能量，爆发【意念头锤】！将思念的力量集中在前额进行攻击。有时会使对手畏缩。 对范围内最多2名敌人造成370点伤害，并施加战术压制。",
+					"power": 370,
+					"target_count": 2,
+					"stun_duration": 0.4,
+					"vfx": "zen_headbutt",
+					"sfx": "skill",
+					"scale": 1.10
+				},
+				{
+					"name": "破坏光线",
+					"desc": "向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。",
+					"detail": "消耗100能量，爆发【破坏光线】！向对手发射强烈的光线进行攻击。下一回合自己将无法动弹。 对范围内最多3名敌人造成580点伤害，并施加战术压制。",
+					"power": 580,
+					"target_count": 3,
+					"stun_duration": 0.4,
+					"vfx": "hyper_beam",
+					"sfx": "skill",
+					"scale": 1.10
+				}
+			],
+			3: [
+				{
+					"name": "预知未来",
+					"desc": "在使用招式２回合后，向对手发送一团念力进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【预知未来】！在使用招式２回合后，向对手发送一团念力进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "future_sight",
+					"sfx": "skill",
+					"scale": 1.55
+				},
+				{
+					"name": "冰冻光束",
+					"desc": "向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。",
+					"detail": "消耗100能量，释放终极奥义【冰冻光束】！向对手发射冰冻光束进行攻击。有时会让对手陷入冰冻状态。 席卷战场对最多6名敌人造成650点巨额伤害与强力击破！",
+					"power": 650,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "ice_beam",
+					"sfx": "water",
+					"scale": 1.55
+				},
+				{
+					"name": "日光束",
+					"desc": "第１回合收集满满的日光，第２回合发射光束进行攻击。",
+					"detail": "消耗100能量，释放终极奥义【日光束】！第１回合收集满满的日光，第２回合发射光束进行攻击。 席卷战场对最多6名敌人造成800点巨额伤害与强力击破！",
+					"power": 800,
+					"target_count": 6,
+					"stun_duration": 0.8,
+					"vfx": "solar_beam",
+					"sfx": "skill",
+					"scale": 1.55
+				}
+			]
+		},
+		"icon": "res://assets/units/deoxys.png"
 	}
 }
 
 # Synergy definitions
 
 var synergies: Dictionary = {
+	"Dark": {
+		"name": "恶系",
+		"icon": "res://assets/ui/type_dark.png",
+		"tiers": [
+			{"count": 2, "desc": "恶系单位暴击率+25%，攻击附带20%护甲穿透"},
+			{"count": 4, "desc": "全队暴击率+45%，恶系攻击附带40%护甲穿透，对生命值低于20%的敌人造成处决"}
+		]
+	},
+	"Steel": {
+		"name": "钢系",
+		"icon": "res://assets/ui/type_steel.png",
+		"tiers": [
+			{"count": 2, "desc": "钢系单位受到伤害减免20%，战斗开始获得250点合金护盾"},
+			{"count": 4, "desc": "全队受到伤害减免30%，战斗开始获得600点合金护盾，免疫致命一击1次"}
+		]
+	},
 	"Fire": {
 		"name": "火系",
 		"icon": "res://assets/ui/type_fire.png",
@@ -20400,157 +51436,392 @@ func get_pokemons_by_cost(cost: int) -> Array[String]:
 # Evolution Chains mapping for all 152 Pokemon
 var evolution_chains: Dictionary = {
 	"abra": {"next": "kadabra", "stage": 1, "root": "abra"},
+	"absol": {"next": "", "stage": 1, "root": "absol"},
 	"aerodactyl": {"next": "", "stage": 1, "root": "aerodactyl"},
+	"aggron": {"next": "", "stage": 3, "root": "aron"},
+	"aipom": {"next": "", "stage": 1, "root": "aipom"},
 	"alakazam": {"next": "", "stage": 3, "root": "abra"},
+	"altaria": {"next": "", "stage": 2, "root": "swablu"},
+	"ampharos": {"next": "", "stage": 3, "root": "mareep"},
+	"anorith": {"next": "armaldo", "stage": 1, "root": "anorith"},
 	"arbok": {"next": "", "stage": 2, "root": "ekans"},
 	"arcanine": {"next": "", "stage": 2, "root": "growlithe"},
+	"ariados": {"next": "", "stage": 2, "root": "spinarak"},
+	"armaldo": {"next": "", "stage": 2, "root": "anorith"},
+	"aron": {"next": "lairon", "stage": 1, "root": "aron"},
 	"articuno": {"next": "", "stage": 1, "root": "articuno"},
+	"azumarill": {"next": "", "stage": 2, "root": "marill"},
+	"azurill": {"next": "marill", "stage": 1, "root": "azurill"},
+	"bagon": {"next": "shelgon", "stage": 1, "root": "bagon"},
+	"baltoy": {"next": "claydol", "stage": 1, "root": "baltoy"},
+	"banette": {"next": "", "stage": 2, "root": "shuppet"},
+	"barboach": {"next": "whiscash", "stage": 1, "root": "barboach"},
+	"bayleef": {"next": "meganium", "stage": 2, "root": "chikorita"},
+	"beautifly": {"next": "", "stage": 3, "root": "wurmple"},
 	"beedrill": {"next": "", "stage": 3, "root": "weedle"},
+	"beldum": {"next": "metang", "stage": 1, "root": "beldum"},
+	"bellossom": {"next": "", "stage": 3, "root": "oddish"},
 	"bellsprout": {"next": "weepinbell", "stage": 1, "root": "bellsprout"},
 	"blastoise": {"next": "", "stage": 3, "root": "squirtle"},
+	"blaziken": {"next": "", "stage": 3, "root": "torchic"},
+	"blissey": {"next": "", "stage": 2, "root": "chansey"},
+	"breloom": {"next": "", "stage": 2, "root": "shroomish"},
 	"bulbasaur": {"next": "ivysaur", "stage": 1, "root": "bulbasaur"},
 	"butterfree": {"next": "", "stage": 3, "root": "caterpie"},
+	"cacnea": {"next": "cacturne", "stage": 1, "root": "cacnea"},
+	"cacturne": {"next": "", "stage": 2, "root": "cacnea"},
+	"camerupt": {"next": "", "stage": 2, "root": "numel"},
+	"carvanha": {"next": "sharpedo", "stage": 1, "root": "carvanha"},
+	"cascoon": {"next": "dustox", "stage": 2, "root": "wurmple"},
+	"castform": {"next": "", "stage": 1, "root": "castform"},
 	"caterpie": {"next": "metapod", "stage": 1, "root": "caterpie"},
-	"chansey": {"next": "", "stage": 1, "root": "chansey"},
+	"celebi": {"next": "", "stage": 1, "root": "celebi"},
+	"chansey": {"next": "blissey", "stage": 1, "root": "chansey"},
 	"charizard": {"next": "", "stage": 3, "root": "charmander"},
 	"charmander": {"next": "charmeleon", "stage": 1, "root": "charmander"},
 	"charmeleon": {"next": "charizard", "stage": 2, "root": "charmander"},
+	"chikorita": {"next": "bayleef", "stage": 1, "root": "chikorita"},
+	"chimecho": {"next": "", "stage": 1, "root": "chimecho"},
+	"chinchou": {"next": "lanturn", "stage": 1, "root": "chinchou"},
+	"clamperl": {"branches": ["huntail", "gorebyss"], "next": "huntail", "stage": 1, "root": "clamperl"},
+	"claydol": {"next": "", "stage": 2, "root": "baltoy"},
 	"clefable": {"next": "", "stage": 2, "root": "clefairy"},
 	"clefairy": {"next": "clefable", "stage": 1, "root": "clefairy"},
+	"cleffa": {"next": "clefairy", "stage": 1, "root": "cleffa"},
 	"cloyster": {"next": "", "stage": 2, "root": "shellder"},
+	"combusken": {"next": "blaziken", "stage": 2, "root": "torchic"},
+	"corphish": {"next": "crawdaunt", "stage": 1, "root": "corphish"},
+	"corsola": {"next": "", "stage": 1, "root": "corsola"},
+	"cradily": {"next": "", "stage": 2, "root": "lileep"},
+	"crawdaunt": {"next": "", "stage": 2, "root": "corphish"},
+	"crobat": {"next": "", "stage": 3, "root": "zubat"},
+	"croconaw": {"next": "feraligatr", "stage": 2, "root": "totodile"},
 	"cubone": {"next": "marowak", "stage": 1, "root": "cubone"},
+	"cyndaquil": {"next": "quilava", "stage": 1, "root": "cyndaquil"},
+	"delcatty": {"next": "", "stage": 2, "root": "skitty"},
+	"delibird": {"next": "", "stage": 1, "root": "delibird"},
+	"deoxys": {"next": "", "stage": 1, "root": "deoxys"},
 	"dewgong": {"next": "", "stage": 2, "root": "seel"},
 	"diglett": {"next": "dugtrio", "stage": 1, "root": "diglett"},
 	"ditto": {"next": "", "stage": 1, "root": "ditto"},
 	"dodrio": {"next": "", "stage": 2, "root": "doduo"},
 	"doduo": {"next": "dodrio", "stage": 1, "root": "doduo"},
+	"donphan": {"next": "", "stage": 2, "root": "phanpy"},
 	"dragonair": {"next": "dragonite", "stage": 2, "root": "dratini"},
 	"dragonite": {"next": "", "stage": 3, "root": "dratini"},
 	"dratini": {"next": "dragonair", "stage": 1, "root": "dratini"},
 	"drowzee": {"next": "hypno", "stage": 1, "root": "drowzee"},
 	"dugtrio": {"next": "", "stage": 2, "root": "diglett"},
-	"eevee": {"next": "vaporeon", "stage": 1, "root": "eevee", "branches": ["vaporeon", "jolteon", "flareon"]},
+	"dunsparce": {"next": "", "stage": 1, "root": "dunsparce"},
+	"dusclops": {"next": "", "stage": 2, "root": "duskull"},
+	"duskull": {"next": "dusclops", "stage": 1, "root": "duskull"},
+	"dustox": {"next": "", "stage": 3, "root": "wurmple"},
+	"eevee": {"branches": ["vaporeon", "jolteon", "flareon", "espeon", "umbreon"], "next": "vaporeon", "stage": 1, "root": "eevee"},
 	"ekans": {"next": "arbok", "stage": 1, "root": "ekans"},
 	"electabuzz": {"next": "", "stage": 1, "root": "electabuzz"},
+	"electrike": {"next": "manectric", "stage": 1, "root": "electrike"},
 	"electrode": {"next": "", "stage": 2, "root": "voltorb"},
+	"elekid": {"next": "electabuzz", "stage": 1, "root": "elekid"},
+	"entei": {"next": "", "stage": 1, "root": "entei"},
+	"espeon": {"next": "", "stage": 2, "root": "eevee"},
 	"exeggcute": {"next": "exeggutor", "stage": 1, "root": "exeggcute"},
 	"exeggutor": {"next": "", "stage": 2, "root": "exeggcute"},
+	"exploud": {"next": "", "stage": 3, "root": "whismur"},
 	"farfetchd": {"next": "", "stage": 1, "root": "farfetchd"},
 	"fearow": {"next": "", "stage": 2, "root": "spearow"},
+	"feebas": {"next": "milotic", "stage": 1, "root": "feebas"},
+	"feraligatr": {"next": "", "stage": 3, "root": "totodile"},
+	"flaaffy": {"next": "ampharos", "stage": 2, "root": "mareep"},
 	"flareon": {"next": "", "stage": 2, "root": "eevee"},
+	"flygon": {"next": "", "stage": 3, "root": "trapinch"},
+	"forretress": {"next": "", "stage": 2, "root": "pineco"},
+	"furret": {"next": "", "stage": 2, "root": "sentret"},
+	"gardevoir": {"next": "", "stage": 3, "root": "ralts"},
 	"gastly": {"next": "haunter", "stage": 1, "root": "gastly"},
 	"gengar": {"next": "", "stage": 3, "root": "gastly"},
 	"geodude": {"next": "graveler", "stage": 1, "root": "geodude"},
-	"gloom": {"next": "vileplume", "stage": 2, "root": "oddish"},
-	"golbat": {"next": "", "stage": 2, "root": "zubat"},
+	"girafarig": {"next": "", "stage": 1, "root": "girafarig"},
+	"glalie": {"next": "", "stage": 2, "root": "snorunt"},
+	"gligar": {"next": "", "stage": 1, "root": "gligar"},
+	"gloom": {"branches": ["vileplume", "bellossom"], "next": "vileplume", "stage": 2, "root": "oddish"},
+	"golbat": {"next": "crobat", "stage": 2, "root": "zubat"},
 	"goldeen": {"next": "seaking", "stage": 1, "root": "goldeen"},
 	"golduck": {"next": "", "stage": 2, "root": "psyduck"},
 	"golem": {"next": "", "stage": 3, "root": "geodude"},
+	"gorebyss": {"next": "", "stage": 2, "root": "clamperl"},
+	"granbull": {"next": "", "stage": 2, "root": "snubbull"},
 	"graveler": {"next": "golem", "stage": 2, "root": "geodude"},
 	"grimer": {"next": "muk", "stage": 1, "root": "grimer"},
+	"groudon": {"next": "", "stage": 1, "root": "groudon"},
+	"grovyle": {"next": "sceptile", "stage": 2, "root": "treecko"},
 	"growlithe": {"next": "arcanine", "stage": 1, "root": "growlithe"},
+	"grumpig": {"next": "", "stage": 2, "root": "spoink"},
+	"gulpin": {"next": "swalot", "stage": 1, "root": "gulpin"},
 	"gyarados": {"next": "", "stage": 2, "root": "magikarp"},
+	"hariyama": {"next": "", "stage": 2, "root": "makuhita"},
 	"haunter": {"next": "gengar", "stage": 2, "root": "gastly"},
+	"heracross": {"next": "", "stage": 1, "root": "heracross"},
 	"hitmonchan": {"next": "", "stage": 1, "root": "hitmonchan"},
 	"hitmonlee": {"next": "", "stage": 1, "root": "hitmonlee"},
+	"hitmontop": {"next": "", "stage": 2, "root": "tyrogue"},
+	"ho_oh": {"next": "", "stage": 1, "root": "ho_oh"},
+	"hoothoot": {"next": "noctowl", "stage": 1, "root": "hoothoot"},
+	"hoppip": {"next": "skiploom", "stage": 1, "root": "hoppip"},
 	"horsea": {"next": "seadra", "stage": 1, "root": "horsea"},
+	"houndoom": {"next": "", "stage": 2, "root": "houndour"},
+	"houndour": {"next": "houndoom", "stage": 1, "root": "houndour"},
+	"huntail": {"next": "", "stage": 2, "root": "clamperl"},
 	"hypno": {"next": "", "stage": 2, "root": "drowzee"},
+	"igglybuff": {"next": "jigglypuff", "stage": 1, "root": "igglybuff"},
+	"illumise": {"next": "", "stage": 1, "root": "illumise"},
 	"ivysaur": {"next": "venusaur", "stage": 2, "root": "bulbasaur"},
 	"jigglypuff": {"next": "wigglytuff", "stage": 1, "root": "jigglypuff"},
+	"jirachi": {"next": "", "stage": 1, "root": "jirachi"},
 	"jolteon": {"next": "", "stage": 2, "root": "eevee"},
+	"jumpluff": {"next": "", "stage": 3, "root": "hoppip"},
 	"jynx": {"next": "", "stage": 1, "root": "jynx"},
 	"kabuto": {"next": "kabutops", "stage": 1, "root": "kabuto"},
 	"kabutops": {"next": "", "stage": 2, "root": "kabuto"},
 	"kadabra": {"next": "alakazam", "stage": 2, "root": "abra"},
 	"kakuna": {"next": "beedrill", "stage": 2, "root": "weedle"},
 	"kangaskhan": {"next": "", "stage": 1, "root": "kangaskhan"},
+	"kecleon": {"next": "", "stage": 1, "root": "kecleon"},
+	"kingdra": {"next": "", "stage": 3, "root": "horsea"},
 	"kingler": {"next": "", "stage": 2, "root": "krabby"},
+	"kirlia": {"next": "gardevoir", "stage": 2, "root": "ralts"},
 	"koffing": {"next": "weezing", "stage": 1, "root": "koffing"},
 	"krabby": {"next": "kingler", "stage": 1, "root": "krabby"},
+	"kyogre": {"next": "", "stage": 1, "root": "kyogre"},
+	"lairon": {"next": "aggron", "stage": 2, "root": "aron"},
+	"lanturn": {"next": "", "stage": 2, "root": "chinchou"},
 	"lapras": {"next": "", "stage": 1, "root": "lapras"},
+	"larvitar": {"next": "pupitar", "stage": 1, "root": "larvitar"},
+	"latias": {"next": "", "stage": 1, "root": "latias"},
+	"latios": {"next": "", "stage": 1, "root": "latios"},
+	"ledian": {"next": "", "stage": 2, "root": "ledyba"},
+	"ledyba": {"next": "ledian", "stage": 1, "root": "ledyba"},
 	"lickitung": {"next": "", "stage": 1, "root": "lickitung"},
+	"lileep": {"next": "cradily", "stage": 1, "root": "lileep"},
+	"linoone": {"next": "", "stage": 2, "root": "zigzagoon"},
+	"lombre": {"next": "ludicolo", "stage": 2, "root": "lotad"},
+	"lotad": {"next": "lombre", "stage": 1, "root": "lotad"},
+	"loudred": {"next": "exploud", "stage": 2, "root": "whismur"},
 	"lucario": {"next": "", "stage": 1, "root": "lucario"},
+	"ludicolo": {"next": "", "stage": 3, "root": "lotad"},
+	"lugia": {"next": "", "stage": 1, "root": "lugia"},
+	"lunatone": {"next": "", "stage": 1, "root": "lunatone"},
+	"luvdisc": {"next": "", "stage": 1, "root": "luvdisc"},
 	"machamp": {"next": "", "stage": 3, "root": "machop"},
 	"machoke": {"next": "machamp", "stage": 2, "root": "machop"},
 	"machop": {"next": "machoke", "stage": 1, "root": "machop"},
+	"magby": {"next": "magmar", "stage": 1, "root": "magby"},
+	"magcargo": {"next": "", "stage": 2, "root": "slugma"},
 	"magikarp": {"next": "gyarados", "stage": 1, "root": "magikarp"},
 	"magmar": {"next": "", "stage": 1, "root": "magmar"},
 	"magnemite": {"next": "magneton", "stage": 1, "root": "magnemite"},
 	"magneton": {"next": "", "stage": 2, "root": "magnemite"},
+	"makuhita": {"next": "hariyama", "stage": 1, "root": "makuhita"},
+	"manectric": {"next": "", "stage": 2, "root": "electrike"},
 	"mankey": {"next": "primeape", "stage": 1, "root": "mankey"},
+	"mantine": {"next": "", "stage": 1, "root": "mantine"},
+	"mareep": {"next": "flaaffy", "stage": 1, "root": "mareep"},
+	"marill": {"next": "azumarill", "stage": 1, "root": "marill"},
 	"marowak": {"next": "", "stage": 2, "root": "cubone"},
+	"marshtomp": {"next": "swampert", "stage": 2, "root": "mudkip"},
+	"masquerain": {"next": "", "stage": 2, "root": "surskit"},
+	"mawile": {"next": "", "stage": 1, "root": "mawile"},
+	"medicham": {"next": "", "stage": 2, "root": "meditite"},
+	"meditite": {"next": "medicham", "stage": 1, "root": "meditite"},
+	"meganium": {"next": "", "stage": 3, "root": "chikorita"},
 	"meowth": {"next": "persian", "stage": 1, "root": "meowth"},
+	"metagross": {"next": "", "stage": 3, "root": "beldum"},
+	"metang": {"next": "metagross", "stage": 2, "root": "beldum"},
 	"metapod": {"next": "butterfree", "stage": 2, "root": "caterpie"},
 	"mew": {"next": "", "stage": 1, "root": "mew"},
 	"mewtwo": {"next": "", "stage": 1, "root": "mewtwo"},
+	"mightyena": {"next": "", "stage": 2, "root": "poochyena"},
+	"milotic": {"next": "", "stage": 2, "root": "feebas"},
+	"miltank": {"next": "", "stage": 1, "root": "miltank"},
+	"minun": {"next": "", "stage": 1, "root": "minun"},
+	"misdreavus": {"next": "", "stage": 1, "root": "misdreavus"},
 	"moltres": {"next": "", "stage": 1, "root": "moltres"},
-	"mr-mime": {"next": "", "stage": 1, "root": "mr-mime"},
+	"mr_mime": {"next": "", "stage": 1, "root": "mr_mime"},
+	"mudkip": {"next": "marshtomp", "stage": 1, "root": "mudkip"},
 	"muk": {"next": "", "stage": 2, "root": "grimer"},
+	"murkrow": {"next": "", "stage": 1, "root": "murkrow"},
+	"natu": {"next": "xatu", "stage": 1, "root": "natu"},
 	"nidoking": {"next": "", "stage": 3, "root": "nidoran_m"},
 	"nidoqueen": {"next": "", "stage": 3, "root": "nidoran_f"},
 	"nidoran_f": {"next": "nidorina", "stage": 1, "root": "nidoran_f"},
 	"nidoran_m": {"next": "nidorino", "stage": 1, "root": "nidoran_m"},
 	"nidorina": {"next": "nidoqueen", "stage": 2, "root": "nidoran_f"},
 	"nidorino": {"next": "nidoking", "stage": 2, "root": "nidoran_m"},
+	"nincada": {"branches": ["ninjask", "shedinja"], "next": "ninjask", "stage": 1, "root": "nincada"},
 	"ninetales": {"next": "", "stage": 2, "root": "vulpix"},
+	"ninjask": {"next": "", "stage": 2, "root": "nincada"},
+	"noctowl": {"next": "", "stage": 2, "root": "hoothoot"},
+	"nosepass": {"next": "", "stage": 1, "root": "nosepass"},
+	"numel": {"next": "camerupt", "stage": 1, "root": "numel"},
+	"nuzleaf": {"next": "shiftry", "stage": 2, "root": "seedot"},
+	"octillery": {"next": "", "stage": 2, "root": "remoraid"},
 	"oddish": {"next": "gloom", "stage": 1, "root": "oddish"},
 	"omanyte": {"next": "omastar", "stage": 1, "root": "omanyte"},
 	"omastar": {"next": "", "stage": 2, "root": "omanyte"},
-	"onix": {"next": "", "stage": 1, "root": "onix"},
+	"onix": {"next": "steelix", "stage": 1, "root": "onix"},
 	"paras": {"next": "parasect", "stage": 1, "root": "paras"},
 	"parasect": {"next": "", "stage": 2, "root": "paras"},
+	"pelipper": {"next": "", "stage": 2, "root": "wingull"},
 	"persian": {"next": "", "stage": 2, "root": "meowth"},
+	"phanpy": {"next": "donphan", "stage": 1, "root": "phanpy"},
+	"pichu": {"next": "pikachu", "stage": 1, "root": "pichu"},
 	"pidgeot": {"next": "", "stage": 3, "root": "pidgey"},
 	"pidgeotto": {"next": "pidgeot", "stage": 2, "root": "pidgey"},
 	"pidgey": {"next": "pidgeotto", "stage": 1, "root": "pidgey"},
 	"pikachu": {"next": "raichu", "stage": 1, "root": "pikachu"},
+	"piloswine": {"next": "", "stage": 2, "root": "swinub"},
+	"pineco": {"next": "forretress", "stage": 1, "root": "pineco"},
 	"pinsir": {"next": "", "stage": 1, "root": "pinsir"},
+	"plusle": {"next": "", "stage": 1, "root": "plusle"},
+	"politoed": {"next": "", "stage": 3, "root": "poliwag"},
 	"poliwag": {"next": "poliwhirl", "stage": 1, "root": "poliwag"},
-	"poliwhirl": {"next": "poliwrath", "stage": 2, "root": "poliwag"},
+	"poliwhirl": {"branches": ["poliwrath", "politoed"], "next": "poliwrath", "stage": 2, "root": "poliwag"},
 	"poliwrath": {"next": "", "stage": 3, "root": "poliwag"},
 	"ponyta": {"next": "rapidash", "stage": 1, "root": "ponyta"},
-	"porygon": {"next": "", "stage": 1, "root": "porygon"},
+	"poochyena": {"next": "mightyena", "stage": 1, "root": "poochyena"},
+	"porygon": {"next": "porygon2", "stage": 1, "root": "porygon"},
+	"porygon2": {"next": "", "stage": 2, "root": "porygon"},
 	"primeape": {"next": "", "stage": 2, "root": "mankey"},
 	"psyduck": {"next": "golduck", "stage": 1, "root": "psyduck"},
+	"pupitar": {"next": "tyranitar", "stage": 2, "root": "larvitar"},
+	"quagsire": {"next": "", "stage": 2, "root": "wooper"},
+	"quilava": {"next": "typhlosion", "stage": 2, "root": "cyndaquil"},
+	"qwilfish": {"next": "", "stage": 1, "root": "qwilfish"},
 	"raichu": {"next": "", "stage": 2, "root": "pikachu"},
+	"raikou": {"next": "", "stage": 1, "root": "raikou"},
+	"ralts": {"next": "kirlia", "stage": 1, "root": "ralts"},
 	"rapidash": {"next": "", "stage": 2, "root": "ponyta"},
 	"raticate": {"next": "", "stage": 2, "root": "rattata"},
 	"rattata": {"next": "raticate", "stage": 1, "root": "rattata"},
+	"rayquaza": {"next": "", "stage": 1, "root": "rayquaza"},
+	"regice": {"next": "", "stage": 1, "root": "regice"},
+	"regirock": {"next": "", "stage": 1, "root": "regirock"},
+	"registeel": {"next": "", "stage": 1, "root": "registeel"},
+	"relicanth": {"next": "", "stage": 1, "root": "relicanth"},
+	"remoraid": {"next": "octillery", "stage": 1, "root": "remoraid"},
 	"rhydon": {"next": "", "stage": 2, "root": "rhyhorn"},
 	"rhyhorn": {"next": "rhydon", "stage": 1, "root": "rhyhorn"},
+	"roselia": {"next": "", "stage": 1, "root": "roselia"},
+	"sableye": {"next": "", "stage": 1, "root": "sableye"},
+	"salamence": {"next": "", "stage": 3, "root": "bagon"},
 	"sandshrew": {"next": "sandslash", "stage": 1, "root": "sandshrew"},
 	"sandslash": {"next": "", "stage": 2, "root": "sandshrew"},
-	"scyther": {"next": "", "stage": 1, "root": "scyther"},
-	"seadra": {"next": "", "stage": 2, "root": "horsea"},
+	"sceptile": {"next": "", "stage": 3, "root": "treecko"},
+	"scizor": {"next": "", "stage": 2, "root": "scyther"},
+	"scyther": {"next": "scizor", "stage": 1, "root": "scyther"},
+	"seadra": {"next": "kingdra", "stage": 2, "root": "horsea"},
 	"seaking": {"next": "", "stage": 2, "root": "goldeen"},
+	"sealeo": {"next": "walrein", "stage": 2, "root": "spheal"},
+	"seedot": {"next": "nuzleaf", "stage": 1, "root": "seedot"},
 	"seel": {"next": "dewgong", "stage": 1, "root": "seel"},
+	"sentret": {"next": "furret", "stage": 1, "root": "sentret"},
+	"seviper": {"next": "", "stage": 1, "root": "seviper"},
+	"sharpedo": {"next": "", "stage": 2, "root": "carvanha"},
+	"shedinja": {"next": "", "stage": 2, "root": "nincada"},
+	"shelgon": {"next": "salamence", "stage": 2, "root": "bagon"},
 	"shellder": {"next": "cloyster", "stage": 1, "root": "shellder"},
+	"shiftry": {"next": "", "stage": 3, "root": "seedot"},
+	"shroomish": {"next": "breloom", "stage": 1, "root": "shroomish"},
+	"shuckle": {"next": "", "stage": 1, "root": "shuckle"},
+	"shuppet": {"next": "banette", "stage": 1, "root": "shuppet"},
+	"silcoon": {"next": "beautifly", "stage": 2, "root": "wurmple"},
+	"skarmory": {"next": "", "stage": 1, "root": "skarmory"},
+	"skiploom": {"next": "jumpluff", "stage": 2, "root": "hoppip"},
+	"skitty": {"next": "delcatty", "stage": 1, "root": "skitty"},
+	"slaking": {"next": "", "stage": 3, "root": "slakoth"},
+	"slakoth": {"next": "vigoroth", "stage": 1, "root": "slakoth"},
 	"slowbro": {"next": "", "stage": 2, "root": "slowpoke"},
-	"slowpoke": {"next": "slowbro", "stage": 1, "root": "slowpoke"},
+	"slowking": {"next": "", "stage": 2, "root": "slowpoke"},
+	"slowpoke": {"branches": ["slowbro", "slowking"], "next": "slowbro", "stage": 1, "root": "slowpoke"},
+	"slugma": {"next": "magcargo", "stage": 1, "root": "slugma"},
+	"smeargle": {"next": "", "stage": 1, "root": "smeargle"},
+	"smoochum": {"next": "jynx", "stage": 1, "root": "smoochum"},
+	"sneasel": {"next": "", "stage": 1, "root": "sneasel"},
 	"snorlax": {"next": "", "stage": 1, "root": "snorlax"},
+	"snorunt": {"next": "glalie", "stage": 1, "root": "snorunt"},
+	"snubbull": {"next": "granbull", "stage": 1, "root": "snubbull"},
+	"solrock": {"next": "", "stage": 1, "root": "solrock"},
 	"spearow": {"next": "fearow", "stage": 1, "root": "spearow"},
+	"spheal": {"next": "sealeo", "stage": 1, "root": "spheal"},
+	"spinarak": {"next": "ariados", "stage": 1, "root": "spinarak"},
+	"spinda": {"next": "", "stage": 1, "root": "spinda"},
+	"spoink": {"next": "grumpig", "stage": 1, "root": "spoink"},
 	"squirtle": {"next": "wartortle", "stage": 1, "root": "squirtle"},
+	"stantler": {"next": "", "stage": 1, "root": "stantler"},
 	"starmie": {"next": "", "stage": 2, "root": "staryu"},
 	"staryu": {"next": "starmie", "stage": 1, "root": "staryu"},
+	"steelix": {"next": "", "stage": 2, "root": "onix"},
+	"sudowoodo": {"next": "", "stage": 1, "root": "sudowoodo"},
+	"suicune": {"next": "", "stage": 1, "root": "suicune"},
+	"sunflora": {"next": "", "stage": 2, "root": "sunkern"},
+	"sunkern": {"next": "sunflora", "stage": 1, "root": "sunkern"},
+	"surskit": {"next": "masquerain", "stage": 1, "root": "surskit"},
+	"swablu": {"next": "altaria", "stage": 1, "root": "swablu"},
+	"swalot": {"next": "", "stage": 2, "root": "gulpin"},
+	"swampert": {"next": "", "stage": 3, "root": "mudkip"},
+	"swellow": {"next": "", "stage": 2, "root": "taillow"},
+	"swinub": {"next": "piloswine", "stage": 1, "root": "swinub"},
+	"taillow": {"next": "swellow", "stage": 1, "root": "taillow"},
 	"tangela": {"next": "", "stage": 1, "root": "tangela"},
 	"tauros": {"next": "", "stage": 1, "root": "tauros"},
+	"teddiursa": {"next": "ursaring", "stage": 1, "root": "teddiursa"},
 	"tentacool": {"next": "tentacruel", "stage": 1, "root": "tentacool"},
 	"tentacruel": {"next": "", "stage": 2, "root": "tentacool"},
+	"togepi": {"next": "togetic", "stage": 1, "root": "togepi"},
+	"togetic": {"next": "", "stage": 2, "root": "togepi"},
+	"torchic": {"next": "combusken", "stage": 1, "root": "torchic"},
+	"torkoal": {"next": "", "stage": 1, "root": "torkoal"},
+	"totodile": {"next": "croconaw", "stage": 1, "root": "totodile"},
+	"trapinch": {"next": "vibrava", "stage": 1, "root": "trapinch"},
+	"treecko": {"next": "grovyle", "stage": 1, "root": "treecko"},
+	"tropius": {"next": "", "stage": 1, "root": "tropius"},
+	"typhlosion": {"next": "", "stage": 3, "root": "cyndaquil"},
+	"tyranitar": {"next": "", "stage": 3, "root": "larvitar"},
+	"tyrogue": {"branches": ["hitmonlee", "hitmonchan", "hitmontop"], "next": "hitmonlee", "stage": 1, "root": "tyrogue"},
+	"umbreon": {"next": "", "stage": 2, "root": "eevee"},
+	"unown": {"next": "", "stage": 1, "root": "unown"},
+	"ursaring": {"next": "", "stage": 2, "root": "teddiursa"},
 	"vaporeon": {"next": "", "stage": 2, "root": "eevee"},
 	"venomoth": {"next": "", "stage": 2, "root": "venonat"},
 	"venonat": {"next": "venomoth", "stage": 1, "root": "venonat"},
 	"venusaur": {"next": "", "stage": 3, "root": "bulbasaur"},
+	"vibrava": {"next": "flygon", "stage": 2, "root": "trapinch"},
 	"victreebel": {"next": "", "stage": 3, "root": "bellsprout"},
+	"vigoroth": {"next": "slaking", "stage": 2, "root": "slakoth"},
 	"vileplume": {"next": "", "stage": 3, "root": "oddish"},
+	"volbeat": {"next": "", "stage": 1, "root": "volbeat"},
 	"voltorb": {"next": "electrode", "stage": 1, "root": "voltorb"},
 	"vulpix": {"next": "ninetales", "stage": 1, "root": "vulpix"},
+	"wailmer": {"next": "wailord", "stage": 1, "root": "wailmer"},
+	"wailord": {"next": "", "stage": 2, "root": "wailmer"},
+	"walrein": {"next": "", "stage": 3, "root": "spheal"},
 	"wartortle": {"next": "blastoise", "stage": 2, "root": "squirtle"},
 	"weedle": {"next": "kakuna", "stage": 1, "root": "weedle"},
 	"weepinbell": {"next": "victreebel", "stage": 2, "root": "bellsprout"},
 	"weezing": {"next": "", "stage": 2, "root": "koffing"},
+	"whiscash": {"next": "", "stage": 2, "root": "barboach"},
+	"whismur": {"next": "loudred", "stage": 1, "root": "whismur"},
 	"wigglytuff": {"next": "", "stage": 2, "root": "jigglypuff"},
+	"wingull": {"next": "pelipper", "stage": 1, "root": "wingull"},
+	"wobbuffet": {"next": "", "stage": 1, "root": "wobbuffet"},
+	"wooper": {"next": "quagsire", "stage": 1, "root": "wooper"},
+	"wurmple": {"branches": ["silcoon", "cascoon"], "next": "silcoon", "stage": 1, "root": "wurmple"},
+	"wynaut": {"next": "wobbuffet", "stage": 1, "root": "wynaut"},
+	"xatu": {"next": "", "stage": 2, "root": "natu"},
+	"yanma": {"next": "", "stage": 1, "root": "yanma"},
+	"zangoose": {"next": "", "stage": 1, "root": "zangoose"},
 	"zapdos": {"next": "", "stage": 1, "root": "zapdos"},
-	"zubat": {"next": "golbat", "stage": 1, "root": "zubat"},
+	"zigzagoon": {"next": "linoone", "stage": 1, "root": "zigzagoon"},
+	"zubat": {"next": "golbat", "stage": 1, "root": "zubat"}
 }
 
 func get_next_evolution(pokemon_id: String) -> String:

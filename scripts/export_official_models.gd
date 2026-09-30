@@ -6,7 +6,10 @@ func _init():
 	export_charmander()
 	export_squirtle()
 	export_bulbasaur()
-	print("All 4 Official Models Exported Successfully!")
+	export_eevee()
+	export_pidgey()
+	export_snorlax()
+	print("All 7 Official Models Exported Successfully!")
 	quit()
 
 func save_to_glb(node: Node3D, dest_path: String) -> bool:
@@ -54,7 +57,6 @@ func export_charmander():
 	var inst = scene.instantiate()
 	var mi: MeshInstance3D = inst.find_child("Charmander", true, false)
 	if mi:
-		# surf 0: Body, surf 1: Eye, surf 2: Tail Flame
 		var mat0 = mi.get_active_material(0)
 		if mat0:
 			mat0 = mat0.duplicate()
@@ -67,7 +69,6 @@ func export_charmander():
 			mat1.roughness = 0.3
 			mi.set_surface_override_material(1, mat1)
 			
-		# Tail Flame Material
 		var flame_mat = StandardMaterial3D.new()
 		flame_mat.resource_name = "TailFlame"
 		var flame_tex = load("res://assets/models/official/charmander/tex/pm0004_00_FireCoreA1.png")
@@ -112,4 +113,47 @@ func export_bulbasaur():
 					mi.set_surface_override_material(s, mat)
 					
 	save_to_glb(inst, "res://assets/models/bulbasaur.glb")
+	inst.free()
+
+func export_eevee():
+	var scene = load("res://assets/models/official/eevee/Eevee.fbx")
+	var inst = scene.instantiate()
+	var mi: MeshInstance3D = inst.find_child("Eevee", true, false)
+	if mi:
+		for s in range(mi.mesh.get_surface_count()):
+			var mat = mi.get_active_material(s)
+			if mat:
+				mat = mat.duplicate()
+				mat.roughness = 0.6
+				mi.set_surface_override_material(s, mat)
+	save_to_glb(inst, "res://assets/models/eevee.glb")
+	inst.free()
+
+func export_pidgey():
+	var scene = load("res://assets/models/official/pidgey/Pidgey.fbx")
+	var inst = scene.instantiate()
+	var mi: MeshInstance3D = inst.find_child("Pidgey", true, false)
+	if mi:
+		for s in range(mi.mesh.get_surface_count()):
+			var mat = mi.get_active_material(s)
+			if mat:
+				mat = mat.duplicate()
+				mat.roughness = 0.55
+				mi.set_surface_override_material(s, mat)
+	save_to_glb(inst, "res://assets/models/pidgey.glb")
+	inst.free()
+
+func export_snorlax():
+	var scene = load("res://assets/models/official/snorlax/Snorlax.fbx")
+	var inst = scene.instantiate()
+	for c in inst.find_children("*", "MeshInstance3D", true, false):
+		var mi = c as MeshInstance3D
+		if mi:
+			for s in range(mi.mesh.get_surface_count()):
+				var mat = mi.get_active_material(s)
+				if mat:
+					mat = mat.duplicate()
+					mat.roughness = 0.6
+					mi.set_surface_override_material(s, mat)
+	save_to_glb(inst, "res://assets/models/snorlax.glb")
 	inst.free()

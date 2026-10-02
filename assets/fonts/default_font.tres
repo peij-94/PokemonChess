@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3]
+
+[resource]
+font_names = PackedStringArray("PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimHei", "WenQuanYi Micro Hei", "Noto Sans CJK SC", "Source Han Sans SC", "sans-serif")
+font_weight = 500

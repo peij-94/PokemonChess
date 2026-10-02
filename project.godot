@@ -49,3 +49,8 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 shader_compiler/shader_cache/enabled=false
 environment/defaults/default_clear_color=Color(0.08, 0.09, 0.13, 1)
+
+[gui]
+
+theme/custom="res://assets/theme/default_theme.tres"
+theme/custom_font="res://assets/fonts/main_font.tres"

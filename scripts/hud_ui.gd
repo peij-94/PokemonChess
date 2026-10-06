@@ -76,6 +76,7 @@ var weather_banner: PanelContainer = null
 var team_comp_planner: Panel = null
 @onready var team_comp_btn: Button = $TopBar/ActionButtons/TeamCompBtn if has_node("TopBar/ActionButtons/TeamCompBtn") else null
 @onready var dynamax_btn: Button = $TopBar/ActionButtons/DynamaxBtn if has_node("TopBar/ActionButtons/DynamaxBtn") else null
+var audio_btn: Button = null
 
 var card_instances: Array = []
 
@@ -217,6 +218,25 @@ func _ready() -> void:
 			MegaDatabase.dynamax_energy_changed.connect(_on_dynamax_energy_changed)
 	_update_dynamax_btn_display()
 	
+	if audio_btn == null:
+		audio_btn = Button.new()
+		audio_btn.name = "AudioToggleBtn"
+		audio_btn.text = "🎵 音乐 [M]"
+		audio_btn.custom_minimum_size = Vector2(75, 30)
+		audio_btn.add_theme_font_size_override("font_size", 11)
+		var a_style = StyleBoxFlat.new()
+		a_style.bg_color = Color(0.18, 0.24, 0.35, 1)
+		a_style.border_color = Color(0.4, 0.6, 0.8, 1)
+		a_style.set_border_width_all(1)
+		a_style.set_corner_radius_all(4)
+		audio_btn.add_theme_stylebox_override("normal", a_style)
+		if action_buttons:
+			action_buttons.add_child(audio_btn)
+		else:
+			audio_btn.position = Vector2(1010, 13)
+			add_child(audio_btn)
+	audio_btn.pressed.connect(_toggle_audio_mute)
+	
 	item_bench = ITEM_BENCH_SCENE.instantiate()
 	item_bench.name = "ItemBench"
 	item_bench.offset_left = 1090.0
@@ -285,13 +305,31 @@ func _unhandled_input(event: InputEvent) -> void:
 			_on_pokedex_pressed()
 		elif event.keycode == KEY_B:
 			_on_arena_bg_pressed()
-		elif event.keycode == KEY_S or event.keycode == KEY_M:
+		elif event.keycode == KEY_S:
 			if dps_meter:
 				dps_meter.toggle_visibility()
+		elif event.keycode == KEY_M:
+			_toggle_audio_mute()
 		elif event.keycode == KEY_C:
 			_on_team_comp_btn_pressed()
 		elif event.keycode == KEY_D:
 			_on_dynamax_btn_pressed()
+		elif event.keycode == KEY_F:
+			_on_buy_exp_pressed()
+		elif event.keycode == KEY_R:
+			_on_reroll_pressed()
+		elif event.keycode == KEY_E:
+			_on_sell_pressed()
+		elif event.keycode == KEY_L:
+			if lock_btn:
+				lock_btn.button_pressed = not lock_btn.button_pressed
+				_on_lock_toggled(lock_btn.button_pressed)
+
+func _toggle_audio_mute() -> void:
+	var muted = AudioManager.toggle_mute()
+	if audio_btn:
+		audio_btn.text = "🔇 静音 [M]" if muted else "🎵 音乐 [M]"
+	show_toast("🔇 背景音乐与音效已静音" if muted else "🎵 背景音乐与音效已开启", Color(0.8, 0.9, 1.0))
 
 func _on_team_comp_btn_pressed() -> void:
 	if team_comp_planner:

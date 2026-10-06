@@ -185,6 +185,12 @@ func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false) -> void:
 		var rock_shield = SynergyManager.get_rock_shield_bonus(is_enemy)
 		if rock_shield > 0:
 			shield += rock_shield
+		var steel_shield = SynergyManager.get_steel_shield_bonus(is_enemy)
+		if steel_shield > 0:
+			shield += steel_shield
+		var fairy_ratio = SynergyManager.get_fairy_shield_ratio(is_enemy)
+		if fairy_ratio > 0.0:
+			shield += max_hp * fairy_ratio
 			
 	# Apply Arena Environment Modifiers
 	if not is_enemy:
@@ -1072,6 +1078,7 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 		
 	# Shield absorption
 	if shield > 0:
+		var had_shield = shield
 		if shield >= reduced:
 			shield -= reduced
 			healing_done += reduced
@@ -1080,6 +1087,8 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 			healing_done += shield
 			reduced -= shield
 			shield = 0
+			if had_shield > 0 and not is_enemy and SynergyManager.has_fairy_shatter_blind(is_enemy):
+				_trigger_fairy_shatter()
 			
 	current_hp -= reduced
 	gain_mana(8.0) # Mana gain upon taking hit
@@ -1222,6 +1231,9 @@ func apply_burn(duration: float, dps: float) -> void:
 	burn_dps = dps
 
 func apply_stun(duration: float) -> void:
+	if not is_enemy and shield > 0 and SynergyManager.has_fairy_cc_immunity(is_enemy):
+		spawn_floating_text("免控!", Color(1.0, 0.7, 0.9))
+		return
 	is_stunned = true
 	stun_timer = max(stun_timer, duration)
 	if stun_vfx == null:
@@ -1229,6 +1241,19 @@ func apply_stun(duration: float) -> void:
 		stun_vfx.position = Vector2(0, -32)
 		add_child(stun_vfx)
 	stun_vfx.start_stun()
+
+func _trigger_fairy_shatter() -> void:
+	spawn_floating_text("妖精护盾破裂!", Color(1.0, 0.6, 0.8), true)
+	var units = get_tree().get_nodes_in_group("units")
+	for u in units:
+		if u != null and is_instance_valid(u) and not u.is_dead and u.is_enemy != is_enemy:
+			if position.distance_to(u.position) <= 150.0:
+				u.atk_speed *= 0.50
+				u.spawn_floating_text("致盲魅惑 -50%攻速", Color(1.0, 0.5, 0.7))
+				get_tree().create_timer(2.0).timeout.connect(func():
+					if is_instance_valid(u) and not u.is_dead:
+						u.atk_speed /= 0.50
+				)
 
 func die() -> void:
 	if is_dead:

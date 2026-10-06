@@ -51226,6 +51226,14 @@ var pokemons: Dictionary = {
 # Synergy definitions
 
 var synergies: Dictionary = {
+	"Fairy": {
+		"name": "妖精系",
+		"icon": "res://assets/ui/type_fairy.png",
+		"tiers": [
+			{"count": 2, "desc": "战斗开始时友军获得相当于自身20%最大生命值的魔法护盾，护盾存在时免控"},
+			{"count": 4, "desc": "护盾提升至40%最大生命值，护盾破裂时对周围敌人造成致盲与50%减速(持续2秒)"}
+		]
+	},
 	"Dark": {
 		"name": "恶系",
 		"icon": "res://assets/ui/type_dark.png",

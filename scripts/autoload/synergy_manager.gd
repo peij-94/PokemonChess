@@ -262,3 +262,23 @@ func get_steel_shield_bonus(is_enemy: bool) -> int:
 		return 600
 	return 0
 
+func get_fairy_shield_ratio(is_enemy: bool) -> float:
+	if is_enemy:
+		return 0.0
+	var tier = active_tiers.get("Fairy", 0)
+	if tier == 1:
+		return 0.20
+	elif tier >= 2:
+		return 0.40
+	return 0.0
+
+func has_fairy_cc_immunity(is_enemy: bool) -> bool:
+	if is_enemy:
+		return false
+	return active_tiers.get("Fairy", 0) >= 1
+
+func has_fairy_shatter_blind(is_enemy: bool) -> bool:
+	if is_enemy:
+		return false
+	return active_tiers.get("Fairy", 0) >= 2
+

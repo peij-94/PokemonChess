@@ -379,6 +379,7 @@ func start_new_game() -> void:
 	if board_ref and board_ref.has_method("init_starter_pokemon"):
 		board_ref.init_starter_pokemon()
 	refresh_shop(true)
+	AudioManager.play_bgm("shop")
 	phase_changed.emit("PREP", phase_timer)
 	
 	if hud_ref and "start_menu_modal" in hud_ref and hud_ref.start_menu_modal and hud_ref.start_menu_modal.visible:
@@ -411,6 +412,10 @@ func start_combat_phase() -> void:
 	current_phase = Phase.COMBAT
 	phase_timer = COMBAT_MAX_TIME
 	AudioManager.play_sfx("round_start")
+	if current_round % 10 == 0 or current_round == 15:
+		AudioManager.play_bgm("boss")
+	else:
+		AudioManager.play_bgm("battle")
 	phase_changed.emit("COMBAT", phase_timer)
 	if board_ref and board_ref.has_method("start_round_combat"):
 		board_ref.start_round_combat()
@@ -427,11 +432,13 @@ func resolve_combat(player_won: bool, remaining_enemies: int = 0) -> void:
 	phase_timer = 3.0
 	
 	if player_won:
+		AudioManager.play_bgm("victory")
 		AudioManager.play_sfx("victory")
 		win_streak += 1
 		loss_streak = 0
 		add_gold(1) # Victory bonus gold
 	else:
+		AudioManager.play_bgm("defeat")
 		AudioManager.play_sfx("defeat")
 		loss_streak += 1
 		win_streak = 0
@@ -489,6 +496,7 @@ func advance_to_next_round() -> void:
 		
 	current_phase = Phase.PREPARATION
 	phase_timer = PREP_TIME
+	AudioManager.play_bgm("shop")
 	phase_changed.emit("PREP", phase_timer)
 	
 	if board_ref and board_ref.has_method("reset_board_for_prep"):

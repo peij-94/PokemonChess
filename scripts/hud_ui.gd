@@ -90,6 +90,8 @@ var current_drag_refund: int = 0
 var current_drag_unit_name: String = ""
 var cinematic_spotlight: ColorRect = null
 var active_toast: PanelContainer = null
+var streak_badge: PanelContainer = null
+var streak_badge_label: Label = null
 
 func _ready() -> void:
 	end_modal.visible = false
@@ -236,6 +238,31 @@ func _ready() -> void:
 			audio_btn.position = Vector2(1010, 13)
 			add_child(audio_btn)
 	audio_btn.pressed.connect(_toggle_audio_mute)
+	
+	# Win/Loss Streak Visual Badge Indicator
+	if streak_badge == null:
+		streak_badge = PanelContainer.new()
+		streak_badge.name = "StreakBadge"
+		var sb_style = StyleBoxFlat.new()
+		sb_style.bg_color = Color(0.12, 0.14, 0.18, 0.9)
+		sb_style.set_corner_radius_all(4)
+		sb_style.content_margin_left = 6
+		sb_style.content_margin_right = 6
+		sb_style.content_margin_top = 2
+		sb_style.content_margin_bottom = 2
+		streak_badge.add_theme_stylebox_override("panel", sb_style)
+		
+		streak_badge_label = Label.new()
+		streak_badge_label.name = "StreakBadgeLabel"
+		streak_badge_label.add_theme_font_size_override("font_size", 11)
+		streak_badge.add_child(streak_badge_label)
+		
+		var round_info = $TopBar/RoundInfo if has_node("TopBar/RoundInfo") else null
+		if round_info:
+			round_info.add_child(streak_badge)
+			round_info.move_child(streak_badge, 1)
+		streak_badge.visible = false
+	update_streak_badge()
 	
 	item_bench = ITEM_BENCH_SCENE.instantiate()
 	item_bench.name = "ItemBench"
@@ -532,6 +559,43 @@ func _on_level_changed(new_lvl: int, cur_exp: int, max_exp: int) -> void:
 
 func _on_round_changed(new_round: int) -> void:
 	round_label.text = "第 %d 回合" % new_round
+	update_streak_badge()
+
+func update_streak_badge() -> void:
+	if streak_badge == null or streak_badge_label == null:
+		return
+	if GameManager.win_streak >= 2:
+		var bonus = 1
+		if GameManager.win_streak >= 5:
+			bonus = 3
+		elif GameManager.win_streak >= 3:
+			bonus = 2
+		streak_badge_label.text = "🔥 %d连胜 (+%dG)" % [GameManager.win_streak, bonus]
+		streak_badge_label.add_theme_color_override("font_color", Color(1.0, 0.7, 0.2))
+		var style: StyleBoxFlat = streak_badge.get_theme_stylebox("panel") as StyleBoxFlat
+		if style:
+			style.bg_color = Color(0.38, 0.12, 0.05, 0.88)
+			style.border_color = Color(1.0, 0.55, 0.2, 0.95)
+			style.set_border_width_all(1)
+		streak_badge.tooltip_text = "当前处于连胜状态！每回合额外奖励 +%d 金币" % bonus
+		streak_badge.visible = true
+	elif GameManager.loss_streak >= 2:
+		var bonus = 1
+		if GameManager.loss_streak >= 5:
+			bonus = 3
+		elif GameManager.loss_streak >= 3:
+			bonus = 2
+		streak_badge_label.text = "❄️ %d连败 (+%dG)" % [GameManager.loss_streak, bonus]
+		streak_badge_label.add_theme_color_override("font_color", Color(0.45, 0.82, 1.0))
+		var style: StyleBoxFlat = streak_badge.get_theme_stylebox("panel") as StyleBoxFlat
+		if style:
+			style.bg_color = Color(0.06, 0.18, 0.35, 0.88)
+			style.border_color = Color(0.3, 0.75, 1.0, 0.95)
+			style.set_border_width_all(1)
+		streak_badge.tooltip_text = "当前处于连败状态！每回合额外奖励 +%d 金币" % bonus
+		streak_badge.visible = true
+	else:
+		streak_badge.visible = false
 
 func _on_cinematic_spotlight_requested(duration: float, darkness: float) -> void:
 	if cinematic_spotlight:
@@ -541,6 +605,7 @@ func _on_cinematic_spotlight_requested(duration: float, darkness: float) -> void
 		tw.tween_property(cinematic_spotlight, "color:a", 0.0, 0.25).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 
 func _on_phase_changed(phase_str: String, _time_left: float) -> void:
+	update_streak_badge()
 	match phase_str:
 		"PREP":
 			phase_label.text = "【准备阶段】"

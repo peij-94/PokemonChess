@@ -50,6 +50,8 @@ var stun_timer: float = 0.0
 var burn_timer: float = 0.0
 var burn_dps: float = 0.0
 var stun_vfx: Node2D = null
+var is_assassin_leaping: bool = false
+var has_leaped_backline: bool = false
 
 # Combat Metrics Tracking
 var damage_dealt: float = 0.0
@@ -345,6 +347,14 @@ func _process(delta: float) -> void:
 	run_combat_ai(delta)
 
 func run_combat_ai(delta: float) -> void:
+	if is_assassin_leaping:
+		return
+		
+	# Assassin leap to enemy backline at round start
+	if is_assassin() and not has_leaped_backline:
+		perform_assassin_leap()
+		return
+		
 	# Check target validity
 	if target_unit == null or not is_instance_valid(target_unit) or target_unit.is_dead:
 		target_unit = find_closest_enemy()
@@ -397,6 +407,67 @@ func find_closest_enemy() -> Unit:
 				min_dist = d
 				closest = u
 	return closest
+
+func is_assassin() -> bool:
+	if attack_range > 1:
+		return false
+	return types.has("Dark") or types.has("Ghost") or (types.has("Bug") and attack_range == 1)
+
+func find_backline_target() -> Unit:
+	var potential_targets = get_tree().get_nodes_in_group("units")
+	var backline_enemy: Unit = null
+	var best_score: float = -999999.0
+	
+	for node in potential_targets:
+		var u = node as Unit
+		if u == null or u == self or u.is_dead or u.is_on_bench:
+			continue
+		if u.is_enemy != self.is_enemy:
+			# For player units, enemy backline is at top (minimum y)
+			# For enemy units, player backline is at bottom (maximum y)
+			var score: float = -u.position.y if not is_enemy else u.position.y
+			score += abs(u.position.x - position.x) * 0.1
+			if score > best_score:
+				best_score = score
+				backline_enemy = u
+	return backline_enemy
+
+func perform_assassin_leap() -> void:
+	var target = find_backline_target()
+	if target == null:
+		return
+		
+	has_leaped_backline = true
+	is_assassin_leaping = true
+	target_unit = target
+	
+	# Determine landing spot adjacent to target (behind target)
+	var offset_y = -48.0 if not is_enemy else 48.0
+	var landing_pos = target.position + Vector2(0, offset_y)
+	landing_pos.x = clamp(landing_pos.x, 240.0, 780.0)
+	landing_pos.y = clamp(landing_pos.y, 80.0, 580.0)
+	
+	spawn_floating_text("潜行突袭!", Color(0.85, 0.45, 1.0), true)
+	AudioManager.play_sfx("tackle")
+	
+	var tw = create_tween().set_parallel(true)
+	tw.tween_property(self, "modulate:a", 0.35, 0.15).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.chain().tween_property(self, "modulate:a", 1.0, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	
+	var move_tw = create_tween()
+	move_tw.tween_property(self, "position", landing_pos, 0.35).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+	
+	var cur_scale = scale
+	var scale_tw = create_tween()
+	scale_tw.tween_property(self, "scale", cur_scale * 1.25, 0.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	scale_tw.tween_property(self, "scale", cur_scale, 0.17).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	
+	move_tw.finished.connect(func():
+		is_assassin_leaping = false
+		if is_instance_valid(target) and not target.is_dead:
+			attack_timer = 0.0
+			perform_attack(target)
+	)
 
 func get_melee_attack_style() -> String:
 	if basic_attack_info.has("style") and basic_attack_info["style"] != "":
@@ -1328,6 +1399,8 @@ func reset_for_prep() -> void:
 		stun_vfx.stop_immediate()
 	burn_timer = 0.0
 	is_in_combat = false
+	is_assassin_leaping = false
+	has_leaped_backline = false
 	attack_count = 0
 	target_unit = null
 	icon_sprite.position = Vector2.ZERO

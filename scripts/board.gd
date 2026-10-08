@@ -189,6 +189,35 @@ func spawn_unit_at_coord(pokemon_id: String, coord: Vector2i, star_level: int = 
 	update_synergies()
 	return unit
 
+func clear_all_units() -> void:
+	for c in range(COLS):
+		for r in range(ROWS):
+			if board_grid[c][r] != null and is_instance_valid(board_grid[c][r]):
+				board_grid[c][r].queue_free()
+				board_grid[c][r] = null
+	for b in range(BENCH_SLOTS):
+		if bench_slots[b] != null and is_instance_valid(bench_slots[b]):
+			bench_slots[b].queue_free()
+			bench_slots[b] = null
+	update_synergies()
+
+func spawn_training_dummy(dummy_hp: float = 30000.0) -> Unit:
+	for c in range(COLS):
+		for r in range(3):
+			if board_grid[c][r] != null and is_instance_valid(board_grid[c][r]):
+				board_grid[c][r].queue_free()
+				board_grid[c][r] = null
+	var u = spawn_unit_at_coord("snorlax", Vector2i(3, 1), 3, true)
+	if u:
+		u.max_hp = dummy_hp
+		u.current_hp = dummy_hp
+		u.atk = 5.0
+		u.scale = Vector2(1.4, 1.4)
+		if u.name_label:
+			u.name_label.text = "🎯 训练木桩"
+		u.spawn_floating_text("🎯 试炼靶桩就绪!", Color(0.4, 1.0, 0.6), true)
+	return u
+
 func auto_deploy_from_bench() -> void:
 	while count_player_units_on_board() < GameManager.level:
 		var bench_unit: Unit = null
@@ -701,15 +730,24 @@ func spawn_enemy_wave(round_num: int) -> void:
 		unit.setup(pid, star, true)
 		unit.grid_coord = coord
 		unit.position = grid_to_world(coord)
+		board_grid[coord.x][coord.y] = unit
 		unit.unit_died.connect(_on_unit_died)
 		unit.unit_clicked.connect(_on_unit_clicked)
 		unit.is_in_combat = true
 		
 		if is_boss:
-			unit.max_hp *= 2.2
+			unit.max_hp *= 2.4
 			unit.current_hp = unit.max_hp
-			unit.atk *= 1.25
+			unit.atk *= 1.3
 			unit.scale = Vector2(1.35, 1.35)
+			unit.set_meta("is_boss", true)
+			var crown = Label.new()
+			crown.name = "BossCrown"
+			crown.text = "👑 BOSS"
+			crown.position = Vector2(-28, -50)
+			crown.add_theme_font_size_override("font_size", 11)
+			crown.add_theme_color_override("font_color", Color(1.0, 0.85, 0.2))
+			unit.add_child(crown)
 			boss_unit_found = unit
 			
 	if boss_unit_found != null:
@@ -743,7 +781,7 @@ func get_wave_definition(round_num: int) -> Array:
 				{"id": "pikachu", "star": 2, "coord": Vector2i(5, 0)},
 				{"id": "bulbasaur", "star": 2, "coord": Vector2i(3, 1)}
 			]
-		5: # Wave 5: Snorlax Epic Boss Wave
+		5: # Wave 5: Snorlax Epic Boss Wave (Gen 1)
 			return [
 				{"id": "snorlax", "star": 3, "coord": Vector2i(3, 1), "is_boss": true},
 				{"id": "gengar", "star": 2, "coord": Vector2i(2, 0)},
@@ -757,44 +795,106 @@ func get_wave_definition(round_num: int) -> Array:
 			]
 		7:
 			return [
-				{"id": "pikachu", "star": 3, "coord": Vector2i(2, 0)},
-				{"id": "alakazam", "star": 2, "coord": Vector2i(5, 0)},
-				{"id": "machop", "star": 3, "coord": Vector2i(3, 1)}
+				{"id": "scizor", "star": 2, "coord": Vector2i(2, 1)},
+				{"id": "heracross", "star": 2, "coord": Vector2i(5, 1)},
+				{"id": "houndoom", "star": 2, "coord": Vector2i(3, 0)}
 			]
 		8:
 			return [
-				{"id": "dragonite", "star": 2, "coord": Vector2i(3, 1)},
-				{"id": "charizard", "star": 2, "coord": Vector2i(4, 1)},
-				{"id": "gyarados", "star": 2, "coord": Vector2i(2, 1)},
-				{"id": "mewtwo", "star": 1, "coord": Vector2i(4, 0)}
+				{"id": "ampharos", "star": 2, "coord": Vector2i(2, 0)},
+				{"id": "kingdra", "star": 2, "coord": Vector2i(5, 0)},
+				{"id": "steelix", "star": 2, "coord": Vector2i(3, 1)},
+				{"id": "skarmory", "star": 2, "coord": Vector2i(4, 1)}
 			]
 		9:
 			return [
-				{"id": "alakazam", "star": 3, "coord": Vector2i(4, 0)},
-				{"id": "machop", "star": 3, "coord": Vector2i(5, 1)},
-				{"id": "gengar", "star": 3, "coord": Vector2i(2, 1)},
-				{"id": "snorlax", "star": 2, "coord": Vector2i(3, 1)}
+				{"id": "espeon", "star": 3, "coord": Vector2i(2, 0)},
+				{"id": "umbreon", "star": 3, "coord": Vector2i(5, 1)},
+				{"id": "gengar", "star": 3, "coord": Vector2i(3, 1)}
 			]
-		10: # Wave 10: Dragonite & Charizard Dual Boss
+		10: # Wave 10: Tyranitar & Lugia Epic Dual Boss (Gen 2)
 			return [
-				{"id": "dragonite", "star": 3, "coord": Vector2i(3, 0), "is_boss": true},
-				{"id": "charizard", "star": 3, "coord": Vector2i(4, 0), "is_boss": true},
-				{"id": "gyarados", "star": 2, "coord": Vector2i(1, 1)},
-				{"id": "snorlax", "star": 2, "coord": Vector2i(6, 1)}
+				{"id": "tyranitar", "star": 3, "coord": Vector2i(3, 1), "is_boss": true},
+				{"id": "lugia", "star": 2, "coord": Vector2i(4, 0), "is_boss": true},
+				{"id": "houndoom", "star": 2, "coord": Vector2i(1, 1)},
+				{"id": "ampharos", "star": 2, "coord": Vector2i(6, 1)}
 			]
-		15: # Wave 15: Dark Mewtwo Finale Superboss
+		11:
 			return [
-				{"id": "mewtwo", "star": 3, "coord": Vector2i(3, 0), "is_boss": true},
-				{"id": "alakazam", "star": 3, "coord": Vector2i(2, 0)},
-				{"id": "gengar", "star": 3, "coord": Vector2i(5, 0)},
-				{"id": "dragonite", "star": 3, "coord": Vector2i(3, 1)}
+				{"id": "blaziken", "star": 2, "coord": Vector2i(2, 1)},
+				{"id": "swampert", "star": 2, "coord": Vector2i(4, 1)},
+				{"id": "sceptile", "star": 2, "coord": Vector2i(5, 1)},
+				{"id": "gardevoir", "star": 2, "coord": Vector2i(3, 0)}
 			]
-		_: # Other high waves
+		12:
 			return [
-				{"id": "mewtwo", "star": 2, "coord": Vector2i(3, 0)},
-				{"id": "dragonite", "star": 3, "coord": Vector2i(4, 0)},
-				{"id": "snorlax", "star": 3, "coord": Vector2i(3, 1)},
-				{"id": "charizard", "star": 3, "coord": Vector2i(4, 1)}
+				{"id": "salamence", "star": 3, "coord": Vector2i(3, 0)},
+				{"id": "flygon", "star": 2, "coord": Vector2i(5, 0)},
+				{"id": "aggron", "star": 2, "coord": Vector2i(2, 1)},
+				{"id": "milotic", "star": 2, "coord": Vector2i(4, 1)}
+			]
+		13:
+			return [
+				{"id": "metagross", "star": 3, "coord": Vector2i(3, 1)},
+				{"id": "lucario", "star": 2, "coord": Vector2i(4, 1)},
+				{"id": "garchomp", "star": 2, "coord": Vector2i(2, 1)},
+				{"id": "togekiss", "star": 2, "coord": Vector2i(5, 0)}
+			]
+		14:
+			return [
+				{"id": "infernape", "star": 3, "coord": Vector2i(2, 1)},
+				{"id": "empoleon", "star": 3, "coord": Vector2i(4, 1)},
+				{"id": "torterra", "star": 3, "coord": Vector2i(5, 1)},
+				{"id": "staraptor", "star": 3, "coord": Vector2i(3, 0)}
+			]
+		15: # Wave 15: Rayquaza & Groudon Superboss (Gen 3)
+			return [
+				{"id": "rayquaza", "star": 3, "coord": Vector2i(3, 0), "is_boss": true},
+				{"id": "groudon", "star": 3, "coord": Vector2i(4, 1), "is_boss": true},
+				{"id": "kyogre", "star": 2, "coord": Vector2i(1, 0)},
+				{"id": "deoxys", "star": 2, "coord": Vector2i(6, 0)}
+			]
+		16:
+			return [
+				{"id": "electivire", "star": 3, "coord": Vector2i(2, 1)},
+				{"id": "magmortar", "star": 3, "coord": Vector2i(4, 1)},
+				{"id": "rhyperior", "star": 3, "coord": Vector2i(5, 1)},
+				{"id": "tangrowth", "star": 3, "coord": Vector2i(3, 1)}
+			]
+		17:
+			return [
+				{"id": "weavile", "star": 3, "coord": Vector2i(2, 1)},
+				{"id": "drapion", "star": 3, "coord": Vector2i(4, 1)},
+				{"id": "honchkrow", "star": 3, "coord": Vector2i(3, 0)},
+				{"id": "spiritomb", "star": 3, "coord": Vector2i(5, 0)}
+			]
+		18:
+			return [
+				{"id": "heatran", "star": 3, "coord": Vector2i(3, 1)},
+				{"id": "regigigas", "star": 3, "coord": Vector2i(4, 1)},
+				{"id": "cresselia", "star": 3, "coord": Vector2i(2, 0)},
+				{"id": "darkrai", "star": 3, "coord": Vector2i(5, 0)}
+			]
+		19:
+			return [
+				{"id": "giratina", "star": 3, "coord": Vector2i(3, 0)},
+				{"id": "darkrai", "star": 3, "coord": Vector2i(2, 0)},
+				{"id": "mewtwo", "star": 3, "coord": Vector2i(5, 0)},
+				{"id": "lucario", "star": 3, "coord": Vector2i(4, 1)}
+			]
+		20: # Wave 20: Arceus, Dialga & Palkia Mythical Supreme Boss (Gen 4 Finale)
+			return [
+				{"id": "arceus", "star": 3, "coord": Vector2i(3, 0), "is_boss": true},
+				{"id": "dialga", "star": 3, "coord": Vector2i(2, 1), "is_boss": true},
+				{"id": "palkia", "star": 3, "coord": Vector2i(5, 1), "is_boss": true},
+				{"id": "giratina", "star": 3, "coord": Vector2i(4, 0)}
+			]
+		_: # Endgame Endless Waves (Rounds > 20)
+			return [
+				{"id": "arceus", "star": 3, "coord": Vector2i(3, 0), "is_boss": true},
+				{"id": "rayquaza", "star": 3, "coord": Vector2i(4, 0)},
+				{"id": "mewtwo", "star": 3, "coord": Vector2i(2, 1)},
+				{"id": "dialga", "star": 3, "coord": Vector2i(5, 1)}
 			]
 
 func _on_unit_died(_unit: Unit) -> void:
@@ -831,20 +931,38 @@ func _award_victory_item_drops(round_num: int) -> void:
 			GameManager.add_item_to_bench(dropped)
 			AudioManager.play_sfx("buy")
 	elif round_num == 5:
-		# Snorlax Boss: drop 1 advanced item
+		# Snorlax Boss (Gen 1): drop 1 advanced item
 		var advs = ItemDatabase.get_all_advanced_item_ids() if ItemDatabase else []
 		if not advs.is_empty():
 			var dropped = advs[randi() % advs.size()]
 			GameManager.add_item_to_bench(dropped)
 			AudioManager.play_sfx("upgrade")
 	elif round_num == 10:
-		# Dragonite Boss: drop 1 advanced item
+		# Tyranitar & Lugia (Gen 2 Dual Boss): drop 1 advanced item + 1 base item
 		var advs = ItemDatabase.get_all_advanced_item_ids() if ItemDatabase else []
 		if not advs.is_empty():
-			var dropped = advs[randi() % advs.size()]
-			GameManager.add_item_to_bench(dropped)
-			AudioManager.play_sfx("upgrade")
-	elif round_num in [4, 7, 8, 12]:
+			GameManager.add_item_to_bench(advs[randi() % advs.size()])
+		var bases = ItemDatabase.get_all_base_item_ids() if ItemDatabase else []
+		if not bases.is_empty():
+			GameManager.add_item_to_bench(bases[randi() % bases.size()])
+		AudioManager.play_sfx("upgrade")
+	elif round_num == 15:
+		# Rayquaza & Groudon (Gen 3 Legendary Boss): drop 1 advanced item + 1 base item
+		var advs = ItemDatabase.get_all_advanced_item_ids() if ItemDatabase else []
+		if not advs.is_empty():
+			GameManager.add_item_to_bench(advs[randi() % advs.size()])
+		var bases = ItemDatabase.get_all_base_item_ids() if ItemDatabase else []
+		if not bases.is_empty():
+			GameManager.add_item_to_bench(bases[randi() % bases.size()])
+		AudioManager.play_sfx("upgrade")
+	elif round_num == 20:
+		# Arceus Supreme Boss (Gen 4 Finale): drop 2 advanced items
+		var advs = ItemDatabase.get_all_advanced_item_ids() if ItemDatabase else []
+		if not advs.is_empty():
+			GameManager.add_item_to_bench(advs[randi() % advs.size()])
+			GameManager.add_item_to_bench(advs[randi() % advs.size()])
+		AudioManager.play_sfx("upgrade")
+	elif round_num in [4, 7, 8, 12, 16]:
 		var bases = ItemDatabase.get_all_base_item_ids() if ItemDatabase else []
 		if not bases.is_empty() and randf() < 0.5:
 			var dropped = bases[randi() % bases.size()]

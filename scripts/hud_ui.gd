@@ -64,6 +64,8 @@ const ITEM_BENCH_SCENE = preload("res://scenes/item_bench.tscn")
 const WEATHER_OVERLAY_SCENE = preload("res://scenes/weather_overlay.tscn")
 const WEATHER_BANNER_SCENE = preload("res://scenes/weather_banner.tscn")
 const TEAM_COMP_PLANNER_SCENE = preload("res://scenes/team_comp_planner.tscn")
+const SANDBOX_TOOLBAR_SCENE = preload("res://scenes/sandbox_toolbar.tscn")
+const DAMAGE_RECAP_MODAL_SCENE = preload("res://scenes/damage_recap_modal.tscn")
 
 var skill_choice_modal: Panel = null
 var evolution_choice_modal: Panel = null
@@ -74,6 +76,9 @@ var item_bench: PanelContainer = null
 var weather_overlay: ColorRect = null
 var weather_banner: PanelContainer = null
 var team_comp_planner: Panel = null
+var sandbox_toolbar: PanelContainer = null
+var damage_recap_modal: Panel = null
+var recap_btn: Button = null
 @onready var team_comp_btn: Button = $TopBar/ActionButtons/TeamCompBtn if has_node("TopBar/ActionButtons/TeamCompBtn") else null
 @onready var dynamax_btn: Button = $TopBar/ActionButtons/DynamaxBtn if has_node("TopBar/ActionButtons/DynamaxBtn") else null
 var audio_btn: Button = null
@@ -239,6 +244,72 @@ func _ready() -> void:
 			add_child(audio_btn)
 	audio_btn.pressed.connect(_toggle_audio_mute)
 	
+	if recap_btn == null:
+		recap_btn = Button.new()
+		recap_btn.name = "RecapBtn"
+		recap_btn.text = "📊 战报 [Tab]"
+		recap_btn.custom_minimum_size = Vector2(75, 30)
+		recap_btn.add_theme_font_size_override("font_size", 11)
+		var r_style = StyleBoxFlat.new()
+		r_style.bg_color = Color(0.18, 0.28, 0.45, 1)
+		r_style.border_color = Color(0.4, 0.7, 1.0, 1)
+		r_style.set_border_width_all(1)
+		r_style.set_corner_radius_all(4)
+		recap_btn.add_theme_stylebox_override("normal", r_style)
+		if action_buttons:
+			action_buttons.add_child(recap_btn)
+		else:
+			recap_btn.position = Vector2(1090, 13)
+			add_child(recap_btn)
+	recap_btn.pressed.connect(_on_recap_btn_pressed)
+	
+	sandbox_toolbar = SANDBOX_TOOLBAR_SCENE.instantiate()
+	sandbox_toolbar.name = "SandboxToolbar"
+	sandbox_toolbar.visible = false
+	add_child(sandbox_toolbar)
+	if not GameManager.sandbox_mode_toggled.is_connected(_on_sandbox_mode_toggled):
+		GameManager.sandbox_mode_toggled.connect(_on_sandbox_mode_toggled)
+
+	damage_recap_modal = DAMAGE_RECAP_MODAL_SCENE.instantiate()
+	damage_recap_modal.name = "DamageRecapModal"
+	damage_recap_modal.visible = false
+	add_child(damage_recap_modal)
+	
+	# Add Sandbox Mode Button to Start Menu
+	var btn_row = start_menu_modal.get_node_or_null("Dialog/VBox/BtnRow") if start_menu_modal else null
+	if btn_row and not btn_row.has_node("SandboxBtn"):
+		var sandbox_btn = Button.new()
+		sandbox_btn.name = "SandboxBtn"
+		sandbox_btn.text = "🧪 演练沙盒"
+		sandbox_btn.custom_minimum_size = Vector2(160, 52)
+		sandbox_btn.add_theme_font_size_override("font_size", 18)
+		var s_style = StyleBoxFlat.new()
+		s_style.bg_color = Color(0.35, 0.18, 0.52, 1)
+		s_style.border_color = Color(0.75, 0.45, 1, 0.9)
+		s_style.set_border_width_all(1)
+		s_style.set_corner_radius_all(6)
+		sandbox_btn.add_theme_stylebox_override("normal", s_style)
+		sandbox_btn.pressed.connect(_on_sandbox_btn_pressed)
+		btn_row.add_child(sandbox_btn)
+		
+	# Add Detailed Recap Button to End Game Modal
+	var end_vbox = end_modal.get_node_or_null("VBox") if end_modal else null
+	if end_vbox and not end_vbox.has_node("ViewRecapBtn"):
+		var view_recap_btn = Button.new()
+		view_recap_btn.name = "ViewRecapBtn"
+		view_recap_btn.text = "📊 查看完整战报数据"
+		view_recap_btn.custom_minimum_size = Vector2(180, 38)
+		view_recap_btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		var vr_style = StyleBoxFlat.new()
+		vr_style.bg_color = Color(0.18, 0.28, 0.45, 1)
+		vr_style.border_color = Color(0.4, 0.7, 1.0, 1)
+		vr_style.set_border_width_all(1)
+		vr_style.set_corner_radius_all(4)
+		view_recap_btn.add_theme_stylebox_override("normal", vr_style)
+		view_recap_btn.pressed.connect(_on_recap_btn_pressed)
+		end_vbox.add_child(view_recap_btn)
+		end_vbox.move_child(view_recap_btn, end_vbox.get_child_count() - 2)
+	
 	# Win/Loss Streak Visual Badge Indicator
 	if streak_badge == null:
 		streak_badge = PanelContainer.new()
@@ -351,6 +422,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			if lock_btn:
 				lock_btn.button_pressed = not lock_btn.button_pressed
 				_on_lock_toggled(lock_btn.button_pressed)
+		elif event.keycode == KEY_TAB:
+			_on_recap_btn_pressed()
 
 func _toggle_audio_mute() -> void:
 	var muted = AudioManager.toggle_mute()
@@ -540,6 +613,49 @@ func _on_play_game_pressed() -> void:
 		if GameManager.current_round == 1:
 			open_trainer_augment_modal()
 	)
+
+func _on_sandbox_btn_pressed() -> void:
+	AudioManager.play_sfx("round_start")
+	if item_bench:
+		item_bench.visible = true
+	var tw = create_tween()
+	tw.tween_property(start_menu_modal, "modulate:a", 0.0, 0.2)
+	tw.tween_callback(func():
+		start_menu_modal.visible = false
+		start_menu_modal.modulate.a = 1.0
+		GameManager.enter_sandbox_mode()
+	)
+
+func _on_sandbox_mode_toggled(is_sandbox: bool) -> void:
+	if sandbox_toolbar:
+		sandbox_toolbar.visible = is_sandbox
+
+func _on_recap_btn_pressed() -> void:
+	if damage_recap_modal == null:
+		return
+	if damage_recap_modal.visible:
+		damage_recap_modal.close_modal()
+	else:
+		var metrics: Array = []
+		if dps_meter and "raw_unit_data" in dps_meter and not dps_meter.raw_unit_data.is_empty():
+			metrics = dps_meter.raw_unit_data
+		else:
+			var all_units = get_tree().get_nodes_in_group("units")
+			for node in all_units:
+				var u = node as Unit
+				if u != null and not u.is_on_bench:
+					var uname = PokemonDatabase.get_pokemon(u.pokemon_id).get("name", u.pokemon_id)
+					metrics.append({
+						"unit": u,
+						"id": u.pokemon_id,
+						"name": uname,
+						"star": u.star_level,
+						"damage": u.damage_dealt,
+						"taken": u.damage_taken,
+						"healing": u.healing_done,
+						"is_enemy": u.is_enemy
+					})
+		damage_recap_modal.open_recap(metrics, GameManager.current_round)
 
 func _on_hp_changed(new_hp: int, _delta: int) -> void:
 	hp_bar.value = new_hp

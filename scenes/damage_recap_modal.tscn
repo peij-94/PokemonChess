@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/damage_recap_modal.gd" id="1_recap"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.06, 0.08, 0.12, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.65, 0.95, 0.85)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_dmg"]
+bg_color = Color(0.42, 0.15, 0.15, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9, 0.3, 0.3, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_taken"]
+bg_color = Color(0.15, 0.28, 0.48, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.6, 0.95, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_heal"]
+bg_color = Color(0.15, 0.38, 0.22, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.85, 0.45, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="DamageRecapModal" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -240.0
+offset_right = 300.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+script = ExtResource("1_recap")
+
+[node name="Dialog" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="Dialog"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="Dialog/VBox"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Dialog/VBox/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.25, 1)
+theme_override_font_sizes/font_size = 17
+text = "📊 战斗结算详细战报"
+
+[node name="RoundInfoLabel" type="Label" parent="Dialog/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "第 1 回合战况分析"
+horizontal_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="Dialog/VBox/Header"]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="PodiumContainer" type="HBoxContainer" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="TabBar" type="HBoxContainer" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="DamageTab" type="Button" parent="Dialog/VBox/TabBar"]
+custom_minimum_size = Vector2(140, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tab_dmg")
+theme_override_font_sizes/font_size = 12
+text = "⚔️ 输出伤害"
+
+[node name="TakenTab" type="Button" parent="Dialog/VBox/TabBar"]
+custom_minimum_size = Vector2(140, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tab_taken")
+theme_override_font_sizes/font_size = 12
+text = "🛡️ 承受伤害"
+
+[node name="HealingTab" type="Button" parent="Dialog/VBox/TabBar"]
+custom_minimum_size = Vector2(140, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tab_heal")
+theme_override_font_sizes/font_size = 12
+text = "💚 治疗与护盾"
+
+[node name="Scroll" type="ScrollContainer" parent="Dialog/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Dialog/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="SummaryLabel" type="Label" parent="Dialog/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.85, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+text = "全队总输出: 0"
+horizontal_alignment = 2

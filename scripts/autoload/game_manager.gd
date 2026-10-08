@@ -21,6 +21,7 @@ signal arena_modifiers_updated(active_mods: Array, arena_info: Dictionary)
 signal target_comp_updated(comp: Dictionary)
 signal camera_shake_requested(trauma: float, duration: float)
 signal cinematic_spotlight_requested(duration: float, darkness: float)
+signal sandbox_mode_toggled(is_sandbox: bool)
 
 func shake_camera(trauma: float = 0.5, duration: float = 0.25) -> void:
 	camera_shake_requested.emit(trauma, duration)
@@ -248,6 +249,7 @@ enum Phase { PREPARATION, COMBAT, RESOLVE, GAME_OVER, VICTORY }
 var current_phase: Phase = Phase.PREPARATION
 var current_round: int = 1
 var is_game_started: bool = true # Defaults to true for test scenes; set to false when on start menu
+var is_sandbox_mode: bool = false
 var phase_timer: float = 20.0
 const PREP_TIME: float = 20.0
 const COMBAT_MAX_TIME: float = 40.0
@@ -386,6 +388,21 @@ func start_new_game() -> void:
 		is_game_started = false
 	else:
 		is_game_started = true
+
+func enter_sandbox_mode() -> void:
+	is_sandbox_mode = true
+	is_game_started = true
+	gold = 999
+	level = 10
+	player_hp = 100
+	current_phase = Phase.PREPARATION
+	phase_timer = PREP_TIME
+	gold_changed.emit(gold, 0)
+	emit_level_signal()
+	hp_changed.emit(player_hp, 0)
+	refresh_shop(true)
+	phase_changed.emit("PREP", phase_timer)
+	sandbox_mode_toggled.emit(true)
 
 func _process(delta: float) -> void:
 	if not is_game_started:

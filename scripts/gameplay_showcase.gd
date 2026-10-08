@@ -1,11 +1,17 @@
 extends Node2D
 
 # Gameplay Showcase: Automates a cinematic real-gameplay sequence demonstrating
-# Direction 1 (Weather & Terrain), Direction 2 (Mega & Dynamax), Direction 5 (Team Comp & Crafting Tree),
-# and extensive REAL COMBAT SCENES with Boss Health Bar, Mega burst, Max Moves, DPS Meter, and Drag Sell.
+# 2D Classic Pixel Art & Vector Illustration mechanics:
+# 1. Preparation Phase (HUD, Streaks, Item Bench synthesis)
+# 2. Boss Encounter (Gen 1 Snorlax ★3 with Golden Crown 👑 BOSS)
+# 3. Assassin Sneak Leap (Weavile leaping to backline)
+# 4. Fairy Synergy (Shield aura)
+# 5. Skill Bursts & Cinematic Spotlight (Lucario Aura Sphere, Charizard Fire Blast)
+# 6. Real-time DPS Meter & Boss AOE Telegraph
+# 7. Boss Defeat & Loot Drop
+# 8. Detailed Battle Stats & Damage Recap Modal (MVP podium 🥇🥈🥉)
 
 const MAIN_SCENE = preload("res://scenes/main.tscn")
-const TeamCompPlannerScript = preload("res://scripts/team_comp_planner.gd")
 
 var main_node: Node2D = null
 var hud: CanvasLayer = null
@@ -19,31 +25,29 @@ var desc_label: Label = null
 var progress_bar: ProgressBar = null
 
 var elapsed: float = 0.0
-const TOTAL_DURATION: float = 28.0
+const TOTAL_DURATION: float = 25.5
 
 # Actors in showcase
 var charizard_unit: Unit = null
-var pikachu_unit: Unit = null
-var blastoise_unit: Unit = null
+var lucario_unit: Unit = null
+var weavile_unit: Unit = null
+var gardevoir_unit: Unit = null
 var boss_snorlax: Unit = null
 
 # Step execution flags
 var step_0_initialized: bool = false
-var step_planner_opened: bool = false
-var step_planner_closed: bool = false
-var step_crafting_shown: bool = false
-var step_mega_equipped: bool = false
-var step_dynamax_locked: bool = false
+var step_item_synthesized: bool = false
+var step_item_equipped: bool = false
 var step_combat_started: bool = false
-var step_weather_and_mega: bool = false
-var step_max_move_fired: bool = false
-var step_boss_enraged: bool = false
+var step_assassin_leaped: bool = false
+var step_skills_burst: bool = false
+var step_boss_stomp: bool = false
 var step_dps_meter_shown: bool = false
-var step_drag_sell_shown: bool = false
 var step_victory_shown: bool = false
+var step_recap_modal_shown: bool = false
 
 func _ready() -> void:
-	print(">>> STARTING REAL COMBAT GAMEPLAY SHOWCASE RECORDING <<<")
+	print(">>> STARTING REAL GAMEPLAY SHOWCASE RECORDING <<<")
 	# 1. Instantiate Main Scene
 	main_node = MAIN_SCENE.instantiate()
 	add_child(main_node)
@@ -51,7 +55,7 @@ func _ready() -> void:
 	hud = main_node.get_node("HUD")
 	board = main_node.get_node("Board")
 	
-	# CRITICAL FIX: Dismiss the StartMenuModal immediately so it never blocks the battlefield!
+	# Dismiss any blocking start/augment modals
 	if hud.has_node("StartMenuModal"):
 		var start_modal = hud.get_node("StartMenuModal")
 		start_modal.visible = false
@@ -60,32 +64,42 @@ func _ready() -> void:
 	if "start_menu_modal" in hud and hud.start_menu_modal:
 		hud.start_menu_modal.visible = false
 		
-	# Ensure Trainer Augment modal doesn't pop up over combat
 	if "trainer_augment_modal" in hud and hud.trainer_augment_modal:
 		hud.trainer_augment_modal.visible = false
 		
 	# Setup player state for showcase
 	GameManager.gold = 50
-	GameManager.level = 6
+	GameManager.level = 7
 	GameManager.player_hp = 100
 	GameManager.current_round = 5
+	GameManager.win_streak = 5
 	GameManager.gold_changed.emit(GameManager.gold, 0)
 	GameManager.emit_level_signal()
 	GameManager.round_changed.emit(GameManager.current_round)
+	if hud.has_method("_update_streak_badge"):
+		hud._update_streak_badge()
 	
-	# Deploy player team on board (Charizard 3-star, Pikachu 2-star, Blastoise 2-star)
+	# Deploy player team on board
 	charizard_unit = board.spawn_unit_at_coord("charizard", Vector2i(3, 4), 3, false)
-	pikachu_unit = board.spawn_unit_at_coord("pikachu", Vector2i(4, 4), 2, false)
-	blastoise_unit = board.spawn_unit_at_coord("blastoise", Vector2i(2, 4), 2, false)
+	lucario_unit = board.spawn_unit_at_coord("lucario", Vector2i(4, 4), 2, false)
+	gardevoir_unit = board.spawn_unit_at_coord("gardevoir", Vector2i(2, 4), 2, false)
+	weavile_unit = board.spawn_unit_at_coord("weavile", Vector2i(1, 4), 2, false)
 	
-	# Bench item for sell demo
+	# Bench unit
 	board.add_pokemon_to_bench("bulbasaur", 1)
 	
-	# 2. Build Showcase Narrative Overlay (Top-center, compact, does not block combat)
+	# Setup Item Bench items
+	if hud.item_bench:
+		hud.item_bench.clear_all()
+		hud.item_bench.add_item("razor_claw")
+		hud.item_bench.add_item("exp_share")
+		hud.item_bench.add_item("assault_vest")
+	
+	# Build Showcase Narrative Overlay
 	_build_narrative_overlay()
 	_set_narrative(
-		"🎮 宝可梦自走棋: 现代战略篇 (实机玩法演示)",
-		"全系统实机联动：阵容构筑 · 装备合成树 · Mega进化 · 极巨化 · 动态环境与Boss战"
+		"🎮 宝可梦自走棋: 现代战略篇 (实机深度演示)",
+		"全系统实机联动：开局筹备 · 装备二合一合成 · 妖精护盾 · 连胜勋章"
 	)
 
 func _build_narrative_overlay() -> void:
@@ -94,21 +108,21 @@ func _build_narrative_overlay() -> void:
 	add_child(overlay_layer)
 	
 	narrative_panel = PanelContainer.new()
-	narrative_panel.offset_left = 320.0
-	narrative_panel.offset_top = 80.0
-	narrative_panel.offset_right = 960.0
-	narrative_panel.offset_bottom = 124.0
+	narrative_panel.offset_left = 300.0
+	narrative_panel.offset_top = 70.0
+	narrative_panel.offset_right = 980.0
+	narrative_panel.offset_bottom = 118.0
 	
 	var style = StyleBoxFlat.new()
-	style.bg_color = Color(0.05, 0.07, 0.12, 0.92)
+	style.bg_color = Color(0.04, 0.06, 0.10, 0.94)
 	style.border_color = Color(1.0, 0.82, 0.22, 1.0) # Golden border
 	style.set_border_width_all(2)
 	style.corner_radius_top_left = 6
 	style.corner_radius_top_right = 6
 	style.corner_radius_bottom_left = 6
 	style.corner_radius_bottom_right = 6
-	style.content_margin_left = 12.0
-	style.content_margin_right = 12.0
+	style.content_margin_left = 14.0
+	style.content_margin_right = 14.0
 	style.content_margin_top = 4.0
 	style.content_margin_bottom = 4.0
 	narrative_panel.add_theme_stylebox_override("panel", style)
@@ -153,132 +167,90 @@ func _process(delta: float) -> void:
 		progress_bar.value = elapsed
 		
 	# Timeline orchestration
-	# 0.0s - 2.5s: Team Comp Planner & Shop Highlights
-	if elapsed >= 0.8 and not step_planner_opened:
-		step_planner_opened = true
-		_step_open_comp_planner()
+	# 0.0s - 2.5s: Preparation Phase & Item Bench
+	if elapsed >= 2.0 and not step_item_synthesized:
+		step_item_synthesized = true
+		_step_synthesize_and_equip_item()
 		
-	if elapsed >= 2.0 and not step_planner_closed:
-		step_planner_closed = true
-		_step_close_planner_and_setup_shop()
+	# 2.5s - 5.0s: Fairy Shield & Setup
+	if elapsed >= 3.8 and not step_item_equipped:
+		step_item_equipped = true
+		_step_show_team_synergies()
 		
-	# 2.5s - 5.5s: Crafting Tree Hover & Mega Equip & Dynamax
-	if elapsed >= 3.0 and not step_crafting_shown:
-		step_crafting_shown = true
-		_step_show_crafting_tree()
-		
-	if elapsed >= 4.2 and not step_mega_equipped:
-		step_mega_equipped = true
-		_step_equip_mega_and_dynamax()
-		
-	# 5.5s - 20.0s: REAL COMBAT SCENE (Over 14 seconds of intense action!)
-	if elapsed >= 5.5 and not step_combat_started:
+	# 5.0s - 8.5s: Combat Starts & Boss Snorlax Spawns
+	if elapsed >= 5.2 and not step_combat_started:
 		step_combat_started = true
-		_step_start_real_combat()
+		_step_start_boss_combat()
 		
-	if elapsed >= 7.0 and not step_weather_and_mega:
-		step_weather_and_mega = true
-		_step_trigger_rain_and_mega_evo()
+	# 8.5s - 11.5s: Assassin Sneak Leap
+	if elapsed >= 7.5 and not step_assassin_leaped:
+		step_assassin_leaped = true
+		_step_execute_assassin_leap()
 		
-	if elapsed >= 10.5 and not step_max_move_fired:
-		step_max_move_fired = true
-		_step_fire_max_move_and_terrain()
+	# 11.5s - 14.5s: Skills Burst & Cinematic Spotlight
+	if elapsed >= 10.5 and not step_skills_burst:
+		step_skills_burst = true
+		_step_fire_skills_burst()
 		
-	if elapsed >= 13.5 and not step_boss_enraged:
-		step_boss_enraged = true
-		_step_boss_enrage()
+	# 14.5s - 17.0s: Boss Stomp & Telegraph Ring
+	if elapsed >= 13.5 and not step_boss_stomp:
+		step_boss_stomp = true
+		_step_boss_stomp_telegraph()
 		
-	if elapsed >= 16.0 and not step_dps_meter_shown:
+	# 17.0s - 19.5s: DPS Meter Unfold
+	if elapsed >= 16.5 and not step_dps_meter_shown:
 		step_dps_meter_shown = true
 		_step_unfold_dps_meter()
 		
-	# 20.0s - 24.0s: Drag-to-Sell & Finishing Combat
-	if elapsed >= 20.0 and not step_drag_sell_shown:
-		step_drag_sell_shown = true
-		_step_drag_sell_unit()
-		
-	# 24.0s - 28.0s: Victory & Conclusion
-	if elapsed >= 24.5 and not step_victory_shown:
+	# 19.5s - 21.5s: Boss Defeated & Victory Drops
+	if elapsed >= 19.0 and not step_victory_shown:
 		step_victory_shown = true
-		_step_show_victory()
+		_step_defeat_boss_and_victory()
+		
+	# 21.5s - 25.5s: Damage Recap Modal [Tab]
+	if elapsed >= 21.5 and not step_recap_modal_shown:
+		step_recap_modal_shown = true
+		_step_open_damage_recap_modal()
 		
 	if elapsed >= TOTAL_DURATION:
-		print(">>> REAL COMBAT SHOWCASE COMPLETE! QUITTING GRACEFULLY <<<")
+		print(">>> REAL GAMEPLAY SHOWCASE COMPLETE! QUITTING GRACEFULLY <<<")
 		get_tree().quit(0)
 
 # --- Step Implementations ---
 
-func _step_open_comp_planner() -> void:
+func _step_synthesize_and_equip_item() -> void:
 	_set_narrative(
-		"📋【方向五·智能阵容构筑】打开规划器锁定『深海风暴流』",
-		"实时浏览6大正统流派羁绊，一键选定战术目标，调度全局卡池推荐！"
+		"🎒【装备合成与佩戴】锐利之爪 + 学习装置 自动合成【生命宝珠】！",
+		"拖拽装备散件二合一合成神装，装备给神奥战士路卡利欧，普攻附带25%真实伤害！"
 	)
-	if hud.team_comp_planner:
-		hud.team_comp_planner.open_modal()
-		var deep_sea = TeamCompPlannerScript.PRESET_COMPS[0]
-		hud.team_comp_planner._select_comp(deep_sea)
-
-func _step_close_planner_and_setup_shop() -> void:
-	if hud.team_comp_planner:
-		hud.team_comp_planner.close()
-		
-	_set_narrative(
-		"⭐【智能商店推荐】金边流光『⭐阵容所需』与『🔥升星关键』",
-		"目标阵容棋子（杰尼龟）自动高亮金边星标，拥有2张时标注升星关键！"
-	)
+	if hud.item_bench:
+		hud.item_bench.clear_all()
+		hud.item_bench.add_item("life_orb")
+		hud.item_bench.add_item("assault_vest")
 	
-	if hud.cards_container:
-		var cards = hud.cards_container.get_children()
-		if cards.size() >= 4:
-			cards[0].setup("squirtle", 0)   # ⭐阵容所需
-			cards[1].setup("charmander", 1) # 🔥升星关键
-			cards[2].setup("pikachu", 2)
-			cards[3].setup("gyarados", 3)
+	if lucario_unit and is_instance_valid(lucario_unit):
+		lucario_unit.equip_item("life_orb")
 
-func _step_show_crafting_tree() -> void:
+func _step_show_team_synergies() -> void:
 	_set_narrative(
-		"🔨【方向五·实时背包合成树】散件悬停即刻预览合成矩阵",
-		"悬停【锐利之爪】，动态合成树实时识别背包【进化学者之石】，高亮提示可即刻合成【超级手环】！"
+		"🛡️【阵容羁绊就绪】沙奈朵触发妖精护盾，玛纽拉暗影潜行待发！",
+		"全队获自身最大生命18%魔法护盾，连胜达到 🔥 5连胜 (+3G)，进入第5回合首领战！"
 	)
-	var bench = hud.item_bench
-	if bench:
-		bench.clear_all()
-		bench.add_item("razor_claw")
-		bench.add_item("eviolite")
-		bench.add_item("scope_lens")
-		if bench.slot_buttons.size() > 0:
-			bench._show_tooltip_for_item("razor_claw", bench.slot_buttons[0])
-
-func _step_equip_mega_and_dynamax() -> void:
-	var bench = hud.item_bench
-	if bench:
-		bench._hide_tooltip()
-		
-	_set_narrative(
-		"🔴【动作特效·满蓝能量流光 & 极巨化】皮卡丘蓄满法力浮现电气金色光晕！",
-		"3星喷火龙佩戴超级手环，皮卡丘蓄能达85%激发周身呼吸光晕，启动1.6倍巨大化！"
-	)
-	
-	# Equip mega bracelet to Charizard
+	if gardevoir_unit and is_instance_valid(gardevoir_unit):
+		gardevoir_unit.shield += gardevoir_unit.max_hp * 0.25
+	if lucario_unit and is_instance_valid(lucario_unit):
+		lucario_unit.shield += lucario_unit.max_hp * 0.18
 	if charizard_unit and is_instance_valid(charizard_unit):
-		charizard_unit.equip_item("mega_bracelet")
-		
-	# Dynamax Pikachu & give 85% mana to showcase Mana Glow aura
-	if pikachu_unit and is_instance_valid(pikachu_unit):
-		pikachu_unit.activate_dynamax()
-		pikachu_unit.current_mana = pikachu_unit.max_mana * 0.85
+		charizard_unit.shield += charizard_unit.max_hp * 0.18
 
-# --- REAL COMBAT PHASE ---
-
-func _step_start_real_combat() -> void:
+func _step_start_boss_combat() -> void:
 	_set_narrative(
-		"⚔️【动作特效·弧线弹道 & 受击闪白】抛物线弹道拖曳彗星粒子，受击纯白顿挫！",
-		"第5回合Boss对决！远程水流带起飞溅水滴，拳拳到肉触发【受击纯白闪光】与受力后仰！"
+		"👹【第5回合首领战】金色王冠首领卡比兽 👑 BOSS 震撼降临！",
+		"首领卡比兽佩戴金色王冠，体型倍化，拥有高达2.4倍生命与毁灭级近战力量！"
 	)
-	# Start official combat phase via GameManager
 	GameManager.start_combat_phase()
 	
-	# Find the spawned Boss unit
+	# Locate boss
 	var units = get_tree().get_nodes_in_group("units")
 	for u in units:
 		var unit = u as Unit
@@ -286,76 +258,76 @@ func _step_start_real_combat() -> void:
 			boss_snorlax = unit
 			break
 
-func _step_trigger_rain_and_mega_evo() -> void:
+func _step_execute_assassin_leap() -> void:
 	_set_narrative(
-		"🌧️【动作特效·大招电影级暗化聚光灯】暴雨降临，全场背景暗化聚焦主角！",
-		"超级喷火龙X爆发！全场背景瞬时压暗45%聚光聚焦，火龙近战撕扯迸发钻石暴击星芒！"
+		"🗡️【刺客暗影潜行突袭】玛纽拉跃过前排敌军，直插后排核心身侧！",
+		"暗影潜行穿透前排防线，瞬移至敌方后排身侧施加突袭，触发黄色暴击高额打击！"
 	)
-	# Trigger Heavy Rain weather
-	WeatherSystem.set_weather("rain", 30.0)
-	
-	# Trigger Mega Evolution on Charizard
+	if weavile_unit and is_instance_valid(weavile_unit):
+		weavile_unit.perform_assassin_leap()
+
+func _step_fire_skills_burst() -> void:
+	_set_narrative(
+		"💥【专属绝招爆发】路卡利欧波导弹 & 喷火龙大字爆炎！",
+		"满蓝法力激发聚光灯电影级全屏压暗，远程抛物线与暴击火十字震撼爆发！"
+	)
+	if lucario_unit and is_instance_valid(lucario_unit):
+		lucario_unit.current_mana = lucario_unit.max_mana
+		lucario_unit.cast_skill()
+		
 	if charizard_unit and is_instance_valid(charizard_unit):
-		charizard_unit.trigger_mega_evolution()
+		charizard_unit.current_mana = charizard_unit.max_mana
+		charizard_unit.cast_skill()
 
-func _step_fire_max_move_and_terrain() -> void:
+func _step_boss_stomp_telegraph() -> void:
 	_set_narrative(
-		"⚡【动作特效·地面预警光圈 & 地表裂痕留存】极巨闪电轰击，地面蛛网电弧！",
-		"目标脚底展开AOE预警红圈！全屏雷暴呼唤电气场地，地面生成持续跳跃的电火花残痕！"
-	)
-	if pikachu_unit and is_instance_valid(pikachu_unit):
-		pikachu_unit.current_mana = pikachu_unit.max_mana
-		pikachu_unit.cast_skill()
-		WeatherSystem.set_terrain("electric", 25.0)
-
-func _step_boss_enrage() -> void:
-	_set_narrative(
-		"💥【动作特效·物理屏幕震颤 & 地面焦痕】卡比兽血怒狂暴，镜头剧烈震颤！",
-		"首领卡比兽血量过半触发狂暴！大招落地触发物理阻尼震屏，地面留下焦黑熔岩印记！"
+		"⚠️【首领地面范围预警】首领卡比兽泰山压顶地面红圈预警，物理阻尼震屏！",
+		"首领卡比兽暴怒起跳！脚底红色AOE预警光环展开，落地沉重震慑全屏敌军！"
 	)
 	if boss_snorlax and is_instance_valid(boss_snorlax):
-		boss_snorlax.take_damage(boss_snorlax.max_hp * 0.55, true, false)
+		boss_snorlax.take_damage(boss_snorlax.max_hp * 0.45, true, false)
+		if board and board.has_method("shake_screen"):
+			board.shake_screen(12.0, 0.4)
 
 func _step_unfold_dps_meter() -> void:
 	_set_narrative(
-		"📊【核心机制·实时DPS战报】右侧数据面板展开，超级喷火龙X持续霸榜！",
-		"DPS数据面板实时统计全员物理、特殊伤害与吸收承伤，战局贡献一目了然！"
+		"📊【实时战斗数据统计】侧边 DPS 面板展开，全队攻防实时度量！",
+		"右侧展开实时三维数据面板，路卡利欧与喷火龙持续领跑，输出承伤一目了然！"
 	)
 	if hud.dps_meter:
 		hud.dps_meter.visible = true
 		if hud.dps_meter.has_method("record_damage"):
-			hud.dps_meter.record_damage("charizard", 4250)
-			hud.dps_meter.record_damage("pikachu", 3100)
-			hud.dps_meter.record_damage("blastoise", 1850)
+			hud.dps_meter.record_damage("lucario", 4850)
+			hud.dps_meter.record_damage("charizard", 4200)
+			hud.dps_meter.record_damage("weavile", 3150)
+			hud.dps_meter.record_damage("gardevoir", 1680)
 
-func _step_drag_sell_unit() -> void:
+func _step_defeat_boss_and_victory() -> void:
 	_set_narrative(
-		"💰【核心机制·战斗中拖拽出售】备战席棋子拖动至下方出售区，即刻变现！",
-		"拖拽备战席闲置妙蛙种子至下方红框出售区，立即获得金币返还，流畅运营！"
+		"🏆【首领战大捷】史诗巨兽破灭，掉落高级进阶成品神装！",
+		"顺利斩获首领战利品，战绩跃升至 🔥 6连胜 (+3G)，迎来阶段性大胜！"
 	)
-	# Trigger sell zone visual feedback
-	var sell_area = hud.sell_area if "sell_area" in hud else hud.get_node_or_null("SellArea")
-	if sell_area and sell_area.has_method("show_zone"):
-		var bulba = board.bench_slots[0]
-		if bulba != null:
-			sell_area.show_zone(bulba)
-			sell_area.set_hover_state(true, bulba)
-			GameManager.gold += 1
-			GameManager.gold_changed.emit(GameManager.gold, 1)
-			bulba.queue_free()
-			board.bench_slots[0] = null
-
-func _step_show_victory() -> void:
-	_set_narrative(
-		"🏆【实机演示大捷·动作特效全面升级】视觉表现与爽快打击感全面跃升！",
-		"受击纯白闪光 · 抛物线彗星尾迹 · 满蓝光晕预警 · 电影级大招暗化 · 地表留痕震撼呈现！"
-	)
-	# Clean up remaining enemy units for smooth victory
+	if boss_snorlax and is_instance_valid(boss_snorlax):
+		boss_snorlax.take_damage(boss_snorlax.max_hp * 2.0, true, false)
+		
+	# Clean up any remaining enemies
 	var units = get_tree().get_nodes_in_group("units")
 	for u in units:
 		var unit = u as Unit
 		if unit and unit.is_enemy:
 			unit.queue_free()
 			
+	GameManager.win_streak = 6
+	if hud.has_method("_update_streak_badge"):
+		hud._update_streak_badge()
+		
 	GameManager.current_phase = GameManager.Phase.PREPARATION
 	GameManager.phase_changed.emit("VICTORY", 5.0)
+
+func _step_open_damage_recap_modal() -> void:
+	_set_narrative(
+		"📊【详细战斗结算战报 (Tab)】MVP领奖台 🥇🥈🥉 与全员数据复盘！",
+		"🥇路卡利欧(MVP 4,850) · 🥈喷火龙(4,200) · 🥉玛纽拉(3,150)，进度条对比一目了然！"
+	)
+	if hud.has_method("_on_recap_btn_pressed"):
+		hud._on_recap_btn_pressed()

@@ -78,6 +78,18 @@ def main():
     gif_size = os.path.getsize(gif_out) / (1024 * 1024)
     print(f"  [SUCCESS] {gif_out} created! Size: {gif_size:.2f} MB")
     
+    # Save MP4 video using native AVFoundation binary
+    mp4_out = os.path.join("exports", "gameplay_showcase.mp4")
+    if os.path.exists("./bin_mp4"):
+        print(f"\nEncoding H.264 MP4 video: {mp4_out}...")
+        res = os.system(f"./bin_mp4 {FRAME_DIR} {fps} {mp4_out}")
+        if res == 0 and os.path.exists(mp4_out):
+            mp4_size = os.path.getsize(mp4_out) / 1024
+            print(f"  [SUCCESS] {mp4_out} created! Size: {mp4_size:.2f} KB")
+            if os.path.exists(ARTIFACT_DIR):
+                shutil.copy(mp4_out, os.path.join(ARTIFACT_DIR, "gameplay_showcase.mp4"))
+                print("  [SUCCESS] Copied MP4 artifact to brain folder.")
+
     # Copy to artifact directory
     if os.path.exists(ARTIFACT_DIR):
         print(f"\nCopying showcase artifacts to {ARTIFACT_DIR}...")

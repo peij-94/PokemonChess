@@ -129,6 +129,8 @@ func _ready() -> void:
 	GameManager.unit_drag_ended.connect(_on_unit_drag_ended)
 	GameManager.cinematic_spotlight_requested.connect(_on_cinematic_spotlight_requested)
 	SynergyManager.synergies_updated.connect(_on_synergies_updated)
+	if ShinyAndLoreManager:
+		ShinyAndLoreManager.lore_synergy_activated.connect(_on_lore_synergy_activated)
 	
 	# Connect UI buttons
 	start_battle_btn.pressed.connect(_on_start_battle_pressed)
@@ -592,6 +594,69 @@ func show_toast(msg: String, col: Color = Color.WHITE) -> void:
 			toast.queue_free()
 	)
 
+func _on_lore_synergy_activated(synergy: Dictionary) -> void:
+	show_lore_synergy_banner(synergy)
+
+func show_lore_synergy_banner(synergy: Dictionary) -> void:
+	var banner = PanelContainer.new()
+	banner.name = "LoreSynergyBanner"
+	banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	banner.z_index = 120
+	
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.08, 0.10, 0.16, 0.96)
+	style.border_color = Color(1.0, 0.85, 0.25, 0.95)
+	style.set_border_width_all(2)
+	style.set_corner_radius_all(10)
+	style.shadow_color = Color(1.0, 0.85, 0.2, 0.45)
+	style.shadow_size = 8
+	style.content_margin_left = 24.0
+	style.content_margin_right = 24.0
+	style.content_margin_top = 10.0
+	style.content_margin_bottom = 10.0
+	banner.add_theme_stylebox_override("panel", style)
+	
+	var vbox = VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 4)
+	
+	var title_lbl = Label.new()
+	var syn_name = synergy.get("name", "")
+	var syn_en = synergy.get("en_name", "")
+	var syn_icon = synergy.get("icon", "🌟")
+	title_lbl.text = "%s 【经典情怀隐藏羁绊激活】%s (%s) %s" % [syn_icon, syn_name, syn_en, syn_icon]
+	title_lbl.add_theme_font_size_override("font_size", 15)
+	title_lbl.add_theme_color_override("font_color", Color(1.0, 0.92, 0.3))
+	title_lbl.add_theme_color_override("font_outline_color", Color(0.4, 0.25, 0.0, 0.9))
+	title_lbl.add_theme_constant_override("outline_size", 3)
+	title_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(title_lbl)
+	
+	var desc_lbl = Label.new()
+	desc_lbl.text = synergy.get("description", "")
+	desc_lbl.add_theme_font_size_override("font_size", 12)
+	desc_lbl.add_theme_color_override("font_color", Color(0.9, 0.95, 1.0))
+	desc_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(desc_lbl)
+	
+	banner.add_child(vbox)
+	add_child(banner)
+	
+	var sw = get_viewport().get_visible_rect().size.x if get_viewport() else 1280.0
+	banner.custom_minimum_size = Vector2(460, 56)
+	banner.position = Vector2(max(10.0, (sw - 480.0) * 0.5), 140.0)
+	banner.modulate.a = 0.0
+	
+	var tw = create_tween()
+	tw.tween_property(banner, "modulate:a", 1.0, 0.18)
+	tw.parallel().tween_property(banner, "position:y", 125.0, 0.18)
+	tw.tween_interval(2.6)
+	tw.tween_property(banner, "modulate:a", 0.0, 0.35)
+	tw.parallel().tween_property(banner, "position:y", 110.0, 0.35)
+	tw.tween_callback(func():
+		if is_instance_valid(banner):
+			banner.queue_free()
+	)
+
 func _on_pokedex_pressed() -> void:
 	if pokedex_modal.visible:
 		pokedex_modal.hide_pokedex()
@@ -775,7 +840,8 @@ func _update_dps_meter_from_combat() -> void:
 func _on_shop_refreshed(cards: Array) -> void:
 	for i in range(card_instances.size()):
 		if i < cards.size():
-			card_instances[i].setup(cards[i], i)
+			var s_info = ShinyAndLoreManager.get_shop_card_shiny_info(i) if ShinyAndLoreManager else {}
+			card_instances[i].setup(cards[i], i, s_info.get("is_shiny", false), s_info.get("affix", ""))
 		else:
 			card_instances[i].setup("", i)
 

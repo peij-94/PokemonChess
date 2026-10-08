@@ -3,6 +3,8 @@ extends Node2D
 # Board: Manages combat grid, bench slots, drag-drop placement, wave enemies, and combat resolution
 
 const UNIT_SCENE = preload("res://scenes/unit.tscn")
+const ELEMENTAL_HEX_NODE_SCRIPT = preload("res://scripts/elemental_hex_node.gd")
+const ELEMENTAL_HEX_SYSTEM_SCRIPT = preload("res://scripts/elemental_hex_system.gd")
 
 const COLS = 8
 const ROWS = 6
@@ -31,6 +33,11 @@ var dragged_unit: Unit = null
 var drag_start_pos: Vector2 = Vector2.ZERO
 var is_dragging: bool = false
 
+# Elemental Hex System integration
+var hex_system = null
+var hexes_container: Node2D = null
+var hex_nodes: Dictionary = {} # Vector2i -> Node2D
+
 # Stored layout to reset after combat
 var home_positions: Dictionary = {} # unit -> Vector2i(col, row)
 
@@ -40,6 +47,22 @@ func _ready() -> void:
 	build_visual_board()
 	build_visual_bench()
 	selector_sprite.visible = false
+	
+	# Initialize 2D Elemental Hexes container and system
+	hexes_container = Node2D.new()
+	hexes_container.name = "ElementalHexes"
+	hexes_container.z_index = 1
+	add_child(hexes_container)
+	if tiles_container:
+		move_child(hexes_container, tiles_container.get_index() + 1)
+		
+	if get_node_or_null("/root/ElementalHexSystem") != null:
+		hex_system = get_node("/root/ElementalHexSystem")
+	else:
+		hex_system = ELEMENTAL_HEX_SYSTEM_SCRIPT.new()
+		add_child(hex_system)
+		
+	refresh_round_elemental_hexes(3)
 
 func init_grid_data() -> void:
 	board_grid.clear()
@@ -123,14 +146,14 @@ func find_first_empty_player_tile() -> Vector2i:
 				return Vector2i(c, r)
 	return Vector2i(-1, -1)
 
-func add_pokemon_bought(pokemon_id: String, star_level: int = 1) -> Unit:
+func add_pokemon_bought(pokemon_id: String, star_level: int = 1, is_shiny: bool = false, affix: String = "") -> Unit:
 	# If in prep phase and board has capacity, deploy directly onto board
 	if GameManager.current_phase == GameManager.Phase.PREPARATION and count_player_units_on_board() < GameManager.level:
 		var target_coord = find_first_empty_player_tile()
 		if target_coord != Vector2i(-1, -1):
 			var unit = UNIT_SCENE.instantiate() as Unit
 			units_container.add_child(unit)
-			unit.setup(pokemon_id, star_level, false)
+			unit.setup(pokemon_id, star_level, false, is_shiny, affix)
 			unit.is_on_bench = false
 			unit.grid_coord = target_coord
 			unit.position = grid_to_world(target_coord)
@@ -141,7 +164,7 @@ func add_pokemon_bought(pokemon_id: String, star_level: int = 1) -> Unit:
 			return unit
 			
 	# Otherwise (including during combat) place on bench
-	return add_pokemon_to_bench(pokemon_id, star_level)
+	return add_pokemon_to_bench(pokemon_id, star_level, is_shiny, affix)
 
 func count_owned_pokemon(pid: String, star: int = 1) -> int:
 	var count = 0
@@ -155,7 +178,7 @@ func count_owned_pokemon(pid: String, star: int = 1) -> int:
 			count += 1
 	return count
 
-func add_pokemon_to_bench(pokemon_id: String, star_level: int = 1) -> Unit:
+func add_pokemon_to_bench(pokemon_id: String, star_level: int = 1, is_shiny: bool = false, affix: String = "") -> Unit:
 	var slot_idx = -1
 	for i in range(BENCH_SLOTS):
 		if bench_slots[i] == null:
@@ -166,7 +189,7 @@ func add_pokemon_to_bench(pokemon_id: String, star_level: int = 1) -> Unit:
 		
 	var unit = UNIT_SCENE.instantiate() as Unit
 	units_container.add_child(unit)
-	unit.setup(pokemon_id, star_level, false)
+	unit.setup(pokemon_id, star_level, false, is_shiny, affix)
 	unit.is_on_bench = true
 	unit.grid_coord = Vector2i(slot_idx, -1)
 	unit.position = bench_to_world(slot_idx)
@@ -593,7 +616,10 @@ func sell_unit(unit: Unit) -> void:
 	update_synergies()
 
 func update_synergies() -> void:
-	SynergyManager.update_synergies_from_units(get_board_units(false))
+	var player_units = get_board_units(false)
+	SynergyManager.update_synergies_from_units(player_units)
+	if ShinyAndLoreManager:
+		ShinyAndLoreManager.check_lore_synergies(player_units)
 
 func check_and_execute_evolutions() -> void:
 	if GameManager.current_phase != GameManager.Phase.PREPARATION:
@@ -649,11 +675,14 @@ func check_and_execute_evolutions() -> void:
 					board_grid[s.grid_coord.x][s.grid_coord.y] = null
 				s.queue_free()
 				
+			var is_any_shiny = prime.is_shiny or (sacrifice1 and sacrifice1.is_shiny) or (sacrifice2 and sacrifice2.is_shiny)
+			var carried_affix = prime.shiny_affix if prime.is_shiny else (sacrifice1.shiny_affix if (sacrifice1 and sacrifice1.is_shiny) else (sacrifice2.shiny_affix if (sacrifice2 and sacrifice2.is_shiny) else ""))
+			
 			var target_star = prime.star_level + 1
 			
 			if target_star == 2:
 				# ★1 -> ★2: Keep same species (only evolve at ★3!)
-				prime.setup(prime.pokemon_id, 2, false)
+				prime.setup(prime.pokemon_id, 2, false, is_any_shiny, carried_affix)
 				AudioManager.play_sfx("upgrade")
 				prime.spawn_floating_text("升星! ★2", Color(1.0, 0.9, 0.2), true)
 				GameManager.notify_unit_evolved(prime.pokemon_id, 2)
@@ -663,7 +692,7 @@ func check_and_execute_evolutions() -> void:
 				return
 			elif target_star == 3:
 				# ★2 -> ★3: Reaches max star!
-				prime.setup(prime.pokemon_id, 3, false)
+				prime.setup(prime.pokemon_id, 3, false, is_any_shiny, carried_affix)
 				var evo_options = PokemonDatabase.get_evolution_options(prime.pokemon_id)
 				if not evo_options.is_empty():
 					# Has evolution options: trigger Step 1 form choice, then 3-star skills
@@ -713,7 +742,11 @@ func start_round_combat() -> void:
 			u.current_mana = min(u.max_mana, u.current_mana + sm)
 			u.update_bars()
 		
+	if ShinyAndLoreManager:
+		ShinyAndLoreManager.apply_combat_start_effects(player_units)
+		
 	spawn_enemy_wave(GameManager.current_round)
+	apply_round_elemental_hexes_to_units()
 
 func spawn_enemy_wave(round_num: int) -> void:
 	var wave_defs = get_wave_definition(round_num)
@@ -996,3 +1029,47 @@ func reset_board_for_prep() -> void:
 			
 	update_synergies()
 	check_and_execute_evolutions()
+	
+	if hex_system:
+		hex_system.clear_all_unit_hex_buffs()
+	refresh_round_elemental_hexes(3)
+
+func refresh_round_elemental_hexes(count: int = 3) -> Dictionary:
+	clear_visual_hexes()
+	if hex_system == null:
+		return {}
+	var p_range = Vector2i(3, ROWS - 1) if ROWS == 6 else Vector2i(4, 7)
+	var e_range = Vector2i(0, 2) if ROWS == 6 else Vector2i(0, 3)
+	var gen_hexes = hex_system.generate_round_hexes(count, p_range, e_range)
+	spawn_visual_hexes(gen_hexes)
+	return gen_hexes
+
+func spawn_visual_hexes(hexes_data: Dictionary) -> void:
+	clear_visual_hexes()
+	for coord in hexes_data:
+		var h_type = hexes_data[coord]
+		var hex_node = ELEMENTAL_HEX_NODE_SCRIPT.new()
+		hex_node.setup(coord, h_type, hex_system.get_hex_info(h_type))
+		hex_node.position = grid_to_world(coord)
+		hexes_container.add_child(hex_node)
+		hex_nodes[coord] = hex_node
+
+func clear_visual_hexes() -> void:
+	for coord in hex_nodes:
+		var node = hex_nodes[coord]
+		if is_instance_valid(node):
+			if node.get_parent():
+				node.get_parent().remove_child(node)
+			node.queue_free()
+	hex_nodes.clear()
+	if hexes_container:
+		for child in hexes_container.get_children():
+			hexes_container.remove_child(child)
+			child.queue_free()
+
+func apply_round_elemental_hexes_to_units() -> void:
+	if hex_system == null:
+		return
+	var all_units = get_board_units(true)
+	hex_system.evaluate_combat_units(all_units)
+

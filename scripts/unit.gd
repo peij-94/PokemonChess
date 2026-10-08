@@ -14,6 +14,12 @@ var is_enemy: bool = false
 var is_on_bench: bool = false
 var grid_coord: Vector2i = Vector2i(-1, -1)
 
+# Shiny Unit Configuration
+var is_shiny: bool = false
+var shiny_affix: String = ""
+var shiny_stats_applied: bool = false
+var shiny_badge_node: Node2D = null
+
 # Base & Current Stats
 var max_hp: float = 600.0
 var current_hp: float = 600.0
@@ -49,6 +55,8 @@ var is_stunned: bool = false
 var stun_timer: float = 0.0
 var burn_timer: float = 0.0
 var burn_dps: float = 0.0
+var burn_is_true: bool = false
+var is_immune_to_knockback: bool = false
 var stun_vfx: Node2D = null
 var is_assassin_leaping: bool = false
 var has_leaped_backline: bool = false
@@ -126,7 +134,7 @@ func switch_evolution_form(new_id: String) -> void:
 	var p_name = data.get("name", new_id)
 	spawn_floating_text("形态切换: %s (★%d)" % [p_name, star_level], Color(0.4, 0.9, 1.0), true)
 
-func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false) -> void:
+func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false, p_is_shiny: bool = false, p_affix: String = "") -> void:
 	pokemon_id = p_id
 	star_level = p_star
 	is_enemy = p_is_enemy
@@ -154,6 +162,19 @@ func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false) -> void:
 		
 	max_mana = data["max_mana"]
 	current_mana = 0.0
+	
+	if p_is_shiny:
+		is_shiny = true
+		shiny_affix = p_affix
+		max_hp *= 1.15
+		atk *= 1.15
+		current_hp = max_hp
+		shiny_stats_applied = true
+		if shiny_affix == "iron_will":
+			armor += 15.0
+			mr += 15.0
+	else:
+		shiny_stats_applied = false
 	
 	basic_attack_info = PokemonDatabase.get_basic_attack(pokemon_id)
 	
@@ -213,6 +234,74 @@ func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false) -> void:
 		
 	update_visuals(data)
 
+func set_shiny(p_shiny: bool, p_affix: String = "") -> void:
+	var old_shiny = is_shiny
+	is_shiny = p_shiny
+	shiny_affix = p_affix
+	
+	if is_shiny and not old_shiny:
+		if not shiny_stats_applied:
+			max_hp *= 1.15
+			atk *= 1.15
+			current_hp = max_hp
+			shiny_stats_applied = true
+			if shiny_affix == "iron_will":
+				armor += 15.0
+				mr += 15.0
+	elif not is_shiny and old_shiny:
+		if shiny_stats_applied:
+			max_hp /= 1.15
+			atk /= 1.15
+			current_hp = min(current_hp, max_hp)
+			shiny_stats_applied = false
+			if shiny_affix == "iron_will":
+				armor -= 15.0
+				mr -= 15.0
+				
+	_update_shiny_visuals()
+	update_bars()
+
+func _update_shiny_visuals() -> void:
+	if not is_shiny:
+		if shiny_badge_node and is_instance_valid(shiny_badge_node):
+			shiny_badge_node.queue_free()
+			shiny_badge_node = null
+		return
+		
+	if shiny_badge_node == null or not is_instance_valid(shiny_badge_node):
+		shiny_badge_node = Node2D.new()
+		shiny_badge_node.name = "ShinyStarBadge"
+		shiny_badge_node.position = Vector2(0, -38)
+		add_child(shiny_badge_node)
+		
+		var label = Label.new()
+		label.name = "StarIcon"
+		label.text = "✨"
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		label.position = Vector2(-12, -12)
+		label.size = Vector2(24, 24)
+		label.add_theme_font_size_override("font_size", 13)
+		label.add_theme_color_override("font_color", Color(1.0, 0.92, 0.2, 1.0))
+		label.add_theme_color_override("font_shadow_color", Color(0.9, 0.5, 0.0, 0.8))
+		label.add_theme_constant_override("shadow_offset_x", 1)
+		label.add_theme_constant_override("shadow_offset_y", 1)
+		shiny_badge_node.add_child(label)
+		
+		var tw = create_tween().set_loops()
+		tw.tween_property(label, "position:y", -16.0, 0.7).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		tw.tween_property(label, "position:y", -8.0, 0.7).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func trigger_fortune_gold(force: bool = false) -> bool:
+	if not is_shiny or shiny_affix != "fortune" or is_enemy:
+		return false
+	if force or (randf() < 0.10):
+		GameManager.add_gold(1)
+		spawn_floating_text("✨+1金币 (招财)!", Color(1.0, 0.85, 0.2), true, 0.8)
+		AudioManager.play_sfx("buy", 1.25, -2.0)
+		return true
+	return false
+
 func select_skill(skill_dict: Dictionary) -> void:
 	if skill_dict.is_empty():
 		return
@@ -226,7 +315,12 @@ func select_skill(skill_dict: Dictionary) -> void:
 	AudioManager.play_sfx("click")
 
 func update_visuals(data: Dictionary) -> void:
-	name_label.text = data["name"]
+	if is_shiny:
+		name_label.text = "✨ " + data.get("name", "")
+		name_label.add_theme_color_override("font_color", Color(1.0, 0.95, 0.3))
+	else:
+		name_label.text = data.get("name", "")
+		name_label.remove_theme_color_override("font_color")
 	
 	# Load animation frames from PokemonDatabase
 	var sf = PokemonDatabase.get_sprite_frames(pokemon_id)
@@ -273,6 +367,7 @@ func update_visuals(data: Dictionary) -> void:
 		hp_bar.modulate = Color(0.3, 0.85, 0.4)
 		
 	update_bars()
+	_update_shiny_visuals()
 
 func update_bars() -> void:
 	if hp_bar:
@@ -337,7 +432,14 @@ func _process(delta: float) -> void:
 	# Burn damage ticking
 	if burn_timer > 0.0:
 		burn_timer -= delta
-		take_damage(burn_dps * delta, true, false, false)
+		if burn_is_true:
+			take_damage(burn_dps * delta, false, false, false, null, true)
+		else:
+			take_damage(burn_dps * delta, true, false, false)
+
+	# Water Hex (宁静泉眼): +6 mana per second
+	if not is_dead and (has_meta("hex_water_mana") or get_meta("elemental_hex", "") == "water"):
+		gain_mana(6.0 * delta)
 		
 	# Attack timer
 	if attack_timer > 0.0:
@@ -630,10 +732,19 @@ func perform_attack(target: Unit) -> void:
 		
 	if not is_enemy and types.has("Grass"):
 		heal(damage * 0.25, true)
+		
+	# Shiny Fortune Affix (普攻 10% 概率掉落 1 金币)
+	if is_shiny and shiny_affix == "fortune" and not is_enemy:
+		trigger_fortune_gold(false)
 
 func _apply_attack_damage_and_passives(target: Unit, damage: float, is_crit: bool, is_combo: bool) -> void:
 	var is_true_damage = (is_combo and pokemon_id == "lucario")
 	target.take_damage(damage, is_true_damage, is_crit, true, self)
+	
+	# Fire Hex (炽热地核): 25% true damage burn
+	if has_meta("hex_fire_burn") or get_meta("elemental_hex", "") == "fire":
+		var burn_total = damage * 0.25
+		target.apply_true_burn(3.0, burn_total / 3.0)
 	
 	# Arena Environment Hit Effects
 	if not is_enemy:
@@ -669,8 +780,7 @@ func _apply_attack_damage_and_passives(target: Unit, damage: float, is_crit: boo
 				_trigger_pikachu_combo_spark(target, damage * 0.5)
 			"machop":
 				var knock_dir = (target.position - position).normalized()
-				var tw = target.create_tween()
-				tw.tween_property(target, "position", target.position + knock_dir * 12.0, 0.08)
+				target.apply_knockback(knock_dir, 12.0)
 
 func _trigger_snorlax_splash(hit_target: Unit, splash_damage: float) -> void:
 	var units = get_tree().get_nodes_in_group("units")
@@ -709,6 +819,8 @@ func spawn_projectile_to(target: Unit, damage: float, is_crit: bool) -> void:
 		var tgt = target_ref.get_ref() as Unit
 		if tgt != null and is_instance_valid(tgt) and not tgt.is_dead:
 			tgt.take_damage(damage, false, is_crit, true, self)
+			if has_meta("hex_fire_burn") or get_meta("elemental_hex", "") == "fire":
+				tgt.apply_true_burn(3.0, (damage * 0.25) / 3.0)
 	)
 
 func get_projectile_color() -> Color:
@@ -746,6 +858,8 @@ func cast_skill() -> void:
 	
 	# Spell Amp from Psychic synergy & Arena Modifiers
 	var amp = SynergyManager.get_spell_amp(is_enemy)
+	if not is_enemy and ShinyAndLoreManager and ShinyAndLoreManager.is_lore_synergy_active("weather_trio"):
+		amp += 0.30
 	if not is_enemy and GameManager.has_arena_modifier("spell_amp"):
 		amp += GameManager.get_arena_modifier_val("spell_amp")
 	if not is_enemy and types.has("Fire") and GameManager.has_arena_modifier("fire_amp"):
@@ -1063,11 +1177,11 @@ func hit_targets_aoe(damage: float, count: int, stun_duration: float = 0.0) -> v
 			if hit >= count:
 				break
 
-func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_float: bool = true, attacker: Unit = null) -> void:
+func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_float: bool = true, attacker: Unit = null, is_true_damage: bool = false) -> void:
 	if is_dead:
 		return
 		
-	# Dodge check for Ghost, Flying, and Astral Arena
+	# Dodge check for Ghost, Flying, Astral Arena, and Wind Hex
 	var dodge_chance = 0.0
 	if not is_enemy and types.has("Ghost"):
 		dodge_chance += 0.25
@@ -1075,6 +1189,9 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 		dodge_chance += SynergyManager.get_flying_dodge_bonus(is_enemy)
 	if not is_enemy and GameManager.has_arena_modifier("dodge_chance"):
 		dodge_chance += GameManager.get_arena_modifier_val("dodge_chance")
+	# Wind Hex (疾风跃迁): 15% physical dodge
+	if not is_magic and (has_meta("hex_wind_active") or get_meta("elemental_hex", "") == "wind"):
+		dodge_chance += 0.15
 	if dodge_chance > 0.0 and randf() < dodge_chance:
 		_play_dodge_reaction()
 		# Astral arena: Psychic & Ghost restore 15 mana on dodge
@@ -1099,7 +1216,7 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 	
 	# Type effectiveness multiplier
 	var type_mult = 1.0
-	if attacker != null and is_instance_valid(attacker):
+	if attacker != null and is_instance_valid(attacker) and not is_true_damage:
 		type_mult = TypeSystem.get_type_multiplier(attacker.types, self.types)
 		raw_amount *= type_mult
 		
@@ -1110,15 +1227,15 @@ func take_damage(raw_amount: float, is_magic: bool, is_crit: bool = false, show_
 
 	# Ability: Thick Fat (Snorlax & Mega Venusaur) - reduction from Fire and Ice
 	var my_ability = AbilityDatabase.get_ability_id_for_pokemon(pokemon_id)
-	if (my_ability == "thick_fat" or (has_meta("is_mega") and pokemon_id == "venusaur")) and attacker and (attacker.types.has("Fire") or attacker.types.has("Ice")):
+	if not is_true_damage and (my_ability == "thick_fat" or (has_meta("is_mega") and pokemon_id == "venusaur")) and attacker and (attacker.types.has("Fire") or attacker.types.has("Ice")):
 		raw_amount *= 0.55
 
 	# Ability: Multiscale (Dragonite) - 60% reduction on first hit at 100% HP
-	if my_ability == "multiscale" and current_hp >= max_hp * 0.99:
+	if not is_true_damage and my_ability == "multiscale" and current_hp >= max_hp * 0.99:
 		raw_amount *= 0.40
 		spawn_floating_text("多重鳞片!", Color(0.3, 0.9, 0.6), true)
 
-	var reduced = raw_amount * (100.0 / (100.0 + max(0.0, def)))
+	var reduced = raw_amount if is_true_damage else (raw_amount * (100.0 / (100.0 + max(0.0, def))))
 	
 	# Normal damage reduction
 	if not is_enemy and types.has("Normal"):
@@ -1300,11 +1417,31 @@ func gain_mana(amount: float) -> void:
 func apply_burn(duration: float, dps: float) -> void:
 	burn_timer = max(burn_timer, duration)
 	burn_dps = dps
+	burn_is_true = false
+
+func apply_true_burn(duration: float, dps: float) -> void:
+	burn_timer = max(burn_timer, duration)
+	burn_dps = dps
+	burn_is_true = true
+	spawn_floating_text("🔥真实灼烧", Color(1.0, 0.45, 0.1))
+
+func apply_knockback(dir: Vector2, distance: float = 12.0) -> bool:
+	if is_dead:
+		return false
+	if is_immune_to_knockback or has_meta("hex_rock_immune_knockback"):
+		spawn_floating_text("免退!", Color(0.85, 0.65, 0.25))
+		return false
+	var tw = create_tween()
+	tw.tween_property(self, "position", position + dir * distance, 0.08)
+	return true
 
 func apply_stun(duration: float) -> void:
 	if not is_enemy and shield > 0 and SynergyManager.has_fairy_cc_immunity(is_enemy):
 		spawn_floating_text("免控!", Color(1.0, 0.7, 0.9))
 		return
+	if is_shiny and shiny_affix == "iron_will":
+		duration *= 0.65
+		spawn_floating_text("坚韧之躯 -35%控制!", Color(0.85, 0.85, 1.0), true)
 	is_stunned = true
 	stun_timer = max(stun_timer, duration)
 	if stun_vfx == null:
@@ -1341,6 +1478,8 @@ func die() -> void:
 	if is_enemy:
 		if MegaDatabase:
 			MegaDatabase.add_dynamax_energy(3)
+		if ShinyAndLoreManager and ShinyAndLoreManager.is_lore_synergy_active("creation_trio"):
+			ShinyAndLoreManager.trigger_creation_trio_stun(self)
 	
 	var tw = create_tween()
 	tw.tween_property(self, "modulate:a", 0.0, 0.3)
@@ -1386,6 +1525,32 @@ func reset_for_prep() -> void:
 		remove_meta("weakness_policy_triggered")
 	if has_meta("is_dynamax"):
 		deactivate_dynamax()
+	if has_meta("elemental_hex"):
+		remove_meta("elemental_hex")
+	if has_meta("hex_fire_burn"):
+		remove_meta("hex_fire_burn")
+	if has_meta("hex_fire_burn_ratio"):
+		remove_meta("hex_fire_burn_ratio")
+	if has_meta("hex_water_mana"):
+		remove_meta("hex_water_mana")
+	if has_meta("hex_water_mana_per_sec"):
+		remove_meta("hex_water_mana_per_sec")
+	if has_meta("hex_rock_shield"):
+		remove_meta("hex_rock_shield")
+	if has_meta("hex_rock_immune_knockback"):
+		remove_meta("hex_rock_immune_knockback")
+	if has_meta("hex_wind_active"):
+		remove_meta("hex_wind_active")
+	if has_meta("hex_wind_dodge_bonus"):
+		remove_meta("hex_wind_dodge_bonus")
+	if has_meta("hex_wind_as_bonus"):
+		atk_speed = max(0.4, atk_speed - get_meta("hex_wind_as_bonus"))
+		remove_meta("hex_wind_as_bonus")
+	is_immune_to_knockback = false
+	burn_is_true = false
+	var hex_aura = get_node_or_null("HexUnitAura")
+	if hex_aura:
+		hex_aura.queue_free()
 	is_dead = false
 	visible = true
 	modulate.a = 1.0

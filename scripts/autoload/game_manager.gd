@@ -578,6 +578,8 @@ func refresh_shop(is_free: bool = false) -> bool:
 		AudioManager.play_sfx("click")
 		
 	current_shop_cards.clear()
+	if ShinyAndLoreManager:
+		ShinyAndLoreManager.on_shop_refreshed(5)
 	var rates = PokemonDatabase.shop_rates.get(level, [100, 0, 0, 0, 0])
 	var deployed_ids = get_deployed_pokemon_ids()
 	
@@ -676,7 +678,12 @@ func buy_card(card_index: int) -> bool:
 	if spend_gold(cost):
 		AudioManager.play_sfx("buy")
 		current_shop_cards[card_index] = "" # Empty this card slot
-		board_ref.add_pokemon_bought(pid, 1)
+		var shiny_info = ShinyAndLoreManager.consume_shop_card(card_index) if ShinyAndLoreManager else {}
+		var is_shiny = shiny_info.get("is_shiny", false)
+		var affix = shiny_info.get("affix", "")
+		var bought_unit = board_ref.add_pokemon_bought(pid, 1, is_shiny, affix)
+		if bought_unit and is_shiny:
+			bought_unit.set_shiny(true, affix)
 		# Only check and execute evolutions during PREPARATION phase!
 		if current_phase == Phase.PREPARATION:
 			check_evolutions()

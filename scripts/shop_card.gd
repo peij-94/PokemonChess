@@ -6,6 +6,8 @@ signal card_clicked(index: int)
 
 var card_index: int = 0
 var pokemon_id: String = ""
+var is_shiny: bool = false
+var shiny_affix: String = ""
 
 @onready var bg_panel: Panel = $Panel
 @onready var icon_rect: TextureRect = $Panel/Icon
@@ -23,9 +25,20 @@ const TIER_COLORS = {
 	5: Color(0.95, 0.70, 0.15)  # Gold
 }
 
-func setup(p_id: String, p_index: int) -> void:
+func setup(p_id: String, p_index: int, p_is_shiny: Variant = null, p_affix: String = "") -> void:
 	card_index = p_index
 	pokemon_id = p_id
+	
+	if p_is_shiny != null:
+		is_shiny = bool(p_is_shiny)
+		shiny_affix = p_affix
+	elif ShinyAndLoreManager:
+		var s_info = ShinyAndLoreManager.get_shop_card_shiny_info(p_index)
+		is_shiny = s_info.get("is_shiny", false)
+		shiny_affix = s_info.get("affix", "")
+	else:
+		is_shiny = false
+		shiny_affix = ""
 	
 	if not is_node_ready():
 		await ready
@@ -41,7 +54,20 @@ func setup(p_id: String, p_index: int) -> void:
 		return
 		
 	var cost = data.get("cost", 1)
-	name_label.text = data.get("name", "")
+	
+	# Shiny Title vs Regular Title
+	if is_shiny:
+		var affix_name = ShinyAndLoreManager.get_affix_name(shiny_affix) if ShinyAndLoreManager else shiny_affix
+		name_label.text = "✨ " + data.get("name", "") + ("·" + affix_name if affix_name != "" else "")
+		name_label.add_theme_color_override("font_color", Color(1.0, 0.95, 0.3))
+		name_label.add_theme_color_override("font_outline_color", Color(0.7, 0.45, 0.05, 1.0))
+		name_label.add_theme_constant_override("outline_size", 3)
+	else:
+		name_label.text = data.get("name", "")
+		name_label.remove_theme_color_override("font_color")
+		name_label.remove_theme_color_override("font_outline_color")
+		name_label.remove_theme_constant_override("outline_size")
+		
 	var is_deployed = GameManager.is_pokemon_deployed(pokemon_id)
 	if is_deployed:
 		cost_label.text = "%d 金币 [已上场 UP]" % cost
@@ -56,7 +82,7 @@ func setup(p_id: String, p_index: int) -> void:
 	if ResourceLoader.exists(icon_path):
 		icon_rect.texture = load(icon_path)
 		
-	# Border color & Target Comp Highlight
+	# Border color & Target Comp Highlight & Shiny Golden Border
 	var tier_col = TIER_COLORS.get(cost, Color.WHITE)
 	var style = bg_panel.get_theme_stylebox("panel").duplicate() as StyleBoxFlat
 	
@@ -71,26 +97,54 @@ func setup(p_id: String, p_index: int) -> void:
 		target_badge.add_theme_font_size_override("font_size", 9)
 		bg_panel.add_child(target_badge)
 		
+	var shiny_badge = bg_panel.get_node_or_null("ShinyBadge") as Label
+	if shiny_badge == null:
+		shiny_badge = Label.new()
+		shiny_badge.name = "ShinyBadge"
+		shiny_badge.offset_left = 6.0
+		shiny_badge.offset_top = 18.0
+		shiny_badge.offset_right = 110.0
+		shiny_badge.offset_bottom = 32.0
+		shiny_badge.add_theme_font_size_override("font_size", 9)
+		bg_panel.add_child(shiny_badge)
+		
 	var is_target = GameManager.is_target_pokemon(pokemon_id)
 	var owned_count = GameManager.board_ref.count_owned_pokemon(pokemon_id, 1) if GameManager.board_ref and GameManager.board_ref.has_method("count_owned_pokemon") else 0
 	
+	if is_shiny:
+		var affix_display = ShinyAndLoreManager.get_affix_name(shiny_affix) if ShinyAndLoreManager else shiny_affix
+		shiny_badge.text = "✨ 闪光【%s】" % (affix_display if affix_display != "" else "异色")
+		shiny_badge.add_theme_color_override("font_color", Color(1.0, 0.95, 0.3))
+		shiny_badge.visible = true
+	else:
+		shiny_badge.visible = false
+	
 	if style:
-		if is_target:
+		if is_shiny:
+			# 金色发光边框
+			style.border_color = Color(1.0, 0.85, 0.2)
+			style.set_border_width_all(3)
+			style.shadow_color = Color(1.0, 0.85, 0.2, 0.6)
+			style.shadow_size = 6
+		elif is_target:
 			target_badge.text = "⭐阵容所需"
 			target_badge.add_theme_color_override("font_color", Color(1.0, 0.9, 0.2))
 			target_badge.visible = true
 			style.border_color = Color(1.0, 0.85, 0.2)
 			style.set_border_width_all(2)
+			style.shadow_size = 0
 		elif owned_count == 2:
 			target_badge.text = "🔥升星关键"
 			target_badge.add_theme_color_override("font_color", Color(1.0, 0.45, 0.3))
 			target_badge.visible = true
 			style.border_color = Color(1.0, 0.4, 0.3)
 			style.set_border_width_all(2)
+			style.shadow_size = 0
 		else:
 			target_badge.visible = false
 			style.border_color = tier_col
 			style.set_border_width_all(1)
+			style.shadow_size = 0
 		bg_panel.add_theme_stylebox_override("panel", style)
 		
 	# Type badges

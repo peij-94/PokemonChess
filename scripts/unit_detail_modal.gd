@@ -1,6 +1,8 @@
 extends Panel
 class_name UnitDetailModal
 
+const ELEMENTAL_HEX_SYSTEM_SCRIPT = preload("res://scripts/elemental_hex_system.gd")
+
 # UnitDetailModal: Comprehensive character inspection card
 # Pops up upon clicking ANY character (player or enemy, board or bench, prep or combat).
 # Displays full stats, live HP/Mana bars, basic attack info, and detailed equipped skill mechanics.
@@ -236,6 +238,29 @@ func _refresh_display() -> void:
 	cost_lbl.add_theme_color_override("font_color", Color(1.0, 0.85, 0.3))
 	cost_lbl.add_theme_font_size_override("font_size", 11)
 	badges_hbox.add_child(cost_lbl)
+	
+	# Elemental Hex Badge
+	if unit.has_meta("elemental_hex"):
+		var hex_type = unit.get_meta("elemental_hex")
+		var hex_info = ELEMENTAL_HEX_SYSTEM_SCRIPT.HEX_TYPES.get(hex_type, {})
+		if not hex_info.is_empty():
+			var hex_badge = PanelContainer.new()
+			hex_badge.name = "HexBadge"
+			var b_style = StyleBoxFlat.new()
+			var h_col = hex_info.get("color", Color(0.8, 0.5, 0.2))
+			b_style.bg_color = h_col.darkened(0.55)
+			b_style.border_color = h_col
+			b_style.set_border_width_all(1)
+			b_style.set_corner_radius_all(4)
+			b_style.set_content_margin_all(2)
+			hex_badge.add_theme_stylebox_override("panel", b_style)
+			
+			var hex_lbl = Label.new()
+			hex_lbl.text = " " + hex_info.get("badge", hex_info.get("name", "元素符文")) + " "
+			hex_lbl.add_theme_color_override("font_color", h_col)
+			hex_lbl.add_theme_font_size_override("font_size", 10)
+			hex_badge.add_child(hex_lbl)
+			badges_hbox.add_child(hex_badge)
 	
 	# 4. Types Badges
 	for t in types_hbox.get_children():

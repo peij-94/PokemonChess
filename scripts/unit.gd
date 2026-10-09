@@ -6,6 +6,7 @@ signal unit_clicked(unit: Unit)
 
 const FLOATING_TEXT_SCENE = preload("res://scenes/floating_text.tscn")
 const STUN_VFX_SCRIPT = preload("res://scripts/stun_vfx.gd")
+const FloatingTextPool = preload("res://scripts/floating_text_pool.gd")
 
 # Configuration & Identity
 var pokemon_id: String = "pikachu"
@@ -1690,10 +1691,8 @@ func deactivate_dynamax() -> void:
 func spawn_floating_text(txt: String, col: Color, is_crit: bool = false, custom_scale: float = -1.0) -> void:
 	if get_parent() == null:
 		return
-	var ft = FLOATING_TEXT_SCENE.instantiate()
-	get_parent().add_child(ft)
-	ft.position = position + Vector2(0, -20)
-	ft.setup(txt, col, is_crit, custom_scale)
+	var pos = position + Vector2(0, -20)
+	FloatingTextPool.spawn(get_parent(), pos, txt, col, is_crit, custom_scale)
 
 func play_click_reaction() -> void:
 	if is_dead:

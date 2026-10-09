@@ -1,5 +1,7 @@
 extends Node
 
+const FloatingTextPool = preload("res://scripts/floating_text_pool.gd")
+
 # GameManager: Core game state, player economy, phase loops, and evolution logic
 
 signal gold_changed(new_val: int, delta: int)
@@ -370,6 +372,10 @@ func start_new_game() -> void:
 	active_gym_index = -1
 	if GymRoadManager:
 		GymRoadManager.end_gym_challenge()
+	FloatingTextPool.clear_pool()
+	if PokemonDatabase and PokemonDatabase.has_method("prune_unused_cache"):
+		PokemonDatabase.prune_unused_cache()
+	SkillVFX.prune_unused_cache()
 	pick_random_background()
 	player_hp = 100
 	gold = 10

@@ -65997,9 +65997,57 @@ func get_shop_eligible_pokemons(cost: int) -> Array[String]:
 
 
 var cached_sprite_frames: Dictionary = {}
+var _sprite_frames_lru: Array[String] = []
+const MAX_CACHED_SPRITE_FRAMES: int = 40
+
+func _touch_lru(pokemon_id: String) -> void:
+	var idx = _sprite_frames_lru.find(pokemon_id)
+	if idx != -1:
+		_sprite_frames_lru.remove_at(idx)
+	_sprite_frames_lru.append(pokemon_id)
+
+func _evict_lru_sprite_frames() -> void:
+	if cached_sprite_frames.size() <= MAX_CACHED_SPRITE_FRAMES:
+		return
+	var active_ids = get_active_pokemon_ids()
+	var to_remove: Array[String] = []
+	for pid in _sprite_frames_lru:
+		if cached_sprite_frames.size() - to_remove.size() <= MAX_CACHED_SPRITE_FRAMES:
+			break
+		if not active_ids.has(pid):
+			to_remove.append(pid)
+	for pid in to_remove:
+		cached_sprite_frames.erase(pid)
+		var lru_idx = _sprite_frames_lru.find(pid)
+		if lru_idx != -1:
+			_sprite_frames_lru.remove_at(lru_idx)
+
+func get_active_pokemon_ids() -> Array[String]:
+	var active: Array[String] = []
+	if GameManager and GameManager.board_ref:
+		for u in GameManager.board_ref.get_board_units(true):
+			if is_instance_valid(u) and not active.has(u.pokemon_id):
+				active.append(u.pokemon_id)
+		for u in GameManager.board_ref.bench_slots:
+			if is_instance_valid(u) and not active.has(u.pokemon_id):
+				active.append(u.pokemon_id)
+	return active
+
+func prune_unused_cache() -> void:
+	var active_ids = get_active_pokemon_ids()
+	var to_remove: Array[String] = []
+	for pid in cached_sprite_frames:
+		if not active_ids.has(pid):
+			to_remove.append(pid)
+	for pid in to_remove:
+		cached_sprite_frames.erase(pid)
+		var lru_idx = _sprite_frames_lru.find(pid)
+		if lru_idx != -1:
+			_sprite_frames_lru.remove_at(lru_idx)
 
 func get_sprite_frames(pokemon_id: String) -> SpriteFrames:
 	if cached_sprite_frames.has(pokemon_id):
+		_touch_lru(pokemon_id)
 		return cached_sprite_frames[pokemon_id]
 		
 	var sf = SpriteFrames.new()
@@ -66102,5 +66150,8 @@ func get_sprite_frames(pokemon_id: String) -> SpriteFrames:
 	if sf.get_frame_count("hurt") == 0 and sf.get_frame_count("idle") > 0:
 		sf.add_frame("hurt", sf.get_frame_texture("idle", 0))
 		
+	_evict_lru_sprite_frames()
 	cached_sprite_frames[pokemon_id] = sf
+	_touch_lru(pokemon_id)
 	return sf
+

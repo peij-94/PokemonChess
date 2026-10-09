@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8x3q2m4e9profile"]
+
+[ext_resource type="Script" path="res://scripts/test_memory_optimization.gd" id="1_test"]
+
+[node name="TestMemoryProfile" type="Node2D"]
+script = ExtResource("1_test")

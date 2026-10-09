@@ -1037,6 +1037,11 @@ func reset_board_for_prep() -> void:
 	if hex_system:
 		hex_system.clear_all_unit_hex_buffs()
 	refresh_round_elemental_hexes(3)
+	
+	# Memory optimization: prune texture caches for defeated enemy units & inactive VFX
+	if PokemonDatabase and PokemonDatabase.has_method("prune_unused_cache"):
+		PokemonDatabase.prune_unused_cache()
+	SkillVFX.prune_unused_cache()
 
 func refresh_round_elemental_hexes(count: int = 3) -> Dictionary:
 	clear_visual_hexes()

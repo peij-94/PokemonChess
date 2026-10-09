@@ -5,9 +5,19 @@ class_name SkillVFX
 # Powered by sequence sprite sheets in res://assets/vfx/<skill_name>/
 
 static var _cached_sprite_frames: Dictionary = {}
+static var _skill_frames_lru: Array[String] = []
+const MAX_CACHED_SKILL_FRAMES: int = 25
+
+static func prune_unused_cache() -> void:
+	_cached_sprite_frames.clear()
+	_skill_frames_lru.clear()
 
 static func get_skill_frames(skill_name: String, fps: float = 14.0) -> SpriteFrames:
 	if _cached_sprite_frames.has(skill_name):
+		var lru_idx = _skill_frames_lru.find(skill_name)
+		if lru_idx != -1:
+			_skill_frames_lru.remove_at(lru_idx)
+		_skill_frames_lru.append(skill_name)
 		return _cached_sprite_frames[skill_name]
 		
 	var sf = SpriteFrames.new()
@@ -26,7 +36,12 @@ static func get_skill_frames(skill_name: String, fps: float = 14.0) -> SpriteFra
 		else:
 			break
 			
+	while _cached_sprite_frames.size() >= MAX_CACHED_SKILL_FRAMES and not _skill_frames_lru.is_empty():
+		var oldest = _skill_frames_lru.pop_front()
+		_cached_sprite_frames.erase(oldest)
+		
 	_cached_sprite_frames[skill_name] = sf
+	_skill_frames_lru.append(skill_name)
 	return sf
 
 # -------------------------------------------------------------

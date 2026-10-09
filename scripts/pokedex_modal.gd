@@ -79,6 +79,8 @@ var current_cost_filter: int = 0 # 0 means all
 var selected_id: String = "pikachu"
 var filter_btns: Array[Button] = []
 var pokemon_cards: Dictionary = {}
+var _card_node_pool: Array[Button] = []
+var _is_list_initialized: bool = false
 
 func _ready() -> void:
 	close_btn.pressed.connect(hide_pokedex)
@@ -108,8 +110,9 @@ func _ready() -> void:
 			hide_pokedex()
 	)
 	build_filter_buttons()
-	populate_pokemon_list()
-	showcase_pokemon("pikachu")
+	if visible:
+		populate_pokemon_list()
+		showcase_pokemon("pikachu")
 
 func _input(event: InputEvent) -> void:
 	if visible and event is InputEventKey and event.pressed and not event.echo:
@@ -122,6 +125,9 @@ func open_pokedex() -> void:
 	z_index = 100
 	move_to_front()
 	AudioManager.play_sfx("click")
+	if not _is_list_initialized or pokemon_cards.is_empty():
+		_is_list_initialized = true
+		populate_pokemon_list()
 	# If a unit is selected on the battlefield or bench, showcase it directly!
 	if GameManager.board_ref and GameManager.board_ref.selected_unit != null:
 		var u = GameManager.board_ref.selected_unit
@@ -141,6 +147,8 @@ func open_pokedex() -> void:
 func hide_pokedex() -> void:
 	visible = false
 	AudioManager.play_sfx("click")
+	if PokemonDatabase and PokemonDatabase.has_method("prune_unused_cache"):
+		PokemonDatabase.prune_unused_cache()
 	if GameManager.hud_ref and GameManager.hud_ref.start_menu_modal and GameManager.hud_ref.start_menu_modal.visible:
 		GameManager.hud_ref.start_menu_modal.move_to_front()
 
@@ -208,9 +216,10 @@ func _update_filter_button_styles() -> void:
 				filter_btns[i].modulate = Color(0.8, 0.85, 0.9)
 
 func populate_pokemon_list() -> void:
+	_is_list_initialized = true
 	for c in list_container.get_children():
 		list_container.remove_child(c)
-		c.queue_free()
+		_card_node_pool.append(c as Button)
 	pokemon_cards.clear()
 		
 	for pid in PokemonDatabase.pokemons:
@@ -218,36 +227,53 @@ func populate_pokemon_list() -> void:
 		if current_cost_filter != 0 and data["cost"] != current_cost_filter:
 			continue
 			
-		var card = Button.new()
-		card.custom_minimum_size = Vector2(90, 85)
-		card.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		var card: Button = null
+		var vbox: VBoxContainer = null
+		var icon: TextureRect = null
+		var lbl: Label = null
 		
-		var vbox = VBoxContainer.new()
-		vbox.anchors_preset = Control.PRESET_FULL_RECT
-		vbox.alignment = BoxContainer.ALIGNMENT_CENTER
-		vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		card.add_child(vbox)
+		if not _card_node_pool.is_empty():
+			card = _card_node_pool.pop_back()
+			vbox = card.get_child(0) as VBoxContainer
+			icon = vbox.get_child(0) as TextureRect
+			lbl = vbox.get_child(1) as Label
+			for conn in card.pressed.get_connections():
+				card.pressed.disconnect(conn.callable)
+		else:
+			card = Button.new()
+			card.custom_minimum_size = Vector2(90, 85)
+			card.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+			
+			vbox = VBoxContainer.new()
+			vbox.anchors_preset = Control.PRESET_FULL_RECT
+			vbox.alignment = BoxContainer.ALIGNMENT_CENTER
+			vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			card.add_child(vbox)
+			
+			icon = TextureRect.new()
+			icon.custom_minimum_size = Vector2(42, 42)
+			icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+			vbox.add_child(icon)
+			
+			lbl = Label.new()
+			lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			lbl.add_theme_font_size_override("font_size", 11)
+			vbox.add_child(lbl)
 		
-		var icon = TextureRect.new()
 		if ResourceLoader.exists(data["icon"]):
 			icon.texture = load(data["icon"])
-		icon.custom_minimum_size = Vector2(42, 42)
-		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		vbox.add_child(icon)
-		
-		var lbl = Label.new()
+		else:
+			icon.texture = null
+			
 		var is_base = PokemonDatabase.is_base_form(pid)
 		var evo_stage = PokemonDatabase.evolution_chains.get(pid, {}).get("stage", 1)
 		if is_base:
 			lbl.text = "%s (%dG)" % [data["name"], data["cost"]]
 		else:
 			lbl.text = "%s (★%d)" % [data["name"], evo_stage]
-		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		lbl.add_theme_font_size_override("font_size", 11)
 		lbl.modulate = TIER_COLORS.get(data["cost"], Color.WHITE)
-		vbox.add_child(lbl)
 		
 		card.pressed.connect(func():
 			AudioManager.play_sfx("click")

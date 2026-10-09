@@ -42,6 +42,25 @@ func _ready() -> void:
 	if exit_sandbox_btn:
 		exit_sandbox_btn.pressed.connect(_on_exit_sandbox_pressed)
 		
+	var hbox = $Margin/HBox if has_node("Margin/HBox") else null
+	if hbox and not hbox.has_node("TrainerBtn"):
+		var trainer_btn = Button.new()
+		trainer_btn.name = "TrainerBtn"
+		trainer_btn.text = "👑 训练家"
+		trainer_btn.add_theme_font_size_override("font_size", 12)
+		trainer_btn.custom_minimum_size = Vector2(70, 28)
+		var t_style = StyleBoxFlat.new()
+		t_style.bg_color = Color(0.2, 0.3, 0.45, 1)
+		t_style.border_color = Color(0.4, 0.7, 1.0, 0.8)
+		t_style.set_border_width_all(1)
+		t_style.set_corner_radius_all(4)
+		trainer_btn.add_theme_stylebox_override("normal", t_style)
+		trainer_btn.pressed.connect(func():
+			if GameManager and GameManager.hud_ref and "trainer_widget" in GameManager.hud_ref and GameManager.hud_ref.trainer_widget:
+				GameManager.hud_ref.trainer_widget.open_trainer_selection_modal()
+		)
+		hbox.add_child(trainer_btn)
+		
 	_create_spawner_panels()
 
 func _create_spawner_panels() -> void:

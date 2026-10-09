@@ -32,6 +32,8 @@ AugmentDatabase="*res://scripts/autoload/augment_database.gd"
 ItemDatabase="*res://scripts/autoload/item_database.gd"
 WeatherSystem="*res://scripts/autoload/weather_system.gd"
 MegaDatabase="*res://scripts/autoload/mega_database.gd"
+GymRoadManager="*res://scripts/gym_road_manager.gd"
+TrainerSystem="*res://scripts/autoload/trainer_system.gd"
 
 [display]
 

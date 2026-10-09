@@ -22,6 +22,7 @@ signal target_comp_updated(comp: Dictionary)
 signal camera_shake_requested(trauma: float, duration: float)
 signal cinematic_spotlight_requested(duration: float, darkness: float)
 signal sandbox_mode_toggled(is_sandbox: bool)
+signal gym_mode_entered(gym_index: int, gym_data: Dictionary)
 
 func shake_camera(trauma: float = 0.5, duration: float = 0.25) -> void:
 	camera_shake_requested.emit(trauma, duration)
@@ -250,6 +251,8 @@ var current_phase: Phase = Phase.PREPARATION
 var current_round: int = 1
 var is_game_started: bool = true # Defaults to true for test scenes; set to false when on start menu
 var is_sandbox_mode: bool = false
+var is_gym_road_mode: bool = false
+var active_gym_index: int = -1
 var phase_timer: float = 20.0
 const PREP_TIME: float = 20.0
 const COMBAT_MAX_TIME: float = 40.0
@@ -363,6 +366,10 @@ func get_current_arena_info() -> Dictionary:
 	return {}
 
 func start_new_game() -> void:
+	is_gym_road_mode = false
+	active_gym_index = -1
+	if GymRoadManager:
+		GymRoadManager.end_gym_challenge()
 	pick_random_background()
 	player_hp = 100
 	gold = 10
@@ -390,6 +397,10 @@ func start_new_game() -> void:
 		is_game_started = true
 
 func enter_sandbox_mode() -> void:
+	is_gym_road_mode = false
+	active_gym_index = -1
+	if GymRoadManager:
+		GymRoadManager.end_gym_challenge()
 	is_sandbox_mode = true
 	is_game_started = true
 	gold = 999
@@ -403,6 +414,62 @@ func enter_sandbox_mode() -> void:
 	refresh_shop(true)
 	phase_changed.emit("PREP", phase_timer)
 	sandbox_mode_toggled.emit(true)
+
+func enter_gym_road_mode(gym_index: int) -> void:
+	if not GymRoadManager:
+		return
+	var gym_data = GymRoadManager.get_gym_data(gym_index)
+	if gym_data.is_empty():
+		return
+		
+	is_gym_road_mode = true
+	active_gym_index = gym_index
+	is_sandbox_mode = false
+	is_game_started = true
+	GymRoadManager.start_gym_challenge(gym_index)
+	
+	# Set background to match gym theme
+	var bg_path = gym_data.get("arena_bg", "")
+	if bg_path != "":
+		current_background_path = bg_path
+		background_changed.emit(bg_path, {"name": gym_data.get("name", ""), "desc": gym_data.get("desc", "")})
+	else:
+		pick_random_background()
+		
+	player_hp = 100
+	level = gym_data.get("player_start_level", 4)
+	gold = gym_data.get("player_start_gold", 40)
+	current_exp = 0
+	current_round = 1
+	win_streak = 0
+	loss_streak = 0
+	shop_locked = false
+	current_phase = Phase.PREPARATION
+	phase_timer = PREP_TIME
+	
+	hp_changed.emit(player_hp, 0)
+	gold_changed.emit(gold, 0)
+	emit_level_signal()
+	
+	if board_ref:
+		if board_ref.has_method("reset_board_for_prep"):
+			board_ref.reset_board_for_prep()
+		if board_ref.has_method("init_starter_pokemon"):
+			board_ref.init_starter_pokemon()
+			
+	refresh_shop(true)
+	AudioManager.play_bgm("shop")
+	phase_changed.emit("PREP", phase_timer)
+	
+	if hud_ref:
+		if "start_menu_modal" in hud_ref and hud_ref.start_menu_modal:
+			hud_ref.start_menu_modal.visible = false
+		if "gym_road_modal" in hud_ref and hud_ref.gym_road_modal:
+			hud_ref.gym_road_modal.visible = false
+		if "item_bench" in hud_ref and hud_ref.item_bench:
+			hud_ref.item_bench.visible = true
+			
+	gym_mode_entered.emit(gym_index, gym_data)
 
 func _process(delta: float) -> void:
 	if not is_game_started:
@@ -475,6 +542,14 @@ func resolve_combat(player_won: bool, remaining_enemies: int = 0) -> void:
 		
 	combat_ended.emit(player_won)
 	phase_changed.emit("RESOLVE", phase_timer)
+	
+	if is_gym_road_mode and GymRoadManager:
+		if player_won:
+			GymRoadManager.settle_gym_battle(active_gym_index, true, player_hp)
+			game_over(true)
+		elif player_hp <= 0:
+			GymRoadManager.settle_gym_battle(active_gym_index, false, 0)
+			game_over(false)
 
 func advance_to_next_round() -> void:
 	if player_hp <= 0:
@@ -490,6 +565,8 @@ func advance_to_next_round() -> void:
 	
 	# Award round economy
 	var max_interest = 8 if (AugmentDatabase and AugmentDatabase.has_augment("interest_tycoon")) else 5
+	if TrainerSystem and TrainerSystem.has_giovanni_passive():
+		max_interest = max(max_interest, TrainerSystem.get_giovanni_max_interest())
 	var interest = min(max_interest, int(gold / 10))
 	var streak_bonus = 0
 	var streak_count = max(win_streak, loss_streak)

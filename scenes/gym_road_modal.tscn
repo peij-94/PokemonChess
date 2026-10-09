@@ -1,0 +1,189 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/gym_road_modal.gd" id="1_modal"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.07, 0.09, 0.13, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.65, 0.95, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge_case"]
+bg_color = Color(0.04, 0.06, 0.09, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.38, 0.55, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close"]
+bg_color = Color(0.55, 0.18, 0.18, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.85, 0.3, 0.3, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_blue"]
+bg_color = Color(0.18, 0.28, 0.42, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.55, 0.8, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="GymRoadModal" type="Panel"]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_modal")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.04, 0.07, 0.9)
+
+[node name="Dialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -325.0
+offset_right = 560.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="Margin" type="MarginContainer" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="VBox" type="VBoxContainer" parent="Dialog/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="Dialog/Margin/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="TitleBox" type="VBoxContainer" parent="Dialog/Margin/VBox/Header"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="Label" parent="Dialog/Margin/VBox/Header/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.25, 1)
+theme_override_font_sizes/font_size = 20
+text = "🏛️ 八大道馆巡礼 • 联盟道馆之路 (Gym Battle Road)"
+
+[node name="Subtitle" type="Label" parent="Dialog/Margin/VBox/Header/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.75, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "挑战关东至神奥八大正统道馆，收集专属荣誉徽章与 3 星全满贯评级！"
+
+[node name="Spacer" type="Control" parent="Dialog/Margin/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BadgeStatsLabel" type="Label" parent="Dialog/Margin/VBox/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.9, 0.6, 1)
+theme_override_font_sizes/font_size = 13
+text = "🏅 徽章收集: 0 / 8  |  ⭐ 星级总览: 0 / 24 ★"
+
+[node name="CloseBtn" type="Button" parent="Dialog/Margin/VBox/Header"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_close")
+theme_override_font_sizes/font_size = 14
+text = "✕"
+
+[node name="BadgeCaseContainer" type="PanelContainer" parent="Dialog/Margin/VBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge_case")
+
+[node name="BadgeCaseVBox" type="VBoxContainer" parent="Dialog/Margin/VBox/BadgeCaseContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BadgeCaseTitle" type="Label" parent="Dialog/Margin/VBox/BadgeCaseContainer/BadgeCaseVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0.3, 1)
+theme_override_font_sizes/font_size = 12
+text = "🏅 专属道馆徽章陈列室 (Gym Badge Case)"
+
+[node name="BadgeList" type="HBoxContainer" parent="Dialog/Margin/VBox/BadgeCaseContainer/BadgeCaseVBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Scroll" type="ScrollContainer" parent="Dialog/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GymCardList" type="VBoxContainer" parent="Dialog/Margin/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Footer" type="HBoxContainer" parent="Dialog/Margin/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="TipLabel" type="Label" parent="Dialog/Margin/VBox/Footer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+theme_override_font_sizes/font_size = 11
+text = "💡 评星规则：通关时剩余血量决定星级 (★1: 存活通关, ★2: ≥50 HP, ★3: ≥80 HP)"
+
+[node name="Spacer" type="Control" parent="Dialog/Margin/VBox/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BottomCloseBtn" type="Button" parent="Dialog/Margin/VBox/Footer"]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_blue")
+theme_override_font_sizes/font_size = 12
+text = "🔙 返回主菜单 / 关闭"

@@ -749,7 +749,11 @@ func start_round_combat() -> void:
 	apply_round_elemental_hexes_to_units()
 
 func spawn_enemy_wave(round_num: int) -> void:
-	var wave_defs = get_wave_definition(round_num)
+	var wave_defs = []
+	if GameManager.is_gym_road_mode and GymRoadManager and GymRoadManager.is_gym_battle_active():
+		wave_defs = GymRoadManager.get_current_gym_wave_definition()
+	else:
+		wave_defs = get_wave_definition(round_num)
 	var boss_unit_found: Unit = null
 	
 	for item in wave_defs:

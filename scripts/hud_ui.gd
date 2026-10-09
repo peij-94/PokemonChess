@@ -66,11 +66,14 @@ const WEATHER_BANNER_SCENE = preload("res://scenes/weather_banner.tscn")
 const TEAM_COMP_PLANNER_SCENE = preload("res://scenes/team_comp_planner.tscn")
 const SANDBOX_TOOLBAR_SCENE = preload("res://scenes/sandbox_toolbar.tscn")
 const DAMAGE_RECAP_MODAL_SCENE = preload("res://scenes/damage_recap_modal.tscn")
+const GYM_ROAD_MODAL_SCENE = preload("res://scenes/gym_road_modal.tscn")
+const TRAINER_WIDGET_SCENE = preload("res://scenes/trainer_widget.tscn")
 
 var skill_choice_modal: Panel = null
 var evolution_choice_modal: Panel = null
 var unit_detail_modal: Panel = null
 var trainer_augment_modal: Panel = null
+var trainer_widget: PanelContainer = null
 var boss_health_bar: PanelContainer = null
 var item_bench: PanelContainer = null
 var weather_overlay: ColorRect = null
@@ -78,7 +81,9 @@ var weather_banner: PanelContainer = null
 var team_comp_planner: Panel = null
 var sandbox_toolbar: PanelContainer = null
 var damage_recap_modal: Panel = null
+var gym_road_modal: Panel = null
 var recap_btn: Button = null
+var gym_road_btn: Button = null
 @onready var team_comp_btn: Button = $TopBar/ActionButtons/TeamCompBtn if has_node("TopBar/ActionButtons/TeamCompBtn") else null
 @onready var dynamax_btn: Button = $TopBar/ActionButtons/DynamaxBtn if has_node("TopBar/ActionButtons/DynamaxBtn") else null
 var audio_btn: Button = null
@@ -265,6 +270,14 @@ func _ready() -> void:
 			add_child(recap_btn)
 	recap_btn.pressed.connect(_on_recap_btn_pressed)
 	
+	trainer_widget = TRAINER_WIDGET_SCENE.instantiate()
+	trainer_widget.name = "TrainerWidget"
+	trainer_widget.position = Vector2(15, 60)
+	add_child(trainer_widget)
+	if has_node("SynergyPanel"):
+		var syn_panel = get_node("SynergyPanel") as Control
+		syn_panel.offset_top = 114.0
+
 	sandbox_toolbar = SANDBOX_TOOLBAR_SCENE.instantiate()
 	sandbox_toolbar.name = "SandboxToolbar"
 	sandbox_toolbar.visible = false
@@ -276,9 +289,47 @@ func _ready() -> void:
 	damage_recap_modal.name = "DamageRecapModal"
 	damage_recap_modal.visible = false
 	add_child(damage_recap_modal)
+
+	gym_road_modal = GYM_ROAD_MODAL_SCENE.instantiate()
+	gym_road_modal.name = "GymRoadModal"
+	gym_road_modal.visible = false
+	add_child(gym_road_modal)
+
+	if gym_road_btn == null:
+		gym_road_btn = Button.new()
+		gym_road_btn.name = "GymRoadBtn"
+		gym_road_btn.text = "🏛️ 道馆 [G]"
+		gym_road_btn.custom_minimum_size = Vector2(75, 30)
+		gym_road_btn.add_theme_font_size_override("font_size", 11)
+		var gr_style = StyleBoxFlat.new()
+		gr_style.bg_color = Color(0.18, 0.32, 0.48, 1)
+		gr_style.border_color = Color(0.4, 0.7, 0.95, 1)
+		gr_style.set_border_width_all(1)
+		gr_style.set_corner_radius_all(4)
+		gym_road_btn.add_theme_stylebox_override("normal", gr_style)
+		if action_buttons:
+			action_buttons.add_child(gym_road_btn)
+		else:
+			gym_road_btn.position = Vector2(1090, 13)
+			add_child(gym_road_btn)
+	gym_road_btn.pressed.connect(_on_gym_road_btn_pressed)
 	
 	# Add Sandbox Mode Button to Start Menu
 	var btn_row = start_menu_modal.get_node_or_null("Dialog/VBox/BtnRow") if start_menu_modal else null
+	if btn_row and not btn_row.has_node("GymRoadBtn"):
+		var gym_start_btn = Button.new()
+		gym_start_btn.name = "GymRoadBtn"
+		gym_start_btn.text = "🏛️ 道馆巡礼"
+		gym_start_btn.custom_minimum_size = Vector2(160, 52)
+		gym_start_btn.add_theme_font_size_override("font_size", 18)
+		var g_style = StyleBoxFlat.new()
+		g_style.bg_color = Color(0.2, 0.35, 0.55, 1)
+		g_style.border_color = Color(0.45, 0.75, 1.0, 0.9)
+		g_style.set_border_width_all(1)
+		g_style.set_corner_radius_all(6)
+		gym_start_btn.add_theme_stylebox_override("normal", g_style)
+		gym_start_btn.pressed.connect(_on_gym_road_btn_pressed)
+		btn_row.add_child(gym_start_btn)
 	if btn_row and not btn_row.has_node("SandboxBtn"):
 		var sandbox_btn = Button.new()
 		sandbox_btn.name = "SandboxBtn"
@@ -293,6 +344,23 @@ func _ready() -> void:
 		sandbox_btn.add_theme_stylebox_override("normal", s_style)
 		sandbox_btn.pressed.connect(_on_sandbox_btn_pressed)
 		btn_row.add_child(sandbox_btn)
+	if btn_row and not btn_row.has_node("TrainerBtn"):
+		var trainer_start_btn = Button.new()
+		trainer_start_btn.name = "TrainerBtn"
+		trainer_start_btn.text = "👑 训练家身份"
+		trainer_start_btn.custom_minimum_size = Vector2(160, 52)
+		trainer_start_btn.add_theme_font_size_override("font_size", 18)
+		var t_style = StyleBoxFlat.new()
+		t_style.bg_color = Color(0.22, 0.32, 0.5, 1)
+		t_style.border_color = Color(0.45, 0.75, 1.0, 0.9)
+		t_style.set_border_width_all(1)
+		t_style.set_corner_radius_all(6)
+		trainer_start_btn.add_theme_stylebox_override("normal", t_style)
+		trainer_start_btn.pressed.connect(func():
+			if trainer_widget and trainer_widget.has_method("open_trainer_selection_modal"):
+				trainer_widget.open_trainer_selection_modal()
+		)
+		btn_row.add_child(trainer_start_btn)
 		
 	# Add Detailed Recap Button to End Game Modal
 	var end_vbox = end_modal.get_node_or_null("VBox") if end_modal else null
@@ -426,6 +494,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				_on_lock_toggled(lock_btn.button_pressed)
 		elif event.keycode == KEY_TAB:
 			_on_recap_btn_pressed()
+		elif event.keycode == KEY_G:
+			_on_gym_road_btn_pressed()
+		elif event.keycode == KEY_Q:
+			if trainer_widget and trainer_widget.has_method("execute_active_tactic"):
+				trainer_widget.execute_active_tactic()
 
 func _toggle_audio_mute() -> void:
 	var muted = AudioManager.toggle_mute()
@@ -695,6 +768,14 @@ func _on_sandbox_mode_toggled(is_sandbox: bool) -> void:
 	if sandbox_toolbar:
 		sandbox_toolbar.visible = is_sandbox
 
+func _on_gym_road_btn_pressed() -> void:
+	if gym_road_modal == null:
+		return
+	if gym_road_modal.visible:
+		gym_road_modal.hide_modal()
+	else:
+		gym_road_modal.open_modal()
+
 func _on_recap_btn_pressed() -> void:
 	if damage_recap_modal == null:
 		return
@@ -728,7 +809,8 @@ func _on_hp_changed(new_hp: int, _delta: int) -> void:
 
 func _on_gold_changed(new_gold: int, _delta: int) -> void:
 	gold_label.text = "%d" % new_gold
-	var interest = min(5, int(new_gold / 10))
+	var max_cap = 8 if (AugmentDatabase and AugmentDatabase.has_augment("interest_tycoon")) else (6 if (TrainerSystem and TrainerSystem.has_giovanni_passive()) else 5)
+	var interest = min(max_cap, int(new_gold / 10))
 	interest_label.text = "利息 +%d" % interest
 
 func _on_level_changed(new_lvl: int, cur_exp: int, max_exp: int) -> void:

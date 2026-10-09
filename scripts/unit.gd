@@ -227,6 +227,12 @@ func setup(p_id: String, p_star: int = 1, p_is_enemy: bool = false, p_is_shiny: 
 		if (types.has("Water") or types.has("Ice")) and GameManager.has_arena_modifier("ice_shield"):
 			shield += GameManager.get_arena_modifier_val("ice_shield")
 
+	# Apply Trainer Passives (Steven Iron Body)
+	if not is_enemy and TrainerSystem and TrainerSystem.has_steven_passive():
+		armor += TrainerSystem.get_steven_armor_bonus()
+		mr += TrainerSystem.get_steven_mr_bonus()
+		set_meta("steven_passive_applied", true)
+
 	_apply_item_stats()
 	
 	if not is_node_ready():
@@ -623,8 +629,11 @@ func perform_attack(target: Unit) -> void:
 			crit_mult = 2.15
 	if not is_enemy and GameManager.has_arena_modifier("crit_chance"):
 		crit_chance += GameManager.get_arena_modifier_val("crit_chance")
+	if not is_enemy and TrainerSystem and TrainerSystem.has_cynthia_passive():
+		crit_chance += TrainerSystem.get_cynthia_crit_chance_bonus()
+		crit_mult += TrainerSystem.get_cynthia_crit_dmg_bonus()
 	var is_crit = (randf() < crit_chance) or (is_combo and pokemon_id == "machop")
-	var damage = atk
+	var damage = get_effective_atk()
 	if has_held_item("expert_belt") and target and target.current_hp / max(1.0, target.max_hp) >= 0.60:
 		damage *= 1.25
 	if is_crit:
@@ -1399,6 +1408,8 @@ func _play_dodge_reaction() -> void:
 func heal(amount: float, show_float: bool = true, healer: Unit = null) -> void:
 	if is_dead:
 		return
+	if not is_enemy and TrainerSystem and TrainerSystem.has_misty_passive():
+		amount *= (1.0 + TrainerSystem.get_misty_heal_shield_bonus())
 	var actual_healed = min(max_hp - current_hp, amount)
 	current_hp = min(max_hp, current_hp + amount)
 	healing_done += actual_healed
@@ -1407,6 +1418,52 @@ func heal(amount: float, show_float: bool = true, healer: Unit = null) -> void:
 	update_bars()
 	if show_float and amount > 5:
 		spawn_floating_text("+" + str(int(amount)), Color(0.2, 0.95, 0.3))
+
+func add_shield(amount: float, show_float: bool = true) -> void:
+	if is_dead:
+		return
+	if not is_enemy and TrainerSystem and TrainerSystem.has_misty_passive():
+		amount *= (1.0 + TrainerSystem.get_misty_heal_shield_bonus())
+	shield += amount
+	update_bars()
+	if show_float and amount > 5:
+		spawn_floating_text("+" + str(int(amount)) + " 护盾", Color(0.25, 0.75, 1.0))
+
+func cleanse_cc() -> void:
+	is_stunned = false
+	stun_timer = 0.0
+	if icon_sprite:
+		icon_sprite.rotation = 0.0
+	if stun_vfx:
+		stun_vfx.stop_immediate()
+	spawn_floating_text("净化!", Color(0.3, 0.9, 1.0))
+
+func get_effective_atk() -> float:
+	var val = atk
+	if not is_enemy and TrainerSystem and TrainerSystem.has_red_passive():
+		if current_hp <= max_hp * 0.50:
+			val *= (1.0 + TrainerSystem.get_red_atk_bonus(self))
+	return val
+
+func get_crit_chance() -> float:
+	var c = 0.20 + get_item_stat_bonus("crit")
+	if not is_enemy and types.has("Fighting"):
+		c += SynergyManager.get_fighting_crit_bonus(is_enemy)
+	if not is_enemy and GameManager.has_arena_modifier("crit_chance"):
+		c += GameManager.get_arena_modifier_val("crit_chance")
+	if not is_enemy and TrainerSystem and TrainerSystem.has_cynthia_passive():
+		c += TrainerSystem.get_cynthia_crit_chance_bonus()
+	return c
+
+func get_crit_mult() -> float:
+	var m = 1.75
+	if has_held_item("infinity_blade"):
+		m = 2.20
+	if not is_enemy and types.has("Fighting") and SynergyManager.active_tiers.get("Fighting", 0) >= 2:
+		m = 2.15
+	if not is_enemy and TrainerSystem and TrainerSystem.has_cynthia_passive():
+		m += TrainerSystem.get_cynthia_crit_dmg_bonus()
+	return m
 
 func gain_mana(amount: float) -> void:
 	if is_dead:

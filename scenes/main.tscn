@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/pokedex_modal.tscn" id="6_pokedex"]
 [ext_resource type="PackedScene" path="res://scenes/arena_modal.tscn" id="7_arena"]
 [ext_resource type="PackedScene" path="res://scenes/dps_meter.tscn" id="8_dps"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/menu_bg.jpg" id="9_menu_bg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_topbar"]
 bg_color = Color(0.09, 0.11, 0.16, 0.95)
@@ -101,6 +102,72 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start_dialog"]
+bg_color = Color(0.04, 0.06, 0.12, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.82, 0.25, 0.95)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.65)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rule_card"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.12, 0.2, 0.75)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22, 0.35, 0.52, 0.6)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_gym"]
+bg_color = Color(0.18, 0.36, 0.58, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.8, 1, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_trainer"]
+bg_color = Color(0.2, 0.28, 0.46, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.7, 1, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_sandbox"]
+bg_color = Color(0.32, 0.18, 0.48, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.72, 0.45, 1, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_main")
@@ -501,6 +568,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BackgroundTexture" type="TextureRect" parent="HUD/StartMenuModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_menu_bg")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="Backdrop" type="ColorRect" parent="HUD/StartMenuModal"]
 layout_mode = 1
 anchors_preset = 15
@@ -508,7 +586,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.04, 0.05, 0.08, 0.94)
+color = Color(0.02, 0.04, 0.08, 0.45)
 
 [node name="Dialog" type="Panel" parent="HUD/StartMenuModal"]
 layout_mode = 1
@@ -517,54 +595,100 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -340.0
-offset_top = -240.0
-offset_right = 340.0
-offset_bottom = 240.0
+offset_left = -390.0
+offset_top = -265.0
+offset_right = 390.0
+offset_bottom = 265.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+theme_override_styles/panel = SubResource("StyleBoxFlat_start_dialog")
 
 [node name="VBox" type="VBoxContainer" parent="HUD/StartMenuModal/Dialog"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 25.0
-offset_right = -30.0
-offset_bottom = -25.0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = -32.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 12
 alignment = 1
 
 [node name="Title" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_colors/font_color = Color(1, 0.86, 0.25, 1)
 theme_override_font_sizes/font_size = 32
 text = "⚡ 宝可梦自走棋 ⚡"
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.7, 0.8, 0.95, 1)
-theme_override_font_sizes/font_size = 15
-text = "Pokémon Auto-Chess • 策略对决与属性羁绊"
+theme_override_colors/font_color = Color(0.72, 0.84, 0.96, 0.95)
+theme_override_font_sizes/font_size = 13
+text = "POKÉMON AUTO-CHESS • 策略对决与属性羁绊"
 horizontal_alignment = 1
 
 [node name="RulesPanel" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="RulesLabel" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel"]
+[node name="RulesGrid" type="GridContainer" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
-theme_override_font_sizes/font_size = 13
-text = " • 购买棋子：从下方商店挑选宝可梦，拖拽或点击部署至战场
- • 三合一进化：3 只相同宝可梦自动合成 2 星/3 星终极形态
- • 属性羁绊：集齐火、水、电、草、超能、龙等属性触发全队特技
- • 自动战斗：回合就绪后自动索敌，满蓝施放招牌大招！"
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="RuleCard1" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rule_card")
+
+[node name="Label1" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid/RuleCard1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.94, 0.98, 1)
+theme_override_font_sizes/font_size = 12
+text = "【选将部署】从商店挑选宝可梦，拖拽或点击部署至战场"
+
+[node name="RuleCard2" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rule_card")
+
+[node name="Label2" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid/RuleCard2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.94, 0.98, 1)
+theme_override_font_sizes/font_size = 12
+text = "【升星进化】3 只相同宝可梦自动合成 2 星/3 星终极形态"
+
+[node name="RuleCard3" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rule_card")
+
+[node name="Label3" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid/RuleCard3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.94, 0.98, 1)
+theme_override_font_sizes/font_size = 12
+text = "【属性羁绊】18 属性与情怀隐藏羁绊，触发全队强力特技"
+
+[node name="RuleCard4" type="PanelContainer" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rule_card")
+
+[node name="Label4" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel/RulesGrid/RuleCard4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.94, 0.98, 1)
+theme_override_font_sizes/font_size = 12
+text = "【智能战斗】自动索敌，刺客潜行突袭，满蓝大招爆发！"
+
+[node name="RulesLabel" type="Label" parent="HUD/StartMenuModal/Dialog/VBox/RulesPanel"]
+visible = false
+layout_mode = 2
+text = "规则概览"
 
 [node name="BtnRow" type="HBoxContainer" parent="HUD/StartMenuModal/Dialog/VBox"]
 layout_mode = 2
@@ -572,24 +696,50 @@ theme_override_constants/separation = 16
 alignment = 1
 
 [node name="PlayGameBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/BtnRow"]
-custom_minimum_size = Vector2(180, 52)
+custom_minimum_size = Vector2(220, 48)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gold")
-theme_override_font_sizes/font_size = 18
-text = "🎮 开始游戏"
+theme_override_font_sizes/font_size = 17
+text = "🎮 开始经典对局"
+
+[node name="GymRoadBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/BtnRow"]
+custom_minimum_size = Vector2(220, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_gym")
+theme_override_font_sizes/font_size = 17
+text = "🏛️ 道馆巡礼挑战"
 
 [node name="MenuPokedexBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/BtnRow"]
-custom_minimum_size = Vector2(180, 52)
+custom_minimum_size = Vector2(220, 48)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 17
 text = "📖 宝可梦图鉴"
+
+[node name="SubBtnRow" type="HBoxContainer" parent="HUD/StartMenuModal/Dialog/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TrainerBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/SubBtnRow"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_trainer")
+theme_override_font_sizes/font_size = 14
+text = "👑 训练家身份"
+
+[node name="SandboxBtn" type="Button" parent="HUD/StartMenuModal/Dialog/VBox/SubBtnRow"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_sandbox")
+theme_override_font_sizes/font_size = 14
+text = "🧪 演练沙盒"
 
 [node name="HintLabel" type="Label" parent="HUD/StartMenuModal/Dialog/VBox"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.5, 0.65, 0.75, 1)
+theme_override_colors/font_color = Color(0.65, 0.78, 0.9, 0.9)
 theme_override_font_sizes/font_size = 12
-text = "快捷键提示：[空格键] 开始战斗 / [P] 打开宝可梦图鉴"
+text = "快捷键提示：[空格键] 开始对局 | [G] 道馆巡礼 | [P] 宝可梦图鉴 | [Q] 战术技能"
 horizontal_alignment = 1
 
 [node name="PokedexModal" parent="HUD" instance=ExtResource("6_pokedex")]

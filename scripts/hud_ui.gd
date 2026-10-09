@@ -314,53 +314,19 @@ func _ready() -> void:
 			add_child(gym_road_btn)
 	gym_road_btn.pressed.connect(_on_gym_road_btn_pressed)
 	
-	# Add Sandbox Mode Button to Start Menu
-	var btn_row = start_menu_modal.get_node_or_null("Dialog/VBox/BtnRow") if start_menu_modal else null
-	if btn_row and not btn_row.has_node("GymRoadBtn"):
-		var gym_start_btn = Button.new()
-		gym_start_btn.name = "GymRoadBtn"
-		gym_start_btn.text = "🏛️ 道馆巡礼"
-		gym_start_btn.custom_minimum_size = Vector2(160, 52)
-		gym_start_btn.add_theme_font_size_override("font_size", 18)
-		var g_style = StyleBoxFlat.new()
-		g_style.bg_color = Color(0.2, 0.35, 0.55, 1)
-		g_style.border_color = Color(0.45, 0.75, 1.0, 0.9)
-		g_style.set_border_width_all(1)
-		g_style.set_corner_radius_all(6)
-		gym_start_btn.add_theme_stylebox_override("normal", g_style)
-		gym_start_btn.pressed.connect(_on_gym_road_btn_pressed)
-		btn_row.add_child(gym_start_btn)
-	if btn_row and not btn_row.has_node("SandboxBtn"):
-		var sandbox_btn = Button.new()
-		sandbox_btn.name = "SandboxBtn"
-		sandbox_btn.text = "🧪 演练沙盒"
-		sandbox_btn.custom_minimum_size = Vector2(160, 52)
-		sandbox_btn.add_theme_font_size_override("font_size", 18)
-		var s_style = StyleBoxFlat.new()
-		s_style.bg_color = Color(0.35, 0.18, 0.52, 1)
-		s_style.border_color = Color(0.75, 0.45, 1, 0.9)
-		s_style.set_border_width_all(1)
-		s_style.set_corner_radius_all(6)
-		sandbox_btn.add_theme_stylebox_override("normal", s_style)
-		sandbox_btn.pressed.connect(_on_sandbox_btn_pressed)
-		btn_row.add_child(sandbox_btn)
-	if btn_row and not btn_row.has_node("TrainerBtn"):
-		var trainer_start_btn = Button.new()
-		trainer_start_btn.name = "TrainerBtn"
-		trainer_start_btn.text = "👑 训练家身份"
-		trainer_start_btn.custom_minimum_size = Vector2(160, 52)
-		trainer_start_btn.add_theme_font_size_override("font_size", 18)
-		var t_style = StyleBoxFlat.new()
-		t_style.bg_color = Color(0.22, 0.32, 0.5, 1)
-		t_style.border_color = Color(0.45, 0.75, 1.0, 0.9)
-		t_style.set_border_width_all(1)
-		t_style.set_corner_radius_all(6)
-		trainer_start_btn.add_theme_stylebox_override("normal", t_style)
-		trainer_start_btn.pressed.connect(func():
-			if trainer_widget and trainer_widget.has_method("open_trainer_selection_modal"):
-				trainer_widget.open_trainer_selection_modal()
-		)
-		btn_row.add_child(trainer_start_btn)
+	# Hook up Start Menu Mode & Feature Buttons
+	if start_menu_modal:
+		var gym_start_btn = start_menu_modal.find_child("GymRoadBtn", true, false) as Button
+		if gym_start_btn and not gym_start_btn.pressed.is_connected(_on_gym_road_btn_pressed):
+			gym_start_btn.pressed.connect(_on_gym_road_btn_pressed)
+
+		var sandbox_btn = start_menu_modal.find_child("SandboxBtn", true, false) as Button
+		if sandbox_btn and not sandbox_btn.pressed.is_connected(_on_sandbox_btn_pressed):
+			sandbox_btn.pressed.connect(_on_sandbox_btn_pressed)
+
+		var trainer_start_btn = start_menu_modal.find_child("TrainerBtn", true, false) as Button
+		if trainer_start_btn and not trainer_start_btn.pressed.is_connected(_open_trainer_selection_from_menu):
+			trainer_start_btn.pressed.connect(_open_trainer_selection_from_menu)
 		
 	# Add Detailed Recap Button to End Game Modal
 	var end_vbox = end_modal.get_node_or_null("VBox") if end_modal else null
@@ -775,6 +741,10 @@ func _on_gym_road_btn_pressed() -> void:
 		gym_road_modal.hide_modal()
 	else:
 		gym_road_modal.open_modal()
+
+func _open_trainer_selection_from_menu() -> void:
+	if trainer_widget and trainer_widget.has_method("open_trainer_selection_modal"):
+		trainer_widget.open_trainer_selection_modal()
 
 func _on_recap_btn_pressed() -> void:
 	if damage_recap_modal == null:

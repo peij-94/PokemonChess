@@ -155,6 +155,9 @@ func _ready() -> void:
 		body.add_child(items_hbox)
 		body.move_child(items_hbox, ability_panel.get_index() + 1)
 
+func open(unit: Unit) -> void:
+	open_for_unit(unit)
+
 func open_for_unit(unit: Unit) -> void:
 	if unit == null or not is_instance_valid(unit):
 		close()
@@ -163,6 +166,8 @@ func open_for_unit(unit: Unit) -> void:
 	target_unit_ref = weakref(unit)
 	_refresh_display()
 	visible = true
+	z_index = 25
+	move_to_front()
 	
 	modulate.a = 0.0
 	var tw = create_tween()

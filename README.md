@@ -50,11 +50,27 @@
 
 ---
 
+## 📚 系统设计与架构文档 (Documentation)
+
+项目拥有详尽的系统架构、机制演进历程与测试验证文档，均已持久化归档至本地仓库的 [`docs/`](./docs/README.md) 目录：
+
+- 📘 [**全系统设计与演进架构全景报告 (DESIGN_AND_SYSTEMS.md)**](./docs/DESIGN_AND_SYSTEMS.md)：涵盖携带装备与合成矩阵、DPS数据面板、18系克制与特性、海克斯强化与Boss战、493只全图鉴、刺客机制、道馆巡礼、训练家战术、闪光与隐藏羁绊、内存优化以及无遮挡UI布局等全量内容。
+- 🗺️ [**四大核心深度扩展规划路线图 (EXPANSION_PLAN.md)**](./docs/EXPANSION_PLAN.md)：闪光与情怀羁绊、元素符文地块、八大道馆巡礼、训练家战术系统设计。
+- ⚡ [**天气场地、Mega极巨化与智能阵容规划 (MEGA_WEATHER_PLAN.md)**](./docs/MEGA_WEATHER_PLAN.md)：天气与场地领域系统、超级进化/极巨化战术与智能阵容构筑器。
+- 📑 [**设计文档库完整索引 (docs/README.md)**](./docs/README.md)
+
+---
+
 ## 📁 目录结构
 
 ```
 focused-hubble/
 ├── project.godot                  # Godot 4 核心工程配置文件
+├── docs/                          # 全系统设计、架构演进与路线图文档库
+│   ├── README.md                  # 设计文档索引
+│   ├── DESIGN_AND_SYSTEMS.md      # 全系统设计与演进架构报告 (1700+ 行)
+│   ├── EXPANSION_PLAN.md          # 四大核心深度扩展路线图
+│   └── MEGA_WEATHER_PLAN.md       # 天气场地与Mega极巨化设计案
 ├── assets/
 │   ├── units/                     # 宝可梦精灵图 (Banana2 生图立绘与高精像素图)
 │   ├── ui/                        # 属性徽标、金币、星级与卡牌组件贴图
